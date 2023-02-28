@@ -2246,20 +2246,150 @@ class Ui_MainWindow(object):
         self.stacked_widget_paginas.addWidget(self.pagina_ventas_individuales_anuales)
         self.pagina_empleados = QtWidgets.QWidget()
         self.pagina_empleados.setObjectName("pagina_empleados")
-        self.label_3 = QtWidgets.QLabel(self.pagina_empleados)
-        self.label_3.setGeometry(QtCore.QRect(130, 230, 221, 31))
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.label_3.setFont(font)
-        self.label_3.setAutoFillBackground(False)
-        self.label_3.setObjectName("label_3")
+        self.horizontalLayoutWidget = QtWidgets.QWidget(self.pagina_empleados)
+        self.horizontalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 731, 621))
+        self.horizontalLayoutWidget.setObjectName("horizontalLayoutWidget")
+        self.horizontalLayout_63 = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
+        self.horizontalLayout_63.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_63.setObjectName("horizontalLayout_63")
+        self.frame_47 = QtWidgets.QFrame(self.horizontalLayoutWidget)
+        self.frame_47.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_47.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_47.setObjectName("frame_47")
+        self.widget_5 = QtWidgets.QWidget(self.frame_47)
+        self.widget_5.setGeometry(QtCore.QRect(10, 10, 334, 70))
+        self.widget_5.setMinimumSize(QtCore.QSize(0, 70))
+        self.widget_5.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_5.setObjectName("widget_5")
+        self.verticalLayout_35 = QtWidgets.QVBoxLayout(self.widget_5)
+        self.verticalLayout_35.setContentsMargins(0, 0, 9, 9)
+        self.verticalLayout_35.setSpacing(0)
+        self.verticalLayout_35.setObjectName("verticalLayout_35")
+        self.label_tipo_usuario_empleados = QtWidgets.QLabel(self.widget_5)
+        self.label_tipo_usuario_empleados.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_empleados.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_empleados.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_tipo_usuario_empleados.setObjectName("label_tipo_usuario_empleados")
+        self.verticalLayout_35.addWidget(self.label_tipo_usuario_empleados)
+        self.frame_48 = QtWidgets.QFrame(self.widget_5)
+        self.frame_48.setMinimumSize(QtCore.QSize(0, 3))
+        self.frame_48.setMaximumSize(QtCore.QSize(16777215, 4))
+        self.frame_48.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 2px;")
+        self.frame_48.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_48.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_48.setObjectName("frame_48")
+        self.verticalLayout_35.addWidget(self.frame_48, 0, QtCore.Qt.AlignTop)
+        self.layoutWidget = QtWidgets.QWidget(self.frame_47)
+        self.layoutWidget.setGeometry(QtCore.QRect(400, 10, 291, 68))
+        self.layoutWidget.setObjectName("layoutWidget")
+        self.horizontalLayout_64 = QtWidgets.QHBoxLayout(self.layoutWidget)
+        self.horizontalLayout_64.setContentsMargins(0, 9, 0, 9)
+        self.horizontalLayout_64.setObjectName("horizontalLayout_64")
+        self.frame_49 = QtWidgets.QFrame(self.layoutWidget)
+        self.frame_49.setMinimumSize(QtCore.QSize(0, 50))
+        self.frame_49.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_49.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_49.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_49.setObjectName("frame_49")
+        self.horizontalLayout_65 = QtWidgets.QHBoxLayout(self.frame_49)
+        self.horizontalLayout_65.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_65.setObjectName("horizontalLayout_65")
+        self.campo_nombre_empleado_empleados = QtWidgets.QLineEdit(self.frame_49)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.campo_nombre_empleado_empleados.sizePolicy().hasHeightForWidth())
+        self.campo_nombre_empleado_empleados.setSizePolicy(sizePolicy)
+        self.campo_nombre_empleado_empleados.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font-family: \'Montserrat\';\n"
+"font-style: normal;\n"
+"font-weight: 600;\n"
+"font-size: 12px;\n"
+"color: rgb(52, 64, 85);\n"
+"border: none;")
+        self.campo_nombre_empleado_empleados.setClearButtonEnabled(False)
+        self.campo_nombre_empleado_empleados.setObjectName("campo_nombre_empleado_empleados")
+        self.horizontalLayout_65.addWidget(self.campo_nombre_empleado_empleados)
+        self.horizontalLayout_64.addWidget(self.frame_49)
+        self.boton_buscar_empleados = QtWidgets.QPushButton(self.layoutWidget)
+        self.boton_buscar_empleados.setMinimumSize(QtCore.QSize(30, 40))
+        self.boton_buscar_empleados.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.boton_buscar_empleados.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(65, 107, 191);\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 400;\n"
+"    font-size: 14px;\n"
+"    border-radius : 15px;\n"
+"}")
+        self.boton_buscar_empleados.setObjectName("boton_buscar_empleados")
+        self.horizontalLayout_64.addWidget(self.boton_buscar_empleados)
+        self.widget_6 = QtWidgets.QWidget(self.frame_47)
+        self.widget_6.setGeometry(QtCore.QRect(40, 110, 651, 471))
+        self.widget_6.setObjectName("widget_6")
+        self.widget_7 = QtWidgets.QWidget(self.widget_6)
+        self.widget_7.setGeometry(QtCore.QRect(150, 10, 351, 70))
+        self.widget_7.setMinimumSize(QtCore.QSize(0, 70))
+        self.widget_7.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_7.setObjectName("widget_7")
+        self.verticalLayout_40 = QtWidgets.QVBoxLayout(self.widget_7)
+        self.verticalLayout_40.setContentsMargins(0, 0, 9, 9)
+        self.verticalLayout_40.setSpacing(0)
+        self.verticalLayout_40.setObjectName("verticalLayout_40")
+        self.label_tipo_usuario_empleados_2 = QtWidgets.QLabel(self.widget_7)
+        self.label_tipo_usuario_empleados_2.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_empleados_2.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_empleados_2.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_tipo_usuario_empleados_2.setStyleSheet("QLabel {\n"
+"    color: rgb(0, 85, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_tipo_usuario_empleados_2.setObjectName("label_tipo_usuario_empleados_2")
+        self.verticalLayout_40.addWidget(self.label_tipo_usuario_empleados_2)
+        self.frame_50 = QtWidgets.QFrame(self.widget_7)
+        self.frame_50.setMinimumSize(QtCore.QSize(0, 3))
+        self.frame_50.setMaximumSize(QtCore.QSize(16777215, 4))
+        self.frame_50.setStyleSheet("background-color: rgb(0, 85, 255);\n"
+"border-radius: 2px;")
+        self.frame_50.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_50.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_50.setObjectName("frame_50")
+        self.verticalLayout_40.addWidget(self.frame_50, 0, QtCore.Qt.AlignTop)
+        self.tabla_empleados = QtWidgets.QTableWidget(self.widget_6)
+        self.tabla_empleados.setGeometry(QtCore.QRect(30, 80, 581, 361))
+        self.tabla_empleados.setObjectName("tabla_empleados")
+        self.tabla_empleados.setColumnCount(4)
+        self.tabla_empleados.setRowCount(0)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_empleados.setHorizontalHeaderItem(0, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_empleados.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_empleados.setHorizontalHeaderItem(2, item)
+        item = QtWidgets.QTableWidgetItem()
+        self.tabla_empleados.setHorizontalHeaderItem(3, item)
+        self.horizontalLayout_63.addWidget(self.frame_47)
         self.stacked_widget_paginas.addWidget(self.pagina_empleados)
         self.verticalLayout.addWidget(self.stacked_widget_paginas)
         self.horizontalLayout.addWidget(self.frame_informacion)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(1)
+        self.stacked_widget_paginas.setCurrentIndex(7)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -2430,7 +2560,18 @@ class Ui_MainWindow(object):
         self.label_hora_menos_ventas_individuales_diarias.setText(_translate("MainWindow", "--:-- pm - --:-- pm"))
         self.label_13.setText(_translate("MainWindow", "Soy la pagina ventas individuales mensuales"))
         self.label_16.setText(_translate("MainWindow", "Soy la pagina ventas individuales anuales"))
-        self.label_3.setText(_translate("MainWindow", "Soy la pagina empleados"))
+        self.label_tipo_usuario_empleados.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.campo_nombre_empleado_empleados.setPlaceholderText(_translate("MainWindow", "Número empleado"))
+        self.boton_buscar_empleados.setText(_translate("MainWindow", "Búscar"))
+        self.label_tipo_usuario_empleados_2.setText(_translate("MainWindow", "EMPLEADOS DE CAFE INDIGO"))
+        item = self.tabla_empleados.horizontalHeaderItem(0)
+        item.setText(_translate("MainWindow", "Nombre"))
+        item = self.tabla_empleados.horizontalHeaderItem(1)
+        item.setText(_translate("MainWindow", "Numero Empleado"))
+        item = self.tabla_empleados.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Tipo de empleado"))
+        item = self.tabla_empleados.horizontalHeaderItem(3)
+        item.setText(_translate("MainWindow", "Estatus"))
 from pyqtgraph import PlotWidget
 
 
