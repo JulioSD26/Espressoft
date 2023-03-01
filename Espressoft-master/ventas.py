@@ -8,6 +8,7 @@ from ventas_ui import *
 import pyqtgraph as pg
 import random
 from controlador_grafica_ventas import *
+from controlador_base_datos import *
 
 # se crea una clase que representa a la ventana principal, la cual hereda de la clase general del widget QMainWindows
 # y tambien hereda de la clase que se genera automaticamente para la ui de la ventana principal (MainWindows)
@@ -73,6 +74,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # el boton de empleados no es un boton desplegable, por lo que solo se le asocia el metodo agregar_quitar_borde_izquierdo_boton() el cual al
         # presionarse simplemente se le agrega el borde izquierdo
         self.boton_empleados.clicked.connect(lambda: self.agregar_quitar_borde_izquierdo_boton(self.boton_empleados, True))
+
+        # al presionar el boton de empleados manda a llamar al metodo llenar_tabla_empleados() que llena la tabla de empleados
+        self.boton_empleados.clicked.connect(lambda: llenar_tabla_empleados(self.tabla_empleados))
+
+        # al presionar el boton busca empleados, se manda a llamar al metodo buscar_empleados() que busca en la tabla de empleados
+        self.boton_buscar_empleados.clicked.connect(lambda: buscar_empleados(self.tabla_empleados, self.campo_nombre_empleado_empleados.text()))
 
         # el boton para cerrar la aplicacion
         self.boton_cerrar.clicked.connect(self.cerrar)
