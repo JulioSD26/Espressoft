@@ -1,4 +1,6 @@
-CREATE DATABASE expressoft;
+-- CREATE DATABASE expressoft;
+
+USE expressoft;
 
 CREATE TABLE empleados (
   empleado_id int(11) NOT NULL,
