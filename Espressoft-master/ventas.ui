@@ -4894,8 +4894,15 @@ border-radius: 2px;</string>
                   <layout class="QHBoxLayout" name="horizontalLayout_67">
                    <item>
                     <widget class="QTableWidget" name="tabla_empleados">
+                     <property name="autoFillBackground">
+                      <bool>true</bool>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(255, 255, 255);
+font: 12pt &quot;MS Shell Dlg 2&quot;;</string>
+                     </property>
                      <attribute name="horizontalHeaderDefaultSectionSize">
-                      <number>151</number>
+                      <number>150</number>
                      </attribute>
                      <column>
                       <property name="text">

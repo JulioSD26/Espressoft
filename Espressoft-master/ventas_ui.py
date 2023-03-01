@@ -8,7 +8,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -2376,6 +2375,9 @@ class Ui_MainWindow(object):
         self.horizontalLayout_67 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_67.setObjectName("horizontalLayout_67")
         self.tabla_empleados = QtWidgets.QTableWidget(self.verticalLayoutWidget)
+        self.tabla_empleados.setAutoFillBackground(True)
+        self.tabla_empleados.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font: 12pt \"MS Shell Dlg 2\";")
         self.tabla_empleados.setObjectName("tabla_empleados")
         self.tabla_empleados.setColumnCount(4)
         self.tabla_empleados.setRowCount(0)
@@ -2387,7 +2389,7 @@ class Ui_MainWindow(object):
         self.tabla_empleados.setHorizontalHeaderItem(2, item)
         item = QtWidgets.QTableWidgetItem()
         self.tabla_empleados.setHorizontalHeaderItem(3, item)
-        self.tabla_empleados.horizontalHeader().setDefaultSectionSize(151)
+        self.tabla_empleados.horizontalHeader().setDefaultSectionSize(150)
         self.horizontalLayout_67.addWidget(self.tabla_empleados)
         self.verticalLayout_46.addLayout(self.horizontalLayout_67)
         self.horizontalLayout_63.addWidget(self.frame_47)
