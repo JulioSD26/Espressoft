@@ -1334,11 +1334,11 @@ border-radius: 15px;</string>
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>false</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
-                      <number>39</number>
-                     </attribute>
                      <attribute name="horizontalHeaderHighlightSections">
                       <bool>true</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderMinimumSectionSize">
+                      <number>39</number>
                      </attribute>
                      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                       <bool>false</bool>
@@ -2198,11 +2198,11 @@ border-radius: 15px;</string>
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>false</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
-                      <number>39</number>
-                     </attribute>
                      <attribute name="horizontalHeaderHighlightSections">
                       <bool>true</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderMinimumSectionSize">
+                      <number>39</number>
                      </attribute>
                      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                       <bool>false</bool>
@@ -2942,11 +2942,11 @@ border-radius: 15px;</string>
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>false</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
-                      <number>39</number>
-                     </attribute>
                      <attribute name="horizontalHeaderHighlightSections">
                       <bool>true</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderMinimumSectionSize">
+                      <number>39</number>
                      </attribute>
                      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                       <bool>false</bool>
@@ -4176,11 +4176,11 @@ border-radius: 15px;</string>
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>false</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
-                      <number>39</number>
-                     </attribute>
                      <attribute name="horizontalHeaderHighlightSections">
                       <bool>true</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderMinimumSectionSize">
+                      <number>39</number>
                      </attribute>
                      <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
                       <bool>false</bool>
@@ -4880,35 +4880,48 @@ border-radius: 2px;</string>
                  </item>
                 </layout>
                </widget>
-               <widget class="QTableWidget" name="tabla_empleados">
+               <widget class="QWidget" name="verticalLayoutWidget">
                 <property name="geometry">
                  <rect>
                   <x>30</x>
                   <y>80</y>
-                  <width>581</width>
-                  <height>361</height>
+                  <width>611</width>
+                  <height>381</height>
                  </rect>
                 </property>
-                <column>
-                 <property name="text">
-                  <string>Nombre</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Numero Empleado</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Tipo de empleado</string>
-                 </property>
-                </column>
-                <column>
-                 <property name="text">
-                  <string>Estatus</string>
-                 </property>
-                </column>
+                <layout class="QVBoxLayout" name="verticalLayout_46">
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_67">
+                   <item>
+                    <widget class="QTableWidget" name="tabla_empleados">
+                     <attribute name="horizontalHeaderDefaultSectionSize">
+                      <number>151</number>
+                     </attribute>
+                     <column>
+                      <property name="text">
+                       <string>Nombre</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Numero Empleado</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Tipo de empleado</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Estatus</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </widget>
               </widget>
              </widget>
