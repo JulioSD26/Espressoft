@@ -5,8 +5,6 @@
 # Ejemplo (usando rutas relativas):
 # pyuic5 -x ventas.ui -o ventas_ui.py
 from ventas_ui import *
-import pyqtgraph as pg
-import random
 from controlador_grafica_ventas import *
 from controlador_base_datos import *
 
