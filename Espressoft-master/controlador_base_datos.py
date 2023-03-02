@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import QTableWidgetItem
 
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
-        conn = connect(host='localhost', user='root', password='',database='expressoft', port=3306)
+        conn = crear_conexion()
         c = conn.cursor()
         sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno), empleado_id, tipo_empleado, estatus FROM empleados" if sqlquery == "" else sqlquery
         c.execute(sqlquery)
@@ -26,3 +26,23 @@ def buscar_empleados(tableWidget, nombre):
     sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombrec, empleado_id, tipo_empleado, ", 
                   "estatus FROM empleados) as empleados2 WHERE nombrec LIKE '%{}%'".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
+
+def verifica_login(numero,password):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        numero = int(numero)
+        c.execute("SELECT * FROM empleados WHERE empleado_id = {} AND contraseña = '{}'".format(numero,password))
+        rows = c.fetchall()
+        conn.close()
+        return True if len(rows) > 0 else False
+    except:
+        print("Error en el login")
+        return False
+
+def crear_conexion():
+    conn = connect(host='localhost', user='root', password='',database='expressoft', port=3306)
+    return conn
+
+if __name__ == "__main__":
+    print("Este archivo no se ejecuta directamente")

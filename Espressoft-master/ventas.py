@@ -340,7 +340,4 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-    window = MainWindow()
-    window.show()
-    app.exec_()
+    print("Este archivo no se ejecuta directamente")
