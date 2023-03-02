@@ -138,19 +138,25 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         estilizar_grafica(self.grafica_ventas_totales_mensuales, "Ventas totales mensuales")
         estilizar_grafica(self.grafica_ventas_totales_anuales, "Ventas totales anuales")
         estilizar_grafica(self.grafica_ventas_individuales_diarias, "Ventas individuales diarias")
+        estilizar_grafica(self.grafica_ventas_individuales_mensuales, "Ventas individuales mensuales")
+        estilizar_grafica(self.grafica_ventas_individuales_anuales, "Ventas individuales anuales")
 
         
         asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_totales_diarias, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
         asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_totales_mensuales, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
         asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_totales_anuales, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
         asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_individuales_diarias, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
+        asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_individuales_mensuales, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
+        asignar_valores_de_tipo_string_eje_x(self.grafica_ventas_individuales_anuales, ['3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm'])
+
+
         
         x = [1, 2, 3, 4, 5, 6]
 
         self.boton_generar_ventas_totales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_diarias, x, generar_datos_aleatorios_para_probar(x)))
         self.boton_generar_ventas_totales_mensuales.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_mensuales, x, generar_datos_aleatorios_para_probar(x)))
         self.boton_generar_ventas_individuales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_individuales_diarias, x, generar_datos_aleatorios_para_probar(x)))
-
+        self.boton_generar_ventas_individuales_mensuales.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_individuales_mensuales, x, generar_datos_aleatorios_para_probar(x)))
 
     def ocultar_mostrar_opciones(self, boton_texto, boton_desplegable_correspondiente, widget_opciones):
         """

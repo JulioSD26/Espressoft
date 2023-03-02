@@ -3,11 +3,12 @@ from PyQt5.QtWidgets import QTableWidgetItem
 
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
-        conn = connect(host='localhost', user='root', password='',database='expressoft', port=3306)
+        conn = connect(host='localhost', user='root', password='luis1234',database='expressoft', port=3306)
         c = conn.cursor()
-        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno), empleado_id, tipo_empleado, estatus FROM empleados" if sqlquery == "" else sqlquery
+        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno), empleado_id, tipo_empleado, estatus FROM empleado" if sqlquery == "" else sqlquery
         c.execute(sqlquery)
         rows = c.fetchall()
+        
         tableWidget.setRowCount(0)
 
         for row in rows:
@@ -24,5 +25,5 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
 
 def buscar_empleados(tableWidget, nombre):
     sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombrec, empleado_id, tipo_empleado, ", 
-                  "estatus FROM empleados) as empleados2 WHERE nombrec LIKE '%{}%'".format(nombre)))
+                  "estatus FROM empleado) as empleados2 WHERE nombrec LIKE '%{}%'".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
