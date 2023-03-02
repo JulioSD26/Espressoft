@@ -13,7 +13,7 @@ if __name__ == "__main__":
     # comprueba que los datos de inicio de sesión sean correctos en la base de datos
     # si es así, abre la ventana principal
 
-    if ui.pushButton.clicked:
+    if ui.boton_ingresar_login.clicked:
         ui = MainWindow()
         ui.show()
     

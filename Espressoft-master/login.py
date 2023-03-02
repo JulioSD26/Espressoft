@@ -16,6 +16,9 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
         Form.resize(900, 600)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("resources/img/icono_cafe.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Form.setWindowIcon(icon)
         Form.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.widget = QtWidgets.QWidget(Form)
@@ -28,50 +31,50 @@ class Ui_Form(object):
         self.label.setScaledContents(True)
         self.label.setText("")
         self.label.setObjectName("label")
-        self.lineEdit = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit.setGeometry(QtCore.QRect(55, 280, 280, 40))
-        self.lineEdit.setStyleSheet("QLineEdit{\n"
+        self.campo_num_emp_login = QtWidgets.QLineEdit(self.widget)
+        self.campo_num_emp_login.setGeometry(QtCore.QRect(55, 280, 280, 40))
+        self.campo_num_emp_login.setStyleSheet("QLineEdit{\n"
 "Padding-left:10px;\n"
 "Padding-right:10px;\n"
 "}")
-        self.lineEdit.setText("")
-        self.lineEdit.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.widget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(55, 350, 280, 40))
-        self.lineEdit_2.setStyleSheet("QLineEdit{\n"
+        self.campo_num_emp_login.setText("")
+        self.campo_num_emp_login.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
+        self.campo_num_emp_login.setObjectName("campo_num_emp_login")
+        self.campo_contrasenia_login = QtWidgets.QLineEdit(self.widget)
+        self.campo_contrasenia_login.setGeometry(QtCore.QRect(55, 350, 280, 40))
+        self.campo_contrasenia_login.setStyleSheet("QLineEdit{\n"
 "border-radius: 10px;\n"
 "Padding-left:10px;\n"
 "Padding-right:10px;\n"
 "}")
-        self.lineEdit_2.setText("")
-        self.lineEdit_2.setEchoMode(QtWidgets.QLineEdit.Password)
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.pushButton = QtWidgets.QPushButton(self.widget)
-        self.pushButton.setGeometry(QtCore.QRect(100, 425, 180, 35))
+        self.campo_contrasenia_login.setText("")
+        self.campo_contrasenia_login.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.campo_contrasenia_login.setObjectName("campo_contrasenia_login")
+        self.boton_ingresar_login = QtWidgets.QPushButton(self.widget)
+        self.boton_ingresar_login.setGeometry(QtCore.QRect(100, 425, 180, 35))
         font = QtGui.QFont()
         font.setPointSize(8)
-        self.pushButton.setFont(font)
-        self.pushButton.setStyleSheet("QPushButton#pushButton{\n"
+        self.boton_ingresar_login.setFont(font)
+        self.boton_ingresar_login.setStyleSheet("QPushButton#boton_ingresar_login{\n"
 "    border-radius: 10px;\n"
 "    border: 2px solid #FFFFFF;\n"
 "    color: #FFFFFF;\n"
 "}\n"
 "\n"
-"QPushButton#pushButton:pressed{\n"
+"QPushButton#boton_ingresar_login:pressed{\n"
 "    background-color: #FFFFFF;\n"
 "    color: #005db1;\n"
 "}")
-        self.pushButton.setObjectName("pushButton")
+        self.boton_ingresar_login.setObjectName("boton_ingresar_login")
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
-        self.lineEdit.setPlaceholderText(_translate("Form", "Número de empleado"))
-        self.lineEdit_2.setPlaceholderText(_translate("Form", "Contraseña"))
-        self.pushButton.setText(_translate("Form", "Ingresar"))
+        Form.setWindowTitle(_translate("Form", "Login"))
+        self.campo_num_emp_login.setPlaceholderText(_translate("Form", "Número de empleado"))
+        self.campo_contrasenia_login.setPlaceholderText(_translate("Form", "Contraseña"))
+        self.boton_ingresar_login.setText(_translate("Form", "Ingresar"))
 
 if __name__=="__main__":
         app = QtWidgets.QApplication(sys.argv)

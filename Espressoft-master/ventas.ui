@@ -11,7 +11,14 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Espressoft</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>resources/img/icono_cafe.png</normaloff>resources/img/icono_cafe.png</iconset>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">

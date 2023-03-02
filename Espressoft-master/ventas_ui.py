@@ -15,6 +15,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(973, 627)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("resources/img/icono_cafe.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
+        MainWindow.setAutoFillBackground(True)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.centralwidget)
@@ -64,9 +68,9 @@ class Ui_MainWindow(object):
         self.boton_ventas_totales_desplegable = QtWidgets.QToolButton(self.menu_lateral)
         self.boton_ventas_totales_desplegable.setStyleSheet("border: none;")
         self.boton_ventas_totales_desplegable.setText("")
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("resources/img/icono_desplegable.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.boton_ventas_totales_desplegable.setIcon(icon)
+        icon1 = QtGui.QIcon()
+        icon1.addPixmap(QtGui.QPixmap("resources/img/icono_desplegable.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.boton_ventas_totales_desplegable.setIcon(icon1)
         self.boton_ventas_totales_desplegable.setObjectName("boton_ventas_totales_desplegable")
         self.horizontalLayout_3.addWidget(self.boton_ventas_totales_desplegable)
         self.verticalLayout_2.addLayout(self.horizontalLayout_3)
@@ -153,7 +157,7 @@ class Ui_MainWindow(object):
         self.boton_ventas_individuales_desplegable = QtWidgets.QToolButton(self.menu_lateral)
         self.boton_ventas_individuales_desplegable.setStyleSheet("border: none;")
         self.boton_ventas_individuales_desplegable.setText("")
-        self.boton_ventas_individuales_desplegable.setIcon(icon)
+        self.boton_ventas_individuales_desplegable.setIcon(icon1)
         self.boton_ventas_individuales_desplegable.setObjectName("boton_ventas_individuales_desplegable")
         self.horizontalLayout_4.addWidget(self.boton_ventas_individuales_desplegable)
         self.verticalLayout_2.addLayout(self.horizontalLayout_4)
@@ -2485,7 +2489,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Espressoft"))
         self.boton_ventas_totales.setText(_translate("MainWindow", "Ventas totales"))
         self.boton_ventas_totales_diarias.setText(_translate("MainWindow", "Ventas diarias"))
         self.boton_ventas_totales_mensuales.setText(_translate("MainWindow", "Ventas mensuales"))
