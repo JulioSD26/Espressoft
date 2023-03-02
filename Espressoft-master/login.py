@@ -9,8 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
-import sys
+from controlador_base_datos import verifica_login
+from ventas import MainWindow
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -69,6 +69,16 @@ class Ui_Form(object):
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
+        self.boton_ingresar_login.clicked.connect(lambda: self.loggedin(Form))
+
+    def loggedin(self,Form):
+        if verifica_login(self.campo_num_emp_login.text(), self.campo_contrasenia_login.text()) == True:
+            Form.close()
+            window = MainWindow()
+            window.show()
+
+
+
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Login"))
@@ -76,10 +86,5 @@ class Ui_Form(object):
         self.campo_contrasenia_login.setPlaceholderText(_translate("Form", "Contraseña"))
         self.boton_ingresar_login.setText(_translate("Form", "Ingresar"))
 
-if __name__=="__main__":
-        app = QtWidgets.QApplication(sys.argv)
-        Form = QtWidgets.QWidget()
-        ui = Ui_Form()
-        ui.setupUi(Form)
-        Form.show()
-        sys.exit(app.exec_())
+if __name__ == "__main__":
+    print("Este archivo no se ejecuta directamente")
