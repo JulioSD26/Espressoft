@@ -22,7 +22,7 @@ CREATE TABLE venta (
   hora time NOT NULL,
   empleado_id int(11) NOT NULL,
   PRIMARY KEY (venta_id),
-  CONSTRAINT venta_ibfk_1 FOREIGN KEY (empleado_id) REFERENCES empleado (empleado_id)
+  FOREIGN KEY (empleado_id) REFERENCES empleados (empleado_id)
 );
 
 INSERT INTO empleados (empleado_id, tipo_empleado, contraseña, nombre, apellido_paterno, apellido_materno, estatus, telefono, email) VALUES
