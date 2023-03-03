@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  db:
+    image: mysql:8.0.31
+    ports:
+      - "3306:3306"
+    container_name: mysql_expressoft
+    environment:
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_ALLOW_EMPTY_PASSWORD: true
+      MYSQL_USER: "expressoft_admin"
+      MYSQL_PASSWORD: "lewylzzvmA2023/"
+      MYSQL_DATABASE: "expressoft"
+    volumes:
+      - dbdata:/var/lib/mysql
+      - ./expressoft.sql:/docker-entrypoint-initdb.d/expressoft.sql
+    networks:
+      mysql_network:
+        aliases:
+          - mysql_host
+networks:
+  mysql_network:
+    name: mysql_net
+volumes:
+  dbdata:
+    driver: local
