@@ -5,7 +5,7 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
         conn = crear_conexion()
         c = conn.cursor()
-        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno), empleado_id, tipo_empleado, estatus FROM empleado" if sqlquery == "" else sqlquery
+        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, estatus FROM empleados" if sqlquery == "" else sqlquery
         c.execute(sqlquery)
         rows = c.fetchall()
         
@@ -24,8 +24,8 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
         print("Error al conectar a la base de datos")
 
 def buscar_empleados(tableWidget, nombre):
-    sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombrec, empleado_id, tipo_empleado, ", 
-                  "estatus FROM empleado) as empleados2 WHERE nombrec LIKE '%{}%'".format(nombre)))
+    sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, ", 
+                  "estatus FROM empleados) as empleados2 WHERE nombre_completo LIKE '%{}%'".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
 
 def verifica_login(numero,password):
@@ -33,7 +33,7 @@ def verifica_login(numero,password):
         conn = crear_conexion()
         c = conn.cursor()
         numero = int(numero)
-        c.execute("SELECT * FROM empleados WHERE empleado_id = {} AND contraseña = '{}'".format(numero,password))
+        c.execute("SELECT * FROM empleados WHERE empleado_id = {} AND contrasenia = '{}'".format(numero,password))
         rows = c.fetchall()
         conn.close()
         return True if len(rows) > 0 else False
