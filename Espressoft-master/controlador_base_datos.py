@@ -31,6 +31,7 @@ def buscar_empleados(tableWidget, nombre):
 def verifica_login(numero,password):
     try:
         conn = crear_conexion()
+        print('xd')
         c = conn.cursor()
         numero = int(numero)
         c.execute("SELECT * FROM empleados WHERE empleado_id = {} AND contrasenia = '{}'".format(numero,password))
@@ -42,7 +43,7 @@ def verifica_login(numero,password):
         return False
 
 def crear_conexion():
-    conn = connect(host='localhost', user='root', password='',database='expressoft', port=3306)
+    conn = connect(host='localhost', user='expressoft_admin', password='lewylzzvmA2023/',database='expressoft', port=3306)
     return conn
 
 if __name__ == "__main__":
