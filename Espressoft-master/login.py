@@ -26,6 +26,8 @@ class Ui_Form(object):
         self.widget.setStyleSheet("border-radius: 10px;")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
+        #Espressoft-master\resources\img\login-background.png
+        #./resources/img/login-background.png
         self.label.setPixmap(QtGui.QPixmap("resources/img/login-background.png"))
         #self.label.setPixmap(QtGui.QPixmap("login-background.png"))
         self.label.setGeometry(QtCore.QRect(0, 0, 900, 600))
