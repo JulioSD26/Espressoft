@@ -1,4 +1,4 @@
-from mysql.connector import connect
+from mysql.connector import connect,Error
 from PyQt5.QtWidgets import QTableWidgetItem
 
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
@@ -20,8 +20,8 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
             tableWidget.setItem(rowPosition, 3, QTableWidgetItem('Activo' if row[3] == 1 else 'Inactivo'))
         
         conn.close()
-    except:
-        print("Error al conectar a la base de datos")
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
 
 def buscar_empleados(tableWidget, nombre):
     sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, ", 
@@ -38,8 +38,8 @@ def verifica_login(numero,password):
         rows = c.fetchall()
         conn.close()
         return True if len(rows) > 0 else False
-    except:
-        print("Error en el login")
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
         return False
 
 def crear_conexion():
