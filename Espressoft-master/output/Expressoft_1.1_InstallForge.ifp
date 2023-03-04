@@ -1,0 +1,330 @@
+﻿
+[Header]
+ProjectFileVersion = 1.1
+[General]
+Program name = Expressoft app
+Program version = 1.1
+Windows 2000 = 0
+Windows XP = 1
+Windows Server 2003 = 1
+Windows Vista = 1
+Windows Server 2008 = 1
+Windows 7 = 1
+Windows 8 = 1
+Windows 10 = 1
+Windows Server 2016 = 1
+DoNotCheckOS = 1
+Company name = Expressoft
+Website = 
+SFA = 1
+DFA = 1
+Comp = 1
+[Graphics]
+Wizard image = H:\Unison\Sexto semestre\PSI\Espressoft-master\resources\img\icono_cafe.png
+Header image = H:\Unison\Sexto semestre\PSI\Espressoft-master\resources\img\icono_mes_mas_ventas.png
+Show Label = 1
+VisualStylesEnabled = 1
+[Files]
+Installation path = <ProgramFiles>\<Company>\<AppName>\
+Autcip = 1
+[Uninstall]
+Vwau = 0
+Website = https://
+Include uninstaller = 1
+Uninstaller filename = Uninstall Expressoft app
+UseCustomDisplayIcon = 0
+CustomDisplayIcon = <InstallPath>\
+[Licence]
+Licence dialog = 1
+[Finish]
+Sart program = 1
+Reboot computer = 0
+Program = <InstallPath>\app.exe
+ProgramArguments = 
+[Shortcuts]
+Allowtc = 1
+Shortcut path = <Company>\<AppName>\
+[Serialoptions]
+Allows = 0
+Number = 1000
+Mask = #####-#####-#####-#####
+[SplashScreen]
+Image = 
+Sound = 
+Time = 2
+PlaySound = 0
+Allow = 0
+[Build]
+File = H:\Unison\Sexto semestre\PSI\Espressoft-master\output\Expressoft_1.1.exe
+SetupIconPath = ..\icons\ancient.ico
+UninstallIconPath = ..\icons\ancient.ico
+CompressionMethod = 0
+CompressionLevel = 2
+[Updater]
+Allow = 0
+1 = <AppName>
+2 = <AppVersion>
+3 = http://
+4 = http://
+5 = http://
+6 = Update
+Language = 0
+RunProg = 
+RunProgs = 0
+Execdlls = 0
+[Languages]
+0
+1
+2
+16
+[Files/Dirs]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_asyncio.pyd
+65.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_bz2.pyd
+86 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_ctypes.pyd
+125.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_decimal.pyd
+265.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_elementtree.pyd
+187.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_hashlib.pyd
+65 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_lzma.pyd
+161 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_multiprocessing.pyd
+31.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_mysql_connector.cp39-win_amd64.pyd
+59.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_overlapped.pyd
+47 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_queue.pyd
+30.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_socket.pyd
+80 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_ssl.pyd
+153.5 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\_uuid.pyd
+25 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-console-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-datetime-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-debug-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-errorhandling-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-file-l1-1-0.dll
+16.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-file-l1-2-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-file-l2-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-handle-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-heap-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-interlocked-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-libraryloader-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-localization-l1-2-0.dll
+15.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-memory-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-namedpipe-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-processenvironment-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-processthreads-l1-1-0.dll
+15.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-processthreads-l1-1-1.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-profile-l1-1-0.dll
+12.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-rtlsupport-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-string-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-synch-l1-1-0.dll
+15.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-synch-l1-2-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-sysinfo-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-timezone-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-core-util-l1-1-0.dll
+13.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-conio-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-convert-l1-1-0.dll
+17.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-environment-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-filesystem-l1-1-0.dll
+15.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-heap-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-locale-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-math-l1-1-0.dll
+22.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-process-l1-1-0.dll
+14.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-runtime-l1-1-0.dll
+17.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-stdio-l1-1-0.dll
+19.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-string-l1-1-0.dll
+19.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-time-l1-1-0.dll
+15.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\api-ms-win-crt-utility-l1-1-0.dll
+13.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\app.exe
+5.6 MB
+exe
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\base_library.zip
+1014.7 KB
+zip
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libcrypto-1_1.dll
+3.3 MB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libcrypto-1_1-x64.dll
+3.3 MB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libffi-7.dll
+32 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libmysql.dll
+6.9 MB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortran-win_amd64.dll
+34.2 MB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libssl-1_1.dll
+682.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\libssl-1_1-x64.dll
+669 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\pyexpat.pyd
+202 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\python3.dll
+60 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\python39.dll
+4.3 MB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\select.pyd
+30 KB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\ucrtbase.dll
+987.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\unicodedata.pyd
+1.1 MB
+pyd
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\VCRUNTIME140.dll
+95.9 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\VCRUNTIME140_1.dll
+36.4 KB
+dll
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\numpy\
+N/A
+[Folder]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\PyQt5\
+N/A
+[Folder]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\pyqtgraph\
+N/A
+[Folder]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\resources\
+N/A
+[Folder]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\setuptools-65.6.3.dist-info\
+N/A
+[Folder]
+H:\Unison\Sexto semestre\PSI\Espressoft-master\output\app\wheel-0.37.1.dist-info\
+N/A
+[Folder]
+[Licence_Begin]
+154
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Arial;}}
+\viewkind4\uc1\pard\cf0\fs20 Adrian puedes poner la guia aqu\'ed\par
+}
+ [Licence_End]
+[Registry]
+[Variables]
+[SCs]
+Desktop
+Expressoft
+<InstallPath>\app.exe
+
+
+0
+Startmenu
+Expressoft
+<InstallPath>\app.exe
+
+
+0
+[IFP_End]
+[Serials]
+[Serials_End]
+[Commands]
