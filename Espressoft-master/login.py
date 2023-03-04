@@ -17,7 +17,7 @@ class Ui_Form(object):
         Form.setObjectName("Form")
         Form.resize(900, 600)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("resources/img/icono_cafe.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("Espressoft-master/resources/img/icono_cafe.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         #Form.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         Form.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -26,7 +26,9 @@ class Ui_Form(object):
         self.widget.setStyleSheet("border-radius: 10px;")
         self.widget.setObjectName("widget")
         self.label = QtWidgets.QLabel(self.widget)
-        self.label.setPixmap(QtGui.QPixmap("resources/img/login-background.png"))
+        #Espressoft-master\resources\img\login-background.png
+        #./resources/img/login-background.png
+        self.label.setPixmap(QtGui.QPixmap("Espressoft-master/resources/img/login-background.png"))
         #self.label.setPixmap(QtGui.QPixmap("login-background.png"))
         self.label.setGeometry(QtCore.QRect(0, 0, 900, 600))
         self.label.setScaledContents(True)
