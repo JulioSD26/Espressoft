@@ -8,9 +8,9 @@ import random
 import pyqtgraph as pg
 from PyQt5 import QtGui
 
-def generar_datos_aleatorios_para_probar(x):
+def generar_datos_aleatorios_para_probar(valores_eje_x: list):
     y = []
-    for i in range(0, 6):
+    for i in range(0, len(valores_eje_x)):
         y.append(random.randint(7000, 25000))
     return y
 
@@ -56,17 +56,24 @@ def asignar_valores_de_tipo_string_eje_x(grafica, lista_valores_eje_x):
     # esto es asi porque no se pueden poner valores al eje x que no sean numericos en un principio, de esta manera
     # se puede hacer eso
     # fuente: https://stackoverflow.com/questions/31775468/show-string-values-on-x-axis-in-pyqtgraph
-    ticks = [list(zip(range(1, 7), (lista_valores_eje_x)))]
+    
+    ticks = [list(zip(range(1, len(lista_valores_eje_x) + 1), (lista_valores_eje_x)))]
     x_axis = grafica.getAxis('bottom')
     x_axis.setTicks(ticks)
 
 
-def dibujar_grafica(grafica, valores_eje_x: list, valores_eje_y: list):
+def dibujar_grafica(grafica, valores_eje_x: list):
     # cada que se va  a dibujar la grafica se borra la anterior, para que no aparezca junto a la nueva
     grafica.getPlotItem().clear()
     pen = pg.mkPen({'color': "#8cb2e2", 'width': 3})
+    # valores_eje_x son los labels de tipo texto que se van a poner en el eje x
+    asignar_valores_de_tipo_string_eje_x(grafica, valores_eje_x)
+    # estos van a ser los valores en el eje x, pero los labels de arriba los van a representar
+    # esto es asi porque no se puede poner un valor en uno de los ejes que no sea numerico
+    valores_x_numericos = [i for i in range(1, len(valores_eje_x) + 1)]
+    valores_eje_y = generar_datos_aleatorios_para_probar(valores_eje_x)
     # symbol representa un simbolo que se puede poner en cada punto x, y, en este caso se le pone uno con forma de 'o', tamanio = 10, de color blanco y cubiero por el color '#658fc2' 
-    grafica.plot(valores_eje_x, valores_eje_y, pen = pen, symbolBrush = 'white', symbolPen ='#658fc2', symbol ='o', symbolSize = 10)
+    grafica.plot(valores_x_numericos, valores_eje_y, pen = pen, symbolBrush = 'white', symbolPen ='#658fc2', symbol ='o', symbolSize = 10)
 
     
 
