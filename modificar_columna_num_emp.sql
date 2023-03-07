@@ -1,0 +1,1 @@
+ALTER TABLE empleados MODIFY empleado_id VARCHAR(50);

@@ -34,8 +34,9 @@ def verifica_login(numero,password):
         conn = crear_conexion()
         
         c = conn.cursor()
-        numero = int(numero)
-        c.execute("SELECT empleado_id, tipo_empleado FROM empleados WHERE empleado_id = {} AND contrasenia = '{}'".format(numero,password))
+        # ahora el num empleado es un varchar, no necesita convertirse a entero
+        numero = numero
+        c.execute("SELECT empleado_id, tipo_empleado FROM empleados WHERE empleado_id = '{}' AND contrasenia = '{}'".format(numero,password))
         rows = c.fetchall()
         
         conn.close()

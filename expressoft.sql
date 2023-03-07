@@ -3,7 +3,7 @@ CREATE SCHEMA IF NOT EXISTS expressoft;
 USE expressoft;
 
 CREATE TABLE empleados (
-  empleado_id int(11) NOT NULL,
+  empleado_id varchar(50) NOT NULL,
   tipo_empleado ENUM('gerente', 'administrador', 'empleado') NOT NULL,
   contrasenia varchar(50) NOT NULL,
   nombre varchar(50) NOT NULL,
