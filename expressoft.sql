@@ -10,7 +10,7 @@ CREATE TABLE empleados (
   apellido_paterno varchar(50) NOT NULL,
   apellido_materno varchar(50) NOT NULL,
   estatus boolean NOT NULL,
-  telefono varchar(12) NOT NULL,
+  telefono varchar(15) NOT NULL,
   email varchar(50) NOT NULL,
   PRIMARY KEY (empleado_id)
 );
@@ -21,7 +21,7 @@ CREATE TABLE venta (
   fecha date NOT NULL,
   hora time NOT NULL,
   empleado_id int(11) NOT NULL,
-  PRIMARY KEY (venta_id),
+  PRIMARY KEY (venta_id)
 );
 
 INSERT INTO empleados (empleado_id, tipo_empleado, contrasenia, nombre, apellido_paterno, apellido_materno, estatus, telefono, email) VALUES
