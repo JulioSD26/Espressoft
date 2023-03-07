@@ -4224,7 +4224,7 @@ class Ui_MainWindow(object):
         self.label_69.setText(_translate("MainWindow", "Año con menos ventas:"))
         self.label_hora_mas_ventas_individuales_diarias_3.setText(_translate("MainWindow", "            -----"))
         self.label_76.setText(_translate("MainWindow", "Fecha del año en curso"))
-        self.label_hora_mas_ventas_individuales_diarias_7.setText(_translate("MainWindow", "13 de enero del 2023"))
+        self.label_hora_mas_ventas_individuales_diarias_7.setText(_translate("MainWindow", "13 de enero"))
         self.label_77.setText(_translate("MainWindow", "Ventas de año en curso"))
         self.label_hora_menos_ventas_individuales_diarias_3.setText(_translate("MainWindow", "$43000.00"))
         self.label_78.setText(_translate("MainWindow", "Ventas totales incluyendo año en curso"))
