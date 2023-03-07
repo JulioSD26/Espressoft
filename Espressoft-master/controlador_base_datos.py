@@ -1,5 +1,6 @@
 from mysql.connector import connect,Error
 from PyQt5.QtWidgets import QTableWidgetItem
+from empleados import asignar_empleado_loggeado
 
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
@@ -34,10 +35,19 @@ def verifica_login(numero,password):
         
         c = conn.cursor()
         numero = int(numero)
-        c.execute("SELECT empleado_id FROM empleados WHERE empleado_id = {} AND contrasenia = '{}'".format(numero,password))
+        c.execute("SELECT empleado_id, tipo_empleado FROM empleados WHERE empleado_id = {} AND contrasenia = '{}'".format(numero,password))
         rows = c.fetchall()
+        
         conn.close()
-        return True if len(rows) > 0 else False
+        if len(rows) > 0:
+            # en teoria rows deberia de regresar solo una fila si los datos son correctos, por lo que se accede a su unico elemento, que es el primero
+            # de ahi, se obtiene una tupla, que de momento es la id del empleado y su tipo
+            empleado = rows[0]
+            # se le pasa esa tupla a la siguiente funcion para crear una instancia de un empleado loggeado
+            asignar_empleado_loggeado(empleado)
+            return True
+        else:
+            return False
     except Error as err:
         print("Algo salio mal: {}".format(err))
         return False

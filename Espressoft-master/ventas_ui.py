@@ -2257,18 +2257,18 @@ class Ui_MainWindow(object):
         self.verticalLayout_51.setContentsMargins(-1, -1, 9, 9)
         self.verticalLayout_51.setSpacing(0)
         self.verticalLayout_51.setObjectName("verticalLayout_51")
-        self.label_tipo_usuario_ventas_individuales_diarias_2 = QtWidgets.QLabel(self.widget_8)
-        self.label_tipo_usuario_ventas_individuales_diarias_2.setMinimumSize(QtCore.QSize(0, 40))
-        self.label_tipo_usuario_ventas_individuales_diarias_2.setMaximumSize(QtCore.QSize(16777215, 40))
-        self.label_tipo_usuario_ventas_individuales_diarias_2.setStyleSheet("QLabel {\n"
+        self.label_tipo_usuario_ventas_individuales_mensuales = QtWidgets.QLabel(self.widget_8)
+        self.label_tipo_usuario_ventas_individuales_mensuales.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_ventas_individuales_mensuales.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_ventas_individuales_mensuales.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: bold;\n"
 "    font-size: 22px;\n"
 "}")
-        self.label_tipo_usuario_ventas_individuales_diarias_2.setObjectName("label_tipo_usuario_ventas_individuales_diarias_2")
-        self.verticalLayout_51.addWidget(self.label_tipo_usuario_ventas_individuales_diarias_2, 0, QtCore.Qt.AlignTop)
+        self.label_tipo_usuario_ventas_individuales_mensuales.setObjectName("label_tipo_usuario_ventas_individuales_mensuales")
+        self.verticalLayout_51.addWidget(self.label_tipo_usuario_ventas_individuales_mensuales, 0, QtCore.Qt.AlignTop)
         self.frame_55 = QtWidgets.QFrame(self.widget_8)
         self.frame_55.setMinimumSize(QtCore.QSize(0, 3))
         self.frame_55.setMaximumSize(QtCore.QSize(16777215, 4))
@@ -2996,18 +2996,18 @@ class Ui_MainWindow(object):
         self.verticalLayout_61.setContentsMargins(-1, -1, 9, 9)
         self.verticalLayout_61.setSpacing(0)
         self.verticalLayout_61.setObjectName("verticalLayout_61")
-        self.label_tipo_usuario_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.widget_9)
-        self.label_tipo_usuario_ventas_individuales_diarias_3.setMinimumSize(QtCore.QSize(0, 40))
-        self.label_tipo_usuario_ventas_individuales_diarias_3.setMaximumSize(QtCore.QSize(16777215, 40))
-        self.label_tipo_usuario_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_tipo_usuario_ventas_individuales_anuales = QtWidgets.QLabel(self.widget_9)
+        self.label_tipo_usuario_ventas_individuales_anuales.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_ventas_individuales_anuales.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: bold;\n"
 "    font-size: 22px;\n"
 "}")
-        self.label_tipo_usuario_ventas_individuales_diarias_3.setObjectName("label_tipo_usuario_ventas_individuales_diarias_3")
-        self.verticalLayout_61.addWidget(self.label_tipo_usuario_ventas_individuales_diarias_3, 0, QtCore.Qt.AlignTop)
+        self.label_tipo_usuario_ventas_individuales_anuales.setObjectName("label_tipo_usuario_ventas_individuales_anuales")
+        self.verticalLayout_61.addWidget(self.label_tipo_usuario_ventas_individuales_anuales, 0, QtCore.Qt.AlignTop)
         self.frame_69 = QtWidgets.QFrame(self.widget_9)
         self.frame_69.setMinimumSize(QtCore.QSize(0, 3))
         self.frame_69.setMaximumSize(QtCore.QSize(16777215, 4))
@@ -3775,19 +3775,19 @@ class Ui_MainWindow(object):
         self.verticalLayout_40.setContentsMargins(25, -1, 15, 9)
         self.verticalLayout_40.setSpacing(0)
         self.verticalLayout_40.setObjectName("verticalLayout_40")
-        self.label_tipo_usuario_empleados_2 = QtWidgets.QLabel(self.widget_7)
-        self.label_tipo_usuario_empleados_2.setMinimumSize(QtCore.QSize(0, 40))
-        self.label_tipo_usuario_empleados_2.setMaximumSize(QtCore.QSize(400, 40))
-        self.label_tipo_usuario_empleados_2.setLayoutDirection(QtCore.Qt.LeftToRight)
-        self.label_tipo_usuario_empleados_2.setStyleSheet("QLabel {\n"
+        self.label_13 = QtWidgets.QLabel(self.widget_7)
+        self.label_13.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_13.setMaximumSize(QtCore.QSize(400, 40))
+        self.label_13.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_13.setStyleSheet("QLabel {\n"
 "    color: rgb(0, 85, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: bold;\n"
 "    font-size: 22px;\n"
 "}")
-        self.label_tipo_usuario_empleados_2.setObjectName("label_tipo_usuario_empleados_2")
-        self.verticalLayout_40.addWidget(self.label_tipo_usuario_empleados_2, 0, QtCore.Qt.AlignHCenter)
+        self.label_13.setObjectName("label_13")
+        self.verticalLayout_40.addWidget(self.label_13, 0, QtCore.Qt.AlignHCenter)
         self.frame_50 = QtWidgets.QFrame(self.widget_7)
         self.frame_50.setMinimumSize(QtCore.QSize(0, 3))
         self.frame_50.setMaximumSize(QtCore.QSize(16777215, 4))
@@ -3893,7 +3893,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(6)
+        self.stacked_widget_paginas.setCurrentIndex(7)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -4059,7 +4059,7 @@ class Ui_MainWindow(object):
         self.label_hora_mas_ventas_individuales_diarias.setText(_translate("MainWindow", "--:-- pm - --:-- pm"))
         self.label_39.setText(_translate("MainWindow", "Hora con menos ventas:"))
         self.label_hora_menos_ventas_individuales_diarias.setText(_translate("MainWindow", "--:-- pm - --:-- pm"))
-        self.label_tipo_usuario_ventas_individuales_diarias_2.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.label_tipo_usuario_ventas_individuales_mensuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_46.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias_2.setPlaceholderText(_translate("MainWindow", "Número empleado"))
         self.boton_buscar_ventas_individuales_diarias_2.setText(_translate("MainWindow", "Búscar"))
@@ -4165,7 +4165,7 @@ class Ui_MainWindow(object):
         self.label_hora_mas_ventas_individuales_diarias_4.setText(_translate("MainWindow", "            -----"))
         self.label_57.setText(_translate("MainWindow", "Mes con menos ventas:"))
         self.label_hora_mas_ventas_individuales_diarias_2.setText(_translate("MainWindow", "            -----"))
-        self.label_tipo_usuario_ventas_individuales_diarias_3.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.label_tipo_usuario_ventas_individuales_anuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_59.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias_3.setPlaceholderText(_translate("MainWindow", "Número empleado"))
         self.boton_buscar_ventas_individuales_diarias_3.setText(_translate("MainWindow", "Búscar"))
@@ -4231,7 +4231,7 @@ class Ui_MainWindow(object):
         self.label_tipo_usuario_empleados.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.campo_nombre_empleado_empleados.setPlaceholderText(_translate("MainWindow", "Nombre de empleado"))
         self.boton_buscar_empleados.setText(_translate("MainWindow", "Búscar"))
-        self.label_tipo_usuario_empleados_2.setText(_translate("MainWindow", "EMPLEADOS DE CAFÉ INDIGO"))
+        self.label_13.setText(_translate("MainWindow", "EMPLEADOS DE CAFÉ INDIGO"))
         item = self.tabla_empleados.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Nombre"))
         item = self.tabla_empleados.horizontalHeaderItem(1)
@@ -4244,4 +4244,10 @@ from pyqtgraph import PlotWidget
 
 
 if __name__ == "__main__":
-    print("Este archivo no se ejecuta directamente")
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())

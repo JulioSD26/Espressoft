@@ -686,7 +686,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>6</number>
+          <number>7</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -4550,7 +4550,7 @@ QTableWidget {
                     <number>9</number>
                    </property>
                    <item alignment="Qt::AlignTop">
-                    <widget class="QLabel" name="label_tipo_usuario_ventas_individuales_diarias_2">
+                    <widget class="QLabel" name="label_tipo_usuario_ventas_individuales_mensuales">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -5983,7 +5983,7 @@ QTableWidget {
                     <number>9</number>
                    </property>
                    <item alignment="Qt::AlignTop">
-                    <widget class="QLabel" name="label_tipo_usuario_ventas_individuales_diarias_3">
+                    <widget class="QLabel" name="label_tipo_usuario_ventas_individuales_anuales">
                      <property name="minimumSize">
                       <size>
                        <width>0</width>
@@ -7511,7 +7511,7 @@ border: none;</string>
                        <number>9</number>
                       </property>
                       <item alignment="Qt::AlignHCenter">
-                       <widget class="QLabel" name="label_tipo_usuario_empleados_2">
+                       <widget class="QLabel" name="label_13">
                         <property name="minimumSize">
                          <size>
                           <width>0</width>

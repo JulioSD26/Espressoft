@@ -7,6 +7,7 @@
 from ventas_ui import *
 from controlador_grafica_ventas import *
 from controlador_base_datos import *
+import empleados
 
 # se crea una clase que representa a la ventana principal, la cual hereda de la clase general del widget QMainWindows
 # y tambien hereda de la clase que se genera automaticamente para la ui de la ventana principal (MainWindows)
@@ -128,6 +129,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for boton_opcion in self.relacion_botones_opciones_y_su_pagina_correspondiente:
             boton_opcion.clicked.connect(self.cambiar_pagina_al_seleccionar_opcion)
 
+
+        
+        self.asignar_tipo_empleado_a_labels()
 
 
         """
@@ -336,6 +340,30 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # al stacked widget se le asigna la pagina a mostrar que se haya elegido al presionar su boton de opciones,
         # dando el efecto de que se cambio la pantalla
         self.stacked_widget_paginas.setCurrentWidget(pagina_a_mostrar)
+
+    
+    def asignar_tipo_empleado_a_labels(self):
+        """
+        A todas las ventanas que tengan un label con el tipo de empleado, les asigna el tipo de empleado del empleado que hizo login.
+        """
+        labels_tipo_empleado = [
+            self.label_tipo_usuario_ventas_totales_diarias,
+            self.label_tipo_usuario_ventas_totales_mensuales,
+            self.label_tipo_usuario_ventas_totales_anuales,
+            self.label_tipo_usuario_ventas_individuales_diarias,
+            self.label_tipo_usuario_ventas_individuales_mensuales,
+            self.label_tipo_usuario_ventas_individuales_anuales,
+            self.label_tipo_usuario_empleados
+            ]
+        
+        # se obtiene al tipo de empleado loggeado, primero obteniendo al objeto empleado, luego su atributo tipo_empleado
+        # y finalmente se pasa a mayusculas
+        tipo_empleado_loggeado = empleados.obtener_usuario_loggeado().tipo_empleado.upper()
+        for label in labels_tipo_empleado:
+            # a cada label/etiqueta se le asigna ese tipo de empleado
+            label.setText(tipo_empleado_loggeado)
+
+
 
     
     def cerrar(self):
