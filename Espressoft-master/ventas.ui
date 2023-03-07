@@ -7463,7 +7463,7 @@ border: none;</string>
 }</string>
                          </property>
                          <property name="text">
-                          <string>Búscar</string>
+                          <string>Buscar</string>
                          </property>
                         </widget>
                        </item>
