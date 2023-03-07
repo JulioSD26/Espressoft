@@ -22,7 +22,6 @@ CREATE TABLE venta (
   hora time NOT NULL,
   empleado_id int(11) NOT NULL,
   PRIMARY KEY (venta_id),
-  FOREIGN KEY (empleado_id) REFERENCES empleados (empleado_id)
 );
 
 INSERT INTO empleados (empleado_id, tipo_empleado, contrasenia, nombre, apellido_paterno, apellido_materno, estatus, telefono, email) VALUES
