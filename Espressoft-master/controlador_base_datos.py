@@ -52,6 +52,21 @@ def verifica_login(numero,password):
     except Error as err:
         print("Algo salio mal: {}".format(err))
         return False
+    
+def verifica_usuario(numero):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("SELECT empleado_id FROM empleados WHERE empleado_id = '{}'".format(numero))
+        rows = c.fetchall()
+        conn.close()
+        if len(rows) > 0:
+            return True
+        else:
+            return False
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
 
 def crear_conexion():
 

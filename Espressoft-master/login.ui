@@ -34,6 +34,12 @@
       <height>600</height>
      </rect>
     </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
     <property name="styleSheet">
      <string notr="true">border-image: url(:/images/login-background.png);</string>
     </property>
@@ -74,7 +80,7 @@ Padding-right:10px;
     <property name="geometry">
      <rect>
       <x>55</x>
-      <y>350</y>
+      <y>340</y>
       <width>280</width>
       <height>40</height>
      </rect>
@@ -124,6 +130,36 @@ QPushButton#pushButton:pressed{
     </property>
     <property name="text">
      <string>Ingresar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mensaje">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>390</y>
+      <width>220</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel{
+font: 12pt &quot;MS Shell Dlg 2&quot;;
+rgb(255, 0, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

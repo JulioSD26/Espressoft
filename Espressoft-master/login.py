@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from controlador_base_datos import verifica_login
+from controlador_base_datos import verifica_login, verifica_usuario
 from ventas import MainWindow
 
 class Ui_Form(object):
@@ -44,7 +44,7 @@ class Ui_Form(object):
         self.campo_num_emp_login.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.campo_num_emp_login.setObjectName("campo_num_emp_login")
         self.campo_contrasenia_login = QtWidgets.QLineEdit(self.widget)
-        self.campo_contrasenia_login.setGeometry(QtCore.QRect(55, 350, 280, 40))
+        self.campo_contrasenia_login.setGeometry(QtCore.QRect(55, 340, 280, 40))
         self.campo_contrasenia_login.setStyleSheet("QLineEdit{\n"
 "border-radius: 10px;\n"
 "Padding-left:10px;\n"
@@ -69,17 +69,31 @@ class Ui_Form(object):
 "    color: #005db1;\n"
 "}")
         self.boton_ingresar_login.setObjectName("boton_ingresar_login")
+        self.mensaje = QtWidgets.QLabel(self.widget)
+        self.mensaje.setGeometry(QtCore.QRect(80, 390, 220, 30))
+        self.mensaje.setScaledContents(True)
+        self.mensaje.setText("")
+        self.mensaje.setStyleSheet("QLabel{\n"
+"font: 12pt 'MS Shell Dlg 2';\n"
+"color: rgb(255, 0, 0);\n"
+"}")
+        self.mensaje.setObjectName("mensaje")
+
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
         self.boton_ingresar_login.clicked.connect(lambda: self.loggedin(Form))
 
     def loggedin(self,Form):
-        if verifica_login(self.campo_num_emp_login.text(), self.campo_contrasenia_login.text()) == True:
-            Form.close()
-            window = MainWindow()
-            window.show()
-
+        if verifica_usuario(self.campo_num_emp_login.text()) == True:
+            if verifica_login(self.campo_num_emp_login.text(), self.campo_contrasenia_login.text()) == True:
+                Form.close()
+                window = MainWindow()
+                window.show()
+            else:
+                self.mensaje.setText("Contraseña incorrecta")
+        else:
+            self.mensaje.setText("El usuario no existe")
 
 
     def retranslateUi(self, Form):
