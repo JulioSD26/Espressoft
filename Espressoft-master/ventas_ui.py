@@ -624,7 +624,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_14.setWordWrap(False)
         self.label_14.setObjectName("label_14")
-        self.verticalLayout_10.addWidget(self.label_14)
+        self.verticalLayout_10.addWidget(self.label_14, 0, QtCore.Qt.AlignHCenter)
         self.label_17 = QtWidgets.QLabel(self.frame)
         self.label_17.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -636,7 +636,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_17.setWordWrap(True)
         self.label_17.setObjectName("label_17")
-        self.verticalLayout_10.addWidget(self.label_17)
+        self.verticalLayout_10.addWidget(self.label_17, 0, QtCore.Qt.AlignHCenter)
         self.label_dia_ventas_totales_diarias = QtWidgets.QLabel(self.frame)
         self.label_dia_ventas_totales_diarias.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -648,7 +648,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_dia_ventas_totales_diarias.setWordWrap(True)
         self.label_dia_ventas_totales_diarias.setObjectName("label_dia_ventas_totales_diarias")
-        self.verticalLayout_10.addWidget(self.label_dia_ventas_totales_diarias)
+        self.verticalLayout_10.addWidget(self.label_dia_ventas_totales_diarias, 0, QtCore.Qt.AlignHCenter)
         self.frame_87 = QtWidgets.QFrame(self.frame)
         self.frame_87.setMaximumSize(QtCore.QSize(600, 16777215))
         self.frame_87.setStyleSheet("QFrame {\n"
@@ -738,7 +738,7 @@ class Ui_MainWindow(object):
         item.setFont(font)
         self.tabla_ventas_totales_diarias.setItem(1, 1, item)
         self.tabla_ventas_totales_diarias.horizontalHeader().setCascadingSectionResizes(True)
-        self.tabla_ventas_totales_diarias.horizontalHeader().setDefaultSectionSize(150)
+        self.tabla_ventas_totales_diarias.horizontalHeader().setDefaultSectionSize(200)
         self.tabla_ventas_totales_diarias.horizontalHeader().setStretchLastSection(True)
         self.tabla_ventas_totales_diarias.verticalHeader().setVisible(False)
         self.tabla_ventas_totales_diarias.verticalHeader().setStretchLastSection(False)
@@ -1039,7 +1039,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_24.setWordWrap(False)
         self.label_24.setObjectName("label_24")
-        self.verticalLayout_20.addWidget(self.label_24)
+        self.verticalLayout_20.addWidget(self.label_24, 0, QtCore.Qt.AlignHCenter)
         self.label_25 = QtWidgets.QLabel(self.frame_18)
         self.label_25.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -1051,7 +1051,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_25.setWordWrap(True)
         self.label_25.setObjectName("label_25")
-        self.verticalLayout_20.addWidget(self.label_25)
+        self.verticalLayout_20.addWidget(self.label_25, 0, QtCore.Qt.AlignHCenter)
         self.label_mes_ventas_totales_mensuales = QtWidgets.QLabel(self.frame_18)
         self.label_mes_ventas_totales_mensuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -1063,7 +1063,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_mes_ventas_totales_mensuales.setWordWrap(True)
         self.label_mes_ventas_totales_mensuales.setObjectName("label_mes_ventas_totales_mensuales")
-        self.verticalLayout_20.addWidget(self.label_mes_ventas_totales_mensuales)
+        self.verticalLayout_20.addWidget(self.label_mes_ventas_totales_mensuales, 0, QtCore.Qt.AlignHCenter)
         self.frame_88 = QtWidgets.QFrame(self.frame_18)
         self.frame_88.setMaximumSize(QtCore.QSize(600, 16777215))
         self.frame_88.setStyleSheet("QFrame {\n"
@@ -1412,7 +1412,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_42.setWordWrap(False)
         self.label_42.setObjectName("label_42")
-        self.verticalLayout_39.addWidget(self.label_42)
+        self.verticalLayout_39.addWidget(self.label_42, 0, QtCore.Qt.AlignHCenter)
         self.label_43 = QtWidgets.QLabel(self.frame_42)
         self.label_43.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -1424,7 +1424,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_43.setWordWrap(True)
         self.label_43.setObjectName("label_43")
-        self.verticalLayout_39.addWidget(self.label_43)
+        self.verticalLayout_39.addWidget(self.label_43, 0, QtCore.Qt.AlignHCenter)
         self.frame_89 = QtWidgets.QFrame(self.frame_42)
         self.frame_89.setMaximumSize(QtCore.QSize(600, 16777215))
         self.frame_89.setStyleSheet("QFrame {\n"
@@ -2019,7 +2019,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_33.setWordWrap(False)
         self.label_33.setObjectName("label_33")
-        self.horizontalLayout_46.addWidget(self.label_33)
+        self.horizontalLayout_46.addWidget(self.label_33, 0, QtCore.Qt.AlignHCenter)
         self.label_dia_ventas_individuales_diarias = QtWidgets.QLabel(self.frame_28)
         self.label_dia_ventas_individuales_diarias.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -2030,7 +2030,7 @@ class Ui_MainWindow(object):
 "    text-align: center;\n"
 "}")
         self.label_dia_ventas_individuales_diarias.setObjectName("label_dia_ventas_individuales_diarias")
-        self.horizontalLayout_46.addWidget(self.label_dia_ventas_individuales_diarias)
+        self.horizontalLayout_46.addWidget(self.label_dia_ventas_individuales_diarias, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_24.addLayout(self.horizontalLayout_46)
         self.frame_90 = QtWidgets.QFrame(self.frame_28)
         self.frame_90.setMaximumSize(QtCore.QSize(600, 16777215))
@@ -2122,6 +2122,7 @@ class Ui_MainWindow(object):
         self.tabla_ventas_individuales_diarias.setItem(1, 1, item)
         self.tabla_ventas_individuales_diarias.horizontalHeader().setCascadingSectionResizes(True)
         self.tabla_ventas_individuales_diarias.horizontalHeader().setDefaultSectionSize(150)
+        self.tabla_ventas_individuales_diarias.horizontalHeader().setMinimumSectionSize(200)
         self.tabla_ventas_individuales_diarias.horizontalHeader().setStretchLastSection(True)
         self.tabla_ventas_individuales_diarias.verticalHeader().setVisible(False)
         self.tabla_ventas_individuales_diarias.verticalHeader().setStretchLastSection(False)
@@ -2585,7 +2586,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_55.setWordWrap(False)
         self.label_55.setObjectName("label_55")
-        self.horizontalLayout_78.addWidget(self.label_55)
+        self.horizontalLayout_78.addWidget(self.label_55, 0, QtCore.Qt.AlignHCenter)
         self.label_mes_ventas_individuales_mensuales = QtWidgets.QLabel(self.frame_63)
         self.label_mes_ventas_individuales_mensuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;    \n"
@@ -2596,7 +2597,7 @@ class Ui_MainWindow(object):
 "    text-align: center;\n"
 "}")
         self.label_mes_ventas_individuales_mensuales.setObjectName("label_mes_ventas_individuales_mensuales")
-        self.horizontalLayout_78.addWidget(self.label_mes_ventas_individuales_mensuales)
+        self.horizontalLayout_78.addWidget(self.label_mes_ventas_individuales_mensuales, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_57.addLayout(self.horizontalLayout_78)
         self.frame_91 = QtWidgets.QFrame(self.frame_63)
         self.frame_91.setMaximumSize(QtCore.QSize(600, 16777215))
@@ -4021,7 +4022,7 @@ class Ui_MainWindow(object):
         self.label_tipo_usuario_ventas_individuales_diarias.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_36.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias.setPlaceholderText(_translate("MainWindow", "Número empleado"))
-        self.boton_buscar_ventas_individuales_diarias.setText(_translate("MainWindow", "Búscar"))
+        self.boton_buscar_ventas_individuales_diarias.setText(_translate("MainWindow", "Buscar"))
         self.label_37.setText(_translate("MainWindow", "Datos de empleado:"))
         self.label_4.setText(_translate("MainWindow", "Número de empleado ingresado:"))
         self.label_num_empleado_ventas_individuales_diarias.setText(_translate("MainWindow", "----"))
@@ -4062,7 +4063,7 @@ class Ui_MainWindow(object):
         self.label_tipo_usuario_ventas_individuales_mensuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_46.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias_2.setPlaceholderText(_translate("MainWindow", "Número empleado"))
-        self.boton_buscar_ventas_individuales_diarias_2.setText(_translate("MainWindow", "Búscar"))
+        self.boton_buscar_ventas_individuales_diarias_2.setText(_translate("MainWindow", "Buscar"))
         self.label_48.setText(_translate("MainWindow", "Datos de empleado:"))
         self.label_50.setText(_translate("MainWindow", "Número de empleado ingresado:"))
         self.label_num_empleado_ventas_individuales_diarias_2.setText(_translate("MainWindow", "----"))
@@ -4168,7 +4169,7 @@ class Ui_MainWindow(object):
         self.label_tipo_usuario_ventas_individuales_anuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_59.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias_3.setPlaceholderText(_translate("MainWindow", "Número empleado"))
-        self.boton_buscar_ventas_individuales_diarias_3.setText(_translate("MainWindow", "Búscar"))
+        self.boton_buscar_ventas_individuales_diarias_3.setText(_translate("MainWindow", "Buscar"))
         self.label_60.setText(_translate("MainWindow", "Datos de empleado:"))
         self.label_61.setText(_translate("MainWindow", "Número de empleado ingresado:"))
         self.label_num_empleado_ventas_individuales_diarias_3.setText(_translate("MainWindow", "----"))

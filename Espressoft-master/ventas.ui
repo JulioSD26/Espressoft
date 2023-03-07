@@ -1373,7 +1373,7 @@ border-radius: 15px;</string>
 }</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_10">
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_14">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -1393,7 +1393,7 @@ border-radius: 15px;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_17">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -1413,7 +1413,7 @@ border-radius: 15px;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_dia_ventas_totales_diarias">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -1509,7 +1509,7 @@ QTableWidget {
                       <bool>true</bool>
                      </attribute>
                      <attribute name="horizontalHeaderDefaultSectionSize">
-                      <number>150</number>
+                      <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
                       <bool>true</bool>
@@ -2186,7 +2186,7 @@ border-radius: 15px;</string>
 }</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_20">
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_24">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -2206,7 +2206,7 @@ border-radius: 15px;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_25">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -2226,7 +2226,7 @@ border-radius: 15px;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_mes_ventas_totales_mensuales">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -2899,7 +2899,7 @@ border-radius: 15px;</string>
 }</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_39">
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_42">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -2919,7 +2919,7 @@ border-radius: 15px;</string>
                   </property>
                  </widget>
                 </item>
-                <item>
+                <item alignment="Qt::AlignHCenter">
                  <widget class="QLabel" name="label_43">
                   <property name="styleSheet">
                    <string notr="true">QLabel {
@@ -3636,7 +3636,7 @@ border: none;</string>
 }</string>
                        </property>
                        <property name="text">
-                        <string>Búscar</string>
+                        <string>Buscar</string>
                        </property>
                       </widget>
                      </item>
@@ -4083,7 +4083,7 @@ border-radius: 15px;</string>
                <layout class="QVBoxLayout" name="verticalLayout_24">
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_46">
-                  <item>
+                  <item alignment="Qt::AlignHCenter">
                    <widget class="QLabel" name="label_33">
                     <property name="styleSheet">
                      <string notr="true">QLabel {
@@ -4103,7 +4103,7 @@ border-radius: 15px;</string>
                     </property>
                    </widget>
                   </item>
-                  <item>
+                  <item alignment="Qt::AlignHCenter">
                    <widget class="QLabel" name="label_dia_ventas_individuales_diarias">
                     <property name="styleSheet">
                      <string notr="true">QLabel {
@@ -4196,6 +4196,9 @@ QTableWidget {
                      </property>
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>true</bool>
+                     </attribute>
+                     <attribute name="horizontalHeaderMinimumSectionSize">
+                      <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderDefaultSectionSize">
                       <number>150</number>
@@ -4741,7 +4744,7 @@ border: none;</string>
 }</string>
                        </property>
                        <property name="text">
-                        <string>Búscar</string>
+                        <string>Buscar</string>
                        </property>
                       </widget>
                      </item>
@@ -5189,7 +5192,7 @@ border-radius: 15px;</string>
                <layout class="QVBoxLayout" name="verticalLayout_57">
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_78">
-                  <item>
+                  <item alignment="Qt::AlignHCenter">
                    <widget class="QLabel" name="label_55">
                     <property name="styleSheet">
                      <string notr="true">QLabel {
@@ -5209,7 +5212,7 @@ border-radius: 15px;</string>
                     </property>
                    </widget>
                   </item>
-                  <item>
+                  <item alignment="Qt::AlignHCenter">
                    <widget class="QLabel" name="label_mes_ventas_individuales_mensuales">
                     <property name="styleSheet">
                      <string notr="true">QLabel {
@@ -6174,7 +6177,7 @@ border: none;</string>
 }</string>
                        </property>
                        <property name="text">
-                        <string>Búscar</string>
+                        <string>Buscar</string>
                        </property>
                       </widget>
                      </item>

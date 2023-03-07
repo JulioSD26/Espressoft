@@ -8,6 +8,7 @@ from ventas_ui import *
 from controlador_grafica_ventas import *
 from controlador_base_datos import *
 import empleados
+import datetime
 
 # se crea una clase que representa a la ventana principal, la cual hereda de la clase general del widget QMainWindows
 # y tambien hereda de la clase que se genera automaticamente para la ui de la ventana principal (MainWindows)
@@ -132,6 +133,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         
         self.asignar_tipo_empleado_a_labels()
+
+
+        self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
 
 
         """
@@ -362,6 +366,19 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         for label in labels_tipo_empleado:
             # a cada label/etiqueta se le asigna ese tipo de empleado
             label.setText(tipo_empleado_loggeado)
+
+
+    def asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios(self):
+        """
+        Asigna una fecha actual y una fecha maxima a los selectores donde se puede seleccionar por dia
+        (Ventas individuales diarias y Ventas totales diarias).
+        """
+        selectores_fecha_diarios = [self.fecha_seleccionada_ventas_individuales_diarias, self.fecha_seleccionada_ventas_totales_diarias]
+        for selector in selectores_fecha_diarios:
+            # le pone como fecha por defecto, el dia actual
+            selector.setDate(datetime.datetime.now())
+            # le pone como fecha maxima, el dia actual
+            selector.setMaximumDate(datetime.datetime.now())
 
 
 
