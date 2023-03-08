@@ -345,7 +345,7 @@ class Ui_MainWindow(object):
         self.label_3.setLineWidth(1)
         self.label_3.setMidLineWidth(1)
         self.label_3.setTextFormat(QtCore.Qt.PlainText)
-        self.label_3.setIndent(-1)
+        #self.label_3.setIndent(-1)
         self.label_3.setObjectName("label_3")
         self.verticalLayout_48.addWidget(self.label_3, 0, QtCore.Qt.AlignHCenter)
         self.frame_52 = QtWidgets.QFrame(self.frame_53)

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="20.4" version="20.4" Modules="simple" RootPath="." Language="en" Id="{A9D2806D-91B8-4440-842F-DEBA37229740}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="yo mero sabor ranchero"/>
+    <ROW Property="ProductCode" Value="1033:{A37A435E-000A-4BCA-A035-48E5B1288E7F} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Expressoft"/>
+    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{B87015AC-B7B5-488B-BE5C-9677FDF8062C}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="Expressoft_Dir" Directory_Parent="ProgramFilesFolder" DefaultDir="EXPRES~1|Expressoft"/>
+    <ROW Directory="ProgramFilesFolder" Directory_Parent="TARGETDIR" DefaultDir="PROGRA~1|ProgramFilesFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="APPDIR" ComponentId="{8F2667C6-C204-4090-AA9E-F0D17857E07E}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ProductInformation" ComponentId="{EA3CC9B1-DB3A-4F11-A013-E627DE26BCB9}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{4A74B2B2-099E-40E1-929F-072A6E607748}" Directory_="SHORTCUTDIR" Attributes="0"/>
+    <ROW Component="VCRUNTIME140.dll" ComponentId="{67E52AA5-F8D9-440A-A4BA-BDFAEE6AC37F}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="VCRUNTIME140.dll"/>
+    <ROW Component="VCRUNTIME140_1.dll" ComponentId="{F1D9EB4F-B866-428F-B62A-B70639F5C5C9}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="VCRUNTIME140_1.dll"/>
+    <ROW Component="_asyncio.pyd" ComponentId="{BAEB0A79-7790-489F-9EB1-4DE8DFB53E16}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="_asyncio.pyd" Type="0"/>
+    <ROW Component="apimswincoreconsolel110.dll" ComponentId="{D1A0EFEF-A9E5-4A4E-848C-FD68E1F1FAF0}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreconsolel110.dll"/>
+    <ROW Component="apimswincoredatetimel110.dll" ComponentId="{14622620-DC76-4191-823F-3597D427E877}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoredatetimel110.dll"/>
+    <ROW Component="apimswincoredebugl110.dll" ComponentId="{2A4D40F5-9BBF-4918-A6C2-06429FFF03B8}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoredebugl110.dll"/>
+    <ROW Component="apimswincoreerrorhandlingl110.dll" ComponentId="{103D69A6-5A06-420B-A875-12AA10B20ABC}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreerrorhandlingl110.dll"/>
+    <ROW Component="apimswincorefilel110.dll" ComponentId="{565903E5-9631-4AB1-A643-53B580D9E6A3}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorefilel110.dll"/>
+    <ROW Component="apimswincorefilel120.dll" ComponentId="{9DFCFA18-B6B8-41F1-9E6D-97C32F68127C}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorefilel120.dll"/>
+    <ROW Component="apimswincorefilel210.dll" ComponentId="{431C05D5-E34A-498F-B02E-CCDF22B1A938}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorefilel210.dll"/>
+    <ROW Component="apimswincorehandlel110.dll" ComponentId="{CD88A4A7-EFA8-445C-8D6F-C51F1A50AF1B}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorehandlel110.dll"/>
+    <ROW Component="apimswincoreheapl110.dll" ComponentId="{810DC7B1-5F84-4F1A-8AE6-781377C7FA39}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreheapl110.dll"/>
+    <ROW Component="apimswincoreinterlockedl110.dll" ComponentId="{63A77F75-0E70-4F98-93FD-574A41577100}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreinterlockedl110.dll"/>
+    <ROW Component="apimswincorelibraryloaderl110.dll" ComponentId="{F4AD4F71-6126-424A-BB82-8F5275CF28F8}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorelibraryloaderl110.dll"/>
+    <ROW Component="apimswincorelocalizationl120.dll" ComponentId="{68799EDC-F001-4F79-85EB-1432153DF039}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorelocalizationl120.dll"/>
+    <ROW Component="apimswincorememoryl110.dll" ComponentId="{FBE17F12-72E5-4C75-9697-62B1DF4E50F7}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorememoryl110.dll"/>
+    <ROW Component="apimswincorenamedpipel110.dll" ComponentId="{22E048D2-3E4C-4B50-8D6A-B95CE692EF4B}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorenamedpipel110.dll"/>
+    <ROW Component="apimswincoreprocessenvironmentl110.dll" ComponentId="{E4BDD888-6151-4284-9FD9-98D1B958F6C9}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreprocessenvironmentl110.dll"/>
+    <ROW Component="apimswincoreprocessthreadsl110.dll" ComponentId="{8293558C-7113-43DE-A406-6EE100D62D58}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreprocessthreadsl110.dll"/>
+    <ROW Component="apimswincoreprocessthreadsl111.dll" ComponentId="{E0C9EF42-B0A6-489C-BC20-7C9C4B30B2E1}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreprocessthreadsl111.dll"/>
+    <ROW Component="apimswincoreprofilel110.dll" ComponentId="{0D84F8BB-F237-48D7-A029-6F1CE4FF65FD}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreprofilel110.dll"/>
+    <ROW Component="apimswincorertlsupportl110.dll" ComponentId="{77B7C8FB-9E1B-4C07-BA49-1662D8B92A29}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorertlsupportl110.dll"/>
+    <ROW Component="apimswincorestringl110.dll" ComponentId="{7859B431-2AAE-42F2-8B73-9F732C6B5B81}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincorestringl110.dll"/>
+    <ROW Component="apimswincoresynchl110.dll" ComponentId="{D764CEC2-B72F-401E-A9CE-D36816A7BF5B}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoresynchl110.dll"/>
+    <ROW Component="apimswincoresynchl120.dll" ComponentId="{D90592EA-76D0-4C9E-8FB6-C218B33F3DC1}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoresynchl120.dll"/>
+    <ROW Component="apimswincoresysinfol110.dll" ComponentId="{648BBE5C-9A35-4C57-A1C0-98C089A20FC4}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoresysinfol110.dll"/>
+    <ROW Component="apimswincoretimezonel110.dll" ComponentId="{0931438F-D509-48FE-8093-8587D69032CD}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoretimezonel110.dll"/>
+    <ROW Component="apimswincoreutill110.dll" ComponentId="{B72E81D3-A035-445F-B5D6-D39F73F71807}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincoreutill110.dll"/>
+    <ROW Component="apimswincrtconiol110.dll" ComponentId="{9E8054B3-4FC1-4814-BB63-86C605406913}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtconiol110.dll"/>
+    <ROW Component="apimswincrtconvertl110.dll" ComponentId="{E1AD4A96-A675-4A5A-BC6C-CAFC99F1F697}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtconvertl110.dll"/>
+    <ROW Component="apimswincrtenvironmentl110.dll" ComponentId="{D15D01D1-320D-4E94-9C92-5707F3D22CDE}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtenvironmentl110.dll"/>
+    <ROW Component="apimswincrtfilesysteml110.dll" ComponentId="{CBA07F50-43CE-4532-9DEB-51B386254B8D}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtfilesysteml110.dll"/>
+    <ROW Component="apimswincrtheapl110.dll" ComponentId="{87059C3E-497C-478F-A335-E13E5CD6E199}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtheapl110.dll"/>
+    <ROW Component="apimswincrtlocalel110.dll" ComponentId="{CB9F31E2-A0C9-424B-A38D-9C8E2F448CEB}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtlocalel110.dll"/>
+    <ROW Component="apimswincrtmathl110.dll" ComponentId="{48521A52-6539-451D-A951-5BA199BEB651}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtmathl110.dll"/>
+    <ROW Component="apimswincrtprocessl110.dll" ComponentId="{47014A24-06A2-4D72-9352-18C7FE5F0ADF}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtprocessl110.dll"/>
+    <ROW Component="apimswincrtruntimel110.dll" ComponentId="{5BA4E4A4-7AAA-44EA-A152-1229161C71D5}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtruntimel110.dll"/>
+    <ROW Component="apimswincrtstdiol110.dll" ComponentId="{71027CA8-E0FE-44DC-8136-F1424AA24A51}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtstdiol110.dll"/>
+    <ROW Component="apimswincrtstringl110.dll" ComponentId="{34E19602-00FC-40C4-AC85-AA7B4FDB944D}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtstringl110.dll"/>
+    <ROW Component="apimswincrttimel110.dll" ComponentId="{537FC143-62B7-46FC-9AA5-5FF6E2F993F2}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrttimel110.dll"/>
+    <ROW Component="apimswincrtutilityl110.dll" ComponentId="{002C0D45-721F-43A8-BFD8-5BA799EE6B1E}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="apimswincrtutilityl110.dll"/>
+    <ROW Component="app.exe" ComponentId="{2F3854A9-FFA2-4B05-B90E-CE28B7344C74}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="app.exe"/>
+    <ROW Component="libcrypto1_1.dll" ComponentId="{2B83F418-C307-4E35-9309-1E3800CD6654}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libcrypto1_1.dll"/>
+    <ROW Component="libcrypto1_1x64.dll" ComponentId="{8D5E6773-B22E-415E-B3B8-B823EC24BAF2}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libcrypto1_1x64.dll"/>
+    <ROW Component="libffi7.dll" ComponentId="{817E24DA-7A93-4879-AD8F-BB1466BEF883}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libffi7.dll"/>
+    <ROW Component="libmysql.dll" ComponentId="{498F2B5F-3D99-4835-82B8-D6560D898F65}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libmysql.dll"/>
+    <ROW Component="libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortranwin_amd64.dll" ComponentId="{38061BD1-8FD3-4ADF-A368-30EC413F0AD8}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortranwin_amd64.dll"/>
+    <ROW Component="libssl1_1.dll" ComponentId="{DA92D385-0C48-42E2-ADD5-D213C82E0240}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libssl1_1.dll"/>
+    <ROW Component="libssl1_1x64.dll" ComponentId="{062B2E71-D287-4363-A56B-4F74629BE4D0}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="libssl1_1x64.dll"/>
+    <ROW Component="python3.dll" ComponentId="{D4E6A626-988A-4951-8680-8FDD43413E47}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="python3.dll"/>
+    <ROW Component="python39.dll" ComponentId="{C3F58806-DBFA-48F5-80FD-15CC362C93A4}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="python39.dll"/>
+    <ROW Component="ucrtbase.dll" ComponentId="{C19DA135-2821-41CB-980A-A87860B04C0F}" Directory_="Expressoft_Dir" Attributes="256" KeyPath="ucrtbase.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="_asyncio.pyd" Component_="_asyncio.pyd" FileName="_asyncio.pyd" Attributes="0" SourcePath="app\_asyncio.pyd" SelfReg="false"/>
+    <ROW File="_bz2.pyd" Component_="_asyncio.pyd" FileName="_bz2.pyd" Attributes="0" SourcePath="app\_bz2.pyd" SelfReg="false"/>
+    <ROW File="_ctypes.pyd" Component_="_asyncio.pyd" FileName="_ctypes.pyd" Attributes="0" SourcePath="app\_ctypes.pyd" SelfReg="false"/>
+    <ROW File="_decimal.pyd" Component_="_asyncio.pyd" FileName="_decimal.pyd" Attributes="0" SourcePath="app\_decimal.pyd" SelfReg="false"/>
+    <ROW File="_elementtree.pyd" Component_="_asyncio.pyd" FileName="_ELEME~1.PYD|_elementtree.pyd" Attributes="0" SourcePath="app\_elementtree.pyd" SelfReg="false"/>
+    <ROW File="_hashlib.pyd" Component_="_asyncio.pyd" FileName="_hashlib.pyd" Attributes="0" SourcePath="app\_hashlib.pyd" SelfReg="false"/>
+    <ROW File="_lzma.pyd" Component_="_asyncio.pyd" FileName="_lzma.pyd" Attributes="0" SourcePath="app\_lzma.pyd" SelfReg="false"/>
+    <ROW File="_multiprocessing.pyd" Component_="_asyncio.pyd" FileName="_MULTI~1.PYD|_multiprocessing.pyd" Attributes="0" SourcePath="app\_multiprocessing.pyd" SelfReg="false"/>
+    <ROW File="_mysql_connector.cp39win_amd64.pyd" Component_="_asyncio.pyd" FileName="_MYSQL~1.PYD|_mysql_connector.cp39-win_amd64.pyd" Attributes="0" SourcePath="app\_mysql_connector.cp39-win_amd64.pyd" SelfReg="false"/>
+    <ROW File="_overlapped.pyd" Component_="_asyncio.pyd" FileName="_OVERL~1.PYD|_overlapped.pyd" Attributes="0" SourcePath="app\_overlapped.pyd" SelfReg="false"/>
+    <ROW File="_queue.pyd" Component_="_asyncio.pyd" FileName="_queue.pyd" Attributes="0" SourcePath="app\_queue.pyd" SelfReg="false"/>
+    <ROW File="_socket.pyd" Component_="_asyncio.pyd" FileName="_socket.pyd" Attributes="0" SourcePath="app\_socket.pyd" SelfReg="false"/>
+    <ROW File="_ssl.pyd" Component_="_asyncio.pyd" FileName="_ssl.pyd" Attributes="0" SourcePath="app\_ssl.pyd" SelfReg="false"/>
+    <ROW File="_uuid.pyd" Component_="_asyncio.pyd" FileName="_uuid.pyd" Attributes="0" SourcePath="app\_uuid.pyd" SelfReg="false"/>
+    <ROW File="apimswincoreconsolel110.dll" Component_="apimswincoreconsolel110.dll" FileName="API-MS~1.DLL|api-ms-win-core-console-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-console-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoredatetimel110.dll" Component_="apimswincoredatetimel110.dll" FileName="API-MS~2.DLL|api-ms-win-core-datetime-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-datetime-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoredebugl110.dll" Component_="apimswincoredebugl110.dll" FileName="API-MS~3.DLL|api-ms-win-core-debug-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-debug-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreerrorhandlingl110.dll" Component_="apimswincoreerrorhandlingl110.dll" FileName="API-MS~4.DLL|api-ms-win-core-errorhandling-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-errorhandling-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorefilel110.dll" Component_="apimswincorefilel110.dll" FileName="API-MS~5.DLL|api-ms-win-core-file-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-file-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorefilel120.dll" Component_="apimswincorefilel120.dll" FileName="API-MS~6.DLL|api-ms-win-core-file-l1-2-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-file-l1-2-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorefilel210.dll" Component_="apimswincorefilel210.dll" FileName="API-MS~7.DLL|api-ms-win-core-file-l2-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-file-l2-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorehandlel110.dll" Component_="apimswincorehandlel110.dll" FileName="API-MS~8.DLL|api-ms-win-core-handle-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-handle-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreheapl110.dll" Component_="apimswincoreheapl110.dll" FileName="API-MS~9.DLL|api-ms-win-core-heap-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-heap-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreinterlockedl110.dll" Component_="apimswincoreinterlockedl110.dll" FileName="API-M~10.DLL|api-ms-win-core-interlocked-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-interlocked-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorelibraryloaderl110.dll" Component_="apimswincorelibraryloaderl110.dll" FileName="API-M~11.DLL|api-ms-win-core-libraryloader-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-libraryloader-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorelocalizationl120.dll" Component_="apimswincorelocalizationl120.dll" FileName="API-M~12.DLL|api-ms-win-core-localization-l1-2-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-localization-l1-2-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorememoryl110.dll" Component_="apimswincorememoryl110.dll" FileName="API-M~13.DLL|api-ms-win-core-memory-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-memory-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorenamedpipel110.dll" Component_="apimswincorenamedpipel110.dll" FileName="API-M~14.DLL|api-ms-win-core-namedpipe-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-namedpipe-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreprocessenvironmentl110.dll" Component_="apimswincoreprocessenvironmentl110.dll" FileName="API-M~15.DLL|api-ms-win-core-processenvironment-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-processenvironment-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreprocessthreadsl110.dll" Component_="apimswincoreprocessthreadsl110.dll" FileName="API-M~16.DLL|api-ms-win-core-processthreads-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-processthreads-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreprocessthreadsl111.dll" Component_="apimswincoreprocessthreadsl111.dll" FileName="API-M~17.DLL|api-ms-win-core-processthreads-l1-1-1.dll" Attributes="0" SourcePath="app\api-ms-win-core-processthreads-l1-1-1.dll" SelfReg="false"/>
+    <ROW File="apimswincoreprofilel110.dll" Component_="apimswincoreprofilel110.dll" FileName="API-M~18.DLL|api-ms-win-core-profile-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-profile-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorertlsupportl110.dll" Component_="apimswincorertlsupportl110.dll" FileName="API-M~19.DLL|api-ms-win-core-rtlsupport-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-rtlsupport-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincorestringl110.dll" Component_="apimswincorestringl110.dll" FileName="API-M~20.DLL|api-ms-win-core-string-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-string-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoresynchl110.dll" Component_="apimswincoresynchl110.dll" FileName="API-M~21.DLL|api-ms-win-core-synch-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-synch-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoresynchl120.dll" Component_="apimswincoresynchl120.dll" FileName="API-M~22.DLL|api-ms-win-core-synch-l1-2-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-synch-l1-2-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoresysinfol110.dll" Component_="apimswincoresysinfol110.dll" FileName="API-M~23.DLL|api-ms-win-core-sysinfo-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-sysinfo-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoretimezonel110.dll" Component_="apimswincoretimezonel110.dll" FileName="API-M~24.DLL|api-ms-win-core-timezone-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-timezone-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincoreutill110.dll" Component_="apimswincoreutill110.dll" FileName="API-M~25.DLL|api-ms-win-core-util-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-core-util-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtconiol110.dll" Component_="apimswincrtconiol110.dll" FileName="API-M~26.DLL|api-ms-win-crt-conio-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-conio-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtconvertl110.dll" Component_="apimswincrtconvertl110.dll" FileName="API-M~27.DLL|api-ms-win-crt-convert-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-convert-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtenvironmentl110.dll" Component_="apimswincrtenvironmentl110.dll" FileName="API-M~28.DLL|api-ms-win-crt-environment-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-environment-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtfilesysteml110.dll" Component_="apimswincrtfilesysteml110.dll" FileName="API-M~29.DLL|api-ms-win-crt-filesystem-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-filesystem-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtheapl110.dll" Component_="apimswincrtheapl110.dll" FileName="API-M~30.DLL|api-ms-win-crt-heap-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-heap-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtlocalel110.dll" Component_="apimswincrtlocalel110.dll" FileName="API-M~31.DLL|api-ms-win-crt-locale-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-locale-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtmathl110.dll" Component_="apimswincrtmathl110.dll" FileName="API-M~32.DLL|api-ms-win-crt-math-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-math-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtprocessl110.dll" Component_="apimswincrtprocessl110.dll" FileName="API-M~33.DLL|api-ms-win-crt-process-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-process-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtruntimel110.dll" Component_="apimswincrtruntimel110.dll" FileName="API-M~34.DLL|api-ms-win-crt-runtime-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-runtime-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtstdiol110.dll" Component_="apimswincrtstdiol110.dll" FileName="API-M~35.DLL|api-ms-win-crt-stdio-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-stdio-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtstringl110.dll" Component_="apimswincrtstringl110.dll" FileName="API-M~36.DLL|api-ms-win-crt-string-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-string-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrttimel110.dll" Component_="apimswincrttimel110.dll" FileName="API-M~37.DLL|api-ms-win-crt-time-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-time-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="apimswincrtutilityl110.dll" Component_="apimswincrtutilityl110.dll" FileName="API-M~38.DLL|api-ms-win-crt-utility-l1-1-0.dll" Attributes="0" SourcePath="app\api-ms-win-crt-utility-l1-1-0.dll" SelfReg="false"/>
+    <ROW File="app.exe" Component_="app.exe" FileName="app.exe" Attributes="0" SourcePath="app\app.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="base_library.zip" Component_="_asyncio.pyd" FileName="BASE_L~1.ZIP|base_library.zip" Attributes="0" SourcePath="app\base_library.zip" SelfReg="false"/>
+    <ROW File="libcrypto1_1.dll" Component_="libcrypto1_1.dll" FileName="LIBCRY~1.DLL|libcrypto-1_1.dll" Attributes="0" SourcePath="app\libcrypto-1_1.dll" SelfReg="false"/>
+    <ROW File="libcrypto1_1x64.dll" Component_="libcrypto1_1x64.dll" FileName="LIBCRY~2.DLL|libcrypto-1_1-x64.dll" Attributes="0" SourcePath="app\libcrypto-1_1-x64.dll" SelfReg="false"/>
+    <ROW File="libffi7.dll" Component_="libffi7.dll" FileName="libffi-7.dll" Attributes="0" SourcePath="app\libffi-7.dll" SelfReg="false"/>
+    <ROW File="libmysql.dll" Component_="libmysql.dll" FileName="libmysql.dll" Attributes="0" SourcePath="app\libmysql.dll" SelfReg="false"/>
+    <ROW File="libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortranwin_amd64.dll" Component_="libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortranwin_amd64.dll" FileName="LIBOPE~1.DLL|libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortran-win_amd64.dll" Attributes="0" SourcePath="app\libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortran-win_amd64.dll" SelfReg="false"/>
+    <ROW File="libssl1_1.dll" Component_="libssl1_1.dll" FileName="LIBSSL~1.DLL|libssl-1_1.dll" Attributes="0" SourcePath="app\libssl-1_1.dll" SelfReg="false"/>
+    <ROW File="libssl1_1x64.dll" Component_="libssl1_1x64.dll" FileName="LIBSSL~2.DLL|libssl-1_1-x64.dll" Attributes="0" SourcePath="app\libssl-1_1-x64.dll" SelfReg="false"/>
+    <ROW File="pyexpat.pyd" Component_="_asyncio.pyd" FileName="pyexpat.pyd" Attributes="0" SourcePath="app\pyexpat.pyd" SelfReg="false"/>
+    <ROW File="python3.dll" Component_="python3.dll" FileName="python3.dll" Attributes="0" SourcePath="app\python3.dll" SelfReg="false"/>
+    <ROW File="python39.dll" Component_="python39.dll" FileName="python39.dll" Attributes="0" SourcePath="app\python39.dll" SelfReg="false"/>
+    <ROW File="select.pyd" Component_="_asyncio.pyd" FileName="select.pyd" Attributes="0" SourcePath="app\select.pyd" SelfReg="false"/>
+    <ROW File="ucrtbase.dll" Component_="ucrtbase.dll" FileName="ucrtbase.dll" Attributes="0" SourcePath="app\ucrtbase.dll" SelfReg="false"/>
+    <ROW File="unicodedata.pyd" Component_="_asyncio.pyd" FileName="UNICOD~1.PYD|unicodedata.pyd" Attributes="0" SourcePath="app\unicodedata.pyd" SelfReg="false"/>
+    <ROW File="VCRUNTIME140.dll" Component_="VCRUNTIME140.dll" FileName="VCRUNT~1.DLL|VCRUNTIME140.dll" Attributes="0" SourcePath="app\VCRUNTIME140.dll" SelfReg="false"/>
+    <ROW File="VCRUNTIME140_1.dll" Component_="VCRUNTIME140_1.dll" FileName="VCRUNT~2.DLL|VCRUNTIME140_1.dll" Attributes="0" SourcePath="app\VCRUNTIME140_1.dll" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" PackageFolder="." PackageFileName="Expressoft" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="_asyncio.pyd"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreconsolel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoredatetimel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoredebugl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreerrorhandlingl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorefilel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorefilel120.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorefilel210.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorehandlel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreheapl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreinterlockedl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorelibraryloaderl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorelocalizationl120.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorememoryl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorenamedpipel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreprocessenvironmentl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreprocessthreadsl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreprocessthreadsl111.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreprofilel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorertlsupportl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincorestringl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoresynchl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoresynchl120.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoresysinfol110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoretimezonel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincoreutill110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtconiol110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtconvertl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtenvironmentl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtfilesysteml110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtheapl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtlocalel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtmathl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtprocessl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtruntimel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtstdiol110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtstringl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrttimel110.dll"/>
+    <ROW Feature_="MainFeature" Component_="apimswincrtutilityl110.dll"/>
+    <ROW Feature_="MainFeature" Component_="app.exe"/>
+    <ROW Feature_="MainFeature" Component_="libcrypto1_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="libcrypto1_1x64.dll"/>
+    <ROW Feature_="MainFeature" Component_="libffi7.dll"/>
+    <ROW Feature_="MainFeature" Component_="libmysql.dll"/>
+    <ROW Feature_="MainFeature" Component_="libopenblas.EL2C6PLE4ZYW3ECEVIV3OXXGRN2NRFM2.gfortranwin_amd64.dll"/>
+    <ROW Feature_="MainFeature" Component_="libssl1_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="libssl1_1x64.dll"/>
+    <ROW Feature_="MainFeature" Component_="python3.dll"/>
+    <ROW Feature_="MainFeature" Component_="python39.dll"/>
+    <ROW Feature_="MainFeature" Component_="ucrtbase.dll"/>
+    <ROW Feature_="MainFeature" Component_="VCRUNTIME140.dll"/>
+    <ROW Feature_="MainFeature" Component_="VCRUNTIME140_1.dll"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="Expressoft" Directory_="SHORTCUTDIR" Name="EXPRES~1|Expressoft" Component_="app.exe" Target="[#app.exe]" Description="Opens the Expressoft app" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="Expressoft_Dir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
