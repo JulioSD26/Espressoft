@@ -1,7 +1,19 @@
 from mysql.connector import connect,Error
 import pandas as pd
 
+"""
+Para que el archivo de ventas se importe correctamente es necesario que cumpla con las siguientes caracteristicas:
+- La hoja en que se encuentra la información debe de llamarse "Hoja1" 
+- En el primer renglon se debe de indicar los nombres de las columnas   "venta_id", "total", "fecha", "hora", "empleado_id" sin espacios y en minusculas
+- Debe cuidar que los datos de cada renglon cumplan con lo siguiente:
+* "venta_id" -> Solo puede tener datos que sean números
+* "total" -> Solo puede tener datos que sean números
+* "fecha" -> Debe de tener formato de fecha dado por excel o bien puede estar escrito de la siguiente manera "año-mes-dia". Por ejemplo: "2015-01-29"
+* "hora" -> Debe de tener formato de hora dado por excel o bien puede estar escrito de la siguiente manera "hora:minutos" en formato de 24 horas. Por ejemplo: "16:40"
+* "empleado_id" -> Solo puede tener datos que sean números 
+Si algún renglon no cuenta con este formato, se le notificará el número de renglón y el archivo no se importará.
 
+"""
 
 def crear_conexion():
     try:
@@ -44,10 +56,45 @@ def insertar_datos_en_tabla_empleados(hoja):
             
     conn.commit()
     conn.close()
+
+def insertar_datos_en_tabla_venta(hoja):
+    lista_venta_id = hoja['venta_id']
+    lista_total = hoja['total']
+    lista_fecha = hoja['fecha']
+    lista_hora = hoja['hora']
+    lista_empleado_id = hoja['empleado_id']
+    try:
+        conn = crear_conexion()
+        cursor = conn.cursor()
+    except Error as err:
+        print('Imposible conectar a la base de datos: {}'.format(err))
+
+    renglon = 2
+    for (venta_id, total, fecha, hora, empleado_id) in zip(lista_venta_id, lista_total, lista_fecha, lista_hora, lista_empleado_id):
+        
+        try:
+            cursor.execute(
+                "INSERT INTO venta (venta_id, total, fecha, hora, empleado_id) VALUES (%s,%s,%s,%s,%s)",
+                (venta_id, total, fecha, hora, empleado_id))
+        except Error as err:
+            print('Algo salio mal: {}'.format(err))
+            print('Hay un dato en el renglon {} con formato diferente al solicitado'.format(renglon))
+            break
+        renglon += 1
+            
+    conn.commit()
+    conn.close()
        
 if __name__=='__main__':
-    hoja = leer_excel('Espressoft-master/documentos_excel/empleados/empleado.xlsx')
-    print(hoja)
+    #El metodo recibe la ruta del archivo y devuelve un diccionario de listas en donde la llave es la columna
+    # y la lista contiene los datos de esa columna
+    hoja_ventas_2021 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2021.xlsx')
+    hoja_ventas_2022 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2022.xlsx')
+    #print(hoja_ventas_2021)
+    #Se inserta los datos del archivo a la base de datos a la que se haya hecho conexion
+    insertar_datos_en_tabla_venta(hoja_ventas_2021)
+    insertar_datos_en_tabla_venta(hoja_ventas_2022)
+
     #insertar_datos_en_tabla_empleados(hoja)
 
 
