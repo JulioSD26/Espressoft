@@ -9,6 +9,8 @@ from controlador_grafica_ventas import *
 from controlador_base_datos import *
 import empleados
 import datetime
+from PyQt5.QtWidgets import QFileDialog, QMessageBox
+from pathlib import Path  
 
 # se crea una clase que representa a la ventana principal, la cual hereda de la clase general del widget QMainWindows
 # y tambien hereda de la clase que se genera automaticamente para la ui de la ventana principal (MainWindows)
@@ -81,6 +83,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # al presionar el boton busca empleados, se manda a llamar al metodo buscar_empleados() que busca en la tabla de empleados
         self.boton_buscar_empleados.clicked.connect(lambda: buscar_empleados(self.tabla_empleados, self.campo_nombre_empleado_empleados.text()))
 
+        self.boton_importar_datos.clicked.connect(lambda: self.agregar_quitar_borde_izquierdo_boton(self.boton_importar_datos, True))
+
         # el boton para cerrar la aplicacion
         self.boton_cerrar.clicked.connect(self.cerrar)
 
@@ -94,7 +98,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.agregar_evento_estilizar_seleccion_a_botones_desplegados(botones_desplegados_individuales)
 
         # esta lista va a ser util para saber que botones pueden tener un borde izquierdo al ser presionados ellos o alguno de sus botones desplegados hijos
-        self.botones_con_posible_borde_izquierdo = [self.boton_ventas_totales, self.boton_ventas_individuales, self.boton_empleados]
+        self.botones_con_posible_borde_izquierdo = [self.boton_ventas_totales, self.boton_ventas_individuales, self.boton_empleados, self.boton_importar_datos]
         # a los botones de esta lista ya se les habia agregado un evento, sin embargo es posible agregar mas de un evento
         # a los botones, en este caso se les va a agregar el evento de quitar negritas a los botones desplegados hijos, cuando
         # sean presionados
@@ -122,7 +126,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.boton_ventas_individuales_diarias: self.pagina_ventas_individuales_diarias,
             self.boton_ventas_individuales_mensuales: self.pagina_ventas_individuales_mensuales,
             self.boton_ventas_individuales_anuales: self.pagina_ventas_individuales_anuales,
-            self.boton_empleados: self.pagina_empleados
+            self.boton_empleados: self.pagina_empleados,
+            self.boton_importar_datos: self.pagina_importar_datos
         }
         
         # a los botones de opciones que eran las llaves del diccionario relacion_botones_opciones_y_su_pagina_correspondiente,
@@ -136,6 +141,16 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
 
         self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
+
+
+        # Botones para la funcionalidad de importar datos desde Excel
+        # Ambos compartiran el mismo "evento"
+
+        self.boton_seleccionar_archivo_empleados.clicked.connect(self.seleccionar_archivo)
+
+        self.boton_seleccionar_archivo_ventas.clicked.connect(self.seleccionar_archivo)
+
+        self.boton_subir_archivos.clicked.connect(self.subir_archivos)
 
 
         """
@@ -353,7 +368,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.label_tipo_usuario_ventas_individuales_diarias,
             self.label_tipo_usuario_ventas_individuales_mensuales,
             self.label_tipo_usuario_ventas_individuales_anuales,
-            self.label_tipo_usuario_empleados
+            self.label_tipo_usuario_empleados,
+            self.label_tipo_usuario_importar_datos
             ]
         
         # se obtiene al tipo de empleado loggeado, primero obteniendo al objeto empleado, luego su atributo tipo_empleado
@@ -376,6 +392,82 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             # le pone como fecha maxima, el dia actual
             selector.setMaximumDate(datetime.datetime.now())
 
+
+
+    def seleccionar_archivo(self):
+        """
+        Evento para los botones de seleccion de archivo en importar datos, al presionarlos abre una ventana donde pueden seleccionar los archivos de tipo Excel.
+        """
+        # se obtiene el nombre del boton de seleccion de archivos presionado, que en este caso solo podrian ser
+        # boton_seleccionar_archivo_empleados y boton_seleccionar_archivo_ventas
+        nombre_boton_seleccion_archivos_presionado = self.sender().objectName()
+        # se checa cual de los 2 fue presionado, porque ambos tienen vinculado este mismo evento
+        if nombre_boton_seleccion_archivos_presionado == "boton_seleccionar_archivo_empleados":
+            # se asigna un nombre a la ventana que se abrira para seleccionar el archivo
+            nombre_ventana_seleccion_archivo = "Seleccionar archivo de empleados"
+        else:
+            nombre_ventana_seleccion_archivo = "Seleccionar archivo de ventas"
+        # se instancia un objeto QFileDialog con un metodo estatico de abrir un archivo, 
+        # como parametros se le dan el widget padre que en este caso seria MainWindow, luego el nombre que aparece
+        # en la ventana de seleccion de archivo, luego la ruta en la que se empieza por defecto (en este caso esta vacia)
+        # para que la tome automaticamente, por que si se le pone C:// por ejemplo, podria ser que la aplicacion se use
+        # en otro sistema operativo a windows o en algun disco duro que se llame diferente, ...
+        ## el tercer parametro es el filtro de los archivos que se pueden seleccionar, en este caso solo los que sean de tipo excel .xlsx
+        archivo_seleccionado = QFileDialog.getOpenFileName(self, nombre_ventana_seleccion_archivo, "", "Archivos Excel (*.xlsx)")
+        # al aceptar o darle en cancelar en la ventana de seleccion de archivo, se obtiene una tupla, si se le dio aceptar con un archivo,
+        # se obtiene la ruta absoluta del archivo como primer elemento de la tupla y como segundo elemento se obtiene la extension del archivo, 
+        # en este caso "Archivos Excel (*.xlsx)".
+        # Si se le dio cancelar y no se se selecciono un archivo, se obtiene una tupla vacia
+        print(archivo_seleccionado)
+        # se usa la libreria de pathlib y su modulo Path para encargarse de obtener solo el nombre del archivo, para que se muestre como texto
+        # en los botones de seleccion de archivo, se usa esta, porque parece que es la que es mas confiable en el sentido, 
+        # de que es multiplataforma y sirve para distintos sistemas operativos, por lo que se supone que no habria problema
+        # si el sistema corriera en Linux o Windows, donde sus rutas varian mucho como el uso de "//".
+        # la libreria os parece que esta mas centrada a Windows y con Linux hay problemas en esta parte.
+        # De la tupla, se obtiene el primer elemento que es su ruta absoluta y con Path se obtiene solo el nombre del archivo
+        print(Path(archivo_seleccionado[0]).name)
+        # al boton que se presiono para seleccionar el archivo, se le pone como texto el nombre del archivo
+        self.sender().setText(Path(archivo_seleccionado[0]).name)
+        # tambien se le pone un tooltip para que al poner el mouse sobre el boton como un hover, se vea la ruta absoluta en un pequenio recuadro, por si no llega a caber
+        # esto tambien tiene el proposito de tener guardada tambien la ruta absoluta, para luego usarla en subir_archivos()
+        self.sender().setToolTip(archivo_seleccionado[0])
+
+
+    def subir_archivos(self):
+        """
+        Suber los archivos seleccionados de empleados y ventas, importando los datos del Excel a la base de datos.
+        """
+
+        """
+        Esto es un borrador para ver como funcionaban los messagebox, tendria que ser cambiado
+        """
+
+        # de los tooltips de los botones de seleccionde archivo se obtienen las rutas absolutas de los archivos seleccionados
+        ruta_absoluta_archivo_empleados = self.boton_seleccionar_archivo_empleados.toolTip()
+        ruta_absoluta_archivo_ventas = self.boton_seleccionar_archivo_ventas.toolTip()
+
+        # esta variable va a a contener el texto que se muestre en el mensaje
+        texto_dialogo = ""
+        # se checa si no se selecciono ningun archivo, viendo si las rutas absolutas de los tooltips de los botones son vacias
+        if ruta_absoluta_archivo_empleados == "" and ruta_absoluta_archivo_ventas == "":
+            texto_dialogo = "Selecciona un archivo por lo menos, por favor"
+        else:
+            # si alguno o ambos archivos se seleccionaron
+            if ruta_absoluta_archivo_empleados != "":
+                texto_dialogo += f"Subiste el archivo: {ruta_absoluta_archivo_empleados} \n"
+            if ruta_absoluta_archivo_ventas != "":
+                texto_dialogo += f"Subiste el archivo: {ruta_absoluta_archivo_ventas} \n"
+
+        # guia en https://www.pythonguis.com/tutorials/pyqt6-dialogs/
+        mensaje = QMessageBox(self)
+        mensaje.setWindowTitle("Archivos subidos")
+        mensaje.setText(texto_dialogo)
+        boton = mensaje.exec()
+        # cuando se presiona el boton Ok en el mensaje
+        if boton == QMessageBox.StandardButton.Ok:
+            print("OK!")
+
+        
 
 
     

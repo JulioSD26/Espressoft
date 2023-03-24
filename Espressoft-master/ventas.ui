@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1335</width>
+    <width>1339</width>
     <height>900</height>
    </rect>
   </property>
@@ -66,7 +66,7 @@
        <property name="leftMargin">
         <number>0</number>
        </property>
-       <item alignment="Qt::AlignHCenter">
+       <item>
         <widget class="QLabel" name="logo_cafe_indigo">
          <property name="minimumSize">
           <size>
@@ -595,6 +595,66 @@
         </spacer>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_40">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="boton_importar_datos">
+           <property name="layoutDirection">
+            <enum>Qt::RightToLeft</enum>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+	color: rgb(255, 255, 255);
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	border: none;
+	padding: 10px;
+}</string>
+           </property>
+           <property name="text">
+            <string>Importar datos</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_18">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_15">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <property name="leftMargin">
           <number>0</number>
@@ -686,7 +746,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>7</number>
+          <number>8</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -1379,7 +1439,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -1399,7 +1459,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -1419,7 +1479,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -2192,7 +2252,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -2212,7 +2272,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -2232,7 +2292,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -2905,7 +2965,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -2925,7 +2985,7 @@ border-radius: 15px;</string>
                    <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -4089,7 +4149,7 @@ border-radius: 15px;</string>
                      <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -4109,7 +4169,7 @@ border-radius: 15px;</string>
                      <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -5198,7 +5258,7 @@ border-radius: 15px;</string>
                      <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -5218,7 +5278,7 @@ border-radius: 15px;</string>
                      <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -6531,7 +6591,7 @@ border-radius: 15px;</string>
                      <string notr="true">QLabel {
 	color: #416BBF;	
 	font-family: 'Montserrat';
-	fo	nt-style: normal;
+	font-style: normal;
 	font-weight: 800;
 	font-size: 20px;
 	text-align: center;
@@ -7783,6 +7843,468 @@ QTableWidget {
               </widget>
              </item>
             </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pagina_importar_datos">
+          <layout class="QVBoxLayout" name="verticalLayout_66">
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QFrame" name="frame_8">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_67">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QScrollArea" name="scrollArea">
+                <property name="styleSheet">
+                 <string notr="true">border: none;</string>
+                </property>
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>1035</width>
+                   <height>896</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_82">
+                  <property name="spacing">
+                   <number>6</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>0</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>0</number>
+                  </property>
+                  <item>
+                   <widget class="QFrame" name="frame_75">
+                    <property name="frameShape">
+                     <enum>QFrame::StyledPanel</enum>
+                    </property>
+                    <property name="frameShadow">
+                     <enum>QFrame::Raised</enum>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_83">
+                     <property name="leftMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="topMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="rightMargin">
+                      <number>0</number>
+                     </property>
+                     <property name="bottomMargin">
+                      <number>0</number>
+                     </property>
+                     <item>
+                      <widget class="QWidget" name="widget_6" native="true">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>70</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>70</height>
+                        </size>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_79">
+                        <item>
+                         <widget class="QLabel" name="label_tipo_usuario_importar_datos">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: rgb(255, 255, 255);
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 22px;
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>TIPO DE USUARIO</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QFrame" name="frame_29">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>3</height>
+                           </size>
+                          </property>
+                          <property name="maximumSize">
+                           <size>
+                            <width>300</width>
+                            <height>4</height>
+                           </size>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 2px;</string>
+                          </property>
+                          <property name="frameShape">
+                           <enum>QFrame::StyledPanel</enum>
+                          </property>
+                          <property name="frameShadow">
+                           <enum>QFrame::Raised</enum>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_43">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>80</height>
+                        </size>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QFrame {
+	background-color: rgb(153, 188, 244);
+	border-radius: 15px;
+	margin-left: 16px;
+	margin-right: 16px;
+}</string>
+                       </property>
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QHBoxLayout" name="horizontalLayout_57">
+                        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                         <widget class="QLabel" name="label_70">
+                          <property name="styleSheet">
+                           <string notr="true">QLabel {
+	color: #416BBF;	
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 28px;
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>IMPORTAR DATOS</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QFrame" name="frame_61">
+                       <property name="frameShape">
+                        <enum>QFrame::StyledPanel</enum>
+                       </property>
+                       <property name="frameShadow">
+                        <enum>QFrame::Raised</enum>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_80">
+                        <property name="leftMargin">
+                         <number>16</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>16</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>16</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>16</number>
+                        </property>
+                        <item>
+                         <layout class="QHBoxLayout" name="horizontalLayout_79">
+                          <property name="spacing">
+                           <number>9</number>
+                          </property>
+                          <property name="leftMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="topMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="rightMargin">
+                           <number>0</number>
+                          </property>
+                          <property name="bottomMargin">
+                           <number>0</number>
+                          </property>
+                          <item>
+                           <widget class="QFrame" name="frame_64">
+                            <property name="styleSheet">
+                             <string notr="true">QFrame {
+	background-color: rgb(153, 188, 244);
+	border-radius: 15px;
+}</string>
+                            </property>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
+                            </property>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
+                            </property>
+                            <layout class="QVBoxLayout" name="verticalLayout_81">
+                             <item>
+                              <widget class="QLabel" name="label_75">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>50</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QLabel {
+	color: #416BBF;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Selecciona el archivo Excel de empleados</string>
+                               </property>
+                               <property name="wordWrap">
+                                <bool>false</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item alignment="Qt::AlignHCenter">
+                              <widget class="QPushButton" name="boton_seleccionar_archivo_empleados">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>250</width>
+                                 <height>45</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>250</width>
+                                 <height>45</height>
+                                </size>
+                               </property>
+                               <property name="layoutDirection">
+                                <enum>Qt::RightToLeft</enum>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	color: #416BBF;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	border-radius : 15px;
+	text-align: left;
+	padding-left: 10px;
+}</string>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>resources/img/icono_subir_archivo.png</normaloff>resources/img/icono_subir_archivo.png</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                              </widget>
+                             </item>
+                             <item alignment="Qt::AlignHCenter">
+                              <widget class="QLabel" name="label_79">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>50</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QLabel {
+	color: #416BBF;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Selecciona el archivo Excel de ventas</string>
+                               </property>
+                               <property name="wordWrap">
+                                <bool>false</bool>
+                               </property>
+                              </widget>
+                             </item>
+                             <item alignment="Qt::AlignHCenter">
+                              <widget class="QPushButton" name="boton_seleccionar_archivo_ventas">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>250</width>
+                                 <height>45</height>
+                                </size>
+                               </property>
+                               <property name="maximumSize">
+                                <size>
+                                 <width>250</width>
+                                 <height>45</height>
+                                </size>
+                               </property>
+                               <property name="layoutDirection">
+                                <enum>Qt::RightToLeft</enum>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(255, 255, 255);
+	color:#416BBF;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	border-radius : 15px;
+	text-align: left;
+	padding-left: 10px;
+}</string>
+                               </property>
+                               <property name="text">
+                                <string/>
+                               </property>
+                               <property name="icon">
+                                <iconset>
+                                 <normaloff>resources/img/icono_subir_archivo.png</normaloff>resources/img/icono_subir_archivo.png</iconset>
+                               </property>
+                               <property name="iconSize">
+                                <size>
+                                 <width>32</width>
+                                 <height>32</height>
+                                </size>
+                               </property>
+                              </widget>
+                             </item>
+                             <item alignment="Qt::AlignHCenter">
+                              <widget class="QPushButton" name="boton_subir_archivos">
+                               <property name="minimumSize">
+                                <size>
+                                 <width>120</width>
+                                 <height>40</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QPushButton {
+	background-color: rgb(65, 107, 191);
+	color: rgb(255, 255, 255);
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	border-radius : 15px;
+}</string>
+                               </property>
+                               <property name="text">
+                                <string>Subir</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </widget>
+                          </item>
+                          <item>
+                           <widget class="QLabel" name="label_16">
+                            <property name="maximumSize">
+                             <size>
+                              <width>526</width>
+                              <height>396</height>
+                             </size>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="pixmap">
+                             <pixmap>resources/img/imagen_ventana_importar_datos.png</pixmap>
+                            </property>
+                            <property name="scaledContents">
+                             <bool>true</bool>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </item>
+                       </layout>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </item>
           </layout>
          </widget>
