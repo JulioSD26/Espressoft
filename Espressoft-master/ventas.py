@@ -152,6 +152,10 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         self.boton_subir_archivos.clicked.connect(self.subir_archivos)
 
+        self.boton_ayuda_archivo_empleados.clicked.connect(lambda: self.mostrar_ayuda("ayuda_formato_empleados"))
+
+        self.boton_ayuda_archivo_ventas.clicked.connect(lambda: self.mostrar_ayuda("ayuda_formato_ventas"))
+
 
         """
         Esto es solo para probar las graficas, se debe de quitar o cambiar
@@ -462,11 +466,60 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         mensaje = QMessageBox(self)
         mensaje.setWindowTitle("Archivos subidos")
         mensaje.setText(texto_dialogo)
-        boton = mensaje.exec()
+        boton_ok = mensaje.exec()
         # cuando se presiona el boton Ok en el mensaje
-        if boton == QMessageBox.StandardButton.Ok:
-            print("OK!")
+        #if boton_ok == QMessageBox.StandardButton.Ok:
+        #    print("OK!")
 
+
+
+    def mostrar_ayuda(self, tipo_ayuda: str):
+        """
+        Muestra un mensaje de ayuda cuando uno de los botones de ayuda de la ventana de importar datos es presionado.
+        Muestra el formato que debe seguir cada Excel para ser importado.
+        """
+        # se checa que boton se presiono, fijandonos en que argumento mando esta funcion, cuando el boton se presiono
+        if tipo_ayuda == "ayuda_formato_empleados":
+            titulo_mensaje = "Formato del archivo de empleados"
+            # esta identacion de texto_mensaje es necesaria, por que si no, los "tabs" que aqui se le pongan para identar, 
+            # en el mensaje que se muestre se van a aplicar, lo que hace que se vieran raros
+            texto_mensaje = """
+Para que el archivo de empleados se importe correctamente es necesario que cumpla con las siguientes características: \n
+- La hoja en que se encuentra la información debe de llamarse "Hoja1" \n
+- En el primer renglón se debe de indicar los nombres de las columnas   "empleado_id", "tipo_empleado", "contrasenia", "nombre", "apellido_paterno", "apellido_materno", "estatus", "numero_telefono", "correo" sin espacios y en minusculas \n
+- Debe cuidar que los datos de cada renglón cumplan con lo siguiente: \n
+* "empleado_id" -> Su longitud debe de ser de 50 carácteres o menor \n
+* "tipo_empleado" -> Solo puede tener alguno de los siguientes valores: administrador, gerente o empleado \n
+* "contrasenia" -> Su longitud debe de ser de 50 carácteres o menor \n
+* "nombre" -> Su longitud debe de ser de 50 carácteres o menor \n
+* "apellido_paterno" -> Su longitud debe de ser de 50 carácteres o menor \n
+* "apellido_materno" -> Su longitud debe de ser de 50 carácteres o menor \n
+* "estatus" -> Solo puede tener alguno de los siguientes valores: 1 (Activo) o 0 (Inactivo) \n
+* "numero_telefono" -> Su longitud debe de ser de 15 carácteres o menor \n
+* "correo" -> Su longitud debe de ser de 50 carácteres o menor \n
+Si algún renglón no cuenta con este formato, se le notificará el número de renglón y el archivo no se importará.
+            """
+        # si no fue el anterior, entoces solo pudo ser tipo_ayuda == "ayuda_formato_ventas"
+        else:
+            titulo_mensaje = "Formato del archivo de ventas"
+            texto_mensaje = """
+Para que el archivo de ventas se importe correctamente es necesario que cumpla con las siguientes características: \n
+- La hoja en que se encuentra la información debe de llamarse "Hoja1" \n
+- En el primer renglón se debe de indicar los nombres de las columnas   "total", "fecha", "hora", "empleado_id" sin espacios y en minusculas \n
+- Debe cuidar que los datos de cada renglón cumplan con lo siguiente: \n
+* "total" -> Solo puede tener datos que sean números \n
+* "fecha" -> Debe de tener formato de fecha dado por excel o bien puede estar escrito de la siguiente manera "año-mes-dia". Por ejemplo: "2015-01-29" \n
+* "hora" -> Debe de tener formato de hora dado por excel o bien puede estar escrito de la siguiente manera "hora:minutos" en formato de 24 horas. Por ejemplo: "16:40" \n
+* "empleado_id" -> Su longitud debe de ser de 50 carácteres o menor \n
+Si algún renglón no cuenta con este formato, se le notificará el número de renglón y el archivo no se importará.
+            """
+        # se crea el mensaje y se le pase como padre a la ventana principal para que se le aplique focus y se centre en la ventana principal
+        mensaje = QMessageBox(self)
+        mensaje.setWindowTitle(titulo_mensaje)
+        mensaje.setText(texto_mensaje)
+        # esto es necesario para que el mensaje aparezca, con esto tambien se puede hacer algo despues de que el boton de "Ok" se presione
+        # pero como aqui no es necesario, no se realiza eso
+        boton_ok = mensaje.exec()
         
 
 

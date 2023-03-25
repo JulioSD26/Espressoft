@@ -4026,8 +4026,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_75.setWordWrap(False)
         self.label_75.setObjectName("label_75")
-        self.verticalLayout_81.addWidget(self.label_75)
-        self.boton_seleccionar_archivo_empleados = QtWidgets.QPushButton(self.frame_64)
+        self.verticalLayout_81.addWidget(self.label_75, 0, QtCore.Qt.AlignHCenter)
+        self.frame_78 = QtWidgets.QFrame(self.frame_64)
+        self.frame_78.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.frame_78.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_78.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_78.setObjectName("frame_78")
+        self.horizontalLayout_106 = QtWidgets.QHBoxLayout(self.frame_78)
+        self.horizontalLayout_106.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_106.setObjectName("horizontalLayout_106")
+        self.boton_seleccionar_archivo_empleados = QtWidgets.QPushButton(self.frame_78)
         self.boton_seleccionar_archivo_empleados.setMinimumSize(QtCore.QSize(250, 45))
         self.boton_seleccionar_archivo_empleados.setMaximumSize(QtCore.QSize(250, 45))
         self.boton_seleccionar_archivo_empleados.setLayoutDirection(QtCore.Qt.RightToLeft)
@@ -4048,7 +4056,22 @@ class Ui_MainWindow(object):
         self.boton_seleccionar_archivo_empleados.setIcon(icon2)
         self.boton_seleccionar_archivo_empleados.setIconSize(QtCore.QSize(32, 32))
         self.boton_seleccionar_archivo_empleados.setObjectName("boton_seleccionar_archivo_empleados")
-        self.verticalLayout_81.addWidget(self.boton_seleccionar_archivo_empleados, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_106.addWidget(self.boton_seleccionar_archivo_empleados, 0, QtCore.Qt.AlignVCenter)
+        self.boton_ayuda_archivo_empleados = QtWidgets.QPushButton(self.frame_78)
+        self.boton_ayuda_archivo_empleados.setMaximumSize(QtCore.QSize(30, 30))
+        self.boton_ayuda_archivo_empleados.setStyleSheet("QPushButton {\n"
+"    background-color:#416BBF;\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 14px;\n"
+"    border-radius : 15px;\n"
+"    text-align: center;\n"
+"}")
+        self.boton_ayuda_archivo_empleados.setObjectName("boton_ayuda_archivo_empleados")
+        self.horizontalLayout_106.addWidget(self.boton_ayuda_archivo_empleados)
+        self.verticalLayout_81.addWidget(self.frame_78)
         self.label_79 = QtWidgets.QLabel(self.frame_64)
         self.label_79.setMaximumSize(QtCore.QSize(16777215, 50))
         self.label_79.setStyleSheet("QLabel {\n"
@@ -4061,7 +4084,15 @@ class Ui_MainWindow(object):
         self.label_79.setWordWrap(False)
         self.label_79.setObjectName("label_79")
         self.verticalLayout_81.addWidget(self.label_79, 0, QtCore.Qt.AlignHCenter)
-        self.boton_seleccionar_archivo_ventas = QtWidgets.QPushButton(self.frame_64)
+        self.frame_93 = QtWidgets.QFrame(self.frame_64)
+        self.frame_93.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.frame_93.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_93.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_93.setObjectName("frame_93")
+        self.horizontalLayout_107 = QtWidgets.QHBoxLayout(self.frame_93)
+        self.horizontalLayout_107.setContentsMargins(0, 0, 0, 0)
+        self.horizontalLayout_107.setObjectName("horizontalLayout_107")
+        self.boton_seleccionar_archivo_ventas = QtWidgets.QPushButton(self.frame_93)
         self.boton_seleccionar_archivo_ventas.setMinimumSize(QtCore.QSize(250, 45))
         self.boton_seleccionar_archivo_ventas.setMaximumSize(QtCore.QSize(250, 45))
         self.boton_seleccionar_archivo_ventas.setLayoutDirection(QtCore.Qt.RightToLeft)
@@ -4080,7 +4111,22 @@ class Ui_MainWindow(object):
         self.boton_seleccionar_archivo_ventas.setIcon(icon2)
         self.boton_seleccionar_archivo_ventas.setIconSize(QtCore.QSize(32, 32))
         self.boton_seleccionar_archivo_ventas.setObjectName("boton_seleccionar_archivo_ventas")
-        self.verticalLayout_81.addWidget(self.boton_seleccionar_archivo_ventas, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_107.addWidget(self.boton_seleccionar_archivo_ventas)
+        self.boton_ayuda_archivo_ventas = QtWidgets.QPushButton(self.frame_93)
+        self.boton_ayuda_archivo_ventas.setMaximumSize(QtCore.QSize(30, 30))
+        self.boton_ayuda_archivo_ventas.setStyleSheet("QPushButton {\n"
+"    background-color:#416BBF;\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 14px;\n"
+"    border-radius : 15px;\n"
+"    text-align: center;\n"
+"}")
+        self.boton_ayuda_archivo_ventas.setObjectName("boton_ayuda_archivo_ventas")
+        self.horizontalLayout_107.addWidget(self.boton_ayuda_archivo_ventas)
+        self.verticalLayout_81.addWidget(self.frame_93)
         self.boton_subir_archivos = QtWidgets.QPushButton(self.frame_64)
         self.boton_subir_archivos.setMinimumSize(QtCore.QSize(120, 40))
         self.boton_subir_archivos.setStyleSheet("QPushButton {\n"
@@ -4465,7 +4511,11 @@ class Ui_MainWindow(object):
         self.label_tipo_usuario_importar_datos.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_70.setText(_translate("MainWindow", "IMPORTAR DATOS"))
         self.label_75.setText(_translate("MainWindow", "Selecciona el archivo Excel de empleados"))
+        self.boton_ayuda_archivo_empleados.setToolTip(_translate("MainWindow", "Formato del archivo de empleados"))
+        self.boton_ayuda_archivo_empleados.setText(_translate("MainWindow", "?"))
         self.label_79.setText(_translate("MainWindow", "Selecciona el archivo Excel de ventas"))
+        self.boton_ayuda_archivo_ventas.setToolTip(_translate("MainWindow", "Formato del archivo de ventas"))
+        self.boton_ayuda_archivo_ventas.setText(_translate("MainWindow", "?"))
         self.boton_subir_archivos.setText(_translate("MainWindow", "Subir"))
 from pyqtgraph import PlotWidget
 
