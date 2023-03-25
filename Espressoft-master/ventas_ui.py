@@ -4072,9 +4072,9 @@ class Ui_MainWindow(object):
         self.boton_ayuda_archivo_ventas.setObjectName("boton_ayuda_archivo_ventas")
         self.horizontalLayout_107.addWidget(self.boton_ayuda_archivo_ventas)
         self.verticalLayout_81.addWidget(self.frame_93)
-        self.boton_subir_archivos = QtWidgets.QPushButton(self.frame_64)
-        self.boton_subir_archivos.setMinimumSize(QtCore.QSize(120, 40))
-        self.boton_subir_archivos.setStyleSheet("QPushButton {\n"
+        self.boton_subir_archivo = QtWidgets.QPushButton(self.frame_64)
+        self.boton_subir_archivo.setMinimumSize(QtCore.QSize(120, 40))
+        self.boton_subir_archivo.setStyleSheet("QPushButton {\n"
 "    background-color: rgb(65, 107, 191);\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
@@ -4083,8 +4083,8 @@ class Ui_MainWindow(object):
 "    font-size: 14px;\n"
 "    border-radius : 15px;\n"
 "}")
-        self.boton_subir_archivos.setObjectName("boton_subir_archivos")
-        self.verticalLayout_81.addWidget(self.boton_subir_archivos, 0, QtCore.Qt.AlignHCenter)
+        self.boton_subir_archivo.setObjectName("boton_subir_archivo")
+        self.verticalLayout_81.addWidget(self.boton_subir_archivo, 0, QtCore.Qt.AlignHCenter)
         self.horizontalLayout_79.addWidget(self.frame_64)
         self.label_16 = QtWidgets.QLabel(self.frame_61)
         self.label_16.setMaximumSize(QtCore.QSize(526, 396))
@@ -4458,7 +4458,7 @@ class Ui_MainWindow(object):
         self.label_79.setText(_translate("MainWindow", "Selecciona el archivo Excel de ventas"))
         self.boton_ayuda_archivo_ventas.setToolTip(_translate("MainWindow", "Formato del archivo de ventas"))
         self.boton_ayuda_archivo_ventas.setText(_translate("MainWindow", "?"))
-        self.boton_subir_archivos.setText(_translate("MainWindow", "Subir"))
+        self.boton_subir_archivo.setText(_translate("MainWindow", "Subir"))
 from pyqtgraph import PlotWidget
 
 

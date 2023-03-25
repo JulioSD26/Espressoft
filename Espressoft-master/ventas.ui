@@ -8234,7 +8234,7 @@ border-radius: 2px;</string>
                               </widget>
                              </item>
                              <item alignment="Qt::AlignHCenter">
-                              <widget class="QPushButton" name="boton_subir_archivos">
+                              <widget class="QPushButton" name="boton_subir_archivo">
                                <property name="minimumSize">
                                 <size>
                                  <width>120</width>

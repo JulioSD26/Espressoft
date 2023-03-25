@@ -13,7 +13,7 @@ class ControladorVentanaImportarDatos():
 
         ventana_principal.boton_seleccionar_archivo_ventas.clicked.connect(lambda: self.seleccionar_archivo(ventana_principal))
 
-        ventana_principal.boton_subir_archivos.clicked.connect(lambda: self.subir_archivos(ventana_principal))
+        ventana_principal.boton_subir_archivo.clicked.connect(lambda: self.subir_archivo(ventana_principal))
 
         ventana_principal.boton_ayuda_archivo_ventas.clicked.connect(lambda: self.mostrar_ayuda(ventana_principal))
 
@@ -46,11 +46,11 @@ class ControladorVentanaImportarDatos():
         # se le pone como texto el nombre del archivo al boton de seleccion de archivo de ventas
         ventana_principal.boton_seleccionar_archivo_ventas.setText(Path(archivo_seleccionado[0]).name)
         # tambien se le pone un tooltip para que al poner el mouse sobre el boton como un hover, se vea la ruta absoluta en un pequenio recuadro, por si no llega a caber
-        # esto tambien tiene el proposito de tener guardada tambien la ruta absoluta, para luego usarla en subir_archivos()
+        # esto tambien tiene el proposito de tener guardada tambien la ruta absoluta, para luego usarla en subir_archivo()
         ventana_principal.boton_seleccionar_archivo_ventas.setToolTip(archivo_seleccionado[0])
 
 
-    def subir_archivos(self, ventana_principal):
+    def subir_archivo(self, ventana_principal):
         """
         Sube el archivo seleccionado de ventas, importando los datos del Excel a la base de datos.
         """
