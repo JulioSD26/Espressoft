@@ -20,7 +20,7 @@ CREATE TABLE venta (
   total decimal(10,2) NOT NULL,
   fecha date NOT NULL,
   hora time NOT NULL,
-  empleado_id int(11) NOT NULL,
+  empleado_id varchar(50) NOT NULL,
   PRIMARY KEY (venta_id)
 );
 
