@@ -16,7 +16,7 @@ CREATE TABLE empleados (
 );
 
 CREATE TABLE venta (
-  venta_id int(11) NOT NULL,
+  venta_id int(11) AUTO_INCREMENT,
   total decimal(10,2) NOT NULL,
   fecha date NOT NULL,
   hora time NOT NULL,

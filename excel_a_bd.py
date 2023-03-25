@@ -58,7 +58,7 @@ def insertar_datos_en_tabla_empleados(hoja):
     conn.close()
 
 def insertar_datos_en_tabla_venta(hoja):
-    lista_venta_id = hoja['venta_id']
+    
     lista_total = hoja['total']
     lista_fecha = hoja['fecha']
     lista_hora = hoja['hora']
@@ -70,12 +70,12 @@ def insertar_datos_en_tabla_venta(hoja):
         print('Imposible conectar a la base de datos: {}'.format(err))
 
     renglon = 2
-    for (venta_id, total, fecha, hora, empleado_id) in zip(lista_venta_id, lista_total, lista_fecha, lista_hora, lista_empleado_id):
+    for ( total, fecha, hora, empleado_id) in zip( lista_total, lista_fecha, lista_hora, lista_empleado_id):
         
         try:
             cursor.execute(
-                "INSERT INTO venta (venta_id, total, fecha, hora, empleado_id) VALUES (%s,%s,%s,%s,%s)",
-                (venta_id, total, fecha, hora, empleado_id))
+                "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES (%s,%s,%s,%s)",
+                ( total, fecha, hora, empleado_id))
         except Error as err:
             print('Algo salio mal: {}'.format(err))
             print('Hay un dato en el renglon {} con formato diferente al solicitado'.format(renglon))
