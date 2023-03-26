@@ -126,7 +126,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.boton_ventas_individuales_mensuales: self.pagina_ventas_individuales_mensuales,
             self.boton_ventas_individuales_anuales: self.pagina_ventas_individuales_anuales,
             self.boton_empleados: self.pagina_empleados,
-            self.boton_importar_datos: self.pagina_importar_datos
+            self.boton_importar_datos: self.pagina_importar_datos,
+            self.boton_agregar_usuario: self.pagina_agregar_usuario,
+            self.boton_editar_usuario: self.pagina_editar_usuario
         }
         
         # a los botones de opciones que eran las llaves del diccionario relacion_botones_opciones_y_su_pagina_correspondiente,
