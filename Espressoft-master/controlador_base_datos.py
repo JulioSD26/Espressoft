@@ -29,6 +29,42 @@ def buscar_empleados(tableWidget, nombre):
                   "estatus FROM empleados) as empleados2 WHERE nombre_completo LIKE '%{}%'".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
 
+def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password))
+        conn.commit()
+        conn.close()
+        return True
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
+    
+def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', correo = '{}', telefono = '{}', tipo_empleado = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, empleado_id))
+        conn.commit()
+        conn.close()
+        return True
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
+
+def obtener_ultimo_empleado_id():
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("SELECT MAX(empleado_id) FROM empleados")
+        rows = c.fetchall()
+        conn.close()
+        return rows[0][0]
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return 0
+
 def verifica_login(numero,password):
     try:
         conn = crear_conexion()
