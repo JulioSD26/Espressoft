@@ -4471,11 +4471,11 @@ class Ui_MainWindow(object):
         self.comboBox_estatus_empleado_agregar.addItem("")
         self.horizontalLayout_131.addWidget(self.comboBox_estatus_empleado_agregar)
         self.gridLayout_2.addWidget(self.frame_113, 3, 1, 1, 1)
-        self.boton_buscar_empleados_3 = QtWidgets.QPushButton(self.frame_104)
-        self.boton_buscar_empleados_3.setGeometry(QtCore.QRect(330, 650, 90, 41))
-        self.boton_buscar_empleados_3.setMinimumSize(QtCore.QSize(30, 40))
-        self.boton_buscar_empleados_3.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.boton_buscar_empleados_3.setStyleSheet("QPushButton {\n"
+        self.boton_agregar_empleado_agregar = QtWidgets.QPushButton(self.frame_104)
+        self.boton_agregar_empleado_agregar.setGeometry(QtCore.QRect(330, 650, 90, 41))
+        self.boton_agregar_empleado_agregar.setMinimumSize(QtCore.QSize(30, 40))
+        self.boton_agregar_empleado_agregar.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.boton_agregar_empleado_agregar.setStyleSheet("QPushButton {\n"
 "    background-color: rgb(65, 107, 191);\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
@@ -4484,7 +4484,7 @@ class Ui_MainWindow(object):
 "    font-size: 14px;\n"
 "    border-radius : 15px;\n"
 "}")
-        self.boton_buscar_empleados_3.setObjectName("boton_buscar_empleados_3")
+        self.boton_agregar_empleado_agregar.setObjectName("boton_agregar_empleado_agregar")
         self.label_numero_empleado_agregar = QtWidgets.QLabel(self.frame_104)
         self.label_numero_empleado_agregar.setGeometry(QtCore.QRect(750, 250, 506, 40))
         self.label_numero_empleado_agregar.setMinimumSize(QtCore.QSize(0, 40))
@@ -4933,7 +4933,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(10)
+        self.stacked_widget_paginas.setCurrentIndex(9)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -5302,7 +5302,7 @@ class Ui_MainWindow(object):
         self.comboBox_tipo_empleado_agregar.setItemText(2, _translate("MainWindow", "administrador"))
         self.comboBox_estatus_empleado_agregar.setItemText(0, _translate("MainWindow", "activo"))
         self.comboBox_estatus_empleado_agregar.setItemText(1, _translate("MainWindow", "inactivo"))
-        self.boton_buscar_empleados_3.setText(_translate("MainWindow", "AGREGAR "))
+        self.boton_agregar_empleado_agregar.setText(_translate("MainWindow", "AGREGAR "))
         self.label_83.setText(_translate("MainWindow", "Numero Empleado:"))
         self.label_tipo_usuario_empleados_4.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.campo_busca_numero_empleado_editar.setPlaceholderText(_translate("MainWindow", "Numero de empleado"))

@@ -866,7 +866,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>10</number>
+          <number>9</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -4377,10 +4377,10 @@ QTableWidget {
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>true</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
+                     <attribute name="horizontalHeaderDefaultSectionSize">
                       <number>200</number>
                      </attribute>
-                     <attribute name="horizontalHeaderDefaultSectionSize">
+                     <attribute name="horizontalHeaderMinimumSectionSize">
                       <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
@@ -9212,7 +9212,7 @@ border: none;</string>
                    </item>
                   </layout>
                  </widget>
-                 <widget class="QPushButton" name="boton_buscar_empleados_3">
+                 <widget class="QPushButton" name="boton_agregar_empleado_agregar">
                   <property name="geometry">
                    <rect>
                     <x>330</x>

@@ -29,11 +29,52 @@ def buscar_empleados(tableWidget, nombre):
                   "estatus FROM empleados) as empleados2 WHERE nombre_completo LIKE '%{}%'".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
 
-def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password):
+def obtener_empleado(empleado_id):
+    if empleado_id == "":
+        return []
     try:
         conn = crear_conexion()
         c = conn.cursor()
-        c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password))
+        c.execute("SELECT * FROM empleados WHERE empleado_id = {}".format(empleado_id))
+        rows = c.fetchall()
+        conn.close()
+        global busqueda_empleado
+        busqueda_empleado = rows[0]
+    except Error as err:
+        buscar_empleados = []
+        print("Algo salio mal: {}".format(err))
+
+def vacia_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password):
+    label_numero.setText("")
+    label_tipo_empleado.setCurrentText("empleado")
+    label_password.setText("")
+    label_nombre.setText("")
+    label_apellido_paterno.setText("")
+    label_apellido_materno.setText("")
+    label_estatus.setCurrentText("activo")
+    label_telefono.setText("")
+    label_correo.setText("")
+
+def llena_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password):
+    label_numero.setText(str(busqueda_empleado[0]))
+    label_tipo_empleado.setCurrentText(busqueda_empleado[1])
+    label_password.setText(busqueda_empleado[2])
+    label_nombre.setText(busqueda_empleado[3])
+    label_apellido_paterno.setText(busqueda_empleado[4])
+    label_apellido_materno.setText(busqueda_empleado[5])
+    label_estatus.setCurrentText('activo' if busqueda_empleado[6] == 1 else 'inactivo')
+    label_telefono.setText(busqueda_empleado[7])
+    label_correo.setText(busqueda_empleado[8])
+
+def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        if estatus == 'activo':
+            estatus = 1
+        else:
+            estatus = 0
+        c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, email, telefono, tipo_empleado, estatus, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password))
         conn.commit()
         conn.close()
         return True
@@ -41,11 +82,15 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
         print("Algo salio mal: {}".format(err))
         return False
     
-def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password):
+def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password):
     try:
         conn = crear_conexion()
         c = conn.cursor()
-        c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', correo = '{}', telefono = '{}', tipo_empleado = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, empleado_id))
+        if estatus == 'activo':
+            estatus = 1
+        else:
+            estatus = 0
+        c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
         conn.commit()
         conn.close()
         return True
@@ -53,17 +98,17 @@ def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, cor
         print("Algo salio mal: {}".format(err))
         return False
 
-def obtener_ultimo_empleado_id():
+def obtener_ultimo_empleado_id(label):
     try:
         conn = crear_conexion()
         c = conn.cursor()
         c.execute("SELECT MAX(empleado_id) FROM empleados")
         rows = c.fetchall()
         conn.close()
-        return rows[0][0]
+        num = int(rows[0][0])+1
+        label.setText(str(num))
     except Error as err:
         print("Algo salio mal: {}".format(err))
-        return 0
 
 def verifica_login(numero,password):
     try:
@@ -111,6 +156,12 @@ def crear_conexion():
                    password='pscale_pw_bkBPzdSi5wMSbrWf1d1GCydQPX6a6FGvRJJAwqol7tZ',
                    database='expressoft', 
                    port=3306)
+
+    # conn = connect(host='localhost',
+    #                user='root',
+    #                password='',
+    #                 database='expressoft',
+    #                 port=3306)
 
 
     return conn
