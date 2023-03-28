@@ -12,6 +12,14 @@ class ControladorMenuLateral():
 
     def __init__(self, ventana_principal):
 
+
+        """
+        QUITAR ESTAS 2 LINEAS PARA LA SEGUNDA ITERACION
+        """
+        ventana_principal.boton_agregar_usuario.setHidden(True)
+        ventana_principal.boton_editar_usuario.setHidden(True)
+        """"""
+        
         # ESTADOS DE INICIO
 
         # el nombre que se le haya dado al componente en QT Designer, es el nombre que se utiliza para acceder
