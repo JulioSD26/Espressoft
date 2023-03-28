@@ -102,7 +102,7 @@ def obtener_ultimo_empleado_id(label):
     try:
         conn = crear_conexion()
         c = conn.cursor()
-        c.execute("SELECT MAX(empleado_id) FROM empleados")
+        c.execute("SELECT COUNT(empleado_id) FROM empleados")
         rows = c.fetchall()
         conn.close()
         num = int(rows[0][0])+1
