@@ -314,10 +314,10 @@ class Ui_MainWindow(object):
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setContentsMargins(0, -1, 4, -1)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
-        self.boton_cerrar = QtWidgets.QPushButton(self.menu_lateral)
-        self.boton_cerrar.setLayoutDirection(QtCore.Qt.RightToLeft)
-        self.boton_cerrar.setAutoFillBackground(False)
-        self.boton_cerrar.setStyleSheet("QPushButton {\n"
+        self.boton_cerrar_sesion = QtWidgets.QPushButton(self.menu_lateral)
+        self.boton_cerrar_sesion.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.boton_cerrar_sesion.setAutoFillBackground(False)
+        self.boton_cerrar_sesion.setStyleSheet("QPushButton {\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
@@ -326,8 +326,8 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    padding: 10px;\n"
 "}")
-        self.boton_cerrar.setObjectName("boton_cerrar")
-        self.horizontalLayout_6.addWidget(self.boton_cerrar)
+        self.boton_cerrar_sesion.setObjectName("boton_cerrar_sesion")
+        self.horizontalLayout_6.addWidget(self.boton_cerrar_sesion)
         spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem21)
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
@@ -3972,7 +3972,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 973, 898))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 922, 564))
         self.scrollAreaWidgetContents_4.setStyleSheet("")
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_82 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
@@ -4178,18 +4178,18 @@ class Ui_MainWindow(object):
         self.verticalLayout_100.setObjectName("verticalLayout_100")
         self.verticalLayout_101 = QtWidgets.QVBoxLayout()
         self.verticalLayout_101.setObjectName("verticalLayout_101")
-        self.label_tipo_usuario_empleados_3 = QtWidgets.QLabel(self.frame_101)
-        self.label_tipo_usuario_empleados_3.setMinimumSize(QtCore.QSize(0, 40))
-        self.label_tipo_usuario_empleados_3.setMaximumSize(QtCore.QSize(16777215, 40))
-        self.label_tipo_usuario_empleados_3.setStyleSheet("QLabel {\n"
+        self.label_tipo_usuario_agregar_usuario = QtWidgets.QLabel(self.frame_101)
+        self.label_tipo_usuario_agregar_usuario.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_agregar_usuario.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_agregar_usuario.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: bold;\n"
 "    font-size: 22px;\n"
 "}")
-        self.label_tipo_usuario_empleados_3.setObjectName("label_tipo_usuario_empleados_3")
-        self.verticalLayout_101.addWidget(self.label_tipo_usuario_empleados_3)
+        self.label_tipo_usuario_agregar_usuario.setObjectName("label_tipo_usuario_agregar_usuario")
+        self.verticalLayout_101.addWidget(self.label_tipo_usuario_agregar_usuario)
         self.frame_102 = QtWidgets.QFrame(self.frame_101)
         self.frame_102.setMinimumSize(QtCore.QSize(0, 3))
         self.frame_102.setMaximumSize(QtCore.QSize(300, 4))
@@ -4543,18 +4543,18 @@ class Ui_MainWindow(object):
         self.verticalLayout_105.setObjectName("verticalLayout_105")
         self.verticalLayout_106 = QtWidgets.QVBoxLayout()
         self.verticalLayout_106.setObjectName("verticalLayout_106")
-        self.label_tipo_usuario_empleados_4 = QtWidgets.QLabel(self.frame_111)
-        self.label_tipo_usuario_empleados_4.setMinimumSize(QtCore.QSize(0, 40))
-        self.label_tipo_usuario_empleados_4.setMaximumSize(QtCore.QSize(16777215, 40))
-        self.label_tipo_usuario_empleados_4.setStyleSheet("QLabel {\n"
+        self.label_tipo_usuario_editar_usuario = QtWidgets.QLabel(self.frame_111)
+        self.label_tipo_usuario_editar_usuario.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_editar_usuario.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_editar_usuario.setStyleSheet("QLabel {\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: bold;\n"
 "    font-size: 22px;\n"
 "}")
-        self.label_tipo_usuario_empleados_4.setObjectName("label_tipo_usuario_empleados_4")
-        self.verticalLayout_106.addWidget(self.label_tipo_usuario_empleados_4)
+        self.label_tipo_usuario_editar_usuario.setObjectName("label_tipo_usuario_editar_usuario")
+        self.verticalLayout_106.addWidget(self.label_tipo_usuario_editar_usuario)
         self.frame_115 = QtWidgets.QFrame(self.frame_111)
         self.frame_115.setMinimumSize(QtCore.QSize(0, 3))
         self.frame_115.setMaximumSize(QtCore.QSize(300, 4))
@@ -4941,7 +4941,7 @@ class Ui_MainWindow(object):
         self.boton_agregar_usuario.setText(_translate("MainWindow", "Agregar Usuario"))
         self.boton_editar_usuario.setText(_translate("MainWindow", "Editar Usuario"))
         self.boton_importar_datos.setText(_translate("MainWindow", "Importar datos"))
-        self.boton_cerrar.setText(_translate("MainWindow", "Cerrar"))
+        self.boton_cerrar_sesion.setText(_translate("MainWindow", "Cerrar sesión"))
         self.label.setText(_translate("MainWindow", "BIENVENIDO A LA APLICACIÓN DE GESTIÓN"))
         self.label_45.setText(_translate("MainWindow", "DE ESTADÍSTICAS DE"))
         self.label_3.setText(_translate("MainWindow", "CAFÉ INDIGO"))
@@ -5279,7 +5279,7 @@ class Ui_MainWindow(object):
         self.boton_ayuda_archivo_ventas.setToolTip(_translate("MainWindow", "Formato del archivo de ventas"))
         self.boton_ayuda_archivo_ventas.setText(_translate("MainWindow", "?"))
         self.boton_subir_archivo.setText(_translate("MainWindow", "Subir"))
-        self.label_tipo_usuario_empleados_3.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.label_tipo_usuario_agregar_usuario.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_80.setText(_translate("MainWindow", "AGREGAR USUARIO A CAFÉ INDIGO"))
         self.campo_apellido_paterno_agregar.setPlaceholderText(_translate("MainWindow", "Apellido Paterno"))
         self.campo_nombre_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Nombre de empleado"))
@@ -5290,7 +5290,7 @@ class Ui_MainWindow(object):
         self.campo_tipo_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Tipo de empleado"))
         self.campo_estatus_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Estatus"))
         self.boton_buscar_empleados_3.setText(_translate("MainWindow", "AGREGAR "))
-        self.label_tipo_usuario_empleados_4.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.label_tipo_usuario_editar_usuario.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.campo_busca_nombre_empleado_editar.setPlaceholderText(_translate("MainWindow", "Nombre de empleado"))
         self.boton_buscar_empleados_editar.setText(_translate("MainWindow", "Buscar"))
         self.label_81.setText(_translate("MainWindow", "EDITAR USUARIO A CAFÉ INDIGO"))

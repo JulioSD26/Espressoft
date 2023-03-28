@@ -783,7 +783,7 @@
           <number>4</number>
          </property>
          <item>
-          <widget class="QPushButton" name="boton_cerrar">
+          <widget class="QPushButton" name="boton_cerrar_sesion">
            <property name="layoutDirection">
             <enum>Qt::RightToLeft</enum>
            </property>
@@ -802,7 +802,7 @@
 }</string>
            </property>
            <property name="text">
-            <string>Cerrar</string>
+            <string>Cerrar sesión</string>
            </property>
           </widget>
          </item>
@@ -4377,10 +4377,10 @@ QTableWidget {
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>true</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderDefaultSectionSize">
+                     <attribute name="horizontalHeaderMinimumSectionSize">
                       <number>200</number>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
+                     <attribute name="horizontalHeaderDefaultSectionSize">
                       <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
@@ -8014,8 +8014,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>973</width>
-                   <height>898</height>
+                   <width>922</width>
+                   <height>564</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -8495,7 +8495,7 @@ border-radius: 2px;</string>
                        <item>
                         <layout class="QVBoxLayout" name="verticalLayout_101">
                          <item>
-                          <widget class="QLabel" name="label_tipo_usuario_empleados_3">
+                          <widget class="QLabel" name="label_tipo_usuario_agregar_usuario">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
@@ -9352,7 +9352,7 @@ border: none;</string>
                        <item>
                         <layout class="QVBoxLayout" name="verticalLayout_106">
                          <item>
-                          <widget class="QLabel" name="label_tipo_usuario_empleados_4">
+                          <widget class="QLabel" name="label_tipo_usuario_editar_usuario">
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
