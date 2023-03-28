@@ -75,10 +75,6 @@ class ControladorMenuLateral():
         ventana_principal.boton_empleados.clicked.connect(
             lambda: llenar_tabla_empleados(ventana_principal.tabla_empleados))
 
-        # al presionar el boton busca empleados, se manda a llamar al metodo buscar_empleados() que busca en la tabla de empleados
-        ventana_principal.boton_buscar_empleados.clicked.connect(lambda: buscar_empleados(
-            ventana_principal.tabla_empleados, ventana_principal.campo_nombre_empleado_empleados.text()))
-
         ventana_principal.boton_importar_datos.clicked.connect(
             lambda: self.agregar_quitar_borde_izquierdo_boton(ventana_principal.boton_importar_datos, True))
 

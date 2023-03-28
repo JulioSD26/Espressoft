@@ -4445,22 +4445,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_130 = QtWidgets.QHBoxLayout(self.frame_112)
         self.horizontalLayout_130.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_130.setObjectName("horizontalLayout_130")
-        self.campo_tipo_empleado_agregar = QtWidgets.QLineEdit(self.frame_112)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_tipo_empleado_agregar.sizePolicy().hasHeightForWidth())
-        self.campo_tipo_empleado_agregar.setSizePolicy(sizePolicy)
-        self.campo_tipo_empleado_agregar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 600;\n"
-"font-size: 12px;\n"
-"color: rgb(52, 64, 85);\n"
-"border: none;")
-        self.campo_tipo_empleado_agregar.setClearButtonEnabled(False)
-        self.campo_tipo_empleado_agregar.setObjectName("campo_tipo_empleado_agregar")
-        self.horizontalLayout_130.addWidget(self.campo_tipo_empleado_agregar)
+        self.comboBox_tipo_empleado_agregar = QtWidgets.QComboBox(self.frame_112)
+        self.comboBox_tipo_empleado_agregar.setObjectName("comboBox_tipo_empleado_agregar")
+        self.comboBox_tipo_empleado_agregar.addItem("")
+        self.comboBox_tipo_empleado_agregar.addItem("")
+        self.comboBox_tipo_empleado_agregar.addItem("")
+        self.horizontalLayout_130.addWidget(self.comboBox_tipo_empleado_agregar)
         self.gridLayout_2.addWidget(self.frame_112, 3, 0, 1, 1)
         self.frame_113 = QtWidgets.QFrame(self.gridLayoutWidget)
         self.frame_113.setMinimumSize(QtCore.QSize(0, 50))
@@ -4475,28 +4465,17 @@ class Ui_MainWindow(object):
         self.horizontalLayout_131 = QtWidgets.QHBoxLayout(self.frame_113)
         self.horizontalLayout_131.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_131.setObjectName("horizontalLayout_131")
-        self.campo_estatus_empleado_agregar = QtWidgets.QLineEdit(self.frame_113)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_estatus_empleado_agregar.sizePolicy().hasHeightForWidth())
-        self.campo_estatus_empleado_agregar.setSizePolicy(sizePolicy)
-        self.campo_estatus_empleado_agregar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 600;\n"
-"font-size: 12px;\n"
-"color: rgb(52, 64, 85);\n"
-"border: none;")
-        self.campo_estatus_empleado_agregar.setClearButtonEnabled(False)
-        self.campo_estatus_empleado_agregar.setObjectName("campo_estatus_empleado_agregar")
-        self.horizontalLayout_131.addWidget(self.campo_estatus_empleado_agregar)
+        self.comboBox_estatus_empleado_agregar = QtWidgets.QComboBox(self.frame_113)
+        self.comboBox_estatus_empleado_agregar.setObjectName("comboBox_estatus_empleado_agregar")
+        self.comboBox_estatus_empleado_agregar.addItem("")
+        self.comboBox_estatus_empleado_agregar.addItem("")
+        self.horizontalLayout_131.addWidget(self.comboBox_estatus_empleado_agregar)
         self.gridLayout_2.addWidget(self.frame_113, 3, 1, 1, 1)
-        self.boton_buscar_empleados_3 = QtWidgets.QPushButton(self.frame_104)
-        self.boton_buscar_empleados_3.setGeometry(QtCore.QRect(330, 650, 90, 41))
-        self.boton_buscar_empleados_3.setMinimumSize(QtCore.QSize(30, 40))
-        self.boton_buscar_empleados_3.setMaximumSize(QtCore.QSize(90, 16777215))
-        self.boton_buscar_empleados_3.setStyleSheet("QPushButton {\n"
+        self.boton_agregar_empleado_agregar = QtWidgets.QPushButton(self.frame_104)
+        self.boton_agregar_empleado_agregar.setGeometry(QtCore.QRect(330, 650, 90, 41))
+        self.boton_agregar_empleado_agregar.setMinimumSize(QtCore.QSize(30, 40))
+        self.boton_agregar_empleado_agregar.setMaximumSize(QtCore.QSize(90, 16777215))
+        self.boton_agregar_empleado_agregar.setStyleSheet("QPushButton {\n"
 "    background-color: rgb(65, 107, 191);\n"
 "    color: rgb(255, 255, 255);\n"
 "    font-family: \'Montserrat\';\n"
@@ -4505,7 +4484,33 @@ class Ui_MainWindow(object):
 "    font-size: 14px;\n"
 "    border-radius : 15px;\n"
 "}")
-        self.boton_buscar_empleados_3.setObjectName("boton_buscar_empleados_3")
+        self.boton_agregar_empleado_agregar.setObjectName("boton_agregar_empleado_agregar")
+        self.label_numero_empleado_agregar = QtWidgets.QLabel(self.frame_104)
+        self.label_numero_empleado_agregar.setGeometry(QtCore.QRect(750, 250, 506, 40))
+        self.label_numero_empleado_agregar.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_numero_empleado_agregar.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_numero_empleado_agregar.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_numero_empleado_agregar.setText("")
+        self.label_numero_empleado_agregar.setObjectName("label_numero_empleado_agregar")
+        self.label_83 = QtWidgets.QLabel(self.frame_104)
+        self.label_83.setGeometry(QtCore.QRect(790, 180, 376, 40))
+        self.label_83.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_83.setMaximumSize(QtCore.QSize(400, 40))
+        self.label_83.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_83.setStyleSheet("QLabel {\n"
+"    color: rgb(0, 85, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_83.setObjectName("label_83")
         self.verticalLayout_98.addWidget(self.frame_104)
         self.horizontalLayout_115.addWidget(self.frame_100)
         self.stacked_widget_paginas.addWidget(self.pagina_agregar_usuario)
@@ -4583,22 +4588,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_143 = QtWidgets.QHBoxLayout(self.frame_126)
         self.horizontalLayout_143.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_143.setObjectName("horizontalLayout_143")
-        self.campo_busca_nombre_empleado_editar = QtWidgets.QLineEdit(self.frame_126)
+        self.campo_busca_numero_empleado_editar = QtWidgets.QLineEdit(self.frame_126)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_busca_nombre_empleado_editar.sizePolicy().hasHeightForWidth())
-        self.campo_busca_nombre_empleado_editar.setSizePolicy(sizePolicy)
-        self.campo_busca_nombre_empleado_editar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        sizePolicy.setHeightForWidth(self.campo_busca_numero_empleado_editar.sizePolicy().hasHeightForWidth())
+        self.campo_busca_numero_empleado_editar.setSizePolicy(sizePolicy)
+        self.campo_busca_numero_empleado_editar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font-family: \'Montserrat\';\n"
 "font-style: normal;\n"
 "font-weight: 600;\n"
 "font-size: 12px;\n"
 "color: rgb(52, 64, 85);\n"
 "border: none;")
-        self.campo_busca_nombre_empleado_editar.setClearButtonEnabled(False)
-        self.campo_busca_nombre_empleado_editar.setObjectName("campo_busca_nombre_empleado_editar")
-        self.horizontalLayout_143.addWidget(self.campo_busca_nombre_empleado_editar)
+        self.campo_busca_numero_empleado_editar.setClearButtonEnabled(False)
+        self.campo_busca_numero_empleado_editar.setObjectName("campo_busca_numero_empleado_editar")
+        self.horizontalLayout_143.addWidget(self.campo_busca_numero_empleado_editar)
         self.horizontalLayout_134.addWidget(self.frame_126, 0, QtCore.Qt.AlignVCenter)
         self.boton_buscar_empleados_editar = QtWidgets.QPushButton(self.widget_14)
         self.boton_buscar_empleados_editar.setMinimumSize(QtCore.QSize(30, 40))
@@ -4854,22 +4859,12 @@ class Ui_MainWindow(object):
         self.horizontalLayout_141 = QtWidgets.QHBoxLayout(self.frame_124)
         self.horizontalLayout_141.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_141.setObjectName("horizontalLayout_141")
-        self.campo_tipo_empleado_editar = QtWidgets.QLineEdit(self.frame_124)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_tipo_empleado_editar.sizePolicy().hasHeightForWidth())
-        self.campo_tipo_empleado_editar.setSizePolicy(sizePolicy)
-        self.campo_tipo_empleado_editar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 600;\n"
-"font-size: 12px;\n"
-"color: rgb(52, 64, 85);\n"
-"border: none;")
-        self.campo_tipo_empleado_editar.setClearButtonEnabled(False)
-        self.campo_tipo_empleado_editar.setObjectName("campo_tipo_empleado_editar")
-        self.horizontalLayout_141.addWidget(self.campo_tipo_empleado_editar)
+        self.comboBox_tipo_empleado_editar = QtWidgets.QComboBox(self.frame_124)
+        self.comboBox_tipo_empleado_editar.setObjectName("comboBox_tipo_empleado_editar")
+        self.comboBox_tipo_empleado_editar.addItem("")
+        self.comboBox_tipo_empleado_editar.addItem("")
+        self.comboBox_tipo_empleado_editar.addItem("")
+        self.horizontalLayout_141.addWidget(self.comboBox_tipo_empleado_editar)
         self.gridLayout_3.addWidget(self.frame_124, 3, 0, 1, 1)
         self.frame_125 = QtWidgets.QFrame(self.gridLayoutWidget_2)
         self.frame_125.setMinimumSize(QtCore.QSize(0, 50))
@@ -4884,22 +4879,11 @@ class Ui_MainWindow(object):
         self.horizontalLayout_142 = QtWidgets.QHBoxLayout(self.frame_125)
         self.horizontalLayout_142.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_142.setObjectName("horizontalLayout_142")
-        self.campo_estatus_empleado_editar = QtWidgets.QLineEdit(self.frame_125)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_estatus_empleado_editar.sizePolicy().hasHeightForWidth())
-        self.campo_estatus_empleado_editar.setSizePolicy(sizePolicy)
-        self.campo_estatus_empleado_editar.setStyleSheet("background-color: rgb(255, 255, 255);\n"
-"font-family: \'Montserrat\';\n"
-"font-style: normal;\n"
-"font-weight: 600;\n"
-"font-size: 12px;\n"
-"color: rgb(52, 64, 85);\n"
-"border: none;")
-        self.campo_estatus_empleado_editar.setClearButtonEnabled(False)
-        self.campo_estatus_empleado_editar.setObjectName("campo_estatus_empleado_editar")
-        self.horizontalLayout_142.addWidget(self.campo_estatus_empleado_editar)
+        self.comboBox_estatus_empleado_editar = QtWidgets.QComboBox(self.frame_125)
+        self.comboBox_estatus_empleado_editar.setObjectName("comboBox_estatus_empleado_editar")
+        self.comboBox_estatus_empleado_editar.addItem("")
+        self.comboBox_estatus_empleado_editar.addItem("")
+        self.horizontalLayout_142.addWidget(self.comboBox_estatus_empleado_editar)
         self.gridLayout_3.addWidget(self.frame_125, 3, 1, 1, 1)
         self.boton_guardar_empleados_editar = QtWidgets.QPushButton(self.frame_116)
         self.boton_guardar_empleados_editar.setGeometry(QtCore.QRect(330, 650, 90, 41))
@@ -4915,6 +4899,32 @@ class Ui_MainWindow(object):
 "    border-radius : 15px;\n"
 "}")
         self.boton_guardar_empleados_editar.setObjectName("boton_guardar_empleados_editar")
+        self.label_82 = QtWidgets.QLabel(self.frame_116)
+        self.label_82.setGeometry(QtCore.QRect(780, 180, 376, 40))
+        self.label_82.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_82.setMaximumSize(QtCore.QSize(400, 40))
+        self.label_82.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.label_82.setStyleSheet("QLabel {\n"
+"    color: rgb(0, 85, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_82.setObjectName("label_82")
+        self.label_numero_empleado_editar = QtWidgets.QLabel(self.frame_116)
+        self.label_numero_empleado_editar.setGeometry(QtCore.QRect(740, 250, 506, 40))
+        self.label_numero_empleado_editar.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_numero_empleado_editar.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_numero_empleado_editar.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_numero_empleado_editar.setText("")
+        self.label_numero_empleado_editar.setObjectName("label_numero_empleado_editar")
         self.verticalLayout_102.addWidget(self.frame_116)
         self.horizontalLayout_118.addWidget(self.frame_103)
         self.stacked_widget_paginas.addWidget(self.pagina_editar_usuario)
@@ -4923,7 +4933,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(10)
+        self.stacked_widget_paginas.setCurrentIndex(9)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -5287,11 +5297,15 @@ class Ui_MainWindow(object):
         self.campo_numero_telefono_agregar.setPlaceholderText(_translate("MainWindow", "Numero de Telefono"))
         self.campo_contrasena_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Contraseña"))
         self.campo_correo_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Correo"))
-        self.campo_tipo_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Tipo de empleado"))
-        self.campo_estatus_empleado_agregar.setPlaceholderText(_translate("MainWindow", "Estatus"))
-        self.boton_buscar_empleados_3.setText(_translate("MainWindow", "AGREGAR "))
+        self.comboBox_tipo_empleado_agregar.setItemText(0, _translate("MainWindow", "empleado"))
+        self.comboBox_tipo_empleado_agregar.setItemText(1, _translate("MainWindow", "gerente"))
+        self.comboBox_tipo_empleado_agregar.setItemText(2, _translate("MainWindow", "administrador"))
+        self.comboBox_estatus_empleado_agregar.setItemText(0, _translate("MainWindow", "activo"))
+        self.comboBox_estatus_empleado_agregar.setItemText(1, _translate("MainWindow", "inactivo"))
+        self.boton_agregar_empleado_agregar.setText(_translate("MainWindow", "AGREGAR "))
+        self.label_83.setText(_translate("MainWindow", "Numero Empleado:"))
         self.label_tipo_usuario_editar_usuario.setText(_translate("MainWindow", "TIPO DE USUARIO"))
-        self.campo_busca_nombre_empleado_editar.setPlaceholderText(_translate("MainWindow", "Nombre de empleado"))
+        self.campo_busca_numero_empleado_editar.setPlaceholderText(_translate("MainWindow", "Numero de empleado"))
         self.boton_buscar_empleados_editar.setText(_translate("MainWindow", "Buscar"))
         self.label_81.setText(_translate("MainWindow", "EDITAR USUARIO A CAFÉ INDIGO"))
         self.campo_apellido_paterno_editar.setPlaceholderText(_translate("MainWindow", "Apellido Paterno"))
@@ -5300,9 +5314,13 @@ class Ui_MainWindow(object):
         self.campo_numero_telefono_editar.setPlaceholderText(_translate("MainWindow", "Numero de Telefono"))
         self.campo_contrasena_empleado_editar.setPlaceholderText(_translate("MainWindow", "Contraseña"))
         self.campo_correo_empleado_editar.setPlaceholderText(_translate("MainWindow", "Correo"))
-        self.campo_tipo_empleado_editar.setPlaceholderText(_translate("MainWindow", "Tipo de empleado"))
-        self.campo_estatus_empleado_editar.setPlaceholderText(_translate("MainWindow", "Estatus"))
+        self.comboBox_tipo_empleado_editar.setItemText(0, _translate("MainWindow", "empleado"))
+        self.comboBox_tipo_empleado_editar.setItemText(1, _translate("MainWindow", "gerente"))
+        self.comboBox_tipo_empleado_editar.setItemText(2, _translate("MainWindow", "administrador"))
+        self.comboBox_estatus_empleado_editar.setItemText(0, _translate("MainWindow", "activo"))
+        self.comboBox_estatus_empleado_editar.setItemText(1, _translate("MainWindow", "inactivo"))
         self.boton_guardar_empleados_editar.setText(_translate("MainWindow", "GUARDAR"))
+        self.label_82.setText(_translate("MainWindow", "Numero Empleado:"))
 from pyqtgraph import PlotWidget
 
 
