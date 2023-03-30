@@ -17,11 +17,15 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 
 def crear_conexion():
     try:
+
         conn = connect(host='localhost', 
                     user='expressoft_admin', 
                     password='lewylzzvmA2023/',
                     database='expressoft', 
                     port=3306)
+       
+
+    
     except Error as err:
           print("Algo salio mal: {}".format(err))
 
@@ -81,6 +85,8 @@ def insertar_datos_en_tabla_venta(hoja):
             print('Hay un dato en el renglon {} con formato diferente al solicitado'.format(renglon))
             break
         renglon += 1
+        if renglon % 100 == 0:
+            conn.commit()
             
     conn.commit()
     conn.close()

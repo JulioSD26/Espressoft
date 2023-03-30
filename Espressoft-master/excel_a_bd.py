@@ -95,6 +95,8 @@ def insertar_datos_en_tabla_venta(archivo):
             # tener que modificar el excel y quitar las filas que ya habian sido insertadas, modificando las que tenian formato incorrecto
             return [False, f'Algo salio mal: {err} \nEl error se produjo al tratar de insertar el renglon {renglon} en la base de datos.']
         renglon += 1
+        if renglon % 100 == 0:
+            conn.commit()
 
     conn.commit()
     conn.close()
