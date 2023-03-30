@@ -17,30 +17,15 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 
 def crear_conexion():
     try:
-        """
+
         conn = connect(host='localhost', 
                     user='expressoft_admin', 
                     password='lewylzzvmA2023/',
                     database='expressoft', 
                     port=3306)
-        """
+       
 
-        #MAIN
-        """
-        conn = connect(host='us-west.connect.psdb.cloud', 
-                    user='63xra7j4bs1gc32un1lm', 
-                    password='pscale_pw_UDT94s3FyDFj4gSQdZxVGqZFZot1tnJlWACe9NXvef7',
-                    database='expressoft', 
-                    port=3306)
-        """
-        #BRANCH
-        
-        conn = connect(host='us-west.connect.psdb.cloud', 
-                    user='o7rlpqw42yyyof54jxn9', 
-                    password='pscale_pw_bkBPzdSi5wMSbrWf1d1GCydQPX6a6FGvRJJAwqol7tZ',
-                    database='expressoft', 
-                    port=3306)
-        
+    
     except Error as err:
           print("Algo salio mal: {}".format(err))
 
@@ -110,11 +95,11 @@ if __name__=='__main__':
     #El metodo recibe la ruta del archivo y devuelve un diccionario de listas en donde la llave es la columna
     # y la lista contiene los datos de esa columna
     hoja_ventas_2021 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2021.xlsx')
-    #hoja_ventas_2022 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2022.xlsx')
+    hoja_ventas_2022 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2022.xlsx')
     #print(hoja_ventas_2021)
     #Se inserta los datos del archivo a la base de datos a la que se haya hecho conexion
     insertar_datos_en_tabla_venta(hoja_ventas_2021)
-    #insertar_datos_en_tabla_venta(hoja_ventas_2022)
+    insertar_datos_en_tabla_venta(hoja_ventas_2022)
 
     #insertar_datos_en_tabla_empleados(hoja)
 
