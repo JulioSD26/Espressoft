@@ -115,6 +115,14 @@ def es_formato_excel_ventas_correcto(hoja_ventas):
     # se aplican clausulas de guarda
     if not validar_encabezado_excel_venta(hoja_ventas):
         return [False, "Los nombres de las columnas en el encabezado deben de aparecer y tener el siguiente orden: \ntotal fecha hora empleado_id"]
+    
+    # se valida si el excel que se esta subiendo para importar, ya se ha subido anteriormente
+    # con esta funcion se van a checar los primeros 10 registros del excel para ver si ya se encuentran en la base de datos.
+    # se pueden poner hasta len(hoja_ventas) registros para checar todo el excel, pero puede que con 10 sea suficiente
+    # por que entre mas se chequen, mas se va a tardar el programa en validar cada uno, aunque este parametro
+    # es modificable
+    if esta_el_excel_ya_subido_en_la_bd(hoja_ventas, 10):
+        return [False, "Mientras se procesaba el Excel, se encontraron registros/filas que ya se encuentran en la base de datos.\nEs muy probable que estés tratando de importar un archivo Excel ya importado, por favor asegurate si ese archivo ya ha sido importado por ti o alguien más."]
     lista_total = hoja_ventas['total']
     lista_fecha = hoja_ventas['fecha']
     lista_hora = hoja_ventas['hora']
@@ -162,6 +170,47 @@ def validar_encabezado_excel_venta(hoja_ventas):
     # el formato es correcto, se regresa True
     return True
 
+
+def esta_el_excel_ya_subido_en_la_bd(hoja_ventas, cantidad_de_registros_a_checar):
+    """
+    Valida si un excel de ventas dado ya ha sido importado a la base de datos.
+    Recibe como argumento la hoja de excel de ventas y la cantidad de registros/filas, los cuales se van 
+    a checar en la base de datos.
+    """
+    contador_registros_repetidos = 0
+    contador_registros_checados = 0
+    try:
+        conn = crear_conexion()
+        cursor = conn.cursor()
+        # se va a recorrer todo el excel, pero mas abajo el for se va a detener cuando se llegue a la cantidad_de_registros_a_checar
+        # esto es asi para evitar errores como que se cantidad_de_registros_a_checar sea mayor a la cantidad de registros que
+        # el excel tenga
+        for i in range(len(hoja_ventas)):
+            # se van obteniendo las filas/registros del excel
+            fila = hoja_ventas.iloc[i]
+            # se ejecuta una query con los datos del registro/fila del excel
+            query = f'SELECT total, fecha, hora, empleado_id FROM venta WHERE total = {fila["total"]} AND fecha = "{fila["fecha"]}" AND hora = "{fila["hora"]}" AND empleado_id = "{fila["empleado_id"]}";'
+            cursor.execute(query)
+            registro = cursor.fetchone()
+            contador_registros_checados += 1
+            # si se encontro por lo menos un registro con esos datos en la base de datos
+            if registro is not None:
+                contador_registros_repetidos += 1
+            # para detener el for si se llega a la cantidad_de_registros_a_checar
+            if i == cantidad_de_registros_a_checar - 1:
+                break
+        conn.close()
+    except Error as err:
+        return [False, f"Algo salió mal al tratarse de conectar a la base de datos: {err}"]
+    # esto es para ver si un cuarto de los registros checados son menores o iguales a los registros repetidos encontrados
+    # si, es asi entonces se regresa True indicando que hay uno o mas registros repetidos.
+    # esto es modificable y solo esta por si se diera la casualidad de que a lo mejor un empleado hizo una venta con
+    # el mismo total, en la misma fecha y hora.
+    # aunque puede ser cambiado modificando la formula o directamente si se encontro un solo registro repetido, ya 
+    # dar por hecho que ese excel ya se importo y regresar, True
+    if (contador_registros_checados / 4) <= contador_registros_repetidos:
+        return True
+    return False
 
 def es_formato_total_correcto(total):
     """
@@ -265,7 +314,7 @@ def validar_integridad_id_empleados(lista_empleado_id):
         # la id de empleado de esta lista se transforma a string para compararla con el otro string de empleado id ya convertido
         if str(empleado_id) not in lista_empleado_id_en_bd:
             # si no se encuentra, se regresa una lista, con su primer elemento siendo False y el segundo siendo un mensaje detallado
-            return [False, f"El id de empleado {empleado_id} no se encuentra registrado en la base de datos.\nAgregue a ese usuario."]
+            return [False, f"Mientras se procesaba el Excel, se encontró un id de empleado ({empleado_id}) que no se encuentra registrado en la base de datos (tabla empleados).\nAgregue a ese usuario."]
     # si se validó la integridad de todos los id de empleados, entonces se regresa True y un mensaje de formato correcto
     return [True, "Todo salió bien, formato correcto"]
 
