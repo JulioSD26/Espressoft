@@ -879,7 +879,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>9</number>
+          <number>4</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -4405,16 +4405,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Hora</string>
@@ -4469,54 +4459,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>10:00 am - 11:00 am</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$15000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>11:00 am - 12:00 pm</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -4912,7 +4854,7 @@ border: none;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QPushButton" name="boton_buscar_ventas_individuales_diarias_2">
+                      <widget class="QPushButton" name="boton_buscar_ventas_individuales_mensuales">
                        <property name="minimumSize">
                         <size>
                          <width>30</width>
@@ -5333,7 +5275,7 @@ border-radius: 15px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_diarias_2">
+                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_mensuales">
                          <property name="styleSheet">
                           <string notr="true">QLabel {
 	color: #000000;
@@ -6345,7 +6287,7 @@ border: none;</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QPushButton" name="boton_buscar_ventas_individuales_diarias_3">
+                      <widget class="QPushButton" name="boton_buscar_ventas_individuales_anuales">
                        <property name="minimumSize">
                         <size>
                          <width>30</width>
@@ -6666,7 +6608,7 @@ border-radius: 15px;</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_diarias_3">
+                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_anuales">
                          <property name="styleSheet">
                           <string notr="true">QLabel {
 	color: #000000;
@@ -8027,8 +7969,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>922</width>
-                   <height>564</height>
+                   <width>959</width>
+                   <height>569</height>
                   </rect>
                  </property>
                  <property name="styleSheet">

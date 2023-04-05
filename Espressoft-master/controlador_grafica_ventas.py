@@ -1,13 +1,12 @@
 """
-Este archivo es un borrador de lo que podria ser un controlador para las graficas de ventas.
-De momento esta solo para probar.
+Controlador que podria reutilizarse para las graficas de todas las ventanas de ventas
 """
-
 
 import random
 import pyqtgraph as pg
 from PyQt5 import QtGui
 
+# esta funcion deberia ser eliminada cuando ya no se requiera probar con ella, en la segunda iteracion
 def generar_datos_aleatorios_para_probar(valores_eje_x: list):
     y = []
     for i in range(0, len(valores_eje_x)):
@@ -40,6 +39,9 @@ def estilizar_grafica(grafica, titulo: str):
     grafica.getAxis("left").tickFont = font
     grafica.getAxis("left").setTextPen(lapiz_ejes)
 
+    # agrega un label en el eje y
+    grafica.getAxis("left").setLabel(text="Total ($)")
+
     # con esto se puede cambiar la fuente del titulo de la grafica
     grafica.getPlotItem().titleLabel.item.setFont(font)
 
@@ -62,18 +64,64 @@ def asignar_valores_de_tipo_string_eje_x(grafica, lista_valores_eje_x):
     x_axis.setTicks(ticks)
 
 
-def dibujar_grafica(grafica, valores_eje_x: list):
+def dibujar_grafica(grafica, diccionario_datos: dict):
+    """
+    Recibe un diccionario, donde sus llaves son los valores del eje x, que pueden ser
+    intervalos de horas como 03:00 PM - 04:00 PM, meses como Enero o anios como el 2022,
+    sus valores correspodientes son los valores del eje y, los cuales son sus correspondientes totales.
+    Dibuja una grafica con estos datos
+    """
     # cada que se va  a dibujar la grafica se borra la anterior, para que no aparezca junto a la nueva
-    grafica.getPlotItem().clear()
+    limpiar_grafica(grafica)
     pen = pg.mkPen({'color': "#8cb2e2", 'width': 3})
     # valores_eje_x son los labels de tipo texto que se van a poner en el eje x
+    # en este caso las llaves del diccionario de datos
+    valores_eje_x = list(diccionario_datos.keys())
+    # los valores del eje y son los valores del diccionario de datos
+    valores_eje_y = list(diccionario_datos.values())
+
+    # esto es para checar si solo se esta tratando de graficar un punto, en una situacion muy rara
+    # en la que al obtener los datos de ventas, se haya obtenido solo 1 elemento, 
+    # por ejemplo en ventas individuales diarias si se da al boton generar con los datos:
+    # fecha = "2022-12-31" 
+    # empleado_id = "11"
+    # de la base de datos solo se obtiene un registro
+    # y cuando se trata de graficar un solo punto, el programa lo grafica pero truena, porque espera
+    # graficar una linea que por lo menos tenga 2 puntos.
+    # para este punto ya esta validado que si no se obtuvo un registro de la base de datos, 
+    # no se genere la grafica ni se actualicen los datos de la ventana, mostrandole un mensaje al usuario,
+    # sin embargo queda este caso donde solo se obtiene un registro
+    if len(valores_eje_x) == 1:
+        # la mejor forma de momento para que el programa no truene y no se vea tan feo, es agregar otro punto
+        # despues, con una etiqueta de No conocido y con el mismo valor en y que ese punto
+        valores_eje_x.append("No conocido")
+        # por correspondencia las listas de valores_eje_x y valores_eje_y tienen que tener la misma longitud,
+        # por lo que si solo hay un elemento, entonces valores_eje_y[0] es el total de ese elemento
+        valores_eje_y.append(valores_eje_y[0])
+
     asignar_valores_de_tipo_string_eje_x(grafica, valores_eje_x)
-    # estos van a ser los valores en el eje x, pero los labels de arriba los van a representar
+    # estos van a ser los valores en el eje x, pero los labels de arriba (valores_eje_x) los van a representar
     # esto es asi porque no se puede poner un valor en uno de los ejes que no sea numerico
     valores_x_numericos = [i for i in range(1, len(valores_eje_x) + 1)]
-    valores_eje_y = generar_datos_aleatorios_para_probar(valores_eje_x)
+
+    # esto es para poner los limites de la grafica
+    # xMin = 0 es para que no se muestren los valores de x negativos, el eje x solo puede tener valores numericos (aunque luego sean reemplazados por labels, siguen siendo representados por numeros)
+    # yMin = -1 es para que no se muestren los valores de y negativos, de modo que no permite verlos ya que ninguna venta podria tener valores negativos
+    # xMax = len(valores_eje_x) + 1 es para que el limite en el eje x sea de la cantidad de valores en el eje x + 1, es mas 1 para que no se meustre recortado el ultimo elemento, de modo que si hay 5 valores en el eje x (en el eje y correspondientemente deben haber 5 tambien), el limite ser hasta el elemento 6
+    # yMax = max(valores_eje_y) + (sum(valores_eje_y) / len(valores_eje_y) es para poner el limite maximo en el eje y,
+    # para esto se obtiene el maximo entre los valores del eje y (totales) y para que no se muestre recortado el ultimo elemento,
+    # se le suma el promedio de los valores en el eje y, porque estos valores pueden variar mucho
+    grafica.getPlotItem().vb.setLimits(xMin = 0, yMin= -1, xMax = len(valores_eje_x) + 1, yMax = max(valores_eje_y) + (sum(valores_eje_y) / len(valores_eje_y)))
+
     # symbol representa un simbolo que se puede poner en cada punto x, y, en este caso se le pone uno con forma de 'o', tamanio = 10, de color blanco y cubiero por el color '#658fc2' 
     grafica.plot(valores_x_numericos, valores_eje_y, pen = pen, symbolBrush = 'white', symbolPen ='#658fc2', symbol ='o', symbolSize = 10)
+
+
+def limpiar_grafica(grafica):
+    """
+    Limpia una grafica dada de sus elementos.
+    """
+    grafica.getPlotItem().clear()
 
     
 

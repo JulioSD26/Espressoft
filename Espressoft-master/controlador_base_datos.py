@@ -151,17 +151,19 @@ def verifica_usuario(numero):
 
 def crear_conexion():
 
+    """
     conn = connect(host='us-west.connect.psdb.cloud', 
                    user='o7rlpqw42yyyof54jxn9', 
                    password='pscale_pw_bkBPzdSi5wMSbrWf1d1GCydQPX6a6FGvRJJAwqol7tZ',
                    database='expressoft', 
                    port=3306)
+    """
 
-    # conn = connect(host='localhost',
-    #                user='root',
-    #                password='',
-    #                 database='expressoft',
-    #                 port=3306)
+    conn = connect(host='localhost',
+                       user='expressoft_admin',
+                       password='lewylzzvmA2023/',
+                       database='expressoft',
+                       port=3306)
 
 
     return conn

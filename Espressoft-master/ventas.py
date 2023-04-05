@@ -8,6 +8,7 @@ from ventas_ui import *
 from controlador_grafica_ventas import *
 from controlador_ventana_importar_datos import ControladorVentanaImportarDatos
 from controlador_menu_lateral import ControladorMenuLateral
+from controlador_ventas_individuales_diarias import ControladorVentasIndividualesDiarias
 from controlador_base_datos import *
 import empleados
 import datetime
@@ -65,13 +66,12 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # argumento la ventana principal, MainWindow
         ControladorMenuLateral(self)
 
+        # se instancia el controlador de ventas individuales diarias para darle funcionalidad a su ventana correspondiente
+        ControladorVentasIndividualesDiarias(self)
+
         self.asignar_tipo_empleado_a_labels()
 
         self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
-
-        """
-        Esto es solo para probar las graficas, se debe de quitar o cambiar
-        """
 
         estilizar_grafica(self.grafica_ventas_totales_diarias,
                           "Ventas totales diarias")
@@ -86,20 +86,68 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         estilizar_grafica(self.grafica_ventas_individuales_anuales,
                           "Ventas individuales anuales")
 
-        self.boton_generar_ventas_totales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_diarias, [
-                                                                  '3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm']))
-        self.boton_generar_ventas_totales_mensuales.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_mensuales, [
-                                                                    'Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sept', 'Oct', 'Nov', 'Dic']))
-        # tanto ventas individuales diarias, como ventas totales diarias no tienen un boton de generar, por lo que se
-        # intuye que se generan automaticamente al cargar la ventana
-        dibujar_grafica(self.grafica_ventas_totales_anuales, ['2020', '2021'])
 
-        self.boton_generar_ventas_individuales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_individuales_diarias, [
-                                                                       '3:00 pm - 4:00 pm', '4:00 pm - 5:00 pm', '5:00 pm - 6:00 pm', '6:00 pm - 7:00 pm', '7:00 pm - 8:00 pm', '8:00 pm - 9:00 pm']))
+        """
+        Esto es para probar, se debe de cambiar.
+        Los datos son de prueba.
+        """
+
+        self.boton_generar_ventas_totales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_diarias, {
+            '11:00 AM - 12:00 PM': 1550.32, 
+            '12:00 PM - 01:00 PM': 0, 
+            '01:00 PM - 02:00 PM': 0, 
+            '02:00 PM - 03:00 PM': 0, 
+            '03:00 PM - 04:00 PM': 893.0, 
+            '04:00 PM - 05:00 PM': 0, 
+            '05:00 PM - 06:00 PM': 345.0, 
+            '06:00 PM - 07:00 PM': 752.0, 
+            '07:00 PM - 08:00 PM': 0, 
+            '08:00 PM - 09:00 PM': 200.0
+            }))
+        
+        self.boton_generar_ventas_totales_mensuales.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_mensuales, {
+            'Ene': 1000, 
+            'Feb': 2221.2, 
+            'Mar': 891.3, 
+            'Abr': 900, 
+            'May': 1226.9, 
+            'Jun': 1231, 
+            'Jul': 3001, 
+            'Ago': 713.90, 
+            'Sept': 1236.08, 
+            'Oct': 2831.87, 
+            'Nov': 1220.98, 
+            'Dic': 550.55
+            }))
+        # ventas totales anuales, no tiene un boton que genere los datos o busque a un empleado, por lo que se
+        # intuye que se generan automaticamente al cargar la ventana
+        dibujar_grafica(self.grafica_ventas_totales_anuales, {
+            '2021': 15018.32,
+            '2022': 22134.67
+        })
+
         self.boton_generar_ventas_individuales_mensuales.clicked.connect(lambda: dibujar_grafica(
-            self.grafica_ventas_individuales_mensuales, ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sept', 'Oct', 'Nov', 'Dic']))
-        dibujar_grafica(self.grafica_ventas_individuales_anuales, [
-                        '2019', '2020', '2021', '2022', '2023'])
+            self.grafica_ventas_individuales_mensuales, {
+            'Ene': 1000, 
+            'Feb': 2221.2, 
+            'Mar': 891.3, 
+            'Abr': 900, 
+            'May': 1226.9, 
+            'Jun': 1231, 
+            'Jul': 3001, 
+            'Ago': 713.90, 
+            'Sept': 1236.08, 
+            'Oct': 2831.87, 
+            'Nov': 1220.98, 
+            'Dic': 550.55
+            }))
+        
+        self.boton_buscar_ventas_individuales_anuales.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_individuales_anuales, {
+            '2020': 7850.12,
+            '2021': 15018.32,
+            '2022': 22134.67,
+            '2023': 16012
+        }))
 
     def asignar_tipo_empleado_a_labels(self):
         """
