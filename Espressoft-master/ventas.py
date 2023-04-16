@@ -110,7 +110,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         Esto es para probar, se debe de cambiar.
         Los datos son de prueba.
         """
-
+        """
         self.boton_generar_ventas_totales_diarias.clicked.connect(lambda: dibujar_grafica(self.grafica_ventas_totales_diarias, {
             '11:00 AM - 12:00 PM': 1550.32, 
             '12:00 PM - 01:00 PM': 0, 
@@ -167,6 +167,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             '2022': 22134.67,
             '2023': 16012
         }))
+        """
 
     def asignar_tipo_empleado_a_labels(self):
         """
