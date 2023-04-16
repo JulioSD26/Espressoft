@@ -9,6 +9,7 @@ from controlador_grafica_ventas import *
 from controlador_ventana_importar_datos import ControladorVentanaImportarDatos
 from controlador_menu_lateral import ControladorMenuLateral
 from controlador_ventas_individuales_diarias import ControladorVentasIndividualesDiarias
+from controlador_ventas_totales_diarias import ControladorVentasTotalesDiarias
 from controlador_base_datos import *
 import empleados
 import datetime
@@ -86,6 +87,24 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         estilizar_grafica(self.grafica_ventas_individuales_anuales,
                           "Ventas individuales anuales")
 
+        ControladorVentasTotalesDiarias(self)
+
+        self.asignar_tipo_empleado_a_labels()
+
+        self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
+
+        estilizar_grafica(self.grafica_ventas_totales_diarias,
+                          "Ventas totales diarias")
+        estilizar_grafica(self.grafica_ventas_totales_mensuales,
+                          "Ventas totales mensuales")
+        estilizar_grafica(self.grafica_ventas_totales_anuales,
+                          "Ventas totales anuales")
+        estilizar_grafica(self.grafica_ventas_individuales_diarias,
+                          "Ventas individuales diarias")
+        estilizar_grafica(
+            self.grafica_ventas_individuales_mensuales, "Ventas individuales mensuales")
+        estilizar_grafica(self.grafica_ventas_individuales_anuales,
+                          "Ventas individuales anuales")
 
         """
         Esto es para probar, se debe de cambiar.
