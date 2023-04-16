@@ -77,6 +77,10 @@ def dibujar_grafica(grafica, diccionario_datos: dict):
     # valores_eje_x son los labels de tipo texto que se van a poner en el eje x
     # en este caso las llaves del diccionario de datos
     valores_eje_x = list(diccionario_datos.keys())
+    valores_eje_x_tipo_str = []
+    # todos los valores del eje x se pasan a str, por si eran numericos
+    for valor in valores_eje_x:
+        valores_eje_x_tipo_str.append(str(valor))
     # los valores del eje y son los valores del diccionario de datos
     valores_eje_y = list(diccionario_datos.values())
 
@@ -91,23 +95,23 @@ def dibujar_grafica(grafica, diccionario_datos: dict):
     # para este punto ya esta validado que si no se obtuvo un registro de la base de datos, 
     # no se genere la grafica ni se actualicen los datos de la ventana, mostrandole un mensaje al usuario,
     # sin embargo queda este caso donde solo se obtiene un registro
-    if len(valores_eje_x) == 1:
+    if len(valores_eje_x_tipo_str) == 1:
         # la mejor forma de momento para que el programa no truene y no se vea tan feo, es agregar otro punto
         # despues, con una etiqueta de No conocido y con el mismo valor en y que ese punto
-        valores_eje_x.append("No conocido")
-        # por correspondencia las listas de valores_eje_x y valores_eje_y tienen que tener la misma longitud,
+        valores_eje_x_tipo_str.append("No conocido")
+        # por correspondencia las listas de valores_eje_x_tipo_str y valores_eje_y tienen que tener la misma longitud,
         # por lo que si solo hay un elemento, entonces valores_eje_y[0] es el total de ese elemento
         valores_eje_y.append(valores_eje_y[0])
 
-    asignar_valores_de_tipo_string_eje_x(grafica, valores_eje_x)
-    # estos van a ser los valores en el eje x, pero los labels de arriba (valores_eje_x) los van a representar
+    asignar_valores_de_tipo_string_eje_x(grafica, valores_eje_x_tipo_str)
+    # estos van a ser los valores en el eje x, pero los labels de arriba (valores_eje_x_tipo_str) los van a representar
     # esto es asi porque no se puede poner un valor en uno de los ejes que no sea numerico
-    valores_x_numericos = [i for i in range(1, len(valores_eje_x) + 1)]
+    valores_x_numericos = [i for i in range(1, len(valores_eje_x_tipo_str) + 1)]
 
     # esto es para poner los limites de la grafica
     # xMin = 0 es para que no se muestren los valores de x negativos, el eje x solo puede tener valores numericos (aunque luego sean reemplazados por labels, siguen siendo representados por numeros)
     # yMin = -1 es para que no se muestren los valores de y negativos, de modo que no permite verlos ya que ninguna venta podria tener valores negativos
-    # xMax = len(valores_eje_x) + 1 es para que el limite en el eje x sea de la cantidad de valores en el eje x + 1, es mas 1 para que no se meustre recortado el ultimo elemento, de modo que si hay 5 valores en el eje x (en el eje y correspondientemente deben haber 5 tambien), el limite ser hasta el elemento 6
+    # xMax = len(valores_eje_x_tipo_str) + 1 es para que el limite en el eje x sea de la cantidad de valores en el eje x + 1, es mas 1 para que no se meustre recortado el ultimo elemento, de modo que si hay 5 valores en el eje x (en el eje y correspondientemente deben haber 5 tambien), el limite ser hasta el elemento 6
     # yMax = max(valores_eje_y) + (sum(valores_eje_y) / len(valores_eje_y) es para poner el limite maximo en el eje y,
     # para esto se obtiene el maximo entre los valores del eje y (totales) y para que no se muestre recortado el ultimo elemento,
     # se le suma el promedio de los valores en el eje y, porque estos valores pueden variar mucho

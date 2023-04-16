@@ -1548,16 +1548,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_6.setObjectName("label_6")
         self.verticalLayout_41.addWidget(self.label_6, 0, QtCore.Qt.AlignHCenter)
-        self.label_fecha_anio_en_curso_ventas_totales_anuales = QtWidgets.QLabel(self.frame_45)
-        self.label_fecha_anio_en_curso_ventas_totales_anuales.setStyleSheet("QLabel {\n"
+        self.label_fecha_en_curso_ventas_totales_anuales = QtWidgets.QLabel(self.frame_45)
+        self.label_fecha_en_curso_ventas_totales_anuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
-"    font-size: 13px;\n"
+"    font-size: 14px;\n"
 "}")
-        self.label_fecha_anio_en_curso_ventas_totales_anuales.setObjectName("label_fecha_anio_en_curso_ventas_totales_anuales")
-        self.verticalLayout_41.addWidget(self.label_fecha_anio_en_curso_ventas_totales_anuales, 0, QtCore.Qt.AlignHCenter)
+        self.label_fecha_en_curso_ventas_totales_anuales.setObjectName("label_fecha_en_curso_ventas_totales_anuales")
+        self.verticalLayout_41.addWidget(self.label_fecha_en_curso_ventas_totales_anuales, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_43.addLayout(self.verticalLayout_41)
         self.horizontalLayout_61.addWidget(self.frame_45)
         self.frame_38 = QtWidgets.QFrame(self.frame_42)
@@ -1590,7 +1590,7 @@ class Ui_MainWindow(object):
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
-"    font-size: 13px;\n"
+"    font-size: 18px;\n"
 "}")
         self.label_ventas_anio_en_curso_ventas_totales_anuales.setObjectName("label_ventas_anio_en_curso_ventas_totales_anuales")
         self.verticalLayout_42.addWidget(self.label_ventas_anio_en_curso_ventas_totales_anuales, 0, QtCore.Qt.AlignHCenter)
@@ -1620,16 +1620,16 @@ class Ui_MainWindow(object):
         self.label_49.setWordWrap(True)
         self.label_49.setObjectName("label_49")
         self.horizontalLayout_50.addWidget(self.label_49, 0, QtCore.Qt.AlignLeft)
-        self.label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales = QtWidgets.QLabel(self.frame_46)
-        self.label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales.setStyleSheet("QLabel {\n"
+        self.label_ventas_totales_anio_actual_incluido_ventas_totales_anuales = QtWidgets.QLabel(self.frame_46)
+        self.label_ventas_totales_anio_actual_incluido_ventas_totales_anuales.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
 "    font-size: 12px;\n"
 "}")
-        self.label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales.setObjectName("label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales")
-        self.horizontalLayout_50.addWidget(self.label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales, 0, QtCore.Qt.AlignRight)
+        self.label_ventas_totales_anio_actual_incluido_ventas_totales_anuales.setObjectName("label_ventas_totales_anio_actual_incluido_ventas_totales_anuales")
+        self.horizontalLayout_50.addWidget(self.label_ventas_totales_anio_actual_incluido_ventas_totales_anuales, 0, QtCore.Qt.AlignRight)
         self.horizontalLayout_62.addLayout(self.horizontalLayout_50)
         self.verticalLayout_39.addWidget(self.frame_46)
         self.horizontalLayout_42.addWidget(self.frame_42)
@@ -2793,22 +2793,22 @@ class Ui_MainWindow(object):
         self.horizontalLayout_86 = QtWidgets.QHBoxLayout(self.frame_71)
         self.horizontalLayout_86.setContentsMargins(6, 6, 6, 6)
         self.horizontalLayout_86.setObjectName("horizontalLayout_86")
-        self.campo_num_empleado_ventas_individuales_diarias_3 = QtWidgets.QLineEdit(self.frame_71)
+        self.campo_num_empleado_ventas_individuales_anuales = QtWidgets.QLineEdit(self.frame_71)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.campo_num_empleado_ventas_individuales_diarias_3.sizePolicy().hasHeightForWidth())
-        self.campo_num_empleado_ventas_individuales_diarias_3.setSizePolicy(sizePolicy)
-        self.campo_num_empleado_ventas_individuales_diarias_3.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        sizePolicy.setHeightForWidth(self.campo_num_empleado_ventas_individuales_anuales.sizePolicy().hasHeightForWidth())
+        self.campo_num_empleado_ventas_individuales_anuales.setSizePolicy(sizePolicy)
+        self.campo_num_empleado_ventas_individuales_anuales.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "font-family: \'Montserrat\';\n"
 "font-style: normal;\n"
 "font-weight: 600;\n"
 "font-size: 12px;\n"
 "color: rgb(52, 64, 85);\n"
 "border: none;")
-        self.campo_num_empleado_ventas_individuales_diarias_3.setClearButtonEnabled(False)
-        self.campo_num_empleado_ventas_individuales_diarias_3.setObjectName("campo_num_empleado_ventas_individuales_diarias_3")
-        self.horizontalLayout_86.addWidget(self.campo_num_empleado_ventas_individuales_diarias_3)
+        self.campo_num_empleado_ventas_individuales_anuales.setClearButtonEnabled(False)
+        self.campo_num_empleado_ventas_individuales_anuales.setObjectName("campo_num_empleado_ventas_individuales_anuales")
+        self.horizontalLayout_86.addWidget(self.campo_num_empleado_ventas_individuales_anuales)
         self.horizontalLayout_85.addWidget(self.frame_71)
         self.boton_buscar_ventas_individuales_anuales = QtWidgets.QPushButton(self.frame_70)
         self.boton_buscar_ventas_individuales_anuales.setMinimumSize(QtCore.QSize(30, 40))
@@ -2859,16 +2859,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_61.setObjectName("label_61")
         self.horizontalLayout_87.addWidget(self.label_61)
-        self.label_num_empleado_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_72)
-        self.label_num_empleado_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_num_empleado_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_72)
+        self.label_num_empleado_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: rgb(65, 107, 191);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 400;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_num_empleado_ventas_individuales_diarias_3.setObjectName("label_num_empleado_ventas_individuales_diarias_3")
-        self.horizontalLayout_87.addWidget(self.label_num_empleado_ventas_individuales_diarias_3)
+        self.label_num_empleado_ventas_individuales_anuales.setObjectName("label_num_empleado_ventas_individuales_anuales")
+        self.horizontalLayout_87.addWidget(self.label_num_empleado_ventas_individuales_anuales)
         spacerItem34 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_87.addItem(spacerItem34)
         self.verticalLayout_64.addLayout(self.horizontalLayout_87)
@@ -2885,16 +2885,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_62.setObjectName("label_62")
         self.horizontalLayout_88.addWidget(self.label_62)
-        self.label_nombre_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_72)
-        self.label_nombre_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_nombre_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_72)
+        self.label_nombre_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: rgb(65, 107, 191);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 400;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_nombre_ventas_individuales_diarias_3.setObjectName("label_nombre_ventas_individuales_diarias_3")
-        self.horizontalLayout_88.addWidget(self.label_nombre_ventas_individuales_diarias_3)
+        self.label_nombre_ventas_individuales_anuales.setObjectName("label_nombre_ventas_individuales_anuales")
+        self.horizontalLayout_88.addWidget(self.label_nombre_ventas_individuales_anuales)
         spacerItem35 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_88.addItem(spacerItem35)
         self.verticalLayout_63.addLayout(self.horizontalLayout_88)
@@ -2910,16 +2910,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_63.setObjectName("label_63")
         self.horizontalLayout_89.addWidget(self.label_63)
-        self.label_estatus_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_72)
-        self.label_estatus_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_estatus_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_72)
+        self.label_estatus_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: rgb(65, 107, 191);\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 400;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_estatus_ventas_individuales_diarias_3.setObjectName("label_estatus_ventas_individuales_diarias_3")
-        self.horizontalLayout_89.addWidget(self.label_estatus_ventas_individuales_diarias_3)
+        self.label_estatus_ventas_individuales_anuales.setObjectName("label_estatus_ventas_individuales_anuales")
+        self.horizontalLayout_89.addWidget(self.label_estatus_ventas_individuales_anuales)
         spacerItem36 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_89.addItem(spacerItem36)
         self.verticalLayout_63.addLayout(self.horizontalLayout_89)
@@ -3110,16 +3110,16 @@ class Ui_MainWindow(object):
         self.horizontalLayout_97.addWidget(self.label_67)
         spacerItem37 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_97.addItem(spacerItem37)
-        self.label_total_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_79)
-        self.label_total_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_total_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_79)
+        self.label_total_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 600;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_total_ventas_individuales_diarias_3.setObjectName("label_total_ventas_individuales_diarias_3")
-        self.horizontalLayout_97.addWidget(self.label_total_ventas_individuales_diarias_3)
+        self.label_total_ventas_individuales_anuales.setObjectName("label_total_ventas_individuales_anuales")
+        self.horizontalLayout_97.addWidget(self.label_total_ventas_individuales_anuales)
         self.horizontalLayout_96.addLayout(self.horizontalLayout_97)
         self.verticalLayout_56.addWidget(self.frame_79)
         self.horizontalLayout_98 = QtWidgets.QHBoxLayout()
@@ -3161,19 +3161,20 @@ class Ui_MainWindow(object):
 "    font-weight: 400;\n"
 "    font-size: 14px;\n"
 "}")
+        self.label_68.setWordWrap(True)
         self.label_68.setObjectName("label_68")
-        self.verticalLayout_68.addWidget(self.label_68)
-        self.label_hora_mas_ventas_individuales_diarias_5 = QtWidgets.QLabel(self.frame_81)
-        self.label_hora_mas_ventas_individuales_diarias_5.setMinimumSize(QtCore.QSize(0, 37))
-        self.label_hora_mas_ventas_individuales_diarias_5.setStyleSheet("QLabel {\n"
+        self.verticalLayout_68.addWidget(self.label_68, 0, QtCore.Qt.AlignHCenter)
+        self.label_anio_mas_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_81)
+        self.label_anio_mas_ventas_individuales_anuales.setMinimumSize(QtCore.QSize(0, 37))
+        self.label_anio_mas_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
-"    font-size: 14px;\n"
+"    font-size: 18px;\n"
 "}")
-        self.label_hora_mas_ventas_individuales_diarias_5.setObjectName("label_hora_mas_ventas_individuales_diarias_5")
-        self.verticalLayout_68.addWidget(self.label_hora_mas_ventas_individuales_diarias_5)
+        self.label_anio_mas_ventas_individuales_anuales.setObjectName("label_anio_mas_ventas_individuales_anuales")
+        self.verticalLayout_68.addWidget(self.label_anio_mas_ventas_individuales_anuales, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.horizontalLayout_99.addLayout(self.verticalLayout_68)
         self.label_74 = QtWidgets.QLabel(self.frame_81)
         self.label_74.setMaximumSize(QtCore.QSize(64, 16777215))
@@ -3191,18 +3192,19 @@ class Ui_MainWindow(object):
 "    font-weight: 400;\n"
 "    font-size: 14px;\n"
 "}")
+        self.label_69.setWordWrap(True)
         self.label_69.setObjectName("label_69")
-        self.verticalLayout_69.addWidget(self.label_69)
-        self.label_hora_mas_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_81)
-        self.label_hora_mas_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.verticalLayout_69.addWidget(self.label_69, 0, QtCore.Qt.AlignHCenter)
+        self.label_anio_menos_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_81)
+        self.label_anio_menos_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
-"    font-size: 14px;\n"
+"    font-size: 18px;\n"
 "}")
-        self.label_hora_mas_ventas_individuales_diarias_3.setObjectName("label_hora_mas_ventas_individuales_diarias_3")
-        self.verticalLayout_69.addWidget(self.label_hora_mas_ventas_individuales_diarias_3)
+        self.label_anio_menos_ventas_individuales_anuales.setObjectName("label_anio_menos_ventas_individuales_anuales")
+        self.verticalLayout_69.addWidget(self.label_anio_menos_ventas_individuales_anuales, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
         self.horizontalLayout_99.addLayout(self.verticalLayout_69)
         self.horizontalLayout_101.addWidget(self.frame_81)
         self.verticalLayout_56.addWidget(self.frame_80)
@@ -3230,16 +3232,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_76.setObjectName("label_76")
         self.verticalLayout_73.addWidget(self.label_76, 0, QtCore.Qt.AlignHCenter)
-        self.label_hora_mas_ventas_individuales_diarias_7 = QtWidgets.QLabel(self.frame_84)
-        self.label_hora_mas_ventas_individuales_diarias_7.setStyleSheet("QLabel {\n"
+        self.label_fecha_en_curso_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_84)
+        self.label_fecha_en_curso_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_hora_mas_ventas_individuales_diarias_7.setObjectName("label_hora_mas_ventas_individuales_diarias_7")
-        self.verticalLayout_73.addWidget(self.label_hora_mas_ventas_individuales_diarias_7, 0, QtCore.Qt.AlignHCenter)
+        self.label_fecha_en_curso_ventas_individuales_anuales.setObjectName("label_fecha_en_curso_ventas_individuales_anuales")
+        self.verticalLayout_73.addWidget(self.label_fecha_en_curso_ventas_individuales_anuales, 0, QtCore.Qt.AlignHCenter)
         self.horizontalLayout_105.addLayout(self.verticalLayout_73)
         self.horizontalLayout_104.addWidget(self.frame_84)
         self.frame_85 = QtWidgets.QFrame(self.frame_77)
@@ -3264,16 +3266,16 @@ class Ui_MainWindow(object):
 "}")
         self.label_77.setObjectName("label_77")
         self.verticalLayout_75.addWidget(self.label_77, 0, QtCore.Qt.AlignHCenter)
-        self.label_hora_menos_ventas_individuales_diarias_3 = QtWidgets.QLabel(self.frame_85)
-        self.label_hora_menos_ventas_individuales_diarias_3.setStyleSheet("QLabel {\n"
+        self.label_ventas_anio_en_curso_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_85)
+        self.label_ventas_anio_en_curso_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #416BBF;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
-"    font-size: 14px;\n"
+"    font-size: 18px;\n"
 "}")
-        self.label_hora_menos_ventas_individuales_diarias_3.setObjectName("label_hora_menos_ventas_individuales_diarias_3")
-        self.verticalLayout_75.addWidget(self.label_hora_menos_ventas_individuales_diarias_3, 0, QtCore.Qt.AlignHCenter)
+        self.label_ventas_anio_en_curso_ventas_individuales_anuales.setObjectName("label_ventas_anio_en_curso_ventas_individuales_anuales")
+        self.verticalLayout_75.addWidget(self.label_ventas_anio_en_curso_ventas_individuales_anuales, 0, QtCore.Qt.AlignHCenter)
         self.verticalLayout_74.addLayout(self.verticalLayout_75)
         self.horizontalLayout_104.addWidget(self.frame_85)
         self.verticalLayout_56.addLayout(self.horizontalLayout_104)
@@ -3289,24 +3291,24 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName("gridLayout")
         self.label_78 = QtWidgets.QLabel(self.frame_86)
         self.label_78.setStyleSheet("QLabel {\n"
-"    color: #416BBF;\n"
+"    color: #344050;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 400;\n"
-"    font-size: 14px;\n"
+"    font-size: 12px;\n"
 "}")
         self.label_78.setObjectName("label_78")
         self.gridLayout.addWidget(self.label_78, 0, 0, 1, 1)
-        self.label_hora_mas_ventas_individuales_diarias_8 = QtWidgets.QLabel(self.frame_86)
-        self.label_hora_mas_ventas_individuales_diarias_8.setStyleSheet("QLabel {\n"
-"    color: #416BBF;\n"
+        self.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_86)
+        self.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
+"    color: #344050;\n"
 "    font-family: \'Montserrat\';\n"
 "    font-style: normal;\n"
 "    font-weight: 700;\n"
 "    font-size: 14px;\n"
 "}")
-        self.label_hora_mas_ventas_individuales_diarias_8.setObjectName("label_hora_mas_ventas_individuales_diarias_8")
-        self.gridLayout.addWidget(self.label_hora_mas_ventas_individuales_diarias_8, 0, 1, 1, 1)
+        self.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales.setObjectName("label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales")
+        self.gridLayout.addWidget(self.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales, 0, 1, 1, 1, QtCore.Qt.AlignRight)
         self.verticalLayout_56.addWidget(self.frame_86)
         self.horizontalLayout_84.addWidget(self.frame_77)
         self.horizontalLayout_16.addLayout(self.horizontalLayout_84)
@@ -4597,7 +4599,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(6)
+        self.stacked_widget_paginas.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
@@ -4670,11 +4672,11 @@ class Ui_MainWindow(object):
         self.label_44.setText(_translate("MainWindow", "Total:"))
         self.label_total_ventas_totales_anuales.setText(_translate("MainWindow", "$--.--"))
         self.label_6.setText(_translate("MainWindow", "Fecha de año en curso:"))
-        self.label_fecha_anio_en_curso_ventas_totales_anuales.setText(_translate("MainWindow", "-- de -- del ----"))
+        self.label_fecha_en_curso_ventas_totales_anuales.setText(_translate("MainWindow", "-- de -- del ----"))
         self.label_47.setText(_translate("MainWindow", "Ventas de año en curso:"))
         self.label_ventas_anio_en_curso_ventas_totales_anuales.setText(_translate("MainWindow", "$--.--"))
         self.label_49.setText(_translate("MainWindow", "Ventas totales incluyendo año en curso:"))
-        self.label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales.setText(_translate("MainWindow", "$--.--"))
+        self.label_ventas_totales_anio_actual_incluido_ventas_totales_anuales.setText(_translate("MainWindow", "$--.--"))
         self.label_tipo_usuario_ventas_individuales_diarias.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_36.setText(_translate("MainWindow", "Ingresa número de empleado"))
         self.campo_num_empleado_ventas_individuales_diarias.setPlaceholderText(_translate("MainWindow", "Número empleado"))
@@ -4729,15 +4731,15 @@ class Ui_MainWindow(object):
         self.label_hora_mas_ventas_individuales_diarias_2.setText(_translate("MainWindow", "            -----"))
         self.label_tipo_usuario_ventas_individuales_anuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.label_59.setText(_translate("MainWindow", "Ingresa número de empleado"))
-        self.campo_num_empleado_ventas_individuales_diarias_3.setPlaceholderText(_translate("MainWindow", "Número empleado"))
+        self.campo_num_empleado_ventas_individuales_anuales.setPlaceholderText(_translate("MainWindow", "Número empleado"))
         self.boton_buscar_ventas_individuales_anuales.setText(_translate("MainWindow", "Buscar"))
         self.label_60.setText(_translate("MainWindow", "Datos de empleado:"))
         self.label_61.setText(_translate("MainWindow", "Número de empleado ingresado:"))
-        self.label_num_empleado_ventas_individuales_diarias_3.setText(_translate("MainWindow", "----"))
+        self.label_num_empleado_ventas_individuales_anuales.setText(_translate("MainWindow", "----"))
         self.label_62.setText(_translate("MainWindow", "Nombre:"))
-        self.label_nombre_ventas_individuales_diarias_3.setText(_translate("MainWindow", "-------"))
+        self.label_nombre_ventas_individuales_anuales.setText(_translate("MainWindow", "-------"))
         self.label_63.setText(_translate("MainWindow", "Estatus:"))
-        self.label_estatus_ventas_individuales_diarias_3.setText(_translate("MainWindow", "------"))
+        self.label_estatus_ventas_individuales_anuales.setText(_translate("MainWindow", "------"))
         self.label_64.setText(_translate("MainWindow", "Porcentaje de ventas:"))
         self.label_porcentaje_ventas_individuales_anuales.setText(_translate("MainWindow", "--.--%"))
         self.label_66.setText(_translate("MainWindow", "VENTAS ANUALES"))
@@ -4746,17 +4748,17 @@ class Ui_MainWindow(object):
         item = self.tabla_ventas_individuales_anuales.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Ingresos totales"))
         self.label_67.setText(_translate("MainWindow", "Total:"))
-        self.label_total_ventas_individuales_diarias_3.setText(_translate("MainWindow", "$--.--"))
-        self.label_68.setText(_translate("MainWindow", "Año con mas ventas"))
-        self.label_hora_mas_ventas_individuales_diarias_5.setText(_translate("MainWindow", "            -----"))
+        self.label_total_ventas_individuales_anuales.setText(_translate("MainWindow", "$--.--"))
+        self.label_68.setText(_translate("MainWindow", "Año con mas ventas:"))
+        self.label_anio_mas_ventas_individuales_anuales.setText(_translate("MainWindow", "----"))
         self.label_69.setText(_translate("MainWindow", "Año con menos ventas:"))
-        self.label_hora_mas_ventas_individuales_diarias_3.setText(_translate("MainWindow", "            -----"))
+        self.label_anio_menos_ventas_individuales_anuales.setText(_translate("MainWindow", "----"))
         self.label_76.setText(_translate("MainWindow", "Fecha del año en curso"))
-        self.label_hora_mas_ventas_individuales_diarias_7.setText(_translate("MainWindow", "-- de ----- del ----"))
+        self.label_fecha_en_curso_ventas_individuales_anuales.setText(_translate("MainWindow", "-- de ----- del ----"))
         self.label_77.setText(_translate("MainWindow", "Ventas de año en curso"))
-        self.label_hora_menos_ventas_individuales_diarias_3.setText(_translate("MainWindow", "$--.--"))
-        self.label_78.setText(_translate("MainWindow", "Ventas totales incluyendo año en curso"))
-        self.label_hora_mas_ventas_individuales_diarias_8.setText(_translate("MainWindow", "$--.--"))
+        self.label_ventas_anio_en_curso_ventas_individuales_anuales.setText(_translate("MainWindow", "$--.--"))
+        self.label_78.setText(_translate("MainWindow", "Ventas totales incluyendo año en curso:"))
+        self.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales.setText(_translate("MainWindow", "$--.--"))
         self.label_tipo_usuario_empleados.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.campo_nombre_empleado_empleados.setPlaceholderText(_translate("MainWindow", "Nombre de empleado"))
         self.boton_buscar_empleados.setText(_translate("MainWindow", "Buscar"))

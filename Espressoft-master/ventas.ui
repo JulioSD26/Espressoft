@@ -879,7 +879,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>6</number>
+          <number>3</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -3246,14 +3246,14 @@ QTableWidget {
                         </widget>
                        </item>
                        <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_fecha_anio_en_curso_ventas_totales_anuales">
+                        <widget class="QLabel" name="label_fecha_en_curso_ventas_totales_anuales">
                          <property name="styleSheet">
                           <string notr="true">QLabel {
 	color: #416BBF;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 13px;
+	font-size: 14px;
 }</string>
                          </property>
                          <property name="text">
@@ -3322,7 +3322,7 @@ QTableWidget {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 13px;
+	font-size: 18px;
 }</string>
                          </property>
                          <property name="text">
@@ -3374,7 +3374,7 @@ QTableWidget {
                       </widget>
                      </item>
                      <item alignment="Qt::AlignRight">
-                      <widget class="QLabel" name="label_ventas_totales_incluyendo_anio_en_curso_ventas_totales_anuales">
+                      <widget class="QLabel" name="label_ventas_totales_anio_actual_incluido_ventas_totales_anuales">
                        <property name="styleSheet">
                         <string notr="true">QLabel {
 	color: #344050;
@@ -5687,7 +5687,7 @@ border-radius: 2px;</string>
                          <number>6</number>
                         </property>
                         <item>
-                         <widget class="QLineEdit" name="campo_num_empleado_ventas_individuales_diarias_3">
+                         <widget class="QLineEdit" name="campo_num_empleado_ventas_individuales_anuales">
                           <property name="sizePolicy">
                            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                             <horstretch>0</horstretch>
@@ -5800,7 +5800,7 @@ border-radius: 15px;</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_num_empleado_ventas_individuales_diarias_3">
+                           <widget class="QLabel" name="label_num_empleado_ventas_individuales_anuales">
                             <property name="styleSheet">
                              <string notr="true">QLabel {
 	color: rgb(65, 107, 191);
@@ -5851,7 +5851,7 @@ border-radius: 15px;</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLabel" name="label_nombre_ventas_individuales_diarias_3">
+                         <widget class="QLabel" name="label_nombre_ventas_individuales_anuales">
                           <property name="styleSheet">
                            <string notr="true">QLabel {
 	color: rgb(65, 107, 191);
@@ -5900,7 +5900,7 @@ border-radius: 15px;</string>
                          </widget>
                         </item>
                         <item>
-                         <widget class="QLabel" name="label_estatus_ventas_individuales_diarias_3">
+                         <widget class="QLabel" name="label_estatus_ventas_individuales_anuales">
                           <property name="styleSheet">
                            <string notr="true">QLabel {
 	color: rgb(65, 107, 191);
@@ -6303,7 +6303,7 @@ QTableWidget {
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_total_ventas_individuales_diarias_3">
+                      <widget class="QLabel" name="label_total_ventas_individuales_anuales">
                        <property name="styleSheet">
                         <string notr="true">QLabel {
 	color: #344050;
@@ -6374,7 +6374,7 @@ QTableWidget {
                      <layout class="QHBoxLayout" name="horizontalLayout_99">
                       <item>
                        <layout class="QVBoxLayout" name="verticalLayout_68">
-                        <item>
+                        <item alignment="Qt::AlignHCenter">
                          <widget class="QLabel" name="label_68">
                           <property name="styleSheet">
                            <string notr="true">QLabel {
@@ -6386,12 +6386,15 @@ QTableWidget {
 }</string>
                           </property>
                           <property name="text">
-                           <string>Año con mas ventas</string>
+                           <string>Año con mas ventas:</string>
+                          </property>
+                          <property name="wordWrap">
+                           <bool>true</bool>
                           </property>
                          </widget>
                         </item>
-                        <item>
-                         <widget class="QLabel" name="label_hora_mas_ventas_individuales_diarias_5">
+                        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                         <widget class="QLabel" name="label_anio_mas_ventas_individuales_anuales">
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
@@ -6404,11 +6407,11 @@ QTableWidget {
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 18px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>            -----</string>
+                           <string>----</string>
                           </property>
                          </widget>
                         </item>
@@ -6432,7 +6435,7 @@ QTableWidget {
                       </item>
                       <item>
                        <layout class="QVBoxLayout" name="verticalLayout_69">
-                        <item>
+                        <item alignment="Qt::AlignHCenter">
                          <widget class="QLabel" name="label_69">
                           <property name="styleSheet">
                            <string notr="true">QLabel {
@@ -6446,21 +6449,24 @@ QTableWidget {
                           <property name="text">
                            <string>Año con menos ventas:</string>
                           </property>
+                          <property name="wordWrap">
+                           <bool>true</bool>
+                          </property>
                          </widget>
                         </item>
-                        <item>
-                         <widget class="QLabel" name="label_hora_mas_ventas_individuales_diarias_3">
+                        <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                         <widget class="QLabel" name="label_anio_menos_ventas_individuales_anuales">
                           <property name="styleSheet">
                            <string notr="true">QLabel {
 	color: #416BBF;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 18px;
 }</string>
                           </property>
                           <property name="text">
-                           <string>            -----</string>
+                           <string>----</string>
                           </property>
                          </widget>
                         </item>
@@ -6508,7 +6514,7 @@ QTableWidget {
                         </widget>
                        </item>
                        <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_hora_mas_ventas_individuales_diarias_7">
+                        <widget class="QLabel" name="label_fecha_en_curso_ventas_individuales_anuales">
                          <property name="styleSheet">
                           <string notr="true">QLabel {
 	color: #416BBF;
@@ -6562,14 +6568,14 @@ QTableWidget {
                         </widget>
                        </item>
                        <item alignment="Qt::AlignHCenter">
-                        <widget class="QLabel" name="label_hora_menos_ventas_individuales_diarias_3">
+                        <widget class="QLabel" name="label_ventas_anio_en_curso_ventas_individuales_anuales">
                          <property name="styleSheet">
                           <string notr="true">QLabel {
 	color: #416BBF;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
-	font-size: 14px;
+	font-size: 18px;
 }</string>
                          </property>
                          <property name="text">
@@ -6603,23 +6609,23 @@ QTableWidget {
                     <widget class="QLabel" name="label_78">
                      <property name="styleSheet">
                       <string notr="true">QLabel {
-	color: #416BBF;
+	color: #344050;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 12px;
 }</string>
                      </property>
                      <property name="text">
-                      <string>Ventas totales incluyendo año en curso</string>
+                      <string>Ventas totales incluyendo año en curso:</string>
                      </property>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QLabel" name="label_hora_mas_ventas_individuales_diarias_8">
+                   <item row="0" column="1" alignment="Qt::AlignRight">
+                    <widget class="QLabel" name="label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales">
                      <property name="styleSheet">
                       <string notr="true">QLabel {
-	color: #416BBF;
+	color: #344050;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;

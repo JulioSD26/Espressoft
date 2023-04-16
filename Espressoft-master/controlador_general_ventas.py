@@ -35,7 +35,8 @@ def insertar_datos_empleado_en_los_labels(ventana_principal, id_empleado, label_
     """
     Se encarga de insertar los datos de empleado en los labels correspondientes a cada ventana de ventas individuales.
     Recibe como parametro la ventana principal MainWindow, el id de empleado buscado y los labels correspondientes a la ventana de ventas individuales:
-    label_id_empleado, label_nombre_empleado y label_estatus_empleado
+    label_id_empleado, label_nombre_empleado y label_estatus_empleado.
+    Regresa True si todo salio bien y se encontro al empleado, en caso contrario regresa False.
     """
     empleado, mensaje = obtener_datos_empleado(id_empleado)
     if empleado is None:
@@ -44,7 +45,7 @@ def insertar_datos_empleado_en_los_labels(ventana_principal, id_empleado, label_
         dialogo.setText(mensaje)
         dialogo.setIcon(QMessageBox.Warning)
         boton_ok = dialogo.exec()
-        return
+        return False
     # si se obtuvo a un empleado sin error, se actualizan los labels
     # empleado era una tupla con 6 datos, siendo:
     # empleado[0] = id del empleado
@@ -56,6 +57,7 @@ def insertar_datos_empleado_en_los_labels(ventana_principal, id_empleado, label_
     label_nombre_empleado.setText(f"{empleado[1]} {empleado[2]} {empleado[3]}")
     # se asigna Activo o Inactivo, segun se haya obtenido un 1 o un 0 del campo de estatus del empleado
     label_estatus_empleado.setText("Activo" if empleado[4] == 1 else "Inactivo")
+    return True
 
 
 # Esta funcion se podria reutilizar para las ventanas de ventas individuales diarias y ventas totales diarias
@@ -91,6 +93,21 @@ def crear_diccionario_intervalos_de_horas_y_totales(datos_ventas):
                 diccionario_intervalo_de_horas_y_sus_totales[llave_diccionario] += total
         # print("diccionario_intervalo_de_horas_y_sus_totales:", diccionario_intervalo_de_horas_y_sus_totales)
         return diccionario_intervalo_de_horas_y_sus_totales
+
+
+# Esta funcion se podria reutilizar para las ventanas de ventas individuales anuales y ventas totales anuales
+def crear_diccionario_anios_y_totales(datos_ventas):
+    """
+    Dados los datos de ventas (una lista de tuplas, donde el primer elemento es el total y el segundo el anio),
+    regresa un diccionario con el anio en el que se realizo cada venta como llave y como valor su total.
+    """
+    diccionario_anios_y_totales = {}
+    for dato in datos_ventas:
+        total = float(dato[0])
+        anio = dato[1]
+        diccionario_anios_y_totales[anio] = total
+    return diccionario_anios_y_totales
+
 
 
 # Esta funcion podria ser reutilizada para todas las ventanas de ventas.

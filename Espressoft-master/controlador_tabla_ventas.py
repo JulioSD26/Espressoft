@@ -36,8 +36,9 @@ def insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente):
     # se suma 1 a la cantidad de filas, por que se va a insertar una
     tabla.setRowCount(cantidad_filas + 1)
     # el periodo de tiempo se transforma a un QTableWidgetItem para poder ser agregado como celda a la tabla
-    item_periodo_tiempo = QTableWidgetItem(periodo_de_tiempo)
-    # lo mismo para el total, solo que este se transforma a str, porque si no, la tabla no lo muestra, porque parece
+    # se pasa a string para que no haya errores al insertar en la tabla
+    item_periodo_tiempo = QTableWidgetItem(str(periodo_de_tiempo))
+    # lo mismo para el total, porque si no, la tabla no lo muestra, porque parece
     # que solo muestra datos de tipo string, lo raro es que no muestra error
     # tambien se le agrega un $
     item_total = QTableWidgetItem(f"${str(total_correspondiente)}")

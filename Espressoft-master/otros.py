@@ -5,6 +5,38 @@ from datetime import datetime, timedelta
 En este modulo van a ver funciones de ayuda que no encajan en alguno de los otros modulos, pero que les sirven.
 """
 
+def obtener_fecha_actual():
+     """
+     Regresa la fecha actual.
+     """
+     return datetime.now()
+
+
+def obtener_fecha_actual_formato_espaniol():
+    """
+    Regresa la fecha actual en formato: "-- de ----- del ----".
+    Ejemplo: 13 de marzo del 2021
+    """
+    fecha_actual = obtener_fecha_actual()
+    # el diccionario que va a relacionar el numero de mes obtenido de fecha_actual.month
+    # con su nombre en espaniol
+    diccionario_meses = {
+         1: 'enero',
+         2: 'febrero',
+         3: 'marzo',
+         4: 'abril',
+         5: 'mayo',
+         6: 'junio',
+         7: 'julio',
+         8: 'agosto',
+         9: 'septiembre',
+         10: 'octubre',
+         11: 'noviembre',
+         12: 'diciembre'
+    }
+    return f"{fecha_actual.day} de {diccionario_meses[fecha_actual.month]} del {fecha_actual.year}"
+
+
 def formatear_hora_a_formato_12_horas(hora_formato_24_horas):
         """
         Formatea una hora del tipo 11:10:00 (como estan en la base de datos) a una del tipo 11:10 AM, asi 
@@ -124,3 +156,7 @@ def llenar_horas_vacias_intervalos_de_horas(lista_horas: list) -> list:
         # cuando esto pasa j se incrementa, indicando que ya se llego a hora_siguiente y que la posicion a insertar va a ser despues de ese valor
         j += 1
     return copia_lista_horas_ordenada
+
+
+if __name__ == "__main__":
+     print(obtener_fecha_actual_formato_espaniol())
