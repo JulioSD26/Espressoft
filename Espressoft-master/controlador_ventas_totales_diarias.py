@@ -65,7 +65,7 @@ class ControladorVentasTotalesDiarias():
         try:
             conn = crear_conexion()
             cursor = conn.cursor()
-            cursor.execute(f'SELECT total, hora AND fecha = "{fecha}"')
+            cursor.execute(f'SELECT total, hora FROM venta WHERE fecha = "{fecha}"')
             ventas = cursor.fetchall()
             if len(ventas) == 0:
                 return None, "No se encontraron ventas", f"No se encontraron ventas en la fecha {fecha}."
