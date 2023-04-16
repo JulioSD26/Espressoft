@@ -66,7 +66,7 @@
        <property name="leftMargin">
         <number>0</number>
        </property>
-       <item>
+       <item alignment="Qt::AlignHCenter">
         <widget class="QLabel" name="logo_cafe_indigo">
          <property name="minimumSize">
           <size>
@@ -879,7 +879,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>4</number>
+          <number>6</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -1713,16 +1713,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Hora</string>
@@ -1777,54 +1767,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>10:00 am - 11:00 am</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$15000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>11:00 am - 12:00 pm</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -2066,31 +2008,6 @@ font-size: 12px;
 color: rgb(52, 64, 85);
 border: none;</string>
                           </property>
-                          <item>
-                           <property name="text">
-                            <string>2019</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2020</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2021</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2022</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2023</string>
-                           </property>
-                          </item>
                          </widget>
                         </item>
                        </layout>
@@ -2526,16 +2443,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Mes</string>
@@ -2590,54 +2497,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>Enero</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$15000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>Febrero</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -3219,16 +3078,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Año</string>
@@ -3283,54 +3132,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>2020</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$150000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>2021</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$100000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -5154,31 +4955,6 @@ font-size: 12px;
 color: rgb(52, 64, 85);
 border: none;</string>
                           </property>
-                          <item>
-                           <property name="text">
-                            <string>2019</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2020</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2021</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2022</string>
-                           </property>
-                          </item>
-                          <item>
-                           <property name="text">
-                            <string>2023</string>
-                           </property>
-                          </item>
                          </widget>
                         </item>
                        </layout>
@@ -5360,7 +5136,7 @@ border-radius: 15px;</string>
 }</string>
                     </property>
                     <property name="text">
-                     <string>2022</string>
+                     <string>----</string>
                     </property>
                    </widget>
                   </item>
@@ -5453,66 +5229,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>3</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>4</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>5</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>6</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>7</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>8</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>9</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>10</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>11</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>12</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Mes</string>
@@ -5567,294 +5283,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>Enero</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>Febrero</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$15000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="2" column="0">
-                      <property name="text">
-                       <string>Marzo</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="2" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="3" column="0">
-                      <property name="text">
-                       <string>Abril</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="3" column="1">
-                      <property name="text">
-                       <string>$11000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="4" column="0">
-                      <property name="text">
-                       <string>Mayo</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="4" column="1">
-                      <property name="text">
-                       <string>$20000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="5" column="0">
-                      <property name="text">
-                       <string>Junio</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="5" column="1">
-                      <property name="text">
-                       <string>$19000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="6" column="0">
-                      <property name="text">
-                       <string>Julio</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="6" column="1">
-                      <property name="text">
-                       <string>$18000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="7" column="0">
-                      <property name="text">
-                       <string>Agosto</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="7" column="1">
-                      <property name="text">
-                       <string>$17000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="8" column="0">
-                      <property name="text">
-                       <string>Septiembre</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="8" column="1">
-                      <property name="text">
-                       <string>$7000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="9" column="0">
-                      <property name="text">
-                       <string>Octubre</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="9" column="1">
-                      <property name="text">
-                       <string>$8000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="10" column="0">
-                      <property name="text">
-                       <string>Noviembre</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="10" column="1">
-                      <property name="text">
-                       <string>$7000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="11" column="0">
-                      <property name="text">
-                       <string>Diciembre</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="11" column="1">
-                      <property name="text">
-                       <string>$23000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -6769,31 +6197,6 @@ QTableWidget {
                      <attribute name="verticalHeaderStretchLastSection">
                       <bool>false</bool>
                      </attribute>
-                     <row>
-                      <property name="text">
-                       <string>1</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>2</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>3</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>4</string>
-                      </property>
-                     </row>
-                     <row>
-                      <property name="text">
-                       <string>5</string>
-                      </property>
-                     </row>
                      <column>
                       <property name="text">
                        <string>Año</string>
@@ -6848,126 +6251,6 @@ QTableWidget {
                        </brush>
                       </property>
                      </column>
-                     <item row="0" column="0">
-                      <property name="text">
-                       <string>2019</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="0" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="0">
-                      <property name="text">
-                       <string>2020</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="1" column="1">
-                      <property name="text">
-                       <string>$15000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="2" column="0">
-                      <property name="text">
-                       <string>2021</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="2" column="1">
-                      <property name="text">
-                       <string>$10000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="3" column="0">
-                      <property name="text">
-                       <string>2022</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="3" column="1">
-                      <property name="text">
-                       <string>$11000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="4" column="0">
-                      <property name="text">
-                       <string>2023</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
-                     <item row="4" column="1">
-                      <property name="text">
-                       <string>$20000.00</string>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <family>Montserrat</family>
-                        <weight>75</weight>
-                        <bold>true</bold>
-                       </font>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                   </layout>
@@ -7236,7 +6519,7 @@ QTableWidget {
 }</string>
                          </property>
                          <property name="text">
-                          <string>13 de enero del 2023</string>
+                          <string>-- de ----- del ----</string>
                          </property>
                         </widget>
                        </item>
@@ -7290,7 +6573,7 @@ QTableWidget {
 }</string>
                          </property>
                          <property name="text">
-                          <string>$43000.00</string>
+                          <string>$--.--</string>
                          </property>
                         </widget>
                        </item>
@@ -7344,7 +6627,7 @@ QTableWidget {
 }</string>
                      </property>
                      <property name="text">
-                      <string>$173500.00</string>
+                      <string>$--.--</string>
                      </property>
                     </widget>
                    </item>
@@ -7969,8 +7252,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>959</width>
-                   <height>569</height>
+                   <width>1048</width>
+                   <height>910</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -8136,6 +7419,9 @@ border-radius: 2px;</string>
                         <enum>QFrame::Raised</enum>
                        </property>
                        <layout class="QVBoxLayout" name="verticalLayout_80">
+                        <property name="spacing">
+                         <number>6</number>
+                        </property>
                         <property name="leftMargin">
                          <number>16</number>
                         </property>
@@ -8151,16 +7437,16 @@ border-radius: 2px;</string>
                         <item>
                          <layout class="QHBoxLayout" name="horizontalLayout_79">
                           <property name="spacing">
-                           <number>9</number>
+                           <number>25</number>
                           </property>
                           <property name="leftMargin">
-                           <number>0</number>
+                           <number>20</number>
                           </property>
                           <property name="topMargin">
                            <number>0</number>
                           </property>
                           <property name="rightMargin">
-                           <number>0</number>
+                           <number>20</number>
                           </property>
                           <property name="bottomMargin">
                            <number>0</number>
@@ -8336,22 +7622,181 @@ border-radius: 2px;</string>
                            </widget>
                           </item>
                           <item>
-                           <widget class="QLabel" name="label_16">
+                           <widget class="QFrame" name="frame_78">
                             <property name="maximumSize">
                              <size>
-                              <width>526</width>
-                              <height>396</height>
+                              <width>550</width>
+                              <height>16777215</height>
                              </size>
                             </property>
-                            <property name="text">
-                             <string/>
+                            <property name="styleSheet">
+                             <string notr="true">QFrame {
+	background-color: rgb(153, 188, 244);
+	border-radius: 15px;
+}</string>
                             </property>
-                            <property name="pixmap">
-                             <pixmap>resources/img/imagen_ventana_importar_datos.png</pixmap>
+                            <property name="frameShape">
+                             <enum>QFrame::StyledPanel</enum>
                             </property>
-                            <property name="scaledContents">
-                             <bool>true</bool>
+                            <property name="frameShadow">
+                             <enum>QFrame::Raised</enum>
                             </property>
+                            <layout class="QHBoxLayout" name="horizontalLayout_90">
+                             <item>
+                              <widget class="QFrame" name="frame_94">
+                               <property name="maximumSize">
+                                <size>
+                                 <width>16777215</width>
+                                 <height>16777215</height>
+                                </size>
+                               </property>
+                               <property name="styleSheet">
+                                <string notr="true">QFrame {
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}</string>
+                               </property>
+                               <property name="frameShape">
+                                <enum>QFrame::StyledPanel</enum>
+                               </property>
+                               <property name="frameShadow">
+                                <enum>QFrame::Raised</enum>
+                               </property>
+                               <layout class="QVBoxLayout" name="verticalLayout_90">
+                                <item>
+                                 <widget class="QTableWidget" name="tabla_eliminar_registros_de_archivos">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>0</width>
+                                    <height>0</height>
+                                   </size>
+                                  </property>
+                                  <property name="maximumSize">
+                                   <size>
+                                    <width>16777215</width>
+                                    <height>16777215</height>
+                                   </size>
+                                  </property>
+                                  <property name="autoFillBackground">
+                                   <bool>true</bool>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">QTableWidget::item {
+	background-color: rgb(255, 255, 255);
+	border-bottom: 1px solid #C8D0DB;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+}
+
+QTableWidget {
+	background-color: rgb(255, 255, 255);
+}</string>
+                                  </property>
+                                  <property name="editTriggers">
+                                   <set>QAbstractItemView::NoEditTriggers</set>
+                                  </property>
+                                  <property name="showDropIndicator" stdset="0">
+                                   <bool>false</bool>
+                                  </property>
+                                  <property name="dragDropOverwriteMode">
+                                   <bool>false</bool>
+                                  </property>
+                                  <property name="selectionMode">
+                                   <enum>QAbstractItemView::NoSelection</enum>
+                                  </property>
+                                  <property name="showGrid">
+                                   <bool>false</bool>
+                                  </property>
+                                  <property name="gridStyle">
+                                   <enum>Qt::SolidLine</enum>
+                                  </property>
+                                  <property name="cornerButtonEnabled">
+                                   <bool>false</bool>
+                                  </property>
+                                  <attribute name="horizontalHeaderCascadingSectionResizes">
+                                   <bool>true</bool>
+                                  </attribute>
+                                  <attribute name="horizontalHeaderMinimumSectionSize">
+                                   <number>30</number>
+                                  </attribute>
+                                  <attribute name="horizontalHeaderDefaultSectionSize">
+                                   <number>150</number>
+                                  </attribute>
+                                  <attribute name="horizontalHeaderStretchLastSection">
+                                   <bool>true</bool>
+                                  </attribute>
+                                  <attribute name="verticalHeaderVisible">
+                                   <bool>false</bool>
+                                  </attribute>
+                                  <attribute name="verticalHeaderStretchLastSection">
+                                   <bool>false</bool>
+                                  </attribute>
+                                  <column>
+                                   <property name="text">
+                                    <string>Nombre de archivo</string>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <family>Montserrat</family>
+                                     <weight>50</weight>
+                                     <bold>false</bold>
+                                    </font>
+                                   </property>
+                                   <property name="background">
+                                    <color>
+                                     <red>248</red>
+                                     <green>250</green>
+                                     <blue>255</blue>
+                                    </color>
+                                   </property>
+                                   <property name="foreground">
+                                    <brush brushstyle="SolidPattern">
+                                     <color alpha="255">
+                                      <red>52</red>
+                                      <green>64</green>
+                                      <blue>80</blue>
+                                     </color>
+                                    </brush>
+                                   </property>
+                                  </column>
+                                  <column>
+                                   <property name="text">
+                                    <string>Fecha</string>
+                                   </property>
+                                   <property name="font">
+                                    <font>
+                                     <family>Montserrat</family>
+                                    </font>
+                                   </property>
+                                   <property name="background">
+                                    <color>
+                                     <red>248</red>
+                                     <green>250</green>
+                                     <blue>255</blue>
+                                    </color>
+                                   </property>
+                                   <property name="foreground">
+                                    <brush brushstyle="SolidPattern">
+                                     <color alpha="255">
+                                      <red>52</red>
+                                      <green>64</green>
+                                      <blue>80</blue>
+                                     </color>
+                                    </brush>
+                                   </property>
+                                  </column>
+                                  <column>
+                                   <property name="text">
+                                    <string/>
+                                   </property>
+                                  </column>
+                                 </widget>
+                                </item>
+                               </layout>
+                              </widget>
+                             </item>
+                            </layout>
                            </widget>
                           </item>
                          </layout>

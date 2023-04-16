@@ -82,6 +82,10 @@ class ControladorVentasIndividualesDiarias():
 
 
     def obtener_datos_ventas_individuales_diarias(self, id_empleado, fecha):
+        """
+        Dado un id de empleado y una fecha, regresa las ventas correspondientes.
+        Si todo salio bien, regresa una tupla, un titulo de mensaje y un mensaje asociado.
+        """
         if id_empleado == "----" or id_empleado == "":
             return None, "Selecciona a un empleado", "Selecciona a un empleado, introduciendo un id de empleado en su campo correspondiente y dandole al botón de Buscar."
         try:
@@ -90,7 +94,7 @@ class ControladorVentasIndividualesDiarias():
             cursor.execute(f'SELECT total, hora FROM venta WHERE empleado_id = "{id_empleado}" AND fecha = "{fecha}"')
             ventas = cursor.fetchall()
             if len(ventas) == 0:
-                return None, "No se encontraron ventas", f"No se encontraron ventas para el empleado con id {id_empleado} en la fecha {fecha}."
+                return None, "No se encontraron ventas", f"No se encontraron ventas para el empleado con id {id_empleado} en la fecha {formatear_dia_a_formato_dia_mes_anio(fecha)}."
             conn.close()
         except:
             return None, "Error", "Algo salió mal mientras se trataba de consultar a la base de datos."
