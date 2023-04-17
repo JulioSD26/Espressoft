@@ -104,7 +104,7 @@ class ControladorVentasIndividualesAnuales():
             conn = crear_conexion()
             cursor = conn.cursor()
             # se agrupan los totales por anios y se ordenan por anio
-            cursor.execute(f'SELECT COUNT(total), YEAR(fecha) FROM venta WHERE empleado_id = "{id_empleado}" GROUP BY YEAR(fecha) ORDER BY YEAR(fecha)')
+            cursor.execute(f'SELECT SUM(total), YEAR(fecha) FROM venta WHERE empleado_id = "{id_empleado}" GROUP BY YEAR(fecha) ORDER BY YEAR(fecha)')
             ventas = cursor.fetchall()
             if len(ventas) == 0:
                 return None, "No se encontraron ventas", f"No se encontraron ventas para el empleado con id {id_empleado}."
