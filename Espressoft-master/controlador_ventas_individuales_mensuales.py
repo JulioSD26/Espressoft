@@ -1,4 +1,4 @@
-from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_meses_y_totales, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_meses_mas_y_menos_ventas
+from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_totales_por_mes, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas
 from controlador_grafica_ventas import dibujar_grafica, limpiar_grafica
 from controlador_tabla_ventas import llenar_datos_tabla, limpiar_tabla
 from controlador_base_datos import crear_conexion
@@ -41,7 +41,7 @@ class ControladorVentasIndividualesMensuales():
         ventana_principal.boton_generar_ventas_individuales_mensuales.clicked.connect(lambda: self.insertar_datos_ventana_ventas_individuales_mensuales(
             ventana_principal,
             ventana_principal.label_num_empleado_ventas_individuales_diarias_2.text(),
-            ventana_principal.combobox_ventas_totales_mensuales_2.currentText()
+            "2022"
             ))
 
 
@@ -65,7 +65,7 @@ class ControladorVentasIndividualesMensuales():
         
         # si no ocurrio ningun error y se obtuvieron datos de ventas
         # se crea el diccionario de intervalos meses y totales con los datos de ventas
-        diccionario_meses_y_totales = crear_diccionario_meses_y_totales(datos_ventas)
+        diccionario_meses_y_totales = crear_diccionario_totales_por_mes(datos_ventas)
 
         # se dibuja la grafica con los datos del diccionario
         dibujar_grafica(ventana_principal.grafica_ventas_individuales_mensuales, diccionario_meses_y_totales)
@@ -74,15 +74,15 @@ class ControladorVentasIndividualesMensuales():
         ventana_principal.label_porcentaje_ventas_individuales_mensuales.setText(calcular_porcentaje_de_ventas(0, 0))
 
         # se le cambia el texto al label que indica el año
-        ventana_principal.label_dia_ventas_individuales_diarias.setText(fecha)
+        ventana_principal.label_mes_ventas_individuales_mensuales.setText(fecha)
 
         # se llena la tabla con los datos del diccionario
-        llenar_datos_tabla(ventana_principal.tabla_ventas_individuales_diarias, diccionario_meses_y_totales)
+        llenar_datos_tabla(ventana_principal.tabla_ventas_individuales_mensuales, diccionario_meses_y_totales)
         
         # se le asigna el total al label de total, cuando se le asigna un texto a un label siempre tiene que ser un str o si no marca error
-        ventana_principal.label_total_ventas_individuales_diarias.setText(f"${str(obtener_total_de_ventas(diccionario_meses_y_totales.values()))}")
+        ventana_principal.label_total_ventas_individuales_diarias_2.setText(f"${str(obtener_total_de_ventas(diccionario_meses_y_totales.values()))}")
 
-        mes_mas_ventas, mes_menos_ventas = obtener_meses_mas_y_menos_ventas(diccionario_meses_y_totales)
+        mes_mas_ventas, mes_menos_ventas = obtener_periodos_con_menos_y_mas_ventas(diccionario_meses_y_totales)
 
         ventana_principal.label_hora_mas_ventas_individuales_diarias_2.setText(str(mes_menos_ventas))
         ventana_principal.label_hora_mas_ventas_individuales_diarias_4.setText(str(mes_mas_ventas))
@@ -102,22 +102,10 @@ class ControladorVentasIndividualesMensuales():
             ventas = cursor.fetchall()
             if len(ventas) == 0:
                 return None, "No se encontraron ventas", f"No se encontraron ventas para el empleado con id {id_empleado} en el año {year}."
-            ventas_meses = {}
-            for venta in ventas:
-                total, fecha = venta
-                mes = datetime.strptime(fecha, '%Y-%m-%d').month
-                if mes in ventas_meses:
-                    ventas_meses[mes] += total
-                else:
-                    ventas_meses[mes] = total
-            ventas_meses = sorted(ventas_meses.items())
-            ventas_meses = [(mes, total) for mes, total in ventas_meses]
             conn.close()
         except:
             return None, "Error", "Algo salió mal mientras se trataba de consultar a la base de datos."
-        return ventas_meses, "", ""
-
-    
+        return ventas, "", ""
 
     def resetear_datos_ventana_ventas_individuales_mensuales(self, ventana_principal):
         """

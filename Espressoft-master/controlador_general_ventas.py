@@ -1,4 +1,5 @@
 from controlador_base_datos import crear_conexion
+from datetime import datetime
 from otros import formatear_hora_a_formato_12_horas, crear_intervalo_de_horas, obtener_hora_restados_sus_minutos, llenar_horas_vacias_intervalos_de_horas
 from PyQt5.QtWidgets import QMessageBox
 
@@ -94,15 +95,58 @@ def crear_diccionario_intervalos_de_horas_y_totales(datos_ventas):
         # print("diccionario_intervalo_de_horas_y_sus_totales:", diccionario_intervalo_de_horas_y_sus_totales)
         return diccionario_intervalo_de_horas_y_sus_totales
 
-# Esta funcion no la reutilicen ni se ocupa pero no queria ser el unico sin una B(
-def crear_diccionario_meses_y_totales(meses_ventas):
-    meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
-    meses_formateados = []
-    for tupla in meses_ventas:
-        mes = meses[tupla[0]-1] # restamos 1 para obtener el índice correcto en la lista de meses
-        ventas = tupla[1]
-        meses_formateados.append((mes, ventas))
-    return meses_formateados
+def crear_diccionario_totales_por_mes(datos_ventas):
+    """
+    Dados los datos de ventas (una lista de tuplas, donde el primer elemento es el total y el segundo la fecha),
+    regresa un diccionario con el mes en el que se realizó cada venta como llave y como valor su total.
+    En el proceso se agregan meses que no aparecían en la lista, con un total de 0.
+    La forma del diccionario regresado es como la siguiente:
+    {'Enero': 5000, 'Febrero': 4000, 'Marzo': 0, 'Abril': 12000, 'Mayo': 0, 'Junio': 2500}
+    """
+    # se genera una lista de meses a partir de las fechas en la lista de datos_ventas
+    lista_meses = [datetime.strptime(str(dato[1]), '%Y-%m-%d').strftime('%B') for dato in datos_ventas]
+
+    # se agregan aquellos meses que no estaban presentes en la lista de meses, con un total de 0
+    lista_meses_con_vacios_llenados = llenar_meses_vacios(lista_meses)
+    # se crea un diccionario con los meses como llaves y un valor inicial de 0 para cada uno de ellos
+    diccionario_meses_y_sus_totales = {mes: 0 for mes in lista_meses_con_vacios_llenados}
+    # se recorre la lista de tuplas de datos_ventas
+    for dato in datos_ventas:
+        # el total se transforma a float, porque de la base de datos se obtiene un objeto Decimal.decimal(numero)
+        total = float(dato[0])
+        # se obtiene el mes de la fecha y se formatea para que tenga el nombre completo del mes
+        mes_formateado = dato[1].strftime('%B')
+        # si ese mes ya se encuentra en el diccionario previamente creado,
+        # entonces que se vayan sumando/acumulando sus totales obtenidos en ese mes
+        # de otro modo si un mes no aparece, como los que se generaron con llenar_meses_vacios(),
+        # entonces su total se mantiene en 0, que es lo que se busca
+        if mes_formateado in diccionario_meses_y_sus_totales:
+            diccionario_meses_y_sus_totales[mes_formateado] += total
+    
+    # se crea una lista de tuplas a partir del diccionario, para poder ordenarla por mes
+    lista_totales_por_mes = [(mes, diccionario_meses_y_sus_totales[mes]) for mes in diccionario_meses_y_sus_totales]
+
+    # se ordena la lista de tuplas por mes
+    lista_totales_por_mes_ordenada = sorted(lista_totales_por_mes, key=lambda x: datetime.strptime(x[0], '%B'))
+
+    # se convierte la lista de tuplas ordenada en un diccionario
+    diccionario_totales_por_mes_ordenado = {mes: total for mes, total in lista_totales_por_mes_ordenada}
+
+    return diccionario_totales_por_mes_ordenado
+
+# Se utiliza para llenar el diccionario con los meses y colocarlos en orden en orden
+def llenar_meses_vacios(lista_meses):
+    """
+    Dada una lista de meses, regresa una lista con aquellos meses que no aparecían en la lista original,
+    y cuyos totales son 0.
+    """
+    meses_presentes = set(lista_meses)
+    meses_posibles = set(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
+    meses_faltantes = meses_posibles - meses_presentes
+    lista_meses_con_vacios_llenados = list(lista_meses)
+    for mes in meses_faltantes:
+        lista_meses_con_vacios_llenados.append(mes)
+    return lista_meses_con_vacios_llenados
 
 
 # Esta funcion se podria reutilizar para las ventanas de ventas individuales anuales y ventas totales anuales
@@ -117,8 +161,6 @@ def crear_diccionario_anios_y_totales(datos_ventas):
         anio = dato[1]
         diccionario_anios_y_totales[anio] = total
     return diccionario_anios_y_totales
-
-
 
 # Esta funcion podria ser reutilizada para todas las ventanas de ventas.
 # todavia no esta implementada porque es para la tercera iteracion.
@@ -165,33 +207,3 @@ def obtener_periodos_con_menos_y_mas_ventas(diccionario_datos: dict):
         if total_del_periodo > diccionario_datos[periodo_con_mas_ventas]:
             periodo_con_mas_ventas = periodo
     return periodo_con_menos_ventas, periodo_con_mas_ventas
-
-# Usare mi propio metodo no me da confianza que pueda agarrar un valor 0 en los meses
-# Obtener mes con mas y menos ventas que sean distintos a 0
-def obtener_meses_mas_y_menos_ventas(meses_ventas):
-    # Ordenamos la lista de ventas de mayor a menor
-    meses_ventas.sort(key=lambda x: x[1], reverse=True)
-
-    # Buscamos el mes con más ventas
-    mes_mas_ventas = None
-    max_ventas = 0
-    for mes, ventas in meses_ventas:
-        if ventas > max_ventas:
-            max_ventas = ventas
-            mes_mas_ventas = mes
-        else:
-            break
-
-    # Buscamos el mes con menos ventas (diferente de 0)
-    mes_menos_ventas = None
-    min_ventas = float('inf')
-    for mes, ventas in meses_ventas:
-        if ventas == 0:
-            continue
-        if ventas < min_ventas:
-            min_ventas = ventas
-            mes_menos_ventas = mes
-
-    return mes_mas_ventas, mes_menos_ventas
-
-
