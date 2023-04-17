@@ -41,9 +41,8 @@ class ControladorVentasIndividualesMensuales():
         ventana_principal.boton_generar_ventas_individuales_mensuales.clicked.connect(lambda: self.insertar_datos_ventana_ventas_individuales_mensuales(
             ventana_principal,
             ventana_principal.label_num_empleado_ventas_individuales_diarias_2.text(),
-            "2022"
+            ventana_principal.combobox_ventas_totales_mensuales_2.currentText()
             ))
-
 
     def insertar_datos_ventana_ventas_individuales_mensuales(self, ventana_principal, id_empleado, fecha):
         """

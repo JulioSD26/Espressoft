@@ -26,7 +26,7 @@ class ControladorVentasTotalesMensuales():
         
         ventana_principal.boton_generar_ventas_totales_mensuales.clicked.connect(lambda: self.insertar_datos_ventana_ventas_totales_mensuales(
             ventana_principal,
-            "2022"
+            ventana_principal.combobox_ventas_totales_mensuales.currentText()
             ))
 
 
