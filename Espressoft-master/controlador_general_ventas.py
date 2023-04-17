@@ -94,6 +94,16 @@ def crear_diccionario_intervalos_de_horas_y_totales(datos_ventas):
         # print("diccionario_intervalo_de_horas_y_sus_totales:", diccionario_intervalo_de_horas_y_sus_totales)
         return diccionario_intervalo_de_horas_y_sus_totales
 
+# Esta funcion no la reutilicen ni se ocupa pero no queria ser el unico sin una B(
+def crear_diccionario_meses_y_totales(meses_ventas):
+    meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+    meses_formateados = []
+    for tupla in meses_ventas:
+        mes = meses[tupla[0]-1] # restamos 1 para obtener el índice correcto en la lista de meses
+        ventas = tupla[1]
+        meses_formateados.append((mes, ventas))
+    return meses_formateados
+
 
 # Esta funcion se podria reutilizar para las ventanas de ventas individuales anuales y ventas totales anuales
 def crear_diccionario_anios_y_totales(datos_ventas):
@@ -155,4 +165,33 @@ def obtener_periodos_con_menos_y_mas_ventas(diccionario_datos: dict):
         if total_del_periodo > diccionario_datos[periodo_con_mas_ventas]:
             periodo_con_mas_ventas = periodo
     return periodo_con_menos_ventas, periodo_con_mas_ventas
+
+# Usare mi propio metodo no me da confianza que pueda agarrar un valor 0 en los meses
+# Obtener mes con mas y menos ventas que sean distintos a 0
+def obtener_meses_mas_y_menos_ventas(meses_ventas):
+    # Ordenamos la lista de ventas de mayor a menor
+    meses_ventas.sort(key=lambda x: x[1], reverse=True)
+
+    # Buscamos el mes con más ventas
+    mes_mas_ventas = None
+    max_ventas = 0
+    for mes, ventas in meses_ventas:
+        if ventas > max_ventas:
+            max_ventas = ventas
+            mes_mas_ventas = mes
+        else:
+            break
+
+    # Buscamos el mes con menos ventas (diferente de 0)
+    mes_menos_ventas = None
+    min_ventas = float('inf')
+    for mes, ventas in meses_ventas:
+        if ventas == 0:
+            continue
+        if ventas < min_ventas:
+            min_ventas = ventas
+            mes_menos_ventas = mes
+
+    return mes_mas_ventas, mes_menos_ventas
+
 
