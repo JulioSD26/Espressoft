@@ -9,9 +9,9 @@ from controlador_grafica_ventas import *
 from controlador_ventana_importar_datos import ControladorVentanaImportarDatos
 from controlador_menu_lateral import ControladorMenuLateral
 from controlador_ventas_individuales_diarias import ControladorVentasIndividualesDiarias
-from controlador_ventas_individuales_mensuales import ControladorVentasIndividualesMensuales
 from controlador_ventas_totales_diarias import ControladorVentasTotalesDiarias
 from controlador_ventas_individuales_anuales import ControladorVentasIndividualesAnuales
+from controlador_ventas_totales_anuales import ControladorVentasTotalesAnuales
 from controlador_base_datos import *
 import empleados
 import datetime
@@ -72,14 +72,13 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # se instancia el controlador de ventas individuales diarias para darle funcionalidad a su ventana correspondiente
         ControladorVentasIndividualesDiarias(self)
 
-        # se instancia el controlador de ventas individuales mensuales para darle funcionalidad a su ventana correspondiente
-        ControladorVentasIndividualesMensuales(self)
-
         # se instancia el controlador de ventas totales diarias para darle funcionalidad a su ventana correspondiente
         ControladorVentasTotalesDiarias(self)
 
         # se instancia el controlador de ventas individuales anuales para darle funcionalidad a su ventana correspondiente
         ControladorVentasIndividualesAnuales(self)
+
+        ControladorVentasTotalesAnuales(self)
 
         self.asignar_tipo_empleado_a_labels()
 
