@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1378</width>
+    <width>1352</width>
     <height>914</height>
    </rect>
   </property>
@@ -879,7 +879,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>9</number>
+          <number>10</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -4191,10 +4191,10 @@ QTableWidget {
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>true</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderDefaultSectionSize">
+                     <attribute name="horizontalHeaderMinimumSectionSize">
                       <number>200</number>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
+                     <attribute name="horizontalHeaderDefaultSectionSize">
                       <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
@@ -7723,11 +7723,11 @@ QTableWidget {
                                   <attribute name="horizontalHeaderCascadingSectionResizes">
                                    <bool>true</bool>
                                   </attribute>
-                                  <attribute name="horizontalHeaderDefaultSectionSize">
-                                   <number>150</number>
-                                  </attribute>
                                   <attribute name="horizontalHeaderMinimumSectionSize">
                                    <number>30</number>
+                                  </attribute>
+                                  <attribute name="horizontalHeaderDefaultSectionSize">
+                                   <number>150</number>
                                   </attribute>
                                   <attribute name="horizontalHeaderStretchLastSection">
                                    <bool>true</bool>
@@ -8057,66 +8057,61 @@ border-radius: 15px;</string>
 	font-weight: 800;
 	font-size: 24px;
 }</string>
-                     </property>
-                     <property name="text">
-                      <string>AGREGAR USUARIO A CAFÉ INDIGO</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item alignment="Qt::AlignTop">
-                    <widget class="QFrame" name="frame_105">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>3</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>4</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color: rgb(0, 85, 255);
-border-radius: 2px;</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                 <widget class="QWidget" name="gridLayoutWidget">
-                  <property name="geometry">
-                   <rect>
-                    <x>50</x>
-                    <y>140</y>
-                    <width>691</width>
-                    <height>501</height>
-                   </rect>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_2">
-                   <item row="0" column="1">
-                    <widget class="QFrame" name="frame_114">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>250</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QFrame {
+                       </property>
+                       <property name="text">
+                        <string>AGREGAR USUARIO A CAFÉ INDIGO</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QFrame" name="frame_104">
+                    <property name="minimumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	background-color: #97bcf5;
+	border-radius: 15px;
+}</string>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_93">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_95">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_97">
+                         <item>
+                          <layout class="QGridLayout" name="gridLayout_2">
+                           <item row="0" column="1">
+                            <widget class="QFrame" name="frame_114">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>250</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QFrame {
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
@@ -8525,143 +8520,185 @@ border: none;</string>
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_130">
-                      <property name="leftMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>6</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_16">
-                        <property name="text">
-                         <string>Tipo de empleado</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QComboBox" name="comboBox_tipo_empleado_agregar">
-                        <item>
-                         <property name="text">
-                          <string>empleado</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>gerente</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>administrador</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QFrame" name="frame_113">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>250</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QFrame {
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_130">
+                              <property name="leftMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QComboBox" name="comboBox_tipo_empleado_agregar">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">background-color: rgb(255, 255, 255);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #416BBF;
+border: none;</string>
+                                </property>
+                                <property name="currentIndex">
+                                 <number>0</number>
+                                </property>
+                                <property name="iconSize">
+                                 <size>
+                                  <width>16</width>
+                                  <height>16</height>
+                                 </size>
+                                </property>
+                                <property name="placeholderText">
+                                 <string>Tipo de empleado</string>
+                                </property>
+                                <item>
+                                 <property name="text">
+                                  <string>empleado</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>gerente</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>administrador</string>
+                                 </property>
+                                </item>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="3" column="1">
+                            <widget class="QFrame" name="frame_113">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>250</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="toolTip">
+                              <string>Estatus</string>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QFrame {
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_131">
-                      <property name="leftMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>6</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_75">
-                        <property name="text">
-                         <string>Estatus</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QComboBox" name="comboBox_estatus_empleado_agregar">
-                        <item>
-                         <property name="text">
-                          <string>activo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>inactivo</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                 <widget class="QPushButton" name="boton_agregar_empleado_agregar">
-                  <property name="geometry">
-                   <rect>
-                    <x>330</x>
-                    <y>650</y>
-                    <width>90</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>90</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_131">
+                              <property name="leftMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QComboBox" name="comboBox_estatus_empleado_agregar">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">background-color: rgb(255, 255, 255);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #416BBF;
+border: none;</string>
+                                </property>
+                                <property name="editable">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="currentText">
+                                 <string>activo</string>
+                                </property>
+                                <property name="currentIndex">
+                                 <number>0</number>
+                                </property>
+                                <property name="placeholderText">
+                                 <string>Estatus</string>
+                                </property>
+                                <property name="frame">
+                                 <bool>true</bool>
+                                </property>
+                                <property name="modelColumn">
+                                 <number>0</number>
+                                </property>
+                                <item>
+                                 <property name="text">
+                                  <string>activo</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>inactivo</string>
+                                 </property>
+                                </item>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="boton_agregar_empleado_agregar">
+                           <property name="minimumSize">
+                            <size>
+                             <width>30</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
 	background-color: rgb(65, 107, 191);
 	color: rgb(255, 255, 255);
 	font-family: 'Montserrat';
@@ -8761,40 +8798,6 @@ QPushButton:hover {
                              <string/>
                             </property>
                            </widget>
-                 <widget class="QLabel" name="label_mensaje_agregar">
-                  <property name="geometry">
-                   <rect>
-                    <x>250</x>
-                    <y>90</y>
-                    <width>506</width>
-                    <height>40</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QLabel {
-	color: rgb(255, 0, 0);
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
-}</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
                           </item>
                           <item alignment="Qt::AlignHCenter">
                            <widget class="QLabel" name="label_16">
@@ -9219,149 +9222,67 @@ border: none;</string>
 	font-size: 14px;
 	border-radius : 15px;
 }</string>
-                        </property>
-                        <property name="text">
-                         <string>Buscar</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </item>
-                   </layout>
+                             </property>
+                             <property name="text">
+                              <string>Buscar</string>
+                             </property>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </widget>
                   </item>
-                 </layout>
-                </widget>
-               </item>
-               <item>
-                <widget class="QFrame" name="frame_116">
-                 <property name="styleSheet">
-                  <string notr="true">QFrame {
-	background-color: rgb(153, 188, 244);
+                  <item>
+                   <widget class="QFrame" name="frame_116">
+                    <property name="minimumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QFrame {
+	background-color: #97bcf5;
 	border-radius: 15px;
 }</string>
-                 </property>
-                 <widget class="QWidget" name="widget_15" native="true">
-                  <property name="geometry">
-                   <rect>
-                    <x>250</x>
-                    <y>20</y>
-                    <width>511</width>
-                    <height>70</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>70</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">background-color: rgb(153, 188, 244);</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_107">
-                   <property name="spacing">
-                    <number>0</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>25</number>
-                   </property>
-                   <property name="rightMargin">
-                    <number>15</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>9</number>
-                   </property>
-                   <item alignment="Qt::AlignHCenter">
-                    <widget class="QLabel" name="label_81">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>40</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>400</width>
-                       <height>40</height>
-                      </size>
-                     </property>
-                     <property name="layoutDirection">
-                      <enum>Qt::LeftToRight</enum>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QLabel {
-	color: rgb(0, 85, 255);
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
-}</string>
-                     </property>
-                     <property name="text">
-                      <string>EDITAR USUARIO A CAFÉ INDIGO</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item alignment="Qt::AlignTop">
-                    <widget class="QFrame" name="frame_117">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>3</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>4</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">background-color: rgb(0, 85, 255);
-border-radius: 2px;</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                 <widget class="QWidget" name="gridLayoutWidget_2">
-                  <property name="geometry">
-                   <rect>
-                    <x>40</x>
-                    <y>140</y>
-                    <width>691</width>
-                    <height>501</height>
-                   </rect>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_3">
-                   <item row="0" column="1">
-                    <widget class="QFrame" name="frame_118">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>250</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QFrame {
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_95">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_108">
+                       <property name="spacing">
+                        <number>20</number>
+                       </property>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_108">
+                         <item>
+                          <layout class="QGridLayout" name="gridLayout_3">
+                           <item row="0" column="1">
+                            <widget class="QFrame" name="frame_118">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>250</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QFrame {
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
@@ -9767,143 +9688,164 @@ border: none;</string>
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_141">
-                      <property name="leftMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>6</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_84">
-                        <property name="text">
-                         <string>Tipo de empleado</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QComboBox" name="comboBox_tipo_empleado_editar">
-                        <item>
-                         <property name="text">
-                          <string>empleado</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>gerente</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>administrador</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="3" column="1">
-                    <widget class="QFrame" name="frame_125">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>50</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>250</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                     <property name="styleSheet">
-                      <string notr="true">QFrame {
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_141">
+                              <property name="leftMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QComboBox" name="comboBox_tipo_empleado_editar">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">background-color: rgb(255, 255, 255);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #416BBF;
+border: none;</string>
+                                </property>
+                                <property name="currentIndex">
+                                 <number>0</number>
+                                </property>
+                                <property name="placeholderText">
+                                 <string>Tipo de empleado</string>
+                                </property>
+                                <item>
+                                 <property name="text">
+                                  <string>empleado</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>gerente</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>administrador</string>
+                                 </property>
+                                </item>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                           <item row="3" column="1">
+                            <widget class="QFrame" name="frame_125">
+                             <property name="minimumSize">
+                              <size>
+                               <width>0</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="maximumSize">
+                              <size>
+                               <width>250</width>
+                               <height>50</height>
+                              </size>
+                             </property>
+                             <property name="styleSheet">
+                              <string notr="true">QFrame {
 	background-color: rgb(255, 255, 255);
 	border-radius: 15px;
 }</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_142">
-                      <property name="leftMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>6</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>6</number>
-                      </property>
-                      <item>
-                       <widget class="QLabel" name="label_85">
-                        <property name="text">
-                         <string>Estatus</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QComboBox" name="comboBox_estatus_empleado_editar">
-                        <item>
-                         <property name="text">
-                          <string>activo</string>
-                         </property>
-                        </item>
-                        <item>
-                         <property name="text">
-                          <string>inactivo</string>
-                         </property>
-                        </item>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                 <widget class="QPushButton" name="boton_guardar_empleados_editar">
-                  <property name="geometry">
-                   <rect>
-                    <x>330</x>
-                    <y>650</y>
-                    <width>90</width>
-                    <height>41</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>90</width>
-                    <height>16777215</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QPushButton {
+                             </property>
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QHBoxLayout" name="horizontalLayout_142">
+                              <property name="leftMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>6</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QComboBox" name="comboBox_estatus_empleado_editar">
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>0</width>
+                                  <height>40</height>
+                                 </size>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">background-color: rgb(255, 255, 255);
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #416BBF;
+border: none;</string>
+                                </property>
+                                <property name="currentIndex">
+                                 <number>0</number>
+                                </property>
+                                <property name="placeholderText">
+                                 <string>Estatus</string>
+                                </property>
+                                <item>
+                                 <property name="text">
+                                  <string>activo</string>
+                                 </property>
+                                </item>
+                                <item>
+                                 <property name="text">
+                                  <string>inactivo</string>
+                                 </property>
+                                </item>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="boton_guardar_empleados_editar">
+                           <property name="minimumSize">
+                            <size>
+                             <width>30</width>
+                             <height>40</height>
+                            </size>
+                           </property>
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>16777215</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QPushButton {
 	background-color: rgb(65, 107, 191);
 	color: rgb(255, 255, 255);
 	font-family: 'Montserrat';
@@ -9997,40 +9939,6 @@ QPushButton:hover {
 	font-style: normal;
 	font-weight: bold;
 	font-size: 28px;
-}</string>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </widget>
-                 <widget class="QLabel" name="label_mensaje_editar">
-                  <property name="geometry">
-                   <rect>
-                    <x>240</x>
-                    <y>90</y>
-                    <width>506</width>
-                    <height>40</height>
-                   </rect>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QLabel {
-	color: rgb(255, 0, 0);
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 22px;
 }</string>
                             </property>
                             <property name="text">

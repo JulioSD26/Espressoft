@@ -30,24 +30,21 @@ def buscar_empleados(tableWidget, nombre):
     llenar_tabla_empleados(tableWidget, sqlquery)
 
 def obtener_empleado(empleado_id):
-    global busqueda_empleado
     if empleado_id == "":
-        busqueda_empleado = []
-    else:
-        try:
-            conn = crear_conexion()
-            c = conn.cursor()
-            c.execute("SELECT * FROM empleados WHERE empleado_id = {}".format(empleado_id))
-            rows = c.fetchall()
-            conn.close()
-            if rows == []:
-                busqueda_empleado = []
-            else:
-                busqueda_empleado = rows[0]
-        except Error as err:
-            print("Algo salio mal: {}".format(err))
+        return []
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("SELECT * FROM empleados WHERE empleado_id = {}".format(empleado_id))
+        rows = c.fetchall()
+        conn.close()
+        global busqueda_empleado
+        busqueda_empleado = rows[0]
+    except Error as err:
+        buscar_empleados = []
+        print("Algo salio mal: {}".format(err))
 
-def vacia_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password, label_mensaje):
+def vacia_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password):
     label_numero.setText("")
     label_tipo_empleado.setCurrentText("empleado")
     label_password.setText("")
@@ -57,42 +54,35 @@ def vacia_campos(label_numero, label_nombre, label_apellido_paterno, label_apell
     label_estatus.setCurrentText("activo")
     label_telefono.setText("")
     label_correo.setText("")
-    label_mensaje.setText("")
 
-def llena_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password, label_mensaje):
-    if busqueda_empleado == []:
-        label_mensaje.setText("No se encontro el empleado")
-    else:
-        label_mensaje.setText("")
-        label_numero.setText(str(busqueda_empleado[0]))
-        label_tipo_empleado.setCurrentText(busqueda_empleado[1])
-        label_password.setText(busqueda_empleado[2])
-        label_nombre.setText(busqueda_empleado[3])
-        label_apellido_paterno.setText(busqueda_empleado[4])
-        label_apellido_materno.setText(busqueda_empleado[5])
-        label_estatus.setCurrentText('activo' if busqueda_empleado[6] == 1 else 'inactivo')
-        label_telefono.setText(busqueda_empleado[7])
-        label_correo.setText(busqueda_empleado[8])
+def llena_campos(label_numero, label_nombre, label_apellido_paterno, label_apellido_materno, label_correo, label_telefono, label_tipo_empleado, label_estatus, label_password):
+    label_numero.setText(str(busqueda_empleado[0]))
+    label_tipo_empleado.setCurrentText(busqueda_empleado[1])
+    label_password.setText(busqueda_empleado[2])
+    label_nombre.setText(busqueda_empleado[3])
+    label_apellido_paterno.setText(busqueda_empleado[4])
+    label_apellido_materno.setText(busqueda_empleado[5])
+    label_estatus.setCurrentText('activo' if busqueda_empleado[6] == 1 else 'inactivo')
+    label_telefono.setText(busqueda_empleado[7])
+    label_correo.setText(busqueda_empleado[8])
 
-def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
-    if valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
-        try:
-            conn = crear_conexion()
-            c = conn.cursor()
-            if estatus == 'activo':
-                estatus = 1
-            else:
-                estatus = 0
-            c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, email, telefono, tipo_empleado, estatus, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password))
-            conn.commit()
-            conn.close()
-            label_mensaje.setText("Empleado agregado correctamente")
-            return True
-        except Error as err:
-            print("Algo salio mal: {}".format(err))
-            return False
+def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        if estatus == 'activo':
+            estatus = 1
+        else:
+            estatus = 0
+        c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, email, telefono, tipo_empleado, estatus, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password))
+        conn.commit()
+        conn.close()
+        return True
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
     
-def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
+def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password):
     try:
         conn = crear_conexion()
         c = conn.cursor()
@@ -103,45 +93,10 @@ def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, cor
         c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
         conn.commit()
         conn.close()
-        label_mensaje.setText("Empleado editado correctamente")
         return True
     except Error as err:
         print("Algo salio mal: {}".format(err))
         return False
-
-def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
-    if empleado_id == "":
-        label_mensaje.setText("El numero de empleado no puede estar vacio")
-        return False
-    elif nombre == "":
-        label_mensaje.setText("El nombre no puede estar vacio")
-        return False
-    elif apellido_paterno == "":
-        label_mensaje.setText("El apellido paterno no puede estar vacio")
-        return False
-    elif apellido_materno == "":
-        label_mensaje.setText("El apellido materno no puede estar vacio")
-        return False
-    elif correo == "":
-        label_mensaje.setText("El correo no puede estar vacio")
-        return False
-    elif telefono == "":
-        label_mensaje.setText("El telefono no puede estar vacio")
-        return False
-    elif password == "":
-        label_mensaje.setText("La contraseña no puede estar vacia")
-        return False
-    elif verifica_usuario(empleado_id) == True:
-        label_mensaje.setText("El numero de empleado ya existe")
-        return False
-    elif verifica_correo(correo) == True:
-        label_mensaje.setText("El correo ya existe")
-        return False
-    elif verifica_telefono(telefono) == True:
-        label_mensaje.setText("El telefono ya existe")
-        return False
-    else:
-        return True
 
 def obtener_ultimo_empleado_id(label):
     try:
@@ -150,8 +105,7 @@ def obtener_ultimo_empleado_id(label):
         c.execute("SELECT COUNT(empleado_id) FROM empleados")
         rows = c.fetchall()
         conn.close()
-        num = 0
-        num += int(rows[0][0])+1
+        num = int(rows[0][0])+1
         label.setText(str(num))
     except Error as err:
         print("Algo salio mal: {}".format(err))
@@ -165,6 +119,7 @@ def verifica_login(numero,password):
         numero = numero
         c.execute("SELECT empleado_id, tipo_empleado FROM empleados WHERE empleado_id = '{}' AND contrasenia = '{}'".format(numero,password))
         rows = c.fetchall()
+        
         conn.close()
         if len(rows) > 0:
             # en teoria rows deberia de regresar solo una fila si los datos son correctos, por lo que se accede a su unico elemento, que es el primero
@@ -184,36 +139,6 @@ def verifica_usuario(numero):
         conn = crear_conexion()
         c = conn.cursor()
         c.execute("SELECT empleado_id FROM empleados WHERE empleado_id = '{}'".format(numero))
-        rows = c.fetchall()
-        conn.close()
-        if len(rows) > 0:
-            return True
-        else:
-            return False
-    except Error as err:
-        print("Algo salio mal: {}".format(err))
-        return False
-    
-def verifica_correo(entrada):
-    try:
-        conn = crear_conexion()
-        c = conn.cursor()
-        c.execute("SELECT email FROM empleados WHERE email = '{}'".format(entrada))
-        rows = c.fetchall()
-        conn.close()
-        if len(rows) > 0:
-            return True
-        else:
-            return False
-    except Error as err:
-        print("Algo salio mal: {}".format(err))
-        return False
-
-def verifica_telefono(entrada):
-    try:
-        conn = crear_conexion()
-        c = conn.cursor()
-        c.execute("SELECT telefono FROM empleados WHERE telefono = '{}'".format(entrada))
         rows = c.fetchall()
         conn.close()
         if len(rows) > 0:
