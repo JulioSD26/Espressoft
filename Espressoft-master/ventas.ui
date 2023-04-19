@@ -7258,8 +7258,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1048</width>
-                   <height>910</height>
+                   <width>592</width>
+                   <height>313</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -8094,6 +8094,31 @@ border-radius: 15px;</string>
                        </property>
                        <item>
                         <layout class="QVBoxLayout" name="verticalLayout_97">
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_mensaje_agregar">
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel {
+    color: rgb(255, 0, 0);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="wordWrap">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
                          <item>
                           <layout class="QGridLayout" name="gridLayout_2">
                            <item row="0" column="1">
@@ -9265,6 +9290,31 @@ border: none;</string>
                        </property>
                        <item>
                         <layout class="QVBoxLayout" name="verticalLayout_108">
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="label_mensaje_editar">
+                           <property name="maximumSize">
+                            <size>
+                             <width>16777215</width>
+                             <height>50</height>
+                            </size>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel {
+    color: rgb(255, 0, 0);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+}</string>
+                           </property>
+                           <property name="text">
+                            <string/>
+                           </property>
+                           <property name="wordWrap">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
                          <item>
                           <layout class="QGridLayout" name="gridLayout_3">
                            <item row="0" column="1">

@@ -3566,7 +3566,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1048, 910))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 592, 313))
         self.scrollAreaWidgetContents_4.setStyleSheet("")
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_82 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
@@ -3920,6 +3920,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_95.setObjectName("horizontalLayout_95")
         self.verticalLayout_97 = QtWidgets.QVBoxLayout()
         self.verticalLayout_97.setObjectName("verticalLayout_97")
+        self.label_mensaje_agregar = QtWidgets.QLabel(self.frame_104)
+        self.label_mensaje_agregar.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.label_mensaje_agregar.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 0, 0);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_mensaje_agregar.setText("")
+        self.label_mensaje_agregar.setWordWrap(True)
+        self.label_mensaje_agregar.setObjectName("label_mensaje_agregar")
+        self.verticalLayout_97.addWidget(self.label_mensaje_agregar, 0, QtCore.Qt.AlignHCenter)
         self.gridLayout_2 = QtWidgets.QGridLayout()
         self.gridLayout_2.setObjectName("gridLayout_2")
         self.frame_114 = QtWidgets.QFrame(self.frame_104)
@@ -4421,6 +4434,19 @@ class Ui_MainWindow(object):
         self.horizontalLayout_108.setObjectName("horizontalLayout_108")
         self.verticalLayout_108 = QtWidgets.QVBoxLayout()
         self.verticalLayout_108.setObjectName("verticalLayout_108")
+        self.label_mensaje_editar = QtWidgets.QLabel(self.frame_116)
+        self.label_mensaje_editar.setMaximumSize(QtCore.QSize(16777215, 50))
+        self.label_mensaje_editar.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 0, 0);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_mensaje_editar.setText("")
+        self.label_mensaje_editar.setWordWrap(True)
+        self.label_mensaje_editar.setObjectName("label_mensaje_editar")
+        self.verticalLayout_108.addWidget(self.label_mensaje_editar, 0, QtCore.Qt.AlignHCenter)
         self.gridLayout_3 = QtWidgets.QGridLayout()
         self.gridLayout_3.setObjectName("gridLayout_3")
         self.frame_118 = QtWidgets.QFrame(self.frame_116)
