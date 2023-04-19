@@ -44,24 +44,28 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.boton_buscar_empleados.clicked.connect(lambda: buscar_empleados(
             self.tabla_empleados, self.campo_nombre_empleado_empleados.text()))
 
-        self.boton_agregar_usuario.clicked.connect(
-            lambda: obtener_ultimo_empleado_id(self.label_numero_empleado_agregar))
+        self.boton_agregar_usuario.clicked.connect(lambda: vacia_campos(self.label_numero_empleado_agregar, self.campo_nombre_empleado_agregar, self.campo_apellido_paterno_agregar, self.campo_apellido_materno_agregar, self.campo_correo_empleado_agregar, 
+                                                                        self.campo_numero_telefono_agregar, self.comboBox_tipo_empleado_agregar, self.comboBox_estatus_empleado_agregar, self.campo_contrasena_empleado_agregar, self.label_mensaje_agregar))
+        self.boton_agregar_usuario.clicked.connect(lambda: obtener_ultimo_empleado_id(self.label_numero_empleado_agregar))
 
         # al presionar el boton de agregar, se manda a llamar al metodo agregar_empleado()
         self.boton_agregar_empleado_agregar.clicked.connect(lambda: agregar_empleado(self.label_numero_empleado_agregar.text(), self.campo_nombre_empleado_agregar.text(), self.campo_apellido_paterno_agregar.text(), self.campo_apellido_materno_agregar.text(
-        ), self.campo_correo_empleado_agregar.text(), self.campo_numero_telefono_agregar.text(), self.comboBox_tipo_empleado_agregar.currentText(), self.comboBox_estatus_empleado_agregar.currentText(), self.campo_contrasena_empleado_agregar.text()))
+        ), self.campo_correo_empleado_agregar.text(), self.campo_numero_telefono_agregar.text(), self.comboBox_tipo_empleado_agregar.currentText(), self.comboBox_estatus_empleado_agregar.currentText(), self.campo_contrasena_empleado_agregar.text(), self.label_mensaje_agregar))
         self.boton_agregar_empleado_agregar.clicked.connect(lambda: vacia_campos(self.label_numero_empleado_agregar, self.campo_nombre_empleado_agregar, self.campo_apellido_paterno_agregar, self.campo_apellido_materno_agregar,
-                                                            self.campo_correo_empleado_agregar, self.campo_numero_telefono_agregar, self.comboBox_tipo_empleado_agregar, self.comboBox_estatus_empleado_agregar, self.campo_contrasena_empleado_agregar))
+                                                            self.campo_correo_empleado_agregar, self.campo_numero_telefono_agregar, self.comboBox_tipo_empleado_agregar, self.comboBox_estatus_empleado_agregar, self.campo_contrasena_empleado_agregar, self.label_mensaje_editar))
+        self.boton_agregar_empleado_agregar.clicked.connect(lambda: obtener_ultimo_empleado_id(self.label_numero_empleado_agregar))
 
         # al presionar el boton de buscar usuario se manda a llamar al metodo obtener_empleado_seleccionado() que obtiene el empleado seleccionado y llena los campos de texto
         self.boton_buscar_empleados_editar.clicked.connect(
             lambda: obtener_empleado(self.campo_busca_numero_empleado_editar.text()))
+        self.boton_buscar_empleados_editar.clicked.connect(lambda: vacia_campos(self.label_numero_empleado_editar, self.campo_nombre_empleado_editar, self.campo_apellido_paterno_editar, self.campo_apellido_materno_editar,
+                                                            self.campo_correo_empleado_editar, self.campo_numero_telefono_editar, self.comboBox_tipo_empleado_editar, self.comboBox_estatus_empleado_editar, self.campo_contrasena_empleado_editar, self.label_mensaje_editar))
         self.boton_buscar_empleados_editar.clicked.connect(lambda: llena_campos(self.label_numero_empleado_editar, self.campo_nombre_empleado_editar, self.campo_apellido_paterno_editar, self.campo_apellido_materno_editar,
-                                                           self.campo_correo_empleado_editar, self.campo_numero_telefono_editar, self.comboBox_tipo_empleado_editar, self.comboBox_estatus_empleado_editar, self.campo_contrasena_empleado_editar))
+                                                           self.campo_correo_empleado_editar, self.campo_numero_telefono_editar, self.comboBox_tipo_empleado_editar, self.comboBox_estatus_empleado_editar, self.campo_contrasena_empleado_editar, self.label_mensaje_editar))
 
         # al presionar el boton de guardar, se manda a llamar al metodo editar_empleado()
         self.boton_guardar_empleados_editar.clicked.connect(lambda: editar_empleado(self.label_numero_empleado_editar.text(), self.campo_nombre_empleado_editar.text(), self.campo_apellido_paterno_editar.text(), self.campo_apellido_materno_editar.text(
-        ), self.campo_correo_empleado_editar.text(), self.campo_numero_telefono_editar.text(), self.comboBox_tipo_empleado_editar.currentText(), self.comboBox_estatus_empleado_editar.currentText(), self.campo_contrasena_empleado_editar.text()))
+        ), self.campo_correo_empleado_editar.text(), self.campo_numero_telefono_editar.text(), self.comboBox_tipo_empleado_editar.currentText(), self.comboBox_estatus_empleado_editar.currentText(), self.campo_contrasena_empleado_editar.text(), self.label_mensaje_agregar))
 
         # se instancia el controlador de la ventana de importar datos, el cual le agrega la funcionalidad a esa ventana
         # se le pasa como argumento la ventana principal, MainWindow
