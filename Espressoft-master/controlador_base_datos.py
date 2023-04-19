@@ -93,21 +93,22 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
             return False
     
 def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
-    try:
-        conn = crear_conexion()
-        c = conn.cursor()
-        if estatus == 'activo':
-            estatus = 1
-        else:
-            estatus = 0
-        c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
-        conn.commit()
-        conn.close()
-        label_mensaje.setText("Empleado editado correctamente")
-        return True
-    except Error as err:
-        print("Algo salio mal: {}".format(err))
-        return False
+    if valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+        try:
+            conn = crear_conexion()
+            c = conn.cursor()
+            if estatus == 'activo':
+                estatus = 1
+            else:
+                estatus = 0
+            c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
+            conn.commit()
+            conn.close()
+            label_mensaje.setText("Empleado editado correctamente")
+            return True
+        except Error as err:
+            print("Algo salio mal: {}".format(err))
+            return False
 
 def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
     if empleado_id == "":
@@ -138,6 +139,34 @@ def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo
         label_mensaje.setText("El correo ya existe")
         return False
     elif verifica_telefono(telefono) == True:
+        label_mensaje.setText("El telefono ya existe")
+        return False
+    else:
+        return True
+
+def valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+    if nombre == "":
+        label_mensaje.setText("El nombre no puede estar vacio")
+        return False
+    elif apellido_paterno == "":
+        label_mensaje.setText("El apellido paterno no puede estar vacio")
+        return False
+    elif apellido_materno == "":
+        label_mensaje.setText("El apellido materno no puede estar vacio")
+        return False
+    elif correo == "":
+        label_mensaje.setText("El correo no puede estar vacio")
+        return False
+    elif telefono == "":
+        label_mensaje.setText("El telefono no puede estar vacio")
+        return False
+    elif password == "":
+        label_mensaje.setText("La contraseña no puede estar vacia")
+        return False
+    elif verifica_correo_editar(correo, empleado_id) == True:
+        label_mensaje.setText("El correo ya existe")
+        return False
+    elif verifica_telefono_editar(telefono, empleado_id) == True:
         label_mensaje.setText("El telefono ya existe")
         return False
     else:
@@ -209,6 +238,29 @@ def verifica_correo(entrada):
         print("Algo salio mal: {}".format(err))
         return False
 
+def verifica_correo_editar(entrada, empleado_id):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("SELECT email FROM empleados WHERE email = '{}'".format(entrada))
+        rows = c.fetchall()
+        conn.close()
+        if len(rows) > 0:
+            conn = crear_conexion()
+            c = conn.cursor()
+            c.execute("SELECT email FROM empleados WHERE empleado_id ='{}'".format(empleado_id))
+            rows = c.fetchall()
+            conn.close()
+            if rows[0][0] == entrada:
+                return False
+            else:
+                return True
+        else:
+            return False
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
+
 def verifica_telefono(entrada):
     try:
         conn = crear_conexion()
@@ -218,6 +270,29 @@ def verifica_telefono(entrada):
         conn.close()
         if len(rows) > 0:
             return True
+        else:
+            return False
+    except Error as err:
+        print("Algo salio mal: {}".format(err))
+        return False
+
+def verifica_telefono_editar(entrada, empleado_id):
+    try:
+        conn = crear_conexion()
+        c = conn.cursor()
+        c.execute("SELECT telefono FROM empleados WHERE telefono = '{}'".format(entrada))
+        rows = c.fetchall()
+        conn.close()
+        if len(rows) > 0:
+            conn = crear_conexion()
+            c = conn.cursor()
+            c.execute("SELECT telefono FROM empleados WHERE empleado_id ='{}'".format(empleado_id))
+            rows = c.fetchall()
+            conn.close()
+            if rows[0][0] == entrada:
+                return False
+            else:
+                return True
         else:
             return False
     except Error as err:
