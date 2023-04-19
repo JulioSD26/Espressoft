@@ -6,7 +6,7 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
         conn = crear_conexion()
         c = conn.cursor()
-        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, estatus FROM empleados" if sqlquery == "" else sqlquery
+        sqlquery = "SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, estatus FROM empleados ORDER BY CAST(empleado_id as signed)" if sqlquery == "" else sqlquery
         c.execute(sqlquery)
         rows = c.fetchall()
         
@@ -26,7 +26,7 @@ def llenar_tabla_empleados(tableWidget, sqlquery=""):
 
 def buscar_empleados(tableWidget, nombre):
     sqlquery="".join(("SELECT * FROM (SELECT CONCAT(nombre,' ',apellido_paterno,' ',apellido_materno) as nombre_completo, empleado_id, tipo_empleado, ", 
-                  "estatus FROM empleados) as empleados2 WHERE nombre_completo LIKE '%{}%'".format(nombre)))
+                  "estatus FROM empleados) as empleados2 WHERE nombre_completo LIKE '%{}%' ORDER BY CAST(empleado_id as signed)".format(nombre)))
     llenar_tabla_empleados(tableWidget, sqlquery)
 
 def obtener_empleado(empleado_id):
