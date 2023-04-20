@@ -18,11 +18,11 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 def crear_conexion():
     try:
 
-        conn = connect(host='aws.connect.psdb.cloud', 
-                    user='kksbcwupr5oabxfhvsbo', 
-                    password='pscale_pw_1i1temoDzMNj32Mvrq8JtuA9PZzdWy0lFyNNIcB92f',
-                    database='expressoft', 
-                    port=3306)
+        conn = connect(host='localhost',
+                       user='expressoft_admin',
+                       password='lewylzzvmA2023/',
+                       database='expressoft',
+                       port=3306)
        
 
     
