@@ -2,8 +2,8 @@ from controlador_base_datos import *
 from PyQt5 import QtGui
 import login
 from empleados import obtener_usuario_loggeado
-from PyQt5 import QtWidgets
-
+from PyQt5 import QtWidgets, QtCore
+import sys, os
 
 class ControladorMenuLateral():
     """
@@ -328,11 +328,17 @@ class ControladorMenuLateral():
         """
         Cierra sesion en la aplicacion.
         """
+        # python = sys.executable
+        # os.execl(python, python, * sys.argv)
         # se cierra la ventana principal
-        ventana_principal.close()
-        # se vuelve a instanciar la pantalla de login
-        Form = QtWidgets.QWidget()
-        ui = login.Ui_Form()
-        ui.setupUi(Form)
-        # y se muestra
-        Form.show()
+        QtCore.QCoreApplication.quit()
+        status = QtCore.QProcess.startDetached(sys.executable, sys.argv)
+        # #ventana_principal.quit()
+        # ventana_principal==None
+        
+        # # se vuelve a instanciar la pantalla de login
+        # Form = QtWidgets.QWidget()
+        # ui = login.Ui_Form()
+        # ui.setupUi(Form)
+        # # y se muestra
+        # Form.show()
