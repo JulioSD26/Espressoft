@@ -83,8 +83,8 @@ class ControladorVentasIndividualesMensuales():
 
         mes_mas_ventas, mes_menos_ventas = obtener_periodos_con_menos_y_mas_ventas(diccionario_meses_y_totales)
 
-        ventana_principal.label_hora_mas_ventas_individuales_diarias_2.setText(str(mes_menos_ventas))
-        ventana_principal.label_hora_mas_ventas_individuales_diarias_4.setText(str(mes_mas_ventas))
+        ventana_principal.label_hora_mas_ventas_individuales_diarias_2.setText(str(mes_mas_ventas))
+        ventana_principal.label_hora_mas_ventas_individuales_diarias_4.setText(str(mes_menos_ventas))
 
 
     def obtener_datos_ventas_individuales_mensuales(self, id_empleado, year):
