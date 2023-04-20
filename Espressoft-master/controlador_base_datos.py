@@ -75,8 +75,17 @@ def llena_campos(label_numero, label_nombre, label_apellido_paterno, label_apell
         label_telefono.setText(busqueda_empleado[7])
         label_correo.setText(busqueda_empleado[8])
 
+def cambia_campo_contrasena(combo_tipo, campo_password):
+    if combo_tipo.currentText() == "empleado":
+        campo_password.setVisible(False)
+        campo_password.setText("")
+        campo_password.setEnabled(False)
+    else:
+        campo_password.setVisible(True)
+        campo_password.setEnabled(True) 
+
 def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
-    if valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+    if valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
         try:
             conn = crear_conexion()
             c = conn.cursor()
@@ -94,7 +103,7 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
             return False
     
 def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
-    if valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+    if valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
         try:
             conn = crear_conexion()
             c = conn.cursor()
@@ -111,7 +120,7 @@ def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, cor
             print("Algo salio mal: {}".format(err))
             return False
 
-def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
     if empleado_id == "":
         label_mensaje.setText("El numero de empleado no puede estar vacio")
         return False
@@ -130,7 +139,7 @@ def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo
     elif telefono == "":
         label_mensaje.setText("El telefono no puede estar vacio")
         return False
-    elif password == "":
+    elif password == "" and tipo_empleado != "empleado":
         label_mensaje.setText("La contraseña no puede estar vacia")
         return False
     elif verifica_usuario(empleado_id) == True:
@@ -151,7 +160,7 @@ def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo
     else:
         return True
 
-def valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, password, label_mensaje):
+def valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
     if nombre == "":
         label_mensaje.setText("El nombre no puede estar vacio")
         return False
@@ -167,7 +176,7 @@ def valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno,
     elif telefono == "":
         label_mensaje.setText("El telefono no puede estar vacio")
         return False
-    elif password == "":
+    elif password == "" and tipo_empleado != "empleado":
         label_mensaje.setText("La contraseña no puede estar vacia")
         return False
     elif validar_correo(correo) == False:
