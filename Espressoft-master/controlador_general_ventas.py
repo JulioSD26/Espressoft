@@ -207,3 +207,35 @@ def obtener_periodos_con_menos_y_mas_ventas(diccionario_datos: dict):
         if total_del_periodo > diccionario_datos[periodo_con_mas_ventas]:
             periodo_con_mas_ventas = periodo
     return periodo_con_menos_ventas, periodo_con_mas_ventas
+
+# Esta funcion podria ser reutilizada para todas las ventanas de ventas mensuales para evitar valores iguales a 0
+def obtener_periodos_con_menos_y_mas_ventas_mensuales(diccionario_datos: dict):
+    """
+    Recibe como parametro un diccionario de datos, donde sus llaves son sus periodos de tiempo
+    y sus valores son sus totales correspondientes.
+    Regresa 2 valores, el primero siendo el periodo con menos ventas y el segundo el periodo con mas ventas.
+    """
+    periodos_de_tiempo = list(diccionario_datos.keys())
+    # inicialmente a ambos periodos se les asigna como maximo y minimo el primer elemento/llave/periodo del diccionario
+    # para este punto ya tiene que estar validado que el diccionario no tiene que estar vacio
+    periodo_con_menos_ventas = periodo_con_mas_ventas = None
+    # se va recorriendo cada periodo en los periodos de tiempo
+    for periodo in periodos_de_tiempo:
+        # se va obteniendo el total de cada periodo
+        total_del_periodo = diccionario_datos[periodo]
+        # se valida que el valor del total no sea 0
+        if total_del_periodo != 0:
+            # si el valor del total no es 0 y aún no se han asignado periodos con menos o más ventas
+            # se asigna el periodo actual como el periodo con menos y más ventas
+            if periodo_con_menos_ventas is None and periodo_con_mas_ventas is None:
+                periodo_con_menos_ventas = periodo_con_mas_ventas = periodo
+            else:
+                # si ya se han asignado periodos con menos o más ventas
+                # se compara el valor del total con el valor del total del periodo con menos/más ventas actual
+                if total_del_periodo < diccionario_datos[periodo_con_menos_ventas]:
+                    # entonces periodo con menos ventas ahora se convierte en ese periodo
+                    periodo_con_menos_ventas = periodo
+                # misma lógica que la anterior, solo que para el periodo con más ventas
+                if total_del_periodo > diccionario_datos[periodo_con_mas_ventas]:
+                    periodo_con_mas_ventas = periodo
+    return periodo_con_menos_ventas, periodo_con_mas_ventas

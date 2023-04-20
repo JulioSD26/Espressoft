@@ -1,4 +1,4 @@
-from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_totales_por_mes, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas
+from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_totales_por_mes, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas_mensuales
 from controlador_grafica_ventas import dibujar_grafica, limpiar_grafica
 from controlador_tabla_ventas import llenar_datos_tabla, limpiar_tabla
 from controlador_base_datos import crear_conexion
@@ -67,7 +67,7 @@ class ControladorVentasTotalesMensuales():
         # se le asigna el total al label de total, cuando se le asigna un texto a un label siempre tiene que ser un str o si no marca error
         ventana_principal.label_total_ventas_totales_mensuales.setText(f"${str(obtener_total_de_ventas(diccionario_meses_y_totales.values()))}")
 
-        mes_mas_ventas, mes_menos_ventas = obtener_periodos_con_menos_y_mas_ventas(diccionario_meses_y_totales)
+        mes_mas_ventas, mes_menos_ventas = obtener_periodos_con_menos_y_mas_ventas_mensuales(diccionario_meses_y_totales)
 
         ventana_principal.label_mes_mas_ventas_totales_mensuales.setText(str(mes_menos_ventas))
         ventana_principal.label_mes_menos_ventas_totales_mensuales.setText(str(mes_mas_ventas))
