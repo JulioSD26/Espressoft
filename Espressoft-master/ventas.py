@@ -100,6 +100,11 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         ControladorVentasTotalesAnuales(self)
 
+        current_year = datetime.datetime.now().year
+        for year in range(current_year, 2001, -1):
+            self.combobox_ventas_totales_mensuales.addItem(str(year))
+            self.combobox_ventas_totales_mensuales_2.addItem(str(year))
+
         self.asignar_tipo_empleado_a_labels()
 
         self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
