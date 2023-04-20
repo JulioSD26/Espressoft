@@ -19,11 +19,17 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 
 def crear_conexion():
     try:
+        conn = connect(host='aws.connect.psdb.cloud', 
+                    user='kksbcwupr5oabxfhvsbo', 
+                    password='pscale_pw_1i1temoDzMNj32Mvrq8JtuA9PZzdWy0lFyNNIcB92f',
+                    database='expressoft', 
+                    port=3306)
+        """
         conn = connect(host='localhost',
                        user='expressoft_admin',
                        password='lewylzzvmA2023/',
                        database='expressoft',
-                       port=3306)
+                       port=3306)"""
     except Error as err:
         print("Algo salio mal: {}".format(err))
 
@@ -82,8 +88,22 @@ def insertar_datos_en_tabla_venta(archivo):
     except Error as err:
         return [False, 'Imposible conectar a la base de datos: {}'.format(err)]
     renglon = 2
-    for (total, fecha, hora, empleado_id) in zip(lista_total, lista_fecha, lista_hora, lista_empleado_id):
+    query = "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES"
 
+    for (total, fecha, hora, empleado_id) in zip(lista_total, lista_fecha, lista_hora, lista_empleado_id):
+        query += " ({},'{}','{}','{}'),".format( str(total), str(fecha), str(hora), str(empleado_id))
+    query = query[:-1]
+    query = query + ";"
+    try:
+        cursor.execute(query)
+    except Error as err:
+        # aunque se hayan hecho las validaciones arriba, es probable que pueda ocurrir un fallo al estar insertando los datos
+            # como que se vaya el internet o algo así, por lo que aunque con las validaciones anteriores se trataba de prevenir que
+            # si el formato fallaba en algun renglon, no se insertara ningun dato en el excel, para que no fuera tedioso para el usuario
+            # tener que modificar el excel y quitar las filas que ya habian sido insertadas, modificando las que tenian formato incorrecto
+            
+        print('Algo salio mal: {}'.format(err))
+        """
         try:
             cursor.execute(
                 "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES (%s,%s,%s,%s)",
@@ -97,8 +117,9 @@ def insertar_datos_en_tabla_venta(archivo):
         renglon += 1
         if renglon % 100 == 0:
             conn.commit()
-
+"""
     conn.commit()
+
     conn.close()
     # si todo salió bien
     return [True, f"El archivo: {archivo} se importó correctamente a la base de datos"]
