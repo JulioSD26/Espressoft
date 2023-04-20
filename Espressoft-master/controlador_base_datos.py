@@ -1,3 +1,4 @@
+import re
 from mysql.connector import connect,Error
 from PyQt5.QtWidgets import QTableWidgetItem
 from empleados import asignar_empleado_loggeado
@@ -135,6 +136,12 @@ def valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo
     elif verifica_usuario(empleado_id) == True:
         label_mensaje.setText("El numero de empleado ya existe")
         return False
+    elif validar_correo(correo) == False:
+        label_mensaje.setText("Formato de correo incorrecto")
+        return False
+    elif validar_telefono(telefono) == False:
+        label_mensaje.setText("Formato de telefono incorrecto")
+        return False
     elif verifica_correo(correo) == True:
         label_mensaje.setText("El correo ya existe")
         return False
@@ -162,6 +169,12 @@ def valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno,
         return False
     elif password == "":
         label_mensaje.setText("La contraseña no puede estar vacia")
+        return False
+    elif validar_correo(correo) == False:
+        label_mensaje.setText("Formato de correo incorrecto")
+        return False
+    elif validar_telefono(telefono) == False:
+        label_mensaje.setText("Formato de telefono incorrecto")
         return False
     elif verifica_correo_editar(correo, empleado_id) == True:
         label_mensaje.setText("El correo ya existe")
@@ -260,6 +273,15 @@ def verifica_correo_editar(entrada, empleado_id):
     except Error as err:
         print("Algo salio mal: {}".format(err))
         return False
+    
+
+def validar_correo(correo):
+    # Definir la expresión regular para validar el formato de un correo electrónico
+    patron = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    # Realizar la validación utilizando la expresión regular y el método search de re
+    resultado = re.search(patron, correo)
+    # Devolver True si el correo electrónico es válido, False en caso contrario
+    return resultado is not None
 
 def verifica_telefono(entrada):
     try:
@@ -297,6 +319,14 @@ def verifica_telefono_editar(entrada, empleado_id):
             return False
     except Error as err:
         print("Algo salio mal: {}".format(err))
+        return False
+
+def validar_telefono(telefono):
+    patron = r'^\+?1?\d{9,15}$'
+    resultado = re.match(patron, telefono)
+    if resultado:
+        return True
+    else:
         return False
 
 def crear_conexion():
