@@ -18,11 +18,11 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 def crear_conexion():
     try:
 
-        conn = connect(host='localhost', 
-                    user='expressoft_admin', 
-                    password='lewylzzvmA2023/',
-                    database='expressoft', 
-                    port=3306)
+        conn = connect(host='localhost',
+                       user='expressoft_admin',
+                       password='lewylzzvmA2023/',
+                       database='expressoft',
+                       port=3306)
        
 
     
@@ -74,6 +74,23 @@ def insertar_datos_en_tabla_venta(hoja):
         print('Imposible conectar a la base de datos: {}'.format(err))
 
     renglon = 2
+    query = "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES"
+    for ( total, fecha, hora, empleado_id) in zip( lista_total, lista_fecha, lista_hora, lista_empleado_id):
+        query += " ({},'{}','{}','{}'),".format( str(total), str(fecha), str(hora), str(empleado_id))
+    query = query[:-1]
+    query = query + ";"
+    
+    try:
+        cursor.execute(query)
+    except Error as err:
+        print('Algo salio mal: {}'.format(err))
+        print('Hay un dato en el renglon {} con formato diferente al solicitado'.format(renglon))
+        
+
+            
+    conn.commit()
+    conn.close()
+    """
     for ( total, fecha, hora, empleado_id) in zip( lista_total, lista_fecha, lista_hora, lista_empleado_id):
         
         try:
@@ -89,18 +106,19 @@ def insertar_datos_en_tabla_venta(hoja):
             conn.commit()
             
     conn.commit()
-    conn.close()
+    conn.close()"""
        
 if __name__=='__main__':
     #El metodo recibe la ruta del archivo y devuelve un diccionario de listas en donde la llave es la columna
     # y la lista contiene los datos de esa columna
+    #hoja_empleados = leer_excel('Espressoft-master/documentos_excel/empleados/empleado.xlsx')
     hoja_ventas_2021 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2021.xlsx')
-    hoja_ventas_2022 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2022.xlsx')
+    #hoja_ventas_2022 = leer_excel('Espressoft-master/documentos_excel/ventas/ventas-2022.xlsx')
     #print(hoja_ventas_2021)
     #Se inserta los datos del archivo a la base de datos a la que se haya hecho conexion
     insertar_datos_en_tabla_venta(hoja_ventas_2021)
-    insertar_datos_en_tabla_venta(hoja_ventas_2022)
-
+    #insertar_datos_en_tabla_venta(hoja_ventas_2022)
+    #insertar_datos_en_tabla_empleados(hoja_empleados)
     #insertar_datos_en_tabla_empleados(hoja)
 
 
