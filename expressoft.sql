@@ -21,7 +21,16 @@ CREATE TABLE venta (
   fecha date NOT NULL,
   hora time NOT NULL,
   empleado_id varchar(50) NOT NULL,
+  archivo_id int(11) NOT NULL,
   PRIMARY KEY (venta_id)
+);
+
+CREATE TABLE archivos_ventas (
+  archivo_id int(11) AUTO_INCREMENT NOT NULL,
+  nombre_archivo varchar(50) UNIQUE,
+  fecha date NOT NULL,
+  empleado_id varchar(50) NOT NULL,
+  PRIMARY KEY (archivo_id)
 );
 
 INSERT INTO empleados (empleado_id, tipo_empleado, contrasenia, nombre, apellido_paterno, apellido_materno, estatus, telefono, email) VALUES

@@ -1,4 +1,7 @@
 from mysql.connector import connect, Error
+from pathlib import Path
+from empleados import obtener_usuario_loggeado
+from otros import obtener_fecha_actual
 import pandas as pd
 import datetime
 
@@ -24,6 +27,22 @@ def crear_conexion():
                        password='lewylzzvmA2023/',
                        database='expressoft',
                        port=3306)
+        #MAIN
+        """
+        conn = connect(host='us-west.connect.psdb.cloud', 
+                    user='63xra7j4bs1gc32un1lm', 
+                    password='pscale_pw_UDT94s3FyDFj4gSQdZxVGqZFZot1tnJlWACe9NXvef7',
+                    database='expressoft', 
+                    port=3306)
+        """
+        #BRANCH
+        """
+        conn = connect(host='us-west.connect.psdb.cloud', 
+                    user='o7rlpqw42yyyof54jxn9', 
+                    password='pscale_pw_bkBPzdSi5wMSbrWf1d1GCydQPX6a6FGvRJJAwqol7tZ',
+                    database='expressoft', 
+                    port=3306)
+        """
     except Error as err:
         print("Algo salio mal: {}".format(err))
 
@@ -61,6 +80,14 @@ def insertar_datos_en_tabla_empleados(hoja):
 
 
 def insertar_datos_en_tabla_venta(archivo):
+    
+    # valida el nombre del archivo
+    nombre_archivo = Path(archivo).name
+    validacion_nombre_archivo = es_nombre_archivo_excel_valido(nombre_archivo)
+    # el primer elemento es el valor booleano que indica si es valido y el segundo su mensaje asociado,
+    # en este caso si el nombre del archivo no es valido:
+    if not validacion_nombre_archivo[0]:
+        return [False, validacion_nombre_archivo[1]]
     try:
         hoja = leer_excel(archivo)
     except Exception as error:
@@ -81,18 +108,35 @@ def insertar_datos_en_tabla_venta(archivo):
         cursor = conn.cursor()
     except Error as err:
         return [False, 'Imposible conectar a la base de datos: {}'.format(err)]
+    usuario_que_esta_subiendo_el_archivo = obtener_usuario_loggeado()
+    id_archivo_a_subir = None
+    # se inserta en la tabla de archivos ese registro del archivo
+    try:
+        cursor.execute(f'INSERT INTO archivos_ventas (nombre_archivo, fecha, empleado_id) VALUES ("{nombre_archivo}","{obtener_fecha_actual()}","{usuario_que_esta_subiendo_el_archivo.id_empleado}")')
+        # como la id del archivo es auto increment, se necesita hacer una query para saber con cual id se inserto
+        cursor.execute(f'SELECT archivo_id FROM archivos_ventas WHERE nombre_archivo = "{nombre_archivo}"')
+        # se obtiene la id del archivo insertado y se pasa a entero
+        id_archivo_a_subir = int(cursor.fetchone()[0])
+    except Error as err:
+        # se cancela la transaccion para que el archivo insertado no se inserte si algo salio mal
+        conn.rollback()
+        return [False, f'Algo salio mal: {err}']
     renglon = 2
     for (total, fecha, hora, empleado_id) in zip(lista_total, lista_fecha, lista_hora, lista_empleado_id):
 
         try:
             cursor.execute(
-                "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES (%s,%s,%s,%s)",
-                (total, fecha, hora, empleado_id))
+                "INSERT INTO venta ( total, fecha, hora, empleado_id, archivo_id) VALUES (%s,%s,%s,%s,%s)",
+                (total, fecha, hora, empleado_id, id_archivo_a_subir))
         except Error as err:
             # aunque se hayan hecho las validaciones arriba, es probable que pueda ocurrir un fallo al estar insertando los datos
             # como que se vaya el internet o algo así, por lo que aunque con las validaciones anteriores se trataba de prevenir que
             # si el formato fallaba en algun renglon, no se insertara ningun dato en el excel, para que no fuera tedioso para el usuario
             # tener que modificar el excel y quitar las filas que ya habian sido insertadas, modificando las que tenian formato incorrecto
+            # con este rollback se supone que si algo salio mal en alguno de los insert anteriores, 
+            # entonces todos los inserts que salieron bien se cancelan, cancelando la transaccion, para
+            # que no se inserten algunos bien y los demas no
+            conn.rollback()
             return [False, f'Algo salio mal: {err} \nEl error se produjo al tratar de insertar el renglon {renglon} en la base de datos.']
         renglon += 1
         if renglon % 100 == 0:
@@ -101,7 +145,7 @@ def insertar_datos_en_tabla_venta(archivo):
     conn.commit()
     conn.close()
     # si todo salió bien
-    return [True, f"El archivo: {archivo} se importó correctamente a la base de datos"]
+    return [True, f"El archivo: {nombre_archivo} se importó correctamente a la base de datos"]
 
 
 def es_formato_excel_ventas_correcto(hoja_ventas):
@@ -151,6 +195,32 @@ def es_formato_excel_ventas_correcto(hoja_ventas):
         renglon += 1
     # si el excel de ventas cuenta con el formato correcto completamente
     return [True, "Formato correcto del excel de ventas"]
+
+
+def es_nombre_archivo_excel_valido(nombre_excel: str):
+    """
+    Valida que la cantidad de caracteres del nombre de un archivo dado sea menor
+    o igual a la cantidad de caracteres establecidos en la base de datos y que 
+    ese nombre de archivo no se encuentre registrado ya en la base de datos.
+    Regresa una lista, donde su primer elemento es un booleano que indica si el
+    nombre del archivo es valido o no y el segundo elemento es el mensaje asociado.
+    """
+    if len(nombre_excel) > 50:
+        return [False, "El nombre del archivo debe de ser de 50 caracteres o menos, incluyendo su extensión."]
+    try:
+        conn = crear_conexion()
+        cursor = conn.cursor()
+        cursor.execute(f'SELECT * FROM archivos_ventas WHERE nombre_archivo = "{nombre_excel}"')
+        registro = cursor.fetchone()
+        conn.close()
+        # si se encontro a un registro con ese nombre de archivo
+        if registro is not None:
+            return [False, "El archivo que tratas de subir ya ha sido subido por otro usuario, el nombre de ese archivo ya se encuentra registrado en la base de datos."]
+    except Error as err:
+        return [False, f"Algo salio mal con la base de datos.\n{err}"]
+    return [True, ""]
+    
+
 
 
 def validar_encabezado_excel_venta(hoja_ventas):
