@@ -879,7 +879,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>9</number>
+          <number>8</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -4191,10 +4191,10 @@ QTableWidget {
                      <attribute name="horizontalHeaderCascadingSectionResizes">
                       <bool>true</bool>
                      </attribute>
-                     <attribute name="horizontalHeaderDefaultSectionSize">
+                     <attribute name="horizontalHeaderMinimumSectionSize">
                       <number>200</number>
                      </attribute>
-                     <attribute name="horizontalHeaderMinimumSectionSize">
+                     <attribute name="horizontalHeaderDefaultSectionSize">
                       <number>200</number>
                      </attribute>
                      <attribute name="horizontalHeaderStretchLastSection">
@@ -7258,8 +7258,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>555</width>
-                   <height>305</height>
+                   <width>1048</width>
+                   <height>910</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -7283,6 +7283,18 @@ QTableWidget {
                   </property>
                   <item>
                    <widget class="QFrame" name="frame_75">
+                    <property name="minimumSize">
+                     <size>
+                      <width>1000</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>16777215</height>
+                     </size>
+                    </property>
                     <property name="frameShape">
                      <enum>QFrame::StyledPanel</enum>
                     </property>
@@ -7723,11 +7735,11 @@ QTableWidget {
                                   <attribute name="horizontalHeaderCascadingSectionResizes">
                                    <bool>true</bool>
                                   </attribute>
-                                  <attribute name="horizontalHeaderDefaultSectionSize">
-                                   <number>150</number>
-                                  </attribute>
                                   <attribute name="horizontalHeaderMinimumSectionSize">
                                    <number>30</number>
+                                  </attribute>
+                                  <attribute name="horizontalHeaderDefaultSectionSize">
+                                   <number>150</number>
                                   </attribute>
                                   <attribute name="horizontalHeaderStretchLastSection">
                                    <bool>true</bool>
@@ -8594,7 +8606,7 @@ border: none;</string>
                                   <height>16</height>
                                  </size>
                                 </property>
-                                <property name="placeholderText" stdset="0">
+                                <property name="placeholderText">
                                  <string>Tipo de empleado</string>
                                 </property>
                                 <item>
@@ -8685,14 +8697,14 @@ border: none;</string>
                                 <property name="currentIndex">
                                  <number>0</number>
                                 </property>
+                                <property name="placeholderText">
+                                 <string>Estatus</string>
+                                </property>
                                 <property name="frame">
                                  <bool>true</bool>
                                 </property>
                                 <property name="modelColumn">
                                  <number>0</number>
-                                </property>
-                                <property name="placeholderText" stdset="0">
-                                 <string>Estatus</string>
                                 </property>
                                 <item>
                                  <property name="text">
@@ -8879,7 +8891,7 @@ QPushButton:hover {
                 <x>0</x>
                 <y>0</y>
                 <width>1036</width>
-                <height>877</height>
+                <height>720</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_112">
@@ -9784,7 +9796,7 @@ border: none;</string>
                                 <property name="currentIndex">
                                  <number>0</number>
                                 </property>
-                                <property name="placeholderText" stdset="0">
+                                <property name="placeholderText">
                                  <string>Tipo de empleado</string>
                                 </property>
                                 <item>
@@ -9866,7 +9878,7 @@ border: none;</string>
                                 <property name="currentIndex">
                                  <number>0</number>
                                 </property>
-                                <property name="placeholderText" stdset="0">
+                                <property name="placeholderText">
                                  <string>Estatus</string>
                                 </property>
                                 <item>
