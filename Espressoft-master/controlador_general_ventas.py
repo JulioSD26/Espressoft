@@ -165,10 +165,23 @@ def crear_diccionario_anios_y_totales(datos_ventas):
 # Esta funcion podria ser reutilizada para todas las ventanas de ventas.
 # todavia no esta implementada porque es para la tercera iteracion.
 # de momento regresa "--.--%" que es el valor que tiene antes de que se calcule algo
+def obtener_meta_ventas(id_meta):
+    try:
+        conn = crear_conexion()
+        cursor = conn.cursor()
+        cursor.execute(f'SELECT meta_ventas FROM metas WHERE id = {id_meta}')
+        meta_ventas = cursor.fetchone()[0]
+        conn.close()
+        return meta_ventas
+    except:
+        return None
+
 def calcular_porcentaje_de_ventas(total_ventas, meta_ventas):
-    # aqui irian todos los calculos
-    porcentaje_de_ventas = "--.--%"
-    return porcentaje_de_ventas
+    if meta_ventas is None:
+        return "--.--%"
+    porcentaje_de_ventas = (total_ventas / float(meta_ventas)) * 100
+    return f"{porcentaje_de_ventas:.2f}%"
+
 
 
 # Esta funcion podria ser reutilizada para todas las ventanas de ventas

@@ -1,4 +1,4 @@
-from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_anios_y_totales, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas
+from controlador_general_ventas import insertar_datos_empleado_en_los_labels, crear_diccionario_anios_y_totales, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas, obtener_meta_ventas
 from controlador_grafica_ventas import dibujar_grafica, limpiar_grafica
 from controlador_tabla_ventas import llenar_datos_tabla, limpiar_tabla
 from controlador_base_datos import crear_conexion
@@ -60,8 +60,8 @@ class ControladorVentasTotalesAnuales():
         # se dibuja la grafica con los datos del diccionario
         dibujar_grafica(ventana_principal.grafica_ventas_totales_anuales, diccionario_anios_y_totales)
         # esta funcion calcular_porcentaje_de_ventas() falta implementarse para la tercera iteracion, se le pasa cualquier argumento
-        ventana_principal.label_porcentaje_ventas_totales_anuales.setText(calcular_porcentaje_de_ventas(0, 0))
-        
+        ventana_principal.label_porcentaje_ventas_totales_anuales.setText(calcular_porcentaje_de_ventas(obtener_total_de_ventas(diccionario_anios_y_totales.values()), obtener_meta_ventas(6)))
+
         # se obtiene el anio en curso
         anio_en_curso = obtener_fecha_actual().year
         # se le asigna un valor inicial de 0 al total del anio en curso

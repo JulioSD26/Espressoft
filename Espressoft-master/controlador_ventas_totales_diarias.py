@@ -1,4 +1,4 @@
-from controlador_general_ventas import crear_diccionario_intervalos_de_horas_y_totales, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas
+from controlador_general_ventas import crear_diccionario_intervalos_de_horas_y_totales, calcular_porcentaje_de_ventas, obtener_total_de_ventas, obtener_periodos_con_menos_y_mas_ventas, obtener_meta_ventas
 from controlador_grafica_ventas import dibujar_grafica, limpiar_grafica
 from controlador_tabla_ventas import llenar_datos_tabla, limpiar_tabla
 from controlador_base_datos import crear_conexion
@@ -45,8 +45,10 @@ class ControladorVentasTotalesDiarias():
         diccionario_intervalos_de_horas_y_totales = crear_diccionario_intervalos_de_horas_y_totales(datos_ventas)
         # se dibuja la grafica con los datos del diccionario
         dibujar_grafica(ventana_principal.grafica_ventas_totales_diarias, diccionario_intervalos_de_horas_y_totales)
+        
         # esta funcion calcular_porcentaje_de_ventas() falta implementarse para la tercera iteracion, se le pasa cualquier argumento
-        ventana_principal.label_porcentaje_ventas_totales_diarias.setText(calcular_porcentaje_de_ventas(0, 0))
+        ventana_principal.label_porcentaje_ventas_totales_diarias.setText(calcular_porcentaje_de_ventas(obtener_total_de_ventas(diccionario_intervalos_de_horas_y_totales.values()), obtener_meta_ventas(4)))
+        
         # se le cambia el texto al label que indica el dia, formateando la fecha a dia/mes/anio
         ventana_principal.label_dia_ventas_totales_diarias.setText(formatear_dia_a_formato_dia_mes_anio(fecha))
         # se llena la tabla con los datos del diccionario
