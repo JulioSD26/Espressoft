@@ -289,6 +289,28 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.addLayout(self.horizontalLayout_109)
         spacerItem18 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
         self.verticalLayout_2.addItem(spacerItem18)
+        self.horizontalLayout_111 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_111.setContentsMargins(0, -1, 4, -1)
+        self.horizontalLayout_111.setObjectName("horizontalLayout_111")
+        self.boton_meta_ventas = QtWidgets.QPushButton(self.menu_lateral)
+        self.boton_meta_ventas.setLayoutDirection(QtCore.Qt.RightToLeft)
+        self.boton_meta_ventas.setAutoFillBackground(False)
+        self.boton_meta_ventas.setStyleSheet("QPushButton {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 400;\n"
+"    font-size: 16px;\n"
+"    border: none;\n"
+"    padding: 10px;\n"
+"}")
+        self.boton_meta_ventas.setObjectName("boton_meta_ventas")
+        self.horizontalLayout_111.addWidget(self.boton_meta_ventas)
+        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_111.addItem(spacerItem19)
+        self.verticalLayout_2.addLayout(self.horizontalLayout_111)
+        spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem20)
         self.horizontalLayout_40 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_40.setContentsMargins(0, -1, 4, -1)
         self.horizontalLayout_40.setObjectName("horizontalLayout_40")
@@ -306,13 +328,13 @@ class Ui_MainWindow(object):
 "}")
         self.boton_importar_datos.setObjectName("boton_importar_datos")
         self.horizontalLayout_40.addWidget(self.boton_importar_datos)
-        spacerItem19 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_40.addItem(spacerItem19)
+        spacerItem21 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_40.addItem(spacerItem21)
         self.verticalLayout_2.addLayout(self.horizontalLayout_40)
-        spacerItem20 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem20)
-        spacerItem21 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.verticalLayout_2.addItem(spacerItem21)
+        spacerItem22 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem22)
+        spacerItem23 = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.verticalLayout_2.addItem(spacerItem23)
         self.horizontalLayout_6 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_6.setContentsMargins(0, -1, 4, -1)
         self.horizontalLayout_6.setObjectName("horizontalLayout_6")
@@ -330,8 +352,8 @@ class Ui_MainWindow(object):
 "}")
         self.boton_cerrar_sesion.setObjectName("boton_cerrar_sesion")
         self.horizontalLayout_6.addWidget(self.boton_cerrar_sesion)
-        spacerItem22 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_6.addItem(spacerItem22)
+        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_6.addItem(spacerItem24)
         self.verticalLayout_2.addLayout(self.horizontalLayout_6)
         self.horizontalLayout.addWidget(self.menu_lateral)
         self.frame_informacion = QtWidgets.QFrame(self.centralwidget)
@@ -802,8 +824,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_15.setObjectName("label_15")
         self.horizontalLayout_17.addWidget(self.label_15)
-        spacerItem23 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_17.addItem(spacerItem23)
+        spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_17.addItem(spacerItem25)
         self.label_total_ventas_totales_diarias = QtWidgets.QLabel(self.frame_9)
         self.label_total_ventas_totales_diarias.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -1180,8 +1202,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_26.setObjectName("label_26")
         self.horizontalLayout_30.addWidget(self.label_26)
-        spacerItem24 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_30.addItem(spacerItem24)
+        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_30.addItem(spacerItem26)
         self.label_total_ventas_totales_mensuales = QtWidgets.QLabel(self.frame_20)
         self.label_total_ventas_totales_mensuales.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -1509,8 +1531,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_44.setObjectName("label_44")
         self.horizontalLayout_59.addWidget(self.label_44)
-        spacerItem25 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_59.addItem(spacerItem25)
+        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_59.addItem(spacerItem27)
         self.label_total_ventas_totales_anuales = QtWidgets.QLabel(self.frame_44)
         self.label_total_ventas_totales_anuales.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -1789,8 +1811,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_num_empleado_ventas_individuales_diarias.setObjectName("label_num_empleado_ventas_individuales_diarias")
         self.horizontalLayout_34.addWidget(self.label_num_empleado_ventas_individuales_diarias)
-        spacerItem26 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_34.addItem(spacerItem26)
+        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_34.addItem(spacerItem28)
         self.verticalLayout_25.addLayout(self.horizontalLayout_34)
         self.verticalLayout_26.addLayout(self.verticalLayout_25)
         self.horizontalLayout_36 = QtWidgets.QHBoxLayout()
@@ -1815,8 +1837,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_nombre_ventas_individuales_diarias.setObjectName("label_nombre_ventas_individuales_diarias")
         self.horizontalLayout_36.addWidget(self.label_nombre_ventas_individuales_diarias)
-        spacerItem27 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_36.addItem(spacerItem27)
+        spacerItem29 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_36.addItem(spacerItem29)
         self.verticalLayout_26.addLayout(self.horizontalLayout_36)
         self.horizontalLayout_35 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_35.setObjectName("horizontalLayout_35")
@@ -1840,8 +1862,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_estatus_ventas_individuales_diarias.setObjectName("label_estatus_ventas_individuales_diarias")
         self.horizontalLayout_35.addWidget(self.label_estatus_ventas_individuales_diarias)
-        spacerItem28 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_35.addItem(spacerItem28)
+        spacerItem30 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_35.addItem(spacerItem30)
         self.verticalLayout_26.addLayout(self.horizontalLayout_35)
         self.verticalLayout_29.addWidget(self.frame_25)
         self.frame_26 = QtWidgets.QFrame(self.frame_31)
@@ -2085,8 +2107,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_38.setObjectName("label_38")
         self.horizontalLayout_49.addWidget(self.label_38)
-        spacerItem29 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_49.addItem(spacerItem29)
+        spacerItem31 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_49.addItem(spacerItem31)
         self.label_total_ventas_individuales_diarias = QtWidgets.QLabel(self.frame_34)
         self.label_total_ventas_individuales_diarias.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -2327,8 +2349,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_num_empleado_ventas_individuales_diarias_2.setObjectName("label_num_empleado_ventas_individuales_diarias_2")
         self.horizontalLayout_71.addWidget(self.label_num_empleado_ventas_individuales_diarias_2)
-        spacerItem30 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_71.addItem(spacerItem30)
+        spacerItem32 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_71.addItem(spacerItem32)
         self.verticalLayout_54.addLayout(self.horizontalLayout_71)
         self.verticalLayout_53.addLayout(self.verticalLayout_54)
         self.horizontalLayout_72 = QtWidgets.QHBoxLayout()
@@ -2353,8 +2375,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_nombre_ventas_individuales_diarias_2.setObjectName("label_nombre_ventas_individuales_diarias_2")
         self.horizontalLayout_72.addWidget(self.label_nombre_ventas_individuales_diarias_2)
-        spacerItem31 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_72.addItem(spacerItem31)
+        spacerItem33 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_72.addItem(spacerItem33)
         self.verticalLayout_53.addLayout(self.horizontalLayout_72)
         self.horizontalLayout_73 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_73.setObjectName("horizontalLayout_73")
@@ -2378,8 +2400,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_estatus_ventas_individuales_diarias_2.setObjectName("label_estatus_ventas_individuales_diarias_2")
         self.horizontalLayout_73.addWidget(self.label_estatus_ventas_individuales_diarias_2)
-        spacerItem32 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_73.addItem(spacerItem32)
+        spacerItem34 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_73.addItem(spacerItem34)
         self.verticalLayout_53.addLayout(self.horizontalLayout_73)
         self.verticalLayout_52.addWidget(self.frame_58)
         self.frame_59 = QtWidgets.QFrame(self.frame_56)
@@ -2614,8 +2636,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_56.setObjectName("label_56")
         self.horizontalLayout_81.addWidget(self.label_56)
-        spacerItem33 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_81.addItem(spacerItem33)
+        spacerItem35 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_81.addItem(spacerItem35)
         self.label_total_ventas_individuales_diarias_2 = QtWidgets.QLabel(self.frame_65)
         self.label_total_ventas_individuales_diarias_2.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -2869,8 +2891,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_num_empleado_ventas_individuales_anuales.setObjectName("label_num_empleado_ventas_individuales_anuales")
         self.horizontalLayout_87.addWidget(self.label_num_empleado_ventas_individuales_anuales)
-        spacerItem34 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_87.addItem(spacerItem34)
+        spacerItem36 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_87.addItem(spacerItem36)
         self.verticalLayout_64.addLayout(self.horizontalLayout_87)
         self.verticalLayout_63.addLayout(self.verticalLayout_64)
         self.horizontalLayout_88 = QtWidgets.QHBoxLayout()
@@ -2895,8 +2917,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_nombre_ventas_individuales_anuales.setObjectName("label_nombre_ventas_individuales_anuales")
         self.horizontalLayout_88.addWidget(self.label_nombre_ventas_individuales_anuales)
-        spacerItem35 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_88.addItem(spacerItem35)
+        spacerItem37 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_88.addItem(spacerItem37)
         self.verticalLayout_63.addLayout(self.horizontalLayout_88)
         self.horizontalLayout_89 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_89.setObjectName("horizontalLayout_89")
@@ -2920,8 +2942,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_estatus_ventas_individuales_anuales.setObjectName("label_estatus_ventas_individuales_anuales")
         self.horizontalLayout_89.addWidget(self.label_estatus_ventas_individuales_anuales)
-        spacerItem36 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_89.addItem(spacerItem36)
+        spacerItem38 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_89.addItem(spacerItem38)
         self.verticalLayout_63.addLayout(self.horizontalLayout_89)
         self.verticalLayout_62.addWidget(self.frame_72)
         self.frame_73 = QtWidgets.QFrame(self.frame_70)
@@ -3108,8 +3130,8 @@ class Ui_MainWindow(object):
 "}")
         self.label_67.setObjectName("label_67")
         self.horizontalLayout_97.addWidget(self.label_67)
-        spacerItem37 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
-        self.horizontalLayout_97.addItem(spacerItem37)
+        spacerItem39 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
+        self.horizontalLayout_97.addItem(spacerItem39)
         self.label_total_ventas_individuales_anuales = QtWidgets.QLabel(self.frame_79)
         self.label_total_ventas_individuales_anuales.setStyleSheet("QLabel {\n"
 "    color: #344050;\n"
@@ -3566,7 +3588,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1048, 910))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1000, 313))
         self.scrollAreaWidgetContents_4.setStyleSheet("")
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_82 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
@@ -3821,7 +3843,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1036, 877))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1036, 670))
         self.scrollAreaWidgetContents_2.setMinimumSize(QtCore.QSize(0, 0))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_111 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
@@ -4257,7 +4279,7 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidgetResizable(True)
         self.scrollArea_3.setObjectName("scrollArea_3")
         self.scrollAreaWidgetContents_3 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 1036, 720))
+        self.scrollAreaWidgetContents_3.setGeometry(QtCore.QRect(0, 0, 1036, 877))
         self.scrollAreaWidgetContents_3.setObjectName("scrollAreaWidgetContents_3")
         self.verticalLayout_112 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_112.setObjectName("verticalLayout_112")
@@ -4759,12 +4781,443 @@ class Ui_MainWindow(object):
         self.scrollArea_3.setWidget(self.scrollAreaWidgetContents_3)
         self.verticalLayout_92.addWidget(self.scrollArea_3)
         self.stacked_widget_paginas.addWidget(self.pagina_editar_usuario)
+        self.pagina_meta_ventas = QtWidgets.QWidget()
+        self.pagina_meta_ventas.setObjectName("pagina_meta_ventas")
+        self.verticalLayout_113 = QtWidgets.QVBoxLayout(self.pagina_meta_ventas)
+        self.verticalLayout_113.setObjectName("verticalLayout_113")
+        self.scrollArea_4 = QtWidgets.QScrollArea(self.pagina_meta_ventas)
+        self.scrollArea_4.setStyleSheet("border: none;")
+        self.scrollArea_4.setWidgetResizable(True)
+        self.scrollArea_4.setObjectName("scrollArea_4")
+        self.scrollAreaWidgetContents = QtWidgets.QWidget()
+        self.scrollAreaWidgetContents.setGeometry(QtCore.QRect(0, 0, 1032, 894))
+        self.scrollAreaWidgetContents.setObjectName("scrollAreaWidgetContents")
+        self.verticalLayout_114 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_114.setObjectName("verticalLayout_114")
+        self.frame_95 = QtWidgets.QFrame(self.scrollAreaWidgetContents)
+        self.frame_95.setMinimumSize(QtCore.QSize(1000, 0))
+        self.frame_95.setMaximumSize(QtCore.QSize(16777215, 16777215))
+        self.frame_95.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_95.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_95.setObjectName("frame_95")
+        self.verticalLayout_116 = QtWidgets.QVBoxLayout(self.frame_95)
+        self.verticalLayout_116.setObjectName("verticalLayout_116")
+        self.widget_10 = QtWidgets.QWidget(self.frame_95)
+        self.widget_10.setMinimumSize(QtCore.QSize(0, 70))
+        self.widget_10.setMaximumSize(QtCore.QSize(16777215, 70))
+        self.widget_10.setObjectName("widget_10")
+        self.verticalLayout_115 = QtWidgets.QVBoxLayout(self.widget_10)
+        self.verticalLayout_115.setContentsMargins(-1, -1, 9, 9)
+        self.verticalLayout_115.setSpacing(0)
+        self.verticalLayout_115.setObjectName("verticalLayout_115")
+        self.label_tipo_usuario_meta_ventas = QtWidgets.QLabel(self.widget_10)
+        self.label_tipo_usuario_meta_ventas.setMinimumSize(QtCore.QSize(0, 40))
+        self.label_tipo_usuario_meta_ventas.setMaximumSize(QtCore.QSize(16777215, 40))
+        self.label_tipo_usuario_meta_ventas.setStyleSheet("QLabel {\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: bold;\n"
+"    font-size: 22px;\n"
+"}")
+        self.label_tipo_usuario_meta_ventas.setObjectName("label_tipo_usuario_meta_ventas")
+        self.verticalLayout_115.addWidget(self.label_tipo_usuario_meta_ventas, 0, QtCore.Qt.AlignTop)
+        self.frame_117 = QtWidgets.QFrame(self.widget_10)
+        self.frame_117.setMinimumSize(QtCore.QSize(0, 3))
+        self.frame_117.setMaximumSize(QtCore.QSize(400, 4))
+        self.frame_117.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 2px;")
+        self.frame_117.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_117.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_117.setObjectName("frame_117")
+        self.verticalLayout_115.addWidget(self.frame_117, 0, QtCore.Qt.AlignTop)
+        self.verticalLayout_116.addWidget(self.widget_10)
+        self.frame_127 = QtWidgets.QFrame(self.frame_95)
+        self.frame_127.setMaximumSize(QtCore.QSize(16777215, 80))
+        self.frame_127.setStyleSheet("QFrame {\n"
+"    background-color: rgb(153, 188, 244);\n"
+"    border-radius: 15px;\n"
+"    margin-left: 16px;\n"
+"    margin-right: 16px;\n"
+"}")
+        self.frame_127.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_127.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_127.setObjectName("frame_127")
+        self.horizontalLayout_112 = QtWidgets.QHBoxLayout(self.frame_127)
+        self.horizontalLayout_112.setObjectName("horizontalLayout_112")
+        self.label_86 = QtWidgets.QLabel(self.frame_127)
+        self.label_86.setStyleSheet("QLabel {\n"
+"    color: #416BBF;    \n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 28px;\n"
+"}")
+        self.label_86.setObjectName("label_86")
+        self.horizontalLayout_112.addWidget(self.label_86, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.verticalLayout_116.addWidget(self.frame_127)
+        self.frame_128 = QtWidgets.QFrame(self.frame_95)
+        self.frame_128.setStyleSheet("QFrame {\n"
+"    background-color: rgb(153, 188, 244);\n"
+"    border-radius: 15px;\n"
+"    margin-left: 16px;\n"
+"    margin-right: 16px;\n"
+"}")
+        self.frame_128.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_128.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_128.setObjectName("frame_128")
+        self.verticalLayout_117 = QtWidgets.QVBoxLayout(self.frame_128)
+        self.verticalLayout_117.setObjectName("verticalLayout_117")
+        self.horizontalFrame = QtWidgets.QFrame(self.frame_128)
+        self.horizontalFrame.setMaximumSize(QtCore.QSize(16777215, 150))
+        self.horizontalFrame.setObjectName("horizontalFrame")
+        self.horizontalLayout_113 = QtWidgets.QHBoxLayout(self.horizontalFrame)
+        self.horizontalLayout_113.setObjectName("horizontalLayout_113")
+        self.label_87 = QtWidgets.QLabel(self.horizontalFrame)
+        self.label_87.setMaximumSize(QtCore.QSize(16777215, 100))
+        self.label_87.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_87.setWordWrap(True)
+        self.label_87.setObjectName("label_87")
+        self.horizontalLayout_113.addWidget(self.label_87)
+        self.frame_130 = QtWidgets.QFrame(self.horizontalFrame)
+        self.frame_130.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_130.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_130.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_130.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_130.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_130.setObjectName("frame_130")
+        self.horizontalLayout_144 = QtWidgets.QHBoxLayout(self.frame_130)
+        self.horizontalLayout_144.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_144.setObjectName("horizontalLayout_144")
+        self.campo_meta_diaria_por_empleado = QtWidgets.QLineEdit(self.frame_130)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.campo_meta_diaria_por_empleado.sizePolicy().hasHeightForWidth())
+        self.campo_meta_diaria_por_empleado.setSizePolicy(sizePolicy)
+        self.campo_meta_diaria_por_empleado.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"font-family: \'Montserrat\';\n"
+"font-style: normal;\n"
+"font-weight: 600;\n"
+"font-size: 14px;\n"
+"color: #416BBF;\n"
+"border: none;")
+        self.campo_meta_diaria_por_empleado.setText("")
+        self.campo_meta_diaria_por_empleado.setClearButtonEnabled(False)
+        self.campo_meta_diaria_por_empleado.setObjectName("campo_meta_diaria_por_empleado")
+        self.horizontalLayout_144.addWidget(self.campo_meta_diaria_por_empleado)
+        self.horizontalLayout_113.addWidget(self.frame_130)
+        self.boton_guardar_meta_ventas = QtWidgets.QPushButton(self.horizontalFrame)
+        self.boton_guardar_meta_ventas.setMinimumSize(QtCore.QSize(30, 40))
+        self.boton_guardar_meta_ventas.setMaximumSize(QtCore.QSize(140, 16777215))
+        self.boton_guardar_meta_ventas.setStyleSheet("QPushButton {\n"
+"    background-color: rgb(65, 107, 191);\n"
+"    color: rgb(255, 255, 255);\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 400;\n"
+"    font-size: 14px;\n"
+"    border-radius : 15px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #4caf50;\n"
+"}")
+        self.boton_guardar_meta_ventas.setObjectName("boton_guardar_meta_ventas")
+        self.horizontalLayout_113.addWidget(self.boton_guardar_meta_ventas)
+        self.verticalLayout_117.addWidget(self.horizontalFrame)
+        self.frame_129 = QtWidgets.QFrame(self.frame_128)
+        self.frame_129.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_129.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_129.setObjectName("frame_129")
+        self.verticalLayout_118 = QtWidgets.QVBoxLayout(self.frame_129)
+        self.verticalLayout_118.setObjectName("verticalLayout_118")
+        self.frame_131 = QtWidgets.QFrame(self.frame_129)
+        self.frame_131.setMinimumSize(QtCore.QSize(0, 3))
+        self.frame_131.setMaximumSize(QtCore.QSize(16777215, 4))
+        self.frame_131.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+"border-radius: 2px;")
+        self.frame_131.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_131.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_131.setObjectName("frame_131")
+        self.verticalLayout_118.addWidget(self.frame_131)
+        self.horizontalLayout_114 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_114.setObjectName("horizontalLayout_114")
+        self.verticalLayout_120 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_120.setObjectName("verticalLayout_120")
+        self.label_88 = QtWidgets.QLabel(self.frame_129)
+        self.label_88.setMaximumSize(QtCore.QSize(16777215, 120))
+        self.label_88.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_88.setObjectName("label_88")
+        self.verticalLayout_120.addWidget(self.label_88, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_115 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_115.setObjectName("horizontalLayout_115")
+        self.label_89 = QtWidgets.QLabel(self.frame_129)
+        self.label_89.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_89.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_89.setObjectName("label_89")
+        self.horizontalLayout_115.addWidget(self.label_89)
+        self.frame_133 = QtWidgets.QFrame(self.frame_129)
+        self.frame_133.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_133.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_133.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_133.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_133.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_133.setObjectName("frame_133")
+        self.horizontalLayout_145 = QtWidgets.QHBoxLayout(self.frame_133)
+        self.horizontalLayout_145.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_145.setObjectName("horizontalLayout_145")
+        self.label_meta_diaria_empleado = QtWidgets.QLabel(self.frame_133)
+        self.label_meta_diaria_empleado.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_diaria_empleado.setObjectName("label_meta_diaria_empleado")
+        self.horizontalLayout_145.addWidget(self.label_meta_diaria_empleado)
+        self.horizontalLayout_115.addWidget(self.frame_133)
+        self.verticalLayout_120.addLayout(self.horizontalLayout_115)
+        self.horizontalLayout_119 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_119.setObjectName("horizontalLayout_119")
+        self.label_91 = QtWidgets.QLabel(self.frame_129)
+        self.label_91.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_91.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_91.setObjectName("label_91")
+        self.horizontalLayout_119.addWidget(self.label_91)
+        self.frame_134 = QtWidgets.QFrame(self.frame_129)
+        self.frame_134.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_134.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_134.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_134.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_134.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_134.setObjectName("frame_134")
+        self.horizontalLayout_146 = QtWidgets.QHBoxLayout(self.frame_134)
+        self.horizontalLayout_146.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_146.setObjectName("horizontalLayout_146")
+        self.label_meta_mensual_empleado = QtWidgets.QLabel(self.frame_134)
+        self.label_meta_mensual_empleado.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_mensual_empleado.setObjectName("label_meta_mensual_empleado")
+        self.horizontalLayout_146.addWidget(self.label_meta_mensual_empleado)
+        self.horizontalLayout_119.addWidget(self.frame_134)
+        self.verticalLayout_120.addLayout(self.horizontalLayout_119)
+        self.horizontalLayout_121 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_121.setObjectName("horizontalLayout_121")
+        self.label_92 = QtWidgets.QLabel(self.frame_129)
+        self.label_92.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_92.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_92.setObjectName("label_92")
+        self.horizontalLayout_121.addWidget(self.label_92)
+        self.frame_135 = QtWidgets.QFrame(self.frame_129)
+        self.frame_135.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_135.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_135.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_135.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_135.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_135.setObjectName("frame_135")
+        self.horizontalLayout_147 = QtWidgets.QHBoxLayout(self.frame_135)
+        self.horizontalLayout_147.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_147.setObjectName("horizontalLayout_147")
+        self.label_meta_anual_empleado = QtWidgets.QLabel(self.frame_135)
+        self.label_meta_anual_empleado.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_anual_empleado.setObjectName("label_meta_anual_empleado")
+        self.horizontalLayout_147.addWidget(self.label_meta_anual_empleado)
+        self.horizontalLayout_121.addWidget(self.frame_135)
+        self.verticalLayout_120.addLayout(self.horizontalLayout_121)
+        self.horizontalLayout_114.addLayout(self.verticalLayout_120)
+        self.verticalLayout_119 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_119.setObjectName("verticalLayout_119")
+        self.verticalLayout_121 = QtWidgets.QVBoxLayout()
+        self.verticalLayout_121.setObjectName("verticalLayout_121")
+        self.label_90 = QtWidgets.QLabel(self.frame_129)
+        self.label_90.setMaximumSize(QtCore.QSize(16777215, 120))
+        self.label_90.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_90.setObjectName("label_90")
+        self.verticalLayout_121.addWidget(self.label_90, 0, QtCore.Qt.AlignHCenter)
+        self.horizontalLayout_122 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_122.setObjectName("horizontalLayout_122")
+        self.label_96 = QtWidgets.QLabel(self.frame_129)
+        self.label_96.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_96.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_96.setObjectName("label_96")
+        self.horizontalLayout_122.addWidget(self.label_96)
+        self.frame_136 = QtWidgets.QFrame(self.frame_129)
+        self.frame_136.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_136.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_136.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_136.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_136.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_136.setObjectName("frame_136")
+        self.horizontalLayout_148 = QtWidgets.QHBoxLayout(self.frame_136)
+        self.horizontalLayout_148.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_148.setObjectName("horizontalLayout_148")
+        self.label_meta_diaria_total = QtWidgets.QLabel(self.frame_136)
+        self.label_meta_diaria_total.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_diaria_total.setObjectName("label_meta_diaria_total")
+        self.horizontalLayout_148.addWidget(self.label_meta_diaria_total)
+        self.horizontalLayout_122.addWidget(self.frame_136)
+        self.verticalLayout_121.addLayout(self.horizontalLayout_122)
+        self.horizontalLayout_123 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_123.setObjectName("horizontalLayout_123")
+        self.label_98 = QtWidgets.QLabel(self.frame_129)
+        self.label_98.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_98.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_98.setObjectName("label_98")
+        self.horizontalLayout_123.addWidget(self.label_98)
+        self.frame_137 = QtWidgets.QFrame(self.frame_129)
+        self.frame_137.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_137.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_137.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_137.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_137.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_137.setObjectName("frame_137")
+        self.horizontalLayout_149 = QtWidgets.QHBoxLayout(self.frame_137)
+        self.horizontalLayout_149.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_149.setObjectName("horizontalLayout_149")
+        self.label_meta_mensual_total = QtWidgets.QLabel(self.frame_137)
+        self.label_meta_mensual_total.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_mensual_total.setObjectName("label_meta_mensual_total")
+        self.horizontalLayout_149.addWidget(self.label_meta_mensual_total)
+        self.horizontalLayout_123.addWidget(self.frame_137)
+        self.verticalLayout_121.addLayout(self.horizontalLayout_123)
+        self.horizontalLayout_133 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_133.setObjectName("horizontalLayout_133")
+        self.label_100 = QtWidgets.QLabel(self.frame_129)
+        self.label_100.setMaximumSize(QtCore.QSize(100, 16777215))
+        self.label_100.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-size: 16px;\n"
+"}")
+        self.label_100.setObjectName("label_100")
+        self.horizontalLayout_133.addWidget(self.label_100)
+        self.frame_138 = QtWidgets.QFrame(self.frame_129)
+        self.frame_138.setMinimumSize(QtCore.QSize(250, 50))
+        self.frame_138.setMaximumSize(QtCore.QSize(400, 50))
+        self.frame_138.setStyleSheet("QFrame {\n"
+"    background-color: rgb(255, 255, 255);\n"
+"    border-radius: 15px;\n"
+"}")
+        self.frame_138.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_138.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_138.setObjectName("frame_138")
+        self.horizontalLayout_150 = QtWidgets.QHBoxLayout(self.frame_138)
+        self.horizontalLayout_150.setContentsMargins(6, 6, 6, 6)
+        self.horizontalLayout_150.setObjectName("horizontalLayout_150")
+        self.label_meta_anual_total = QtWidgets.QLabel(self.frame_138)
+        self.label_meta_anual_total.setStyleSheet("QLabel {\n"
+"    color: #416BBF;\n"
+"    font-family: \'Montserrat\';\n"
+"    font-style: normal;\n"
+"    font-weight: 800;\n"
+"    font-size: 18px;\n"
+"}")
+        self.label_meta_anual_total.setObjectName("label_meta_anual_total")
+        self.horizontalLayout_150.addWidget(self.label_meta_anual_total)
+        self.horizontalLayout_133.addWidget(self.frame_138)
+        self.verticalLayout_121.addLayout(self.horizontalLayout_133)
+        self.verticalLayout_119.addLayout(self.verticalLayout_121)
+        self.horizontalLayout_114.addLayout(self.verticalLayout_119)
+        self.verticalLayout_118.addLayout(self.horizontalLayout_114)
+        self.verticalLayout_117.addWidget(self.frame_129)
+        self.verticalLayout_116.addWidget(self.frame_128)
+        self.verticalLayout_114.addWidget(self.frame_95)
+        self.scrollArea_4.setWidget(self.scrollAreaWidgetContents)
+        self.verticalLayout_113.addWidget(self.scrollArea_4)
+        self.stacked_widget_paginas.addWidget(self.pagina_meta_ventas)
         self.verticalLayout.addWidget(self.stacked_widget_paginas)
         self.horizontalLayout.addWidget(self.frame_informacion)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(8)
+        self.stacked_widget_paginas.setCurrentIndex(11)
         self.comboBox_tipo_empleado_agregar.setCurrentIndex(0)
         self.comboBox_estatus_empleado_agregar.setCurrentIndex(0)
         self.comboBox_tipo_empleado_editar.setCurrentIndex(0)
@@ -4785,6 +5238,7 @@ class Ui_MainWindow(object):
         self.boton_empleados.setText(_translate("MainWindow", "Empleados"))
         self.boton_agregar_usuario.setText(_translate("MainWindow", "Agregar Usuario"))
         self.boton_editar_usuario.setText(_translate("MainWindow", "Editar Usuario"))
+        self.boton_meta_ventas.setText(_translate("MainWindow", "Meta de ventas"))
         self.boton_importar_datos.setText(_translate("MainWindow", "Importar datos"))
         self.boton_cerrar_sesion.setText(_translate("MainWindow", "Cerrar sesión"))
         self.label.setText(_translate("MainWindow", "BIENVENIDO A LA APLICACIÓN DE GESTIÓN"))
@@ -4991,6 +5445,25 @@ class Ui_MainWindow(object):
         self.comboBox_estatus_empleado_editar.setItemText(1, _translate("MainWindow", "inactivo"))
         self.boton_guardar_empleados_editar.setText(_translate("MainWindow", "GUARDAR"))
         self.label_82.setText(_translate("MainWindow", "Número de empleado:"))
+        self.label_tipo_usuario_meta_ventas.setText(_translate("MainWindow", "TIPO DE USUARIO"))
+        self.label_86.setText(_translate("MainWindow", "META DE VENTAS"))
+        self.label_87.setText(_translate("MainWindow", "Ingresa el total de pesos ($MXN) esperados por ganar en un día por empleado"))
+        self.campo_meta_diaria_por_empleado.setPlaceholderText(_translate("MainWindow", "$MXN"))
+        self.boton_guardar_meta_ventas.setText(_translate("MainWindow", "GUARDAR"))
+        self.label_88.setText(_translate("MainWindow", "Ganancias esperadas por empleado"))
+        self.label_89.setText(_translate("MainWindow", "Al día:"))
+        self.label_meta_diaria_empleado.setText(_translate("MainWindow", "$--.--"))
+        self.label_91.setText(_translate("MainWindow", "Al mes:"))
+        self.label_meta_mensual_empleado.setText(_translate("MainWindow", "$--.--"))
+        self.label_92.setText(_translate("MainWindow", "Al año:"))
+        self.label_meta_anual_empleado.setText(_translate("MainWindow", "$--.--"))
+        self.label_90.setText(_translate("MainWindow", "Ganancias esperadas totales"))
+        self.label_96.setText(_translate("MainWindow", "Al día:"))
+        self.label_meta_diaria_total.setText(_translate("MainWindow", "$--.--"))
+        self.label_98.setText(_translate("MainWindow", "Al mes:"))
+        self.label_meta_mensual_total.setText(_translate("MainWindow", "$--.--"))
+        self.label_100.setText(_translate("MainWindow", "Al año:"))
+        self.label_meta_anual_total.setText(_translate("MainWindow", "$--.--"))
 from pyqtgraph import PlotWidget
 
 

@@ -39,6 +39,7 @@ class ControladorMenuLateral():
             ventana_principal.boton_agregar_usuario.setHidden(True)
             ventana_principal.boton_editar_usuario.setHidden(True)
             ventana_principal.boton_importar_datos.setHidden(True)
+            ventana_principal.boton_meta_ventas.setHidden(True)
 
         """
         EVENTOS: PRESIONAR UN BOTON
@@ -83,6 +84,9 @@ class ControladorMenuLateral():
 
         ventana_principal.boton_editar_usuario.clicked.connect(
             lambda: self.agregar_quitar_borde_izquierdo_boton(ventana_principal.boton_editar_usuario, True))
+        
+        ventana_principal.boton_meta_ventas.clicked.connect(
+            lambda: self.agregar_quitar_borde_izquierdo_boton(ventana_principal.boton_meta_ventas, True))
 
         # el boton para cerrar sesion en la aplicacion
         ventana_principal.boton_cerrar_sesion.clicked.connect(
@@ -107,7 +111,8 @@ class ControladorMenuLateral():
                                                     ventana_principal.boton_empleados,
                                                     ventana_principal.boton_importar_datos,
                                                     ventana_principal.boton_agregar_usuario,
-                                                    ventana_principal.boton_editar_usuario]
+                                                    ventana_principal.boton_editar_usuario,
+                                                    ventana_principal.boton_meta_ventas]
         # a los botones de esta lista ya se les habia agregado un evento, sin embargo es posible agregar mas de un evento
         # a los botones, en este caso se les va a agregar el evento de quitar negritas a los botones desplegados hijos, cuando
         # sean presionados
@@ -137,7 +142,8 @@ class ControladorMenuLateral():
             ventana_principal.boton_empleados: ventana_principal.pagina_empleados,
             ventana_principal.boton_importar_datos: ventana_principal.pagina_importar_datos,
             ventana_principal.boton_agregar_usuario: ventana_principal.pagina_agregar_usuario,
-            ventana_principal.boton_editar_usuario: ventana_principal.pagina_editar_usuario
+            ventana_principal.boton_editar_usuario: ventana_principal.pagina_editar_usuario,
+            ventana_principal.boton_meta_ventas: ventana_principal.pagina_meta_ventas
         }
 
         # a los botones de opciones que eran las llaves del diccionario relacion_botones_opciones_y_su_pagina_correspondiente,

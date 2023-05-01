@@ -122,8 +122,6 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         estilizar_grafica(self.grafica_ventas_individuales_anuales,
                           "Ventas individuales anuales")
 
-        self.asignar_tipo_empleado_a_labels()
-
         self.asignar_fecha_actual_y_fecha_maxima_a_selectores_de_fecha_diarios()
 
         estilizar_grafica(self.grafica_ventas_totales_diarias,
@@ -216,7 +214,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
             self.label_tipo_usuario_empleados,
             self.label_tipo_usuario_importar_datos,
             self.label_tipo_usuario_agregar_usuario,
-            self.label_tipo_usuario_editar_usuario
+            self.label_tipo_usuario_editar_usuario,
+            self.label_tipo_usuario_meta_ventas
         ]
 
         # se obtiene al tipo de empleado loggeado, primero obteniendo al objeto empleado, luego su atributo tipo_empleado
