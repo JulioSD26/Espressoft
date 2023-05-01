@@ -289,4 +289,13 @@ def actualizar_metas(meta_diaria):
         conn.close()
     except:
         return None
+    
+
+# puede ser reutilizada para ventas individuales y totales mensuales
+def obtener_diccionario_meses_porcentajes(diccionario_meses_y_totales, meta_ventas):
+    diccionario_meses_porcentajes = {}
+    for mes in diccionario_meses_y_totales.keys():
+        porcentaje_ventas = calcular_porcentaje_de_ventas(diccionario_meses_y_totales[mes], meta_ventas)
+        diccionario_meses_porcentajes[mes] = porcentaje_ventas
+    return diccionario_meses_porcentajes
 

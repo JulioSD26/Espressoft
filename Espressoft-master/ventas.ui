@@ -939,7 +939,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>11</number>
+          <number>2</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -2120,74 +2120,6 @@ border-radius: 15px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QFrame" name="frame_15">
-                     <property name="styleSheet">
-                      <string notr="true">QFrame {
-	background-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
-                     </property>
-                     <property name="frameShape">
-                      <enum>QFrame::StyledPanel</enum>
-                     </property>
-                     <property name="frameShadow">
-                      <enum>QFrame::Raised</enum>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_22">
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_23">
-                        <item>
-                         <layout class="QVBoxLayout" name="verticalLayout_17">
-                          <item>
-                           <widget class="QLabel" name="label_18">
-                            <property name="styleSheet">
-                             <string notr="true">QLabel {
-	color: #416BBF;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-}</string>
-                            </property>
-                            <property name="text">
-                             <string>Porcentaje de ventas:</string>
-                            </property>
-                           </widget>
-                          </item>
-                          <item>
-                           <widget class="QLabel" name="label_porcentaje_ventas_totales_mensuales">
-                            <property name="styleSheet">
-                             <string notr="true">QLabel {
-	color: #000000;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 20px;
-}</string>
-                            </property>
-                            <property name="text">
-                             <string>--.--%</string>
-                            </property>
-                           </widget>
-                          </item>
-                         </layout>
-                        </item>
-                        <item alignment="Qt::AlignRight">
-                         <widget class="QLabel" name="label_19">
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="pixmap">
-                           <pixmap>resources/img/icono_estadistica.png</pixmap>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
                     <widget class="QFrame" name="frame_16">
                      <property name="styleSheet">
                       <string notr="true">QFrame {
@@ -2538,6 +2470,33 @@ QTableWidget {
                       <property name="font">
                        <font>
                         <family>Montserrat</family>
+                       </font>
+                      </property>
+                      <property name="background">
+                       <color>
+                        <red>248</red>
+                        <green>250</green>
+                        <blue>255</blue>
+                       </color>
+                      </property>
+                      <property name="foreground">
+                       <brush brushstyle="SolidPattern">
+                        <color alpha="255">
+                         <red>52</red>
+                         <green>64</green>
+                         <blue>80</blue>
+                        </color>
+                       </brush>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Porcentaje de ventas</string>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Montserrat</family>
+                        <pointsize>8</pointsize>
                        </font>
                       </property>
                       <property name="background">
@@ -5069,80 +5028,6 @@ border-radius: 15px;</string>
                   </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QFrame" name="frame_62">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QFrame {
-	background-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_75">
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_76">
-                     <item>
-                      <layout class="QHBoxLayout" name="horizontalLayout_77">
-                       <item>
-                        <widget class="QLabel" name="label_53">
-                         <property name="styleSheet">
-                          <string notr="true">QLabel {
-	color: #416BBF;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-}</string>
-                         </property>
-                         <property name="text">
-                          <string>Porcentaje de ventas:</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_mensuales">
-                         <property name="styleSheet">
-                          <string notr="true">QLabel {
-	color: #000000;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-}</string>
-                         </property>
-                         <property name="text">
-                          <string>--.--%</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item alignment="Qt::AlignRight">
-                      <widget class="QLabel" name="label_54">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="pixmap">
-                        <pixmap>resources/img/icono_estadistica.png</pixmap>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -5324,6 +5209,33 @@ QTableWidget {
                       <property name="font">
                        <font>
                         <family>Montserrat</family>
+                       </font>
+                      </property>
+                      <property name="background">
+                       <color>
+                        <red>248</red>
+                        <green>250</green>
+                        <blue>255</blue>
+                       </color>
+                      </property>
+                      <property name="foreground">
+                       <brush brushstyle="SolidPattern">
+                        <color alpha="255">
+                         <red>52</red>
+                         <green>64</green>
+                         <blue>80</blue>
+                        </color>
+                       </brush>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Porcentaje de ventas</string>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Montserrat</family>
+                        <pointsize>8</pointsize>
                        </font>
                       </property>
                       <property name="background">
@@ -7318,8 +7230,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1000</width>
-                   <height>313</height>
+                   <width>1048</width>
+                   <height>910</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -7910,7 +7822,7 @@ QTableWidget {
                 <x>0</x>
                 <y>0</y>
                 <width>1036</width>
-                <height>670</height>
+                <height>877</height>
                </rect>
               </property>
               <property name="minimumSize">

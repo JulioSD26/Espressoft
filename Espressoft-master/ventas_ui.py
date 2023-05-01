@@ -942,48 +942,6 @@ class Ui_MainWindow(object):
 "border-radius: 15px;")
         self.grafica_ventas_totales_mensuales.setObjectName("grafica_ventas_totales_mensuales")
         self.verticalLayout_15.addWidget(self.grafica_ventas_totales_mensuales)
-        self.frame_15 = QtWidgets.QFrame(self.frame_13)
-        self.frame_15.setStyleSheet("QFrame {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius: 15px;\n"
-"}")
-        self.frame_15.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_15.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_15.setObjectName("frame_15")
-        self.horizontalLayout_22 = QtWidgets.QHBoxLayout(self.frame_15)
-        self.horizontalLayout_22.setObjectName("horizontalLayout_22")
-        self.horizontalLayout_23 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_23.setObjectName("horizontalLayout_23")
-        self.verticalLayout_17 = QtWidgets.QVBoxLayout()
-        self.verticalLayout_17.setObjectName("verticalLayout_17")
-        self.label_18 = QtWidgets.QLabel(self.frame_15)
-        self.label_18.setStyleSheet("QLabel {\n"
-"    color: #416BBF;\n"
-"    font-family: \'Montserrat\';\n"
-"    font-style: normal;\n"
-"    font-weight: 400;\n"
-"    font-size: 18px;\n"
-"}")
-        self.label_18.setObjectName("label_18")
-        self.verticalLayout_17.addWidget(self.label_18)
-        self.label_porcentaje_ventas_totales_mensuales = QtWidgets.QLabel(self.frame_15)
-        self.label_porcentaje_ventas_totales_mensuales.setStyleSheet("QLabel {\n"
-"    color: #000000;\n"
-"    font-family: \'Montserrat\';\n"
-"    font-style: normal;\n"
-"    font-weight: bold;\n"
-"    font-size: 20px;\n"
-"}")
-        self.label_porcentaje_ventas_totales_mensuales.setObjectName("label_porcentaje_ventas_totales_mensuales")
-        self.verticalLayout_17.addWidget(self.label_porcentaje_ventas_totales_mensuales)
-        self.horizontalLayout_23.addLayout(self.verticalLayout_17)
-        self.label_19 = QtWidgets.QLabel(self.frame_15)
-        self.label_19.setText("")
-        self.label_19.setPixmap(QtGui.QPixmap("resources/img/icono_estadistica.png"))
-        self.label_19.setObjectName("label_19")
-        self.horizontalLayout_23.addWidget(self.label_19, 0, QtCore.Qt.AlignRight)
-        self.horizontalLayout_22.addLayout(self.horizontalLayout_23)
-        self.verticalLayout_15.addWidget(self.frame_15)
         self.frame_16 = QtWidgets.QFrame(self.frame_13)
         self.frame_16.setStyleSheet("QFrame {\n"
 "    background-color: rgb(255, 255, 255);\n"
@@ -1151,7 +1109,7 @@ class Ui_MainWindow(object):
         self.tabla_ventas_totales_mensuales.setGridStyle(QtCore.Qt.SolidLine)
         self.tabla_ventas_totales_mensuales.setCornerButtonEnabled(False)
         self.tabla_ventas_totales_mensuales.setObjectName("tabla_ventas_totales_mensuales")
-        self.tabla_ventas_totales_mensuales.setColumnCount(2)
+        self.tabla_ventas_totales_mensuales.setColumnCount(3)
         self.tabla_ventas_totales_mensuales.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -1173,6 +1131,16 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         item.setForeground(brush)
         self.tabla_ventas_totales_mensuales.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(8)
+        item.setFont(font)
+        item.setBackground(QtGui.QColor(248, 250, 255))
+        brush = QtGui.QBrush(QtGui.QColor(52, 64, 80))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setForeground(brush)
+        self.tabla_ventas_totales_mensuales.setHorizontalHeaderItem(2, item)
         self.tabla_ventas_totales_mensuales.horizontalHeader().setCascadingSectionResizes(True)
         self.tabla_ventas_totales_mensuales.horizontalHeader().setDefaultSectionSize(150)
         self.tabla_ventas_totales_mensuales.horizontalHeader().setStretchLastSection(True)
@@ -2472,49 +2440,6 @@ class Ui_MainWindow(object):
         self.grafica_ventas_individuales_mensuales.setObjectName("grafica_ventas_individuales_mensuales")
         self.verticalLayout_78.addWidget(self.grafica_ventas_individuales_mensuales)
         self.verticalLayout_50.addWidget(self.frame_60)
-        self.frame_62 = QtWidgets.QFrame(self.frame_54)
-        self.frame_62.setMaximumSize(QtCore.QSize(16777215, 50))
-        self.frame_62.setStyleSheet("QFrame {\n"
-"    background-color: rgb(255, 255, 255);\n"
-"    border-radius: 15px;\n"
-"}")
-        self.frame_62.setFrameShape(QtWidgets.QFrame.StyledPanel)
-        self.frame_62.setFrameShadow(QtWidgets.QFrame.Raised)
-        self.frame_62.setObjectName("frame_62")
-        self.horizontalLayout_75 = QtWidgets.QHBoxLayout(self.frame_62)
-        self.horizontalLayout_75.setObjectName("horizontalLayout_75")
-        self.horizontalLayout_76 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_76.setObjectName("horizontalLayout_76")
-        self.horizontalLayout_77 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_77.setObjectName("horizontalLayout_77")
-        self.label_53 = QtWidgets.QLabel(self.frame_62)
-        self.label_53.setStyleSheet("QLabel {\n"
-"    color: #416BBF;\n"
-"    font-family: \'Montserrat\';\n"
-"    font-style: normal;\n"
-"    font-weight: 400;\n"
-"    font-size: 16px;\n"
-"}")
-        self.label_53.setObjectName("label_53")
-        self.horizontalLayout_77.addWidget(self.label_53)
-        self.label_porcentaje_ventas_individuales_mensuales = QtWidgets.QLabel(self.frame_62)
-        self.label_porcentaje_ventas_individuales_mensuales.setStyleSheet("QLabel {\n"
-"    color: #000000;\n"
-"    font-family: \'Montserrat\';\n"
-"    font-style: normal;\n"
-"    font-weight: bold;\n"
-"    font-size: 18px;\n"
-"}")
-        self.label_porcentaje_ventas_individuales_mensuales.setObjectName("label_porcentaje_ventas_individuales_mensuales")
-        self.horizontalLayout_77.addWidget(self.label_porcentaje_ventas_individuales_mensuales)
-        self.horizontalLayout_76.addLayout(self.horizontalLayout_77)
-        self.label_54 = QtWidgets.QLabel(self.frame_62)
-        self.label_54.setText("")
-        self.label_54.setPixmap(QtGui.QPixmap("resources/img/icono_estadistica.png"))
-        self.label_54.setObjectName("label_54")
-        self.horizontalLayout_76.addWidget(self.label_54, 0, QtCore.Qt.AlignRight)
-        self.horizontalLayout_75.addLayout(self.horizontalLayout_76)
-        self.verticalLayout_50.addWidget(self.frame_62)
         self.horizontalLayout_68.addWidget(self.frame_54)
         self.frame_63 = QtWidgets.QFrame(self.pagina_ventas_individuales_mensuales)
         self.frame_63.setMaximumSize(QtCore.QSize(500, 16777215))
@@ -2585,7 +2510,7 @@ class Ui_MainWindow(object):
         self.tabla_ventas_individuales_mensuales.setGridStyle(QtCore.Qt.SolidLine)
         self.tabla_ventas_individuales_mensuales.setCornerButtonEnabled(False)
         self.tabla_ventas_individuales_mensuales.setObjectName("tabla_ventas_individuales_mensuales")
-        self.tabla_ventas_individuales_mensuales.setColumnCount(2)
+        self.tabla_ventas_individuales_mensuales.setColumnCount(3)
         self.tabla_ventas_individuales_mensuales.setRowCount(0)
         item = QtWidgets.QTableWidgetItem()
         font = QtGui.QFont()
@@ -2607,6 +2532,16 @@ class Ui_MainWindow(object):
         brush.setStyle(QtCore.Qt.SolidPattern)
         item.setForeground(brush)
         self.tabla_ventas_individuales_mensuales.setHorizontalHeaderItem(1, item)
+        item = QtWidgets.QTableWidgetItem()
+        font = QtGui.QFont()
+        font.setFamily("Montserrat")
+        font.setPointSize(8)
+        item.setFont(font)
+        item.setBackground(QtGui.QColor(248, 250, 255))
+        brush = QtGui.QBrush(QtGui.QColor(52, 64, 80))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        item.setForeground(brush)
+        self.tabla_ventas_individuales_mensuales.setHorizontalHeaderItem(2, item)
         self.tabla_ventas_individuales_mensuales.horizontalHeader().setCascadingSectionResizes(True)
         self.tabla_ventas_individuales_mensuales.horizontalHeader().setDefaultSectionSize(150)
         self.tabla_ventas_individuales_mensuales.horizontalHeader().setStretchLastSection(True)
@@ -3588,7 +3523,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollArea.setObjectName("scrollArea")
         self.scrollAreaWidgetContents_4 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1000, 313))
+        self.scrollAreaWidgetContents_4.setGeometry(QtCore.QRect(0, 0, 1048, 910))
         self.scrollAreaWidgetContents_4.setStyleSheet("")
         self.scrollAreaWidgetContents_4.setObjectName("scrollAreaWidgetContents_4")
         self.verticalLayout_82 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_4)
@@ -3843,7 +3778,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollArea_2.setObjectName("scrollArea_2")
         self.scrollAreaWidgetContents_2 = QtWidgets.QWidget()
-        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1036, 670))
+        self.scrollAreaWidgetContents_2.setGeometry(QtCore.QRect(0, 0, 1036, 877))
         self.scrollAreaWidgetContents_2.setMinimumSize(QtCore.QSize(0, 0))
         self.scrollAreaWidgetContents_2.setObjectName("scrollAreaWidgetContents_2")
         self.verticalLayout_111 = QtWidgets.QVBoxLayout(self.scrollAreaWidgetContents_2)
@@ -5217,7 +5152,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
-        self.stacked_widget_paginas.setCurrentIndex(11)
+        self.stacked_widget_paginas.setCurrentIndex(2)
         self.comboBox_tipo_empleado_agregar.setCurrentIndex(0)
         self.comboBox_estatus_empleado_agregar.setCurrentIndex(0)
         self.comboBox_tipo_empleado_editar.setCurrentIndex(0)
@@ -5264,8 +5199,6 @@ class Ui_MainWindow(object):
         self.label_total_ventas_totales_diarias.setText(_translate("MainWindow", "$--.--"))
         self.label_tipo_usuario_ventas_totales_mensuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
         self.boton_generar_ventas_totales_mensuales.setText(_translate("MainWindow", "Generar"))
-        self.label_18.setText(_translate("MainWindow", "Porcentaje de ventas:"))
-        self.label_porcentaje_ventas_totales_mensuales.setText(_translate("MainWindow", "--.--%"))
         self.label_21.setText(_translate("MainWindow", "Mes con más ventas:"))
         self.label_mes_mas_ventas_totales_mensuales.setText(_translate("MainWindow", "----"))
         self.label_23.setText(_translate("MainWindow", "Mes con menos ventas:"))
@@ -5277,6 +5210,8 @@ class Ui_MainWindow(object):
         item.setText(_translate("MainWindow", "Mes"))
         item = self.tabla_ventas_totales_mensuales.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Ingresos totales"))
+        item = self.tabla_ventas_totales_mensuales.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Porcentaje de ventas"))
         self.label_26.setText(_translate("MainWindow", "Total:"))
         self.label_total_ventas_totales_mensuales.setText(_translate("MainWindow", "$--.--"))
         self.label_tipo_usuario_ventas_totales_anuales.setText(_translate("MainWindow", "TIPO DE USUARIO"))
@@ -5338,14 +5273,14 @@ class Ui_MainWindow(object):
         self.label_52.setText(_translate("MainWindow", "Estatus:"))
         self.label_estatus_ventas_individuales_diarias_2.setText(_translate("MainWindow", "------"))
         self.boton_generar_ventas_individuales_mensuales.setText(_translate("MainWindow", "Generar"))
-        self.label_53.setText(_translate("MainWindow", "Porcentaje de ventas:"))
-        self.label_porcentaje_ventas_individuales_mensuales.setText(_translate("MainWindow", "--.--%"))
         self.label_55.setText(_translate("MainWindow", "VENTAS MENSUALES:"))
         self.label_mes_ventas_individuales_mensuales.setText(_translate("MainWindow", "----"))
         item = self.tabla_ventas_individuales_mensuales.horizontalHeaderItem(0)
         item.setText(_translate("MainWindow", "Mes"))
         item = self.tabla_ventas_individuales_mensuales.horizontalHeaderItem(1)
         item.setText(_translate("MainWindow", "Ingresos"))
+        item = self.tabla_ventas_individuales_mensuales.horizontalHeaderItem(2)
+        item.setText(_translate("MainWindow", "Porcentaje de ventas"))
         self.label_56.setText(_translate("MainWindow", "Total:"))
         self.label_total_ventas_individuales_diarias_2.setText(_translate("MainWindow", "$--.--"))
         self.label_58.setText(_translate("MainWindow", "Mes con mas ventas:"))

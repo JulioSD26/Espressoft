@@ -5,9 +5,11 @@ from PyQt5 import QtGui
 from PyQt5.QtWidgets import QTableWidgetItem
 
 
-def llenar_datos_tabla(tabla, diccionario_datos: dict):
+def llenar_datos_tabla(tabla, diccionario_datos: dict, diccionario_porcentaje_de_ventas = {}):
     """
-    LLena una tabla dada, con unos datos dados (diccionario_datos)
+    LLena una tabla dada, con unos datos dados (diccionario_datos).
+    Hay un tercer parametro opcional que es para las ventanas de ventas individuales mensuales y ventas totales mensuales,
+    el cual es un diccionario que relaciona al periodo (llave) con su porcentaje de ventas (valor).
     """
     # antes de llenarla, se vacia por si tenia filas de una generacion de datos anterior
     limpiar_tabla(tabla)
@@ -21,15 +23,17 @@ def llenar_datos_tabla(tabla, diccionario_datos: dict):
         # llave/periodo_de_tiempo = '03:00 PM - 04:00 PM'
         # valor/total_correspondiente = 3560.98
         total_correspondiente = diccionario_datos[periodo_de_tiempo]
+        porcentaje_correspondiente = diccionario_porcentaje_de_ventas.get(periodo_de_tiempo, None)
         # se va insertando cada fila con esos 2 datos en la tabla
-        insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente)
+        insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente, porcentaje_correspondiente)
 
 
-def insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente):
+def insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente, porcentaje_correspondiente):
     """
     Recibe como argumentos una tabla a la que se le va a insertar la fila,
     un periodo de tiempo que podria ser por ejemplo '03:00 PM - 04:00 PM', 'Enero' o '2021', entre otros,
-    tambien recibe el total correspondiente a ese periodo de tiempo
+    tambien recibe el total correspondiente a ese periodo de tiempo.
+    De igual manera recibe un porcentaje si se trata de las tablas de ventas individuales o totales mensuales
     """
     # se obtiene la cantidad de filas de la tabla, que si ya fue limpiada, deberia de ser 0
     cantidad_filas = tabla.rowCount()
@@ -57,6 +61,10 @@ def insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente):
     # la primera columna (0) es el periodo de tiempo, mientras que la segunda (1) es su total correspondiente
     tabla.setItem(cantidad_filas, 0, item_periodo_tiempo)
     tabla.setItem(cantidad_filas, 1, item_total)
+    if porcentaje_correspondiente is not None:
+        item_porcentaje = QTableWidgetItem(str(porcentaje_correspondiente))
+        item_porcentaje.setFont(font)
+        tabla.setItem(cantidad_filas, 2, item_porcentaje)
     
 
 def limpiar_tabla(tabla):

@@ -42,12 +42,12 @@ class ControladorVentanaMetas():
             ventana_principal.label_meta_anual_total.setText("Error al obtener las metas")
             return
             
-        ventana_principal.label_meta_diaria_empleado.setText(str(meta_diaria_emp))
-        ventana_principal.label_meta_mensual_empleado.setText(str(meta_mensual_emp))
-        ventana_principal.label_meta_anual_empleado.setText(str(meta_anual_emp))
-        ventana_principal.label_meta_diaria_total.setText(str(meta_diaria_total))
-        ventana_principal.label_meta_mensual_total.setText(str(meta_mensual_total))
-        ventana_principal.label_meta_anual_total.setText(str(meta_anual_total))
+        ventana_principal.label_meta_diaria_empleado.setText(f"${str(meta_diaria_emp)}")
+        ventana_principal.label_meta_mensual_empleado.setText(f"${str(meta_mensual_emp)}")
+        ventana_principal.label_meta_anual_empleado.setText(f"${str(meta_anual_emp)}")
+        ventana_principal.label_meta_diaria_total.setText(f"${str(meta_diaria_total)}")
+        ventana_principal.label_meta_mensual_total.setText(f"${str(meta_mensual_total)}")
+        ventana_principal.label_meta_anual_total.setText(f"${str(meta_anual_total)}")
 
     def actualizar_metas_diarias(self, ventana_principal, meta_diaria_por_empleado_texto):
         try:

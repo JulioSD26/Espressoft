@@ -124,10 +124,10 @@ def insertar_datos_en_tabla_venta(archivo):
         conn.rollback()
         return [False, f'Algo salio mal: {err}']
     renglon = 2
-    query = "INSERT INTO venta ( total, fecha, hora, empleado_id) VALUES"
+    query = "INSERT INTO venta ( total, fecha, hora, empleado_id, archivo_id) VALUES"
 
     for (total, fecha, hora, empleado_id) in zip(lista_total, lista_fecha, lista_hora, lista_empleado_id):
-        query += " ({},'{}','{}','{}'),".format( str(total), str(fecha), str(hora), str(empleado_id))
+        query += " ({},'{}','{}','{}', '{}'),".format( str(total), str(fecha), str(hora), str(empleado_id), str(id_archivo_a_subir))
     query = query[:-1]
     query = query + ";"
     try:
@@ -137,8 +137,8 @@ def insertar_datos_en_tabla_venta(archivo):
             # como que se vaya el internet o algo así, por lo que aunque con las validaciones anteriores se trataba de prevenir que
             # si el formato fallaba en algun renglon, no se insertara ningun dato en el excel, para que no fuera tedioso para el usuario
             # tener que modificar el excel y quitar las filas que ya habian sido insertadas, modificando las que tenian formato incorrecto
-            
-        print('Algo salio mal: {}'.format(err))
+        conn.rollback()
+        return [False, f'Algo salio mal: {err} \nEl error se produjo al tratar de insertar el renglon {renglon} en la base de datos.']
         """
         try:
             cursor.execute(
