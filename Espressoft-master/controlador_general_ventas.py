@@ -252,3 +252,41 @@ def obtener_periodos_con_menos_y_mas_ventas_mensuales(diccionario_datos: dict):
                 if total_del_periodo > diccionario_datos[periodo_con_mas_ventas]:
                     periodo_con_mas_ventas = periodo
     return periodo_con_menos_ventas, periodo_con_mas_ventas
+
+#Recibe un valor tipo float que es el valor de metas diarias y sustituye los demas valores segun calculos preechos
+def actualizar_metas(meta_diaria):
+    try:
+        conn = crear_conexion()
+        cursor = conn.cursor()
+        # Actualizar la meta diaria individual
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_diaria} WHERE descripcion = "Metas diarias individuales"')
+
+        # Obtener el número de empleados activos
+        cursor.execute('SELECT COUNT(*) FROM empleados WHERE estatus = 1')
+        num_empleados = cursor.fetchone()[0]
+
+        # Actualizar la meta diaria total
+        meta_diaria_total = meta_diaria * num_empleados
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_diaria_total} WHERE descripcion = "Metas diarias totales"')
+
+        # Actualizar la meta mensual individual
+        meta_mensual_individual = meta_diaria * 24
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_mensual_individual} WHERE descripcion = "Metas mensuales individuales"')
+
+        # Actualizar la meta mensual total
+        meta_mensual_total = meta_mensual_individual * num_empleados
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_mensual_total} WHERE descripcion = "Metas mensuales totales"')
+
+        # Actualizar la meta anual individual
+        meta_anual_individual = meta_mensual_individual * 12
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_anual_individual} WHERE descripcion = "Metas anuales individuales"')
+
+        # Actualizar la meta anual total
+        meta_anual_total = meta_anual_individual * num_empleados
+        cursor.execute(f'UPDATE metas SET meta_ventas = {meta_anual_total} WHERE descripcion = "Metas anuales totales"')
+
+        conn.commit()
+        conn.close()
+    except:
+        return None
+
