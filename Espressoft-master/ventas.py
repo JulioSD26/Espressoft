@@ -14,6 +14,7 @@ from controlador_ventas_totales_diarias import ControladorVentasTotalesDiarias
 from controlador_ventas_totales_mensuales import ControladorVentasTotalesMensuales
 from controlador_ventas_individuales_anuales import ControladorVentasIndividualesAnuales
 from controlador_ventas_totales_anuales import ControladorVentasTotalesAnuales
+from controlador_ventana_metas import ControladorVentanaMetas
 from controlador_base_datos import *
 import empleados
 import datetime
@@ -99,6 +100,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         ControladorVentasIndividualesAnuales(self)
 
         ControladorVentasTotalesAnuales(self)
+
+        ControladorVentanaMetas(self)
 
         current_year = datetime.datetime.now().year
         for year in range(current_year, 2001, -1):
