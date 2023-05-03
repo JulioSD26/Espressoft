@@ -4,7 +4,7 @@ Controlador que podria reutilizarse para las graficas de todas las ventanas de v
 
 import random
 import pyqtgraph as pg
-from PyQt5 import QtGui
+from PyQt5 import QtGui, QtWidgets
 
 # esta funcion deberia ser eliminada cuando ya no se requiera probar con ella, en la segunda iteracion
 def generar_datos_aleatorios_para_probar(valores_eje_x: list):
@@ -18,6 +18,7 @@ def estilizar_grafica(grafica, titulo: str):
     """
     Estiliza a la grafica, cambiando su color de fondo, titulo, fuentes de letra, entre otras cosas.
     """
+    
     grafica.setBackground('#FFFFFF')
     grafica.setTitle(titulo, color="#344055", size="10pt")
     # esto es para que se muestren de entrada 2 valores en el eje x, en este caso los primeros 2, 
@@ -47,6 +48,10 @@ def estilizar_grafica(grafica, titulo: str):
 
     # con esto se puede mostrar/ocultar las lineas que son paralelas a cada uno de los ejes.
     # en este caso solo se muestran las del eje y, para que se parezca al disenio
+    #desactiva movimientos del mouse.
+    #grafica.setMouseEnabled(x=True, y=True)
+    #grafica.getPlotItem().getViewBox().setMouseMode(grafica.getPlotItem().getViewBox().RectMode)
+    grafica.setMenuEnabled(False)
     grafica.showGrid(x=False, y=True)
 
 
@@ -73,6 +78,8 @@ def dibujar_grafica(grafica, diccionario_datos: dict):
     """
     # cada que se va  a dibujar la grafica se borra la anterior, para que no aparezca junto a la nueva
     limpiar_grafica(grafica)
+    
+    
     pen = pg.mkPen({'color': "#8cb2e2", 'width': 3})
     # valores_eje_x son los labels de tipo texto que se van a poner en el eje x
     # en este caso las llaves del diccionario de datos
@@ -116,16 +123,14 @@ def dibujar_grafica(grafica, diccionario_datos: dict):
     # para esto se obtiene el maximo entre los valores del eje y (totales) y para que no se muestre recortado el ultimo elemento,
     # se le suma el promedio de los valores en el eje y, porque estos valores pueden variar mucho
     grafica.getPlotItem().vb.setLimits(xMin = 0, yMin= -1, xMax = len(valores_eje_x) + 1, yMax = max(valores_eje_y) + (sum(valores_eje_y) / len(valores_eje_y)))
-
     # symbol representa un simbolo que se puede poner en cada punto x, y, en este caso se le pone uno con forma de 'o', tamanio = 10, de color blanco y cubiero por el color '#658fc2' 
+    #grafica.plot(valores_x_numericos, valores_eje_y, pen = pen, symbolBrush = 'white', symbolPen ='#658fc2', symbol ='o', symbolSize = 10)     
+    
     grafica.plot(valores_x_numericos, valores_eje_y, pen = pen, symbolBrush = 'white', symbolPen ='#658fc2', symbol ='o', symbolSize = 10)
-
 
 def limpiar_grafica(grafica):
     """
     Limpia una grafica dada de sus elementos.
     """
     grafica.getPlotItem().clear()
-
     
-
