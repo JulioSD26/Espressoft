@@ -30,13 +30,13 @@ def crear_conexion():
                        database='expressoft',
                        port=3306)
         #MAIN
-        """
-        conn = connect(host='us-west.connect.psdb.cloud', 
-                    user='63xra7j4bs1gc32un1lm', 
-                    password='pscale_pw_UDT94s3FyDFj4gSQdZxVGqZFZot1tnJlWACe9NXvef7',
-                    database='expressoft', 
-                    port=3306)
-        """
+        
+        # conn = connect(host='aws.connect.psdb.cloud', 
+        #             user='vv3upcwbnup56n32lt7q', 
+        #             password='pscale_pw_hdrK9oDbl34YbJwCDVkHohKurkI7tJuXF3rqZrCqYEH',
+        #             database='expressoft', 
+        #             port=3306)
+        
         #BRANCH
         """
         conn = connect(host='us-west.connect.psdb.cloud', 
