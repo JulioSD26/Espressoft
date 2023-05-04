@@ -2,8 +2,10 @@ from mysql.connector import connect, Error
 from pathlib import Path
 from empleados import obtener_usuario_loggeado
 from otros import obtener_fecha_actual
+from controlador_base_datos import crear_conexion
 import pandas as pd
 import datetime
+
 
 """
 Para que el archivo de ventas se importe correctamente es necesario que cumpla con las siguientes caracteristicas:
@@ -20,35 +22,7 @@ Si algún renglon no cuenta con este formato, se le notificará el número de re
 """
 
 
-def crear_conexion():
-    try:
-       
-        
-        conn = connect(host='localhost',
-                       user='expressoft_admin',
-                       password='lewylzzvmA2023/',
-                       database='expressoft',
-                       port=3306)
-        #MAIN
-        
-        # conn = connect(host='aws.connect.psdb.cloud', 
-        #             user='vv3upcwbnup56n32lt7q', 
-        #             password='pscale_pw_hdrK9oDbl34YbJwCDVkHohKurkI7tJuXF3rqZrCqYEH',
-        #             database='expressoft', 
-        #             port=3306)
-        
-        #BRANCH
-        """
-        conn = connect(host='us-west.connect.psdb.cloud', 
-                    user='o7rlpqw42yyyof54jxn9', 
-                    password='pscale_pw_bkBPzdSi5wMSbrWf1d1GCydQPX6a6FGvRJJAwqol7tZ',
-                    database='expressoft', 
-                    port=3306)
-        """
-    except Error as err:
-        print("Algo salio mal: {}".format(err))
 
-    return conn
 
 
 def leer_excel(archivo):

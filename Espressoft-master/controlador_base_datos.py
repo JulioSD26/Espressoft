@@ -2,6 +2,7 @@ import re
 from mysql.connector import connect,Error
 from PyQt5.QtWidgets import QTableWidgetItem
 from empleados import asignar_empleado_loggeado
+from conectar_a_bd import crear_conexion_nube, crear_conexion_local
 
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
@@ -340,22 +341,7 @@ def validar_telefono(telefono):
 
 def crear_conexion():
 
-    # conn = connect(host='aws.connect.psdb.cloud', 
-    #                 user='vv3upcwbnup56n32lt7q', 
-    #                 password='pscale_pw_hdrK9oDbl34YbJwCDVkHohKurkI7tJuXF3rqZrCqYEH',
-    #                 database='expressoft', 
-    #                 port=3306)
-    """
-    
-
-    """
-    conn = connect(host='localhost',
-                       user='expressoft_admin',
-                       password='lewylzzvmA2023/',
-                       database='expressoft',
-                       port=3306)
-
-    return conn
+    return crear_conexion_local()
 
 
 
