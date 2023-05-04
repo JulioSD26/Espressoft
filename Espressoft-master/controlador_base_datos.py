@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QMessageBox
 from empleados import asignar_empleado_loggeado
 from conectar_a_bd import crear_conexion_nube, crear_conexion_local
 
+
 def llenar_tabla_empleados(tableWidget, sqlquery=""):
     try:
         conn = crear_conexion()
@@ -86,7 +87,7 @@ def cambia_campo_contrasena(combo_tipo, campo_password):
         campo_password.setVisible(True)
         campo_password.setEnabled(True) 
 
-def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
+def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje, ventana_principal):
     if valida_datos(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
         try:
             conn = crear_conexion()
@@ -98,7 +99,7 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
             c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, email, telefono, tipo_empleado, estatus, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password))
             conn.commit()
             conn.close()
-            dialogo = QMessageBox()
+            dialogo = QMessageBox(ventana_principal)
             label_mensaje.setText("Empleado agregado correctamente")
             dialogo.setWindowTitle("Recordatorio")
             dialogo.setText("Recuerda modificar la ventana de meta ventas")
@@ -110,7 +111,7 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
             print("Algo salio mal: {}".format(err))
             return False
     
-def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje):
+def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, label_mensaje, ventana_principal):
     if valida_datos_editar(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, password, label_mensaje):
         try:
             conn = crear_conexion()
@@ -122,7 +123,7 @@ def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, cor
             c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
             conn.commit()
             conn.close()
-            dialogo = QMessageBox()
+            dialogo = QMessageBox(ventana_principal)
             label_mensaje.setText("Empleado editado correctamente")
             dialogo.setWindowTitle("Recordatorio")
             dialogo.setText("Recuerda modificar la ventana de meta ventas")

@@ -52,7 +52,7 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
 
         # al presionar el boton de agregar, se manda a llamar al metodo agregar_empleado()
         self.boton_agregar_empleado_agregar.clicked.connect(lambda: agregar_empleado(self.label_numero_empleado_agregar.text(), self.campo_nombre_empleado_agregar.text(), self.campo_apellido_paterno_agregar.text(), self.campo_apellido_materno_agregar.text(
-        ), self.campo_correo_empleado_agregar.text(), self.campo_numero_telefono_agregar.text(), self.comboBox_tipo_empleado_agregar.currentText(), self.comboBox_estatus_empleado_agregar.currentText(), self.campo_contrasena_empleado_agregar.text(), self.label_mensaje_agregar))
+        ), self.campo_correo_empleado_agregar.text(), self.campo_numero_telefono_agregar.text(), self.comboBox_tipo_empleado_agregar.currentText(), self.comboBox_estatus_empleado_agregar.currentText(), self.campo_contrasena_empleado_agregar.text(), self.label_mensaje_agregar, self))
         self.boton_agregar_empleado_agregar.clicked.connect(lambda: vacia_campos(self.label_numero_empleado_agregar, self.campo_nombre_empleado_agregar, self.campo_apellido_paterno_agregar, self.campo_apellido_materno_agregar,
                                                             self.campo_correo_empleado_agregar, self.campo_numero_telefono_agregar, self.comboBox_tipo_empleado_agregar, self.comboBox_estatus_empleado_agregar, self.campo_contrasena_empleado_agregar, self.label_mensaje_editar))
         self.boton_agregar_empleado_agregar.clicked.connect(lambda: obtener_ultimo_empleado_id(self.label_numero_empleado_agregar))
@@ -74,8 +74,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.boton_buscar_empleados_editar.clicked.connect(lambda: cambia_campo_contrasena(self.comboBox_tipo_empleado_editar, self.campo_contrasena_empleado_editar))
 
         # al presionar el boton de guardar, se manda a llamar al metodo editar_empleado()
+        #agregar argumento al final que sea self (ventana_principal)
         self.boton_guardar_empleados_editar.clicked.connect(lambda: editar_empleado(self.label_numero_empleado_editar.text(), self.campo_nombre_empleado_editar.text(), self.campo_apellido_paterno_editar.text(), self.campo_apellido_materno_editar.text(
-        ), self.campo_correo_empleado_editar.text(), self.campo_numero_telefono_editar.text(), self.comboBox_tipo_empleado_editar.currentText(), self.comboBox_estatus_empleado_editar.currentText(), self.campo_contrasena_empleado_editar.text(), self.label_mensaje_editar))
+        ), self.campo_correo_empleado_editar.text(), self.campo_numero_telefono_editar.text(), self.comboBox_tipo_empleado_editar.currentText(), self.comboBox_estatus_empleado_editar.currentText(), self.campo_contrasena_empleado_editar.text(), self.label_mensaje_editar, self))
         # se instancia el controlador de la ventana de importar datos, el cual le agrega la funcionalidad a esa ventana
         # se le pasa como argumento la ventana principal, MainWindow
         ControladorVentanaImportarDatos(self)
