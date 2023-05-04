@@ -1,6 +1,7 @@
 import re
 from mysql.connector import connect,Error
 from PyQt5.QtWidgets import QTableWidgetItem
+from PyQt5.QtWidgets import QMessageBox
 from empleados import asignar_empleado_loggeado
 from conectar_a_bd import crear_conexion_nube, crear_conexion_local
 
@@ -97,7 +98,13 @@ def agregar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, co
             c.execute("INSERT INTO empleados (empleado_id, nombre, apellido_paterno, apellido_materno, email, telefono, tipo_empleado, estatus, contrasenia) VALUES ('{}','{}', '{}', '{}', '{}', '{}', '{}', '{}', '{}')".format(empleado_id, nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password))
             conn.commit()
             conn.close()
+            dialogo = QMessageBox()
             label_mensaje.setText("Empleado agregado correctamente")
+            dialogo.setWindowTitle("Recordatorio")
+            dialogo.setText("Recuerda modificar la ventana de meta ventas")
+            dialogo.setIcon(QMessageBox.Warning)
+            boton_ok = dialogo.exec()
+            # se sale de la función
             return True
         except Error as err:
             print("Algo salio mal: {}".format(err))
@@ -115,7 +122,12 @@ def editar_empleado(empleado_id, nombre, apellido_paterno, apellido_materno, cor
             c.execute("UPDATE empleados SET nombre = '{}', apellido_paterno = '{}', apellido_materno = '{}', email = '{}', telefono = '{}', tipo_empleado = '{}', estatus = '{}', contrasenia = '{}' WHERE empleado_id = {}".format(nombre, apellido_paterno, apellido_materno, correo, telefono, tipo_empleado, estatus, password, empleado_id))
             conn.commit()
             conn.close()
+            dialogo = QMessageBox()
             label_mensaje.setText("Empleado editado correctamente")
+            dialogo.setWindowTitle("Recordatorio")
+            dialogo.setText("Recuerda modificar la ventana de meta ventas")
+            dialogo.setIcon(QMessageBox.Warning)
+            boton_ok = dialogo.exec()
             return True
         except Error as err:
             print("Algo salio mal: {}".format(err))
