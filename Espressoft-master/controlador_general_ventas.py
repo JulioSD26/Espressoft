@@ -299,3 +299,18 @@ def obtener_diccionario_meses_porcentajes(diccionario_meses_y_totales, meta_vent
         diccionario_meses_porcentajes[mes] = porcentaje_ventas
     return diccionario_meses_porcentajes
 
+# puede ser reutilizada para ventas individuales y totales anuales
+def obtener_diccionario_anios_porcentajes(diccionario_anios_y_totales, meta_ventas):
+    diccionario_anios_porcentajes = {}
+    for anio, total_ventas in diccionario_anios_y_totales.items():
+        if anio == "En progreso":
+            diccionario_anios_porcentajes[anio] = "En progreso"
+        else:
+            try:
+                total_ventas_numerico = float(total_ventas)
+                porcentaje_ventas = calcular_porcentaje_de_ventas(total_ventas_numerico, meta_ventas)
+                diccionario_anios_porcentajes[float(anio)] = porcentaje_ventas
+            except ValueError:
+                diccionario_anios_porcentajes[anio] = "--.--%"
+    return diccionario_anios_porcentajes
+
