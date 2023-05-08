@@ -3,9 +3,7 @@ Controlador que podria reutilizarse para las tablas de todas las ventanas de ven
 """
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QTableWidgetItem
-import locale
 
-locale.setlocale(locale.LC_ALL, '')
 def llenar_datos_tabla(tabla, diccionario_datos: dict, diccionario_porcentaje_de_ventas = {}):
     """
     LLena una tabla dada, con unos datos dados (diccionario_datos).
