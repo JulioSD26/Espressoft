@@ -939,7 +939,7 @@
        <item>
         <widget class="QStackedWidget" name="stacked_widget_paginas">
          <property name="currentIndex">
-          <number>3</number>
+          <number>6</number>
          </property>
          <widget class="QWidget" name="pagina_por_defecto">
           <property name="styleSheet">
@@ -3976,7 +3976,7 @@ border-radius: 15px;</string>
 }</string>
                          </property>
                          <property name="text">
-                          <string>Porcentaje de ventas:</string>
+                          <string>Porcentaje de ventas al día:</string>
                          </property>
                         </widget>
                        </item>
@@ -5903,80 +5903,6 @@ border-radius: 15px;</string>
                   </layout>
                  </widget>
                 </item>
-                <item>
-                 <widget class="QFrame" name="frame_76">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true">QFrame {
-	background-color: rgb(255, 255, 255);
-	border-radius: 15px;
-}</string>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_91">
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_92">
-                     <item>
-                      <layout class="QHBoxLayout" name="horizontalLayout_93">
-                       <item>
-                        <widget class="QLabel" name="label_64">
-                         <property name="styleSheet">
-                          <string notr="true">QLabel {
-	color: #416BBF;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 16px;
-}</string>
-                         </property>
-                         <property name="text">
-                          <string>Porcentaje de ventas:</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QLabel" name="label_porcentaje_ventas_individuales_anuales">
-                         <property name="styleSheet">
-                          <string notr="true">QLabel {
-	color: #000000;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: bold;
-	font-size: 18px;
-}</string>
-                         </property>
-                         <property name="text">
-                          <string>--.--%</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </item>
-                     <item alignment="Qt::AlignRight">
-                      <widget class="QLabel" name="label_65">
-                       <property name="text">
-                        <string/>
-                       </property>
-                       <property name="pixmap">
-                        <pixmap>resources/img/icono_estadistica.png</pixmap>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
                </layout>
               </widget>
              </item>
@@ -6158,6 +6084,18 @@ QTableWidget {
                          <blue>80</blue>
                         </color>
                        </brush>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Porcentaje de ventas</string>
+                      </property>
+                      <property name="background">
+                       <color>
+                        <red>248</red>
+                        <green>250</green>
+                        <blue>255</blue>
+                       </color>
                       </property>
                      </column>
                     </widget>
@@ -7167,8 +7105,8 @@ QTableWidget {
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>1000</width>
-                   <height>317</height>
+                   <width>1048</width>
+                   <height>910</height>
                   </rect>
                  </property>
                  <property name="styleSheet">
@@ -7758,8 +7696,8 @@ QTableWidget {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>1044</width>
-                <height>688</height>
+                <width>1036</width>
+                <height>670</height>
                </rect>
               </property>
               <property name="minimumSize">
@@ -8799,8 +8737,8 @@ QPushButton:hover {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>1044</width>
-                <height>738</height>
+                <width>1036</width>
+                <height>720</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_112">
@@ -9974,8 +9912,8 @@ QPushButton:hover {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>1022</width>
-                <height>545</height>
+                <width>1018</width>
+                <height>514</height>
                </rect>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_114">
