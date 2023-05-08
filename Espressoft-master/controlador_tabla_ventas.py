@@ -3,8 +3,9 @@ Controlador que podria reutilizarse para las tablas de todas las ventanas de ven
 """
 from PyQt5 import QtGui
 from PyQt5.QtWidgets import QTableWidgetItem
+import locale
 
-
+locale.setlocale(locale.LC_ALL, '')
 def llenar_datos_tabla(tabla, diccionario_datos: dict, diccionario_porcentaje_de_ventas = {}):
     """
     LLena una tabla dada, con unos datos dados (diccionario_datos).
@@ -45,7 +46,11 @@ def insertar_fila_en_tabla(tabla, periodo_de_tiempo, total_correspondiente, porc
     # lo mismo para el total, porque si no, la tabla no lo muestra, porque parece
     # que solo muestra datos de tipo string, lo raro es que no muestra error
     # tambien se le agrega un $
-    item_total = QTableWidgetItem(f"${str(total_correspondiente)}")
+    #item_total = QTableWidgetItem(f"${str(total_correspondiente)}")
+    if total_correspondiente=="En proceso":
+        item_total = QTableWidgetItem(f"{ str(total_correspondiente)}")
+    else:
+        item_total = QTableWidgetItem("${:,.2f}".format(total_correspondiente))
     # se crea una fuente para el item/celda
     font = QtGui.QFont()
     font.setFamily("Montserrat")

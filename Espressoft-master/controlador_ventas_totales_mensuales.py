@@ -66,7 +66,7 @@ class ControladorVentasTotalesMensuales():
         llenar_datos_tabla(ventana_principal.tabla_ventas_totales_mensuales, diccionario_meses_y_totales, diccionario_meses_porcentajes)
         
         # se le asigna el total al label de total, cuando se le asigna un texto a un label siempre tiene que ser un str o si no marca error
-        ventana_principal.label_total_ventas_totales_mensuales.setText(f"${str(obtener_total_de_ventas(diccionario_meses_y_totales.values()))}")
+        ventana_principal.label_total_ventas_totales_mensuales.setText("${:,.2f}".format(obtener_total_de_ventas(diccionario_meses_y_totales.values())))
 
         mes_mas_ventas, mes_menos_ventas = obtener_periodos_con_menos_y_mas_ventas_mensuales(diccionario_meses_y_totales)
 

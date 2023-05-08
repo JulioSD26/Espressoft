@@ -82,17 +82,17 @@ class ControladorVentasIndividualesAnuales():
         diccionario_anios_y_totales.pop(anio_en_curso)
         total_ventas_sin_incluir_anio_en_curso = obtener_total_de_ventas(diccionario_anios_y_totales.values())
         # se le asigna el total al label de total, cuando se le asigna un texto a un label siempre tiene que ser un str o si no marca error
-        ventana_principal.label_total_ventas_individuales_anuales.setText(f"${str(total_ventas_sin_incluir_anio_en_curso)}")
+        ventana_principal.label_total_ventas_individuales_anuales.setText("${:,.2f}".format(total_ventas_sin_incluir_anio_en_curso))
 
         anio_menos_ventas, anio_mas_ventas = obtener_periodos_con_menos_y_mas_ventas(diccionario_anios_y_totales)
         
         ventana_principal.label_anio_menos_ventas_individuales_anuales.setText(str(anio_menos_ventas))
         ventana_principal.label_anio_mas_ventas_individuales_anuales.setText(str(anio_mas_ventas))
 
-        ventana_principal.label_ventas_anio_en_curso_ventas_individuales_anuales.setText(f"${str(total_anio_en_curso)}")
+        ventana_principal.label_ventas_anio_en_curso_ventas_individuales_anuales.setText("${:,.2f}".format(total_anio_en_curso))
 
         # aqui finalmente se suman el total del anio en curso y los totales de los otros anios
-        ventana_principal.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales.setText(f"${str(total_ventas_sin_incluir_anio_en_curso + total_anio_en_curso)}")
+        ventana_principal.label_ventas_totales_anio_actual_incluido_ventas_individuales_anuales.setText("${:,.2f}".format(total_ventas_sin_incluir_anio_en_curso + total_anio_en_curso))
 
 
 

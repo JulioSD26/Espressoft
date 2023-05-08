@@ -54,7 +54,7 @@ class ControladorVentasTotalesDiarias():
         # se llena la tabla con los datos del diccionario
         llenar_datos_tabla(ventana_principal.tabla_ventas_totales_diarias, diccionario_intervalos_de_horas_y_totales)
         # se le asigna el total al label de total, cuando se le asigna un texto a un label siempre tiene que ser un str o si no marca error
-        ventana_principal.label_total_ventas_totales_diarias.setText(f"${str(obtener_total_de_ventas(diccionario_intervalos_de_horas_y_totales.values()))}")
+        ventana_principal.label_total_ventas_totales_diarias.setText("${:,.2f}".format(obtener_total_de_ventas(diccionario_intervalos_de_horas_y_totales.values())))
 
         intervalo_horas_menos_ventas, intervalo_horas_mas_ventas = obtener_periodos_con_menos_y_mas_ventas(diccionario_intervalos_de_horas_y_totales)
         
