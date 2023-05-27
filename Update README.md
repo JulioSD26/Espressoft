@@ -6,6 +6,8 @@ This software is a desktop application specifically designed for importing data 
 ## Requirements
 - Python
 - Conda
+- MySQL 5 or higher
+- Docker (not necessary)
 
 ## Run These commands to get everything set up
 
